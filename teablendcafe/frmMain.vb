@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class frmMain
 
     ' NAVIGATION VARS
     ' 1 Home
