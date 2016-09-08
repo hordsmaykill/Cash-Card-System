@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44CF5E4D-5ED4-460A-BB1E-8DC5F4AC04C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>teablendcafe.My.MyApplication</StartupObject>
+    <RootNamespace>teablendcafe</RootNamespace>
+    <AssemblyName>teablendcafe</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>teablendcafe.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>teablendcafe.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="splash.Designer.vb">
+      <DependentUpon>splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ikot.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ikot22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\331.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ikot221.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttons1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPLASH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashhhhUntitled-1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashhhhUntitled-11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashhhhUntitled-12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash111.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\332.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaa.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\333.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sublogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_home_white_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment_125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assessment_105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_1251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainlogo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobgtest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobgcropped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_person_outline_white_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
