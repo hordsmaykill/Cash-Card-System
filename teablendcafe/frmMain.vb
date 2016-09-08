@@ -31,11 +31,6 @@
 
     End Sub
 
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles panSideMenu.Paint
-
-    End Sub
-
     Private Sub btnMenu_MouseEnter(sender As Object, e As EventArgs) Handles btnMenu.MouseEnter
         btnMenu.Image = My.Resources.menuHover
     End Sub
@@ -273,8 +268,6 @@
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 
-
-
     End Sub
 
     Private Sub menuHide() Handles panContent.Click, panHeading.Click
@@ -292,9 +285,6 @@
         ltime.Text = DateTime.Now.ToLongTimeString
         lDate.Text = DateTime.Today.ToLongDateString
     End Sub
-
-
-
 
     'logoutbutton'
 
