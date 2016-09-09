@@ -20,19 +20,6 @@ Public Class login
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call ConnectDB()
         TransparencyKey = BackColor
-
-
-
-    End Sub
-
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub tDateTime_Tick(sender As Object, e As EventArgs) Handles tDateTime.Tick

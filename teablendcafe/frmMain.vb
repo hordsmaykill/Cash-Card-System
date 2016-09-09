@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class frmMain
 
     ' NAVIGATION VARS
     ' 1 Home
@@ -28,11 +28,6 @@
         menuHideLoad()
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
-
-    End Sub
-
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles panSideMenu.Paint
 
     End Sub
 
@@ -273,8 +268,6 @@
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 
-
-
     End Sub
 
     Private Sub menuHide() Handles panContent.Click, panHeading.Click
@@ -292,9 +285,6 @@
         ltime.Text = DateTime.Now.ToLongTimeString
         lDate.Text = DateTime.Today.ToLongDateString
     End Sub
-
-
-
 
     'logoutbutton'
 
