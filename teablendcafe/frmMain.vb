@@ -9,6 +9,7 @@
 
     Dim contentLocation = 1
     Dim contentLocationY = 0
+
     Dim isMenuHidden = False
 
     Private Const PAN_CONTENT_HEIGHT = 700
@@ -21,6 +22,21 @@
     Private Const SIDE_MENU_ACCOUNTS = 5
 
     ' END NAVIGAION VARS
+
+    'menus'
+    ' try to CAPSLOCK constant variables
+    Private Const DRINKS_PANMENU_WIDTH = 762
+    Private Const DRINKS_SCROLL_SPEED = 127
+
+    Private Const DRINKS_MENU1 = 1
+    Private Const DRINKS_MENU2 = 2
+
+    Dim drinksLocation = 1
+    Dim drinksLocationX = 0
+
+
+
+    'end menus'
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -260,7 +276,7 @@
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 
-        For Each ctrl As Control In panMenu.Controls
+        For Each ctrl As Control In menu.Controls
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 
@@ -302,30 +318,39 @@
 
     End Sub
 
+    Private Sub drinks_panemenubtn1_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn1.Click
+        drinksLocationX = drinks_panmenu1.Location.X
+        drinksLocation = DRINKS_MENU1
+        tmrDrinks1.Enabled = True
+    End Sub
 
+    Private Sub drinks_panemenubtn2_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn2.Click
+        drinksLocationX = drinks_panmenu1.Location.X
+        drinksLocation = DRINKS_MENU2
+        tmrDrinks1.Enabled = True
+    End Sub
 
+    Private Sub tmrDrinks1_Tick(sender As Object, e As EventArgs) Handles tmrDrinks1.Tick
 
+        Select Case drinksLocation
+            Case DRINKS_MENU1 ' btn 1
+                If drinksLocationX = -DRINKS_PANMENU_WIDTH Then
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X = 0 Then
+                        tmrDrinks1.Enabled = False
+                    End If
+                End If
 
+            Case DRINKS_MENU2
+                If drinksLocationX = 0 Then
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X = -DRINKS_PANMENU_WIDTH Then
+                        tmrDrinks1.Enabled = False
+                    End If
+                End If
 
+        End Select
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ' end menu hide
+    End Sub
 
 End Class

@@ -20,6 +20,8 @@ Public Class login
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call ConnectDB()
         TransparencyKey = BackColor
+        Me.AcceptButton = btnlogin
+        Me.CancelButton = btnexit
     End Sub
 
     Private Sub tDateTime_Tick(sender As Object, e As EventArgs) Handles tDateTime.Tick
@@ -43,6 +45,7 @@ Public Class login
             MsgBox("Welcome" & Reader.Item(0).ToString & "" & Reader.Item(1).ToString, vbInformation + vbOKOnly, "Message")
             Reader.Close()
             frmMain.Show()
+            Me.Close()
         Else
             Reader.Close()
             MsgBox("The user id and/or Password are incorrect.", vbInformation + vbOKOnly, "Message")
