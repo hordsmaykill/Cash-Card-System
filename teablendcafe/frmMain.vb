@@ -9,6 +9,7 @@
 
     Dim contentLocation = 1
     Dim contentLocationY = 0
+
     Dim isMenuHidden = False
 
     Private Const PAN_CONTENT_HEIGHT = 700
@@ -21,6 +22,18 @@
     Private Const SIDE_MENU_ACCOUNTS = 5
 
     ' END NAVIGAION VARS
+
+    'menus'
+    Dim isdrnks_panmenuidden = False
+    Private Const drnks_panmenu1 = 1
+    Private Const drnks_panmenu2 = 2
+
+    Dim drnks_panmenu1_contentLocation = 1
+    Dim contentLocationX = 0
+
+    Private Const drnks_panmenu_HEIGHT = 800
+    Private Const drnks_panmenuL_SPEED = 175
+    'end menus'
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -118,6 +131,42 @@
                     tmrContent.Enabled = False
                 End If
 
+
+        End Select
+        'drnks'
+
+        Select Case drnks_panmenu1_contentLocation
+            Case drnks_panmenu1 'panmenu1-800 '
+
+                If isdrnks_panmenuidden Then
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + 10, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X >= 0 Then
+                        drinks_panmenu1.Location = New Point(0, drinks_panmenu1.Location.Y)
+                        tmrMenu.Enabled = False
+                    End If
+                Else
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - 23, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X <= -800 Then
+                        drinks_panmenu1.Location = New Point(-800, drinks_panmenu1.Location.Y)
+                        tmrMenu.Enabled = False
+                    End If
+                End If
+
+            Case drnks_panmenu2 'panmenu1 0 '
+
+                If isdrnks_panmenuidden Then
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + 10, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X >= -800 Then
+                        drinks_panmenu1.Location = New Point(0, drinks_panmenu1.Location.Y)
+                        tmrMenu.Enabled = False
+                    End If
+                Else
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - 23, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X <= 0 Then
+                        drinks_panmenu1.Location = New Point(0, drinks_panmenu1.Location.Y)
+                        tmrMenu.Enabled = False
+                    End If
+                End If
 
         End Select
 
@@ -260,7 +309,7 @@
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 
-        For Each ctrl As Control In panMenu.Controls
+        For Each ctrl As Control In menu.Controls
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 
@@ -301,6 +350,104 @@
         Panel2.BackColor = Color.FromArgb(111, 68, 10)
 
     End Sub
+
+
+
+    Private Sub Button36_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button37_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button38_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button39_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button40_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button41_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button42_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button43_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button44_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button45_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button46_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button47_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button48_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button49_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button50_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button51_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button52_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub drinks_panemenubtn2_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn2.Click
+        contentLocationX = drinks_panmenu1.Location.X
+        isdrnks_panmenuidden = Not isdrnks_panmenuidden
+        tmrContent.Enabled = True
+
+
+    End Sub
+
+    Private Sub drinks_panemenubtn1_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn1.Click
+        contentLocationX = drinks_panmenu1.Location.X
+        isdrnks_panmenuidden = Not isdrnks_panmenuidden
+        tmrContent.Enabled = True
+
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

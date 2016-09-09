@@ -42,7 +42,7 @@ Public Class login
         If Reader.HasRows Then
             MsgBox("Welcome" & Reader.Item(0).ToString & "" & Reader.Item(1).ToString, vbInformation + vbOKOnly, "Message")
             Reader.Close()
-            Form1.Show()
+            frmMain.Show()
         Else
             Reader.Close()
             MsgBox("The user id and/or Password are incorrect.", vbInformation + vbOKOnly, "Message")
