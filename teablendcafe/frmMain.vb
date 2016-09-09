@@ -24,15 +24,18 @@
     ' END NAVIGAION VARS
 
     'menus'
-    Dim isdrnks_panmenuidden = False
-    Private Const drnks_panmenu1 = 1
-    Private Const drnks_panmenu2 = 2
+    ' try to CAPSLOCK constant variables
+    Private Const DRINKS_PANMENU_WIDTH = 762
+    Private Const DRINKS_SCROLL_SPEED = 127
 
-    Dim drnks_panmenu1_contentLocation = 1
-    Dim contentLocationX = 0
+    Private Const DRINKS_MENU1 = 1
+    Private Const DRINKS_MENU2 = 2
 
-    Private Const drnks_panmenu_HEIGHT = 800
-    Private Const drnks_panmenuL_SPEED = 175
+    Dim drinksLocation = 1
+    Dim drinksLocationX = 0
+
+
+
     'end menus'
 
 
@@ -131,42 +134,6 @@
                     tmrContent.Enabled = False
                 End If
 
-
-        End Select
-        'drnks'
-
-        Select Case drnks_panmenu1_contentLocation
-            Case drnks_panmenu1 'panmenu1-800 '
-
-                If isdrnks_panmenuidden Then
-                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + 10, drinks_panmenu1.Location.Y)
-                    If drinks_panmenu1.Location.X >= 0 Then
-                        drinks_panmenu1.Location = New Point(0, drinks_panmenu1.Location.Y)
-                        tmrMenu.Enabled = False
-                    End If
-                Else
-                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - 23, drinks_panmenu1.Location.Y)
-                    If drinks_panmenu1.Location.X <= -800 Then
-                        drinks_panmenu1.Location = New Point(-800, drinks_panmenu1.Location.Y)
-                        tmrMenu.Enabled = False
-                    End If
-                End If
-
-            Case drnks_panmenu2 'panmenu1 0 '
-
-                If isdrnks_panmenuidden Then
-                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + 10, drinks_panmenu1.Location.Y)
-                    If drinks_panmenu1.Location.X >= -800 Then
-                        drinks_panmenu1.Location = New Point(0, drinks_panmenu1.Location.Y)
-                        tmrMenu.Enabled = False
-                    End If
-                Else
-                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - 23, drinks_panmenu1.Location.Y)
-                    If drinks_panmenu1.Location.X <= 0 Then
-                        drinks_panmenu1.Location = New Point(0, drinks_panmenu1.Location.Y)
-                        tmrMenu.Enabled = False
-                    End If
-                End If
 
         End Select
 
@@ -352,49 +319,38 @@
     End Sub
 
     Private Sub drinks_panemenubtn1_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn1.Click
-        contentLocationX = drinks_panmenu1.Location.X
-        isdrnks_panmenuidden = Not isdrnks_panmenuidden
-        tmrContent.Enabled = True
-
+        drinksLocationX = drinks_panmenu1.Location.X
+        drinksLocation = DRINKS_MENU1
+        tmrDrinks1.Enabled = True
     End Sub
 
+    Private Sub drinks_panemenubtn2_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn2.Click
+        drinksLocationX = drinks_panmenu1.Location.X
+        drinksLocation = DRINKS_MENU2
+        tmrDrinks1.Enabled = True
+    End Sub
 
+    Private Sub tmrDrinks1_Tick(sender As Object, e As EventArgs) Handles tmrDrinks1.Tick
 
+        Select Case drinksLocation
+            Case DRINKS_MENU1 ' btn 1
+                If drinksLocationX = -DRINKS_PANMENU_WIDTH Then
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X = 0 Then
+                        tmrDrinks1.Enabled = False
+                    End If
+                End If
 
+            Case DRINKS_MENU2
+                If drinksLocationX = 0 Then
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X = -DRINKS_PANMENU_WIDTH Then
+                        tmrDrinks1.Enabled = False
+                    End If
+                End If
 
+        End Select
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ' end menu hide
+    End Sub
 
 End Class

@@ -46,6 +46,10 @@ Partial Class frmMain
         Me.menu = New System.Windows.Forms.GroupBox()
         Me.Drinks_panmenu = New System.Windows.Forms.Panel()
         Me.drinks_panmenu1 = New System.Windows.Forms.Panel()
+        Me.Button24 = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -89,10 +93,7 @@ Partial Class frmMain
         Me.panWrapper = New System.Windows.Forms.Panel()
         Me.tmrContent = New System.Windows.Forms.Timer(Me.components)
         Me.tDateTime = New System.Windows.Forms.Timer(Me.components)
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.Button24 = New System.Windows.Forms.Button()
+        Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
         CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -436,10 +437,50 @@ Partial Class frmMain
         Me.drinks_panmenu1.Controls.Add(Me.Button3)
         Me.drinks_panmenu1.Controls.Add(Me.Button2)
         Me.drinks_panmenu1.Controls.Add(Me.Button1)
-        Me.drinks_panmenu1.Location = New System.Drawing.Point(0, 3)
+        Me.drinks_panmenu1.Location = New System.Drawing.Point(0, 0)
         Me.drinks_panmenu1.Name = "drinks_panmenu1"
-        Me.drinks_panmenu1.Size = New System.Drawing.Size(1559, 188)
+        Me.drinks_panmenu1.Size = New System.Drawing.Size(1524, 194)
         Me.drinks_panmenu1.TabIndex = 0
+        '
+        'Button24
+        '
+        Me.Button24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button24.Location = New System.Drawing.Point(1338, 20)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(160, 152)
+        Me.Button24.TabIndex = 29
+        Me.Button24.Text = "Button24"
+        Me.Button24.UseVisualStyleBackColor = True
+        '
+        'Button23
+        '
+        Me.Button23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button23.Location = New System.Drawing.Point(1156, 20)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(160, 152)
+        Me.Button23.TabIndex = 28
+        Me.Button23.Text = "Button23"
+        Me.Button23.UseVisualStyleBackColor = True
+        '
+        'Button22
+        '
+        Me.Button22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button22.Location = New System.Drawing.Point(970, 20)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(160, 152)
+        Me.Button22.TabIndex = 27
+        Me.Button22.Text = "Button22"
+        Me.Button22.UseVisualStyleBackColor = True
+        '
+        'Button21
+        '
+        Me.Button21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button21.Location = New System.Drawing.Point(789, 20)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(160, 152)
+        Me.Button21.TabIndex = 26
+        Me.Button21.Text = "Button21"
+        Me.Button21.UseVisualStyleBackColor = True
         '
         'Button6
         '
@@ -820,41 +861,9 @@ Partial Class frmMain
         '
         Me.tDateTime.Enabled = True
         '
-        'Button21
+        'tmrDrinks1
         '
-        Me.Button21.Location = New System.Drawing.Point(827, 20)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(160, 152)
-        Me.Button21.TabIndex = 26
-        Me.Button21.Text = "Button21"
-        Me.Button21.UseVisualStyleBackColor = True
-        '
-        'Button22
-        '
-        Me.Button22.Location = New System.Drawing.Point(1008, 20)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(160, 152)
-        Me.Button22.TabIndex = 27
-        Me.Button22.Text = "Button22"
-        Me.Button22.UseVisualStyleBackColor = True
-        '
-        'Button23
-        '
-        Me.Button23.Location = New System.Drawing.Point(1194, 20)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(160, 152)
-        Me.Button23.TabIndex = 28
-        Me.Button23.Text = "Button23"
-        Me.Button23.UseVisualStyleBackColor = True
-        '
-        'Button24
-        '
-        Me.Button24.Location = New System.Drawing.Point(1376, 20)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(160, 152)
-        Me.Button24.TabIndex = 29
-        Me.Button24.Text = "Button24"
-        Me.Button24.UseVisualStyleBackColor = True
+        Me.tmrDrinks1.Interval = 10
         '
         'frmMain
         '
@@ -971,4 +980,5 @@ Partial Class frmMain
     Friend WithEvents Button23 As Button
     Friend WithEvents Button22 As Button
     Friend WithEvents Button21 As Button
+    Friend WithEvents tmrDrinks1 As Timer
 End Class
