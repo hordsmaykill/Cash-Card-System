@@ -341,7 +341,7 @@
                     End If
                 End If
 
-            Case DRINKS_MENU2
+            Case DRINKS_MENU2 'btn 2
                 If drinksLocationX = 0 Then
                     drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
                     If drinks_panmenu1.Location.X = -DRINKS_PANMENU_WIDTH Then
