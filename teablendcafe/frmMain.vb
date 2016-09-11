@@ -435,7 +435,7 @@ Public Class frmMain
                 End If
 
             Case SUB_MENU2 'btn 2
-                If MAINLocationX = 0 Then
+                If SUBLocationX = 0 Then
                     sub_panmenu1.Location = New Point(sub_panmenu1.Location.X - SUB_SCROLL_SPEED, sub_panmenu1.Location.Y)
                     If sub_panmenu1.Location.X = -SUB_PANMENU_WIDTH Then
                         tmrSubmenu.Enabled = False

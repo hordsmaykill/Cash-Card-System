@@ -91,3 +91,12 @@ C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\bin\Debug\teablendcafe.exe
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.exe
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.xml
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.pdb
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\bin\Debug\teablendcafe.exe
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\bin\Debug\teablendcafe.pdb
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\bin\Debug\teablendcafe.xml
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.vbprojResolveAssemblyReference.cache
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmMain.resources
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.login.resources
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.Resources.resources
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.splash.resources
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.vbproj.GenerateResource.Cache
