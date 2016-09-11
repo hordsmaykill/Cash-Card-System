@@ -1,4 +1,5 @@
-﻿Public Class frmMain
+﻿
+Public Class frmMain
 
     ' NAVIGATION VARS
     ' 1 Home
@@ -6,6 +7,7 @@
     ' 3 Menu
     ' 4 Assessment
     ' 5 Accounts
+
 
     Dim contentLocation = 1
     Dim contentLocationY = 0
@@ -30,10 +32,31 @@
 
     Private Const DRINKS_MENU1 = 1
     Private Const DRINKS_MENU2 = 2
+    Private Const DRINKS_MENU3 = 3
 
     Dim drinksLocation = 1
     Dim drinksLocationX = 0
 
+    'sub menus'
+    Private Const SUB_PANMENU_WIDTH = 762
+    Private Const SUB_SCROLL_SPEED = 127
+
+    Private Const SUB_MENU1 = 1
+    Private Const SUB_MENU2 = 2
+    Private Const SUB_MENU3 = 3
+
+    Dim SUBLocation = 1
+    Dim SUBLocationX = 0
+    'end sub menus'
+    'main'
+    Private Const MAIN_PANMENU_WIDTH = 762
+    Private Const MAIN_SCROLL_SPEED = 127
+
+    Private Const MAIN_MENU1 = 1
+    Private Const MAIN_MENU2 = 2
+
+    Dim MAINLocation = 1
+    Dim MAINLocationX = 0
 
 
     'end menus'
@@ -308,7 +331,7 @@
         Panel2.Show()
     End Sub
 
-    Private Sub Panel2_MouseLeave(sender As Object, e As EventArgs) Handles Panel2.MouseLeave
+    Private Sub Panel2_MouseLeave(sender As Object, e As EventArgs) Handles Panel2.MouseLeave, picLogout.Leave
         Panel2.Hide()
         Panel2.BackColor = Color.FromArgb(67, 41, 6)
     End Sub
@@ -317,7 +340,7 @@
         Panel2.BackColor = Color.FromArgb(111, 68, 10)
 
     End Sub
-
+    'DRNKS BTN'
     Private Sub drinks_panemenubtn1_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn1.Click
         drinksLocationX = drinks_panmenu1.Location.X
         drinksLocation = DRINKS_MENU1
@@ -330,6 +353,29 @@
         tmrDrinks1.Enabled = True
     End Sub
 
+    Private Sub drinks_panemenubtn3_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn3.Click
+        drinksLocationX = drinks_panmenu1.Location.X
+        drinksLocation = DRINKS_MENU3
+        tmrDrinks1.Enabled = True
+    End Sub
+    'END DNKS'
+    Private Sub main_panemenubtn1_Click(sender As Object, e As EventArgs) Handles main_panemenubtn1.Click
+        MAINLocationX = main_panmenu1.Location.X
+        MAINLocation = MAIN_MENU1
+        tmrMain2.Enabled = True
+
+
+    End Sub
+
+    Private Sub main_panemenubtn2_Click(sender As Object, e As EventArgs) Handles main_panemenubtn2.Click
+        MAINLocationX = main_panmenu1.Location.X
+        MAINLocation = MAIN_MENU2
+        tmrMain2.Enabled = True
+    End Sub
+
+
+
+
     Private Sub tmrDrinks1_Tick(sender As Object, e As EventArgs) Handles tmrDrinks1.Tick
 
         Select Case drinksLocation
@@ -341,6 +387,7 @@
                     End If
                 End If
 
+
             Case DRINKS_MENU2 'btn 2
                 If drinksLocationX = 0 Then
                     drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
@@ -349,8 +396,94 @@
                     End If
                 End If
 
+
+
         End Select
 
     End Sub
+
+    Private Sub tmrMain2_Tick(sender As Object, e As EventArgs) Handles tmrMain2.Tick
+
+        Select Case MAINLocation
+            Case MAIN_MENU1 ' btn 1
+                If MAINLocationX = -MAIN_PANMENU_WIDTH Then
+                    main_panmenu1.Location = New Point(main_panmenu1.Location.X + MAIN_SCROLL_SPEED, main_panmenu1.Location.Y)
+                    If main_panmenu1.Location.X = 0 Then
+                        tmrMain2.Enabled = False
+                    End If
+                End If
+
+            Case MAIN_MENU2 'btn 2
+                If MAINLocationX = 0 Then
+                    main_panmenu1.Location = New Point(main_panmenu1.Location.X - MAIN_SCROLL_SPEED, main_panmenu1.Location.Y)
+                    If main_panmenu1.Location.X = -MAIN_PANMENU_WIDTH Then
+                        tmrMain2.Enabled = False
+                    End If
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub tmrSubmenu_Tick(sender As Object, e As EventArgs) Handles tmrSubmenu.Tick
+        Select Case SUBLocation
+            Case SUB_MENU1 ' btn 1
+                If SUBLocationX = -SUB_PANMENU_WIDTH Then
+                    sub_panmenu1.Location = New Point(sub_panmenu1.Location.X + SUB_SCROLL_SPEED, sub_panmenu1.Location.Y)
+                    If sub_panmenu1.Location.X = 0 Then
+                        tmrSubmenu.Enabled = False
+                    End If
+                End If
+
+            Case SUB_MENU2 'btn 2
+                If MAINLocationX = 0 Then
+                    sub_panmenu1.Location = New Point(sub_panmenu1.Location.X - SUB_SCROLL_SPEED, sub_panmenu1.Location.Y)
+                    If sub_panmenu1.Location.X = -SUB_PANMENU_WIDTH Then
+                        tmrSubmenu.Enabled = False
+                    End If
+                End If
+
+        End Select
+    End Sub
+
+
+
+
+    Private Sub panHome_MouseEnter(sender As Object, e As EventArgs) Handles panHome.MouseEnter
+        Panel2.Hide()
+    End Sub
+
+    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel2.MouseClick, picLogout.Click
+        Dim reply As MsgBoxResult
+
+        reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
+        If reply = MsgBoxResult.Yes Then
+            End
+        End If
+    End Sub
+
+    Private Sub submenu_panmenu1_Click(sender As Object, e As EventArgs) Handles submenu_panmenu1.Click
+        SUBLocationX = sub_panmenu1.Location.X
+        SUBLocation = SUB_MENU1
+        tmrSubmenu.Enabled = True
+    End Sub
+
+    Private Sub submenu_panbtn2_Click(sender As Object, e As EventArgs) Handles submenu_panbtn2.Click
+        SUBLocationX = sub_panmenu1.Location.X
+        SUBLocation = SUB_MENU2
+        tmrSubmenu.Enabled = True
+    End Sub
+
+
+
+
+
+
+    'z'
+
+
+    'z'
+
+
+
 
 End Class
