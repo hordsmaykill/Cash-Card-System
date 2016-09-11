@@ -251,3 +251,8 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+.vs/teablendcafe/v14/.suo
+teablendcafe/bin/Debug/teablendcafe.exe
+teablendcafe/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+teablendcafe/obj/Debug/teablendcafe.pdb
+teablendcafe/obj/Debug/teablendcafe.vbproj.FileListAbsolute.txt
