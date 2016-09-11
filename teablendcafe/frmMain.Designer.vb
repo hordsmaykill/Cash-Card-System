@@ -38,39 +38,115 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnUsrMgmt = New System.Windows.Forms.Button()
         Me.panHeading = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.picLogout = New System.Windows.Forms.PictureBox()
+        Me.lbllogout = New System.Windows.Forms.Label()
         Me.piclogout2 = New System.Windows.Forms.PictureBox()
         Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.tmrMenu = New System.Windows.Forms.Timer(Me.components)
         Me.panContent = New System.Windows.Forms.Panel()
         Me.panMenu = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.menu = New System.Windows.Forms.GroupBox()
-        Me.Drinks_panmenu = New System.Windows.Forms.Panel()
-        Me.drinks_panmenu1 = New System.Windows.Forms.Panel()
-        Me.Button24 = New System.Windows.Forms.Button()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.drinks_panemenubtn2 = New System.Windows.Forms.Button()
-        Me.drinks_panemenubtn1 = New System.Windows.Forms.Button()
-        Me.main_menuPanel = New System.Windows.Forms.Panel()
-        Me.Button20 = New System.Windows.Forms.Button()
-        Me.Button19 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.sub_menuPanel = New System.Windows.Forms.Panel()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
+        Me.submenu_panbtn2 = New System.Windows.Forms.Button()
+        Me.submenu_panmenu1 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.sub_panmenu1 = New System.Windows.Forms.Panel()
+        Me.Button65 = New System.Windows.Forms.Button()
+        Me.Button66 = New System.Windows.Forms.Button()
+        Me.Button67 = New System.Windows.Forms.Button()
+        Me.Button68 = New System.Windows.Forms.Button()
+        Me.Button69 = New System.Windows.Forms.Button()
+        Me.Button59 = New System.Windows.Forms.Button()
+        Me.Button60 = New System.Windows.Forms.Button()
+        Me.Button61 = New System.Windows.Forms.Button()
+        Me.Button62 = New System.Windows.Forms.Button()
+        Me.Button63 = New System.Windows.Forms.Button()
+        Me.drinks_panemenubtn3 = New System.Windows.Forms.Button()
+        Me.main_panemenubtn2 = New System.Windows.Forms.Button()
+        Me.main_panemenubtn1 = New System.Windows.Forms.Button()
+        Me.main_panmenu = New System.Windows.Forms.Panel()
+        Me.main_panmenu1 = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button57 = New System.Windows.Forms.Button()
+        Me.Button58 = New System.Windows.Forms.Button()
+        Me.Button33 = New System.Windows.Forms.Button()
+        Me.Button34 = New System.Windows.Forms.Button()
+        Me.Button35 = New System.Windows.Forms.Button()
+        Me.Button36 = New System.Windows.Forms.Button()
+        Me.Button37 = New System.Windows.Forms.Button()
+        Me.Button38 = New System.Windows.Forms.Button()
+        Me.Button39 = New System.Windows.Forms.Button()
+        Me.Button40 = New System.Windows.Forms.Button()
+        Me.Button55 = New System.Windows.Forms.Button()
+        Me.Button56 = New System.Windows.Forms.Button()
+        Me.Drinks_panmenu = New System.Windows.Forms.Panel()
+        Me.drinks_panmenu1 = New System.Windows.Forms.Panel()
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
+        Me.Button24 = New System.Windows.Forms.Button()
+        Me.Button29 = New System.Windows.Forms.Button()
+        Me.Button30 = New System.Windows.Forms.Button()
+        Me.Button31 = New System.Windows.Forms.Button()
+        Me.Button32 = New System.Windows.Forms.Button()
+        Me.Button43 = New System.Windows.Forms.Button()
+        Me.Button44 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.Button45 = New System.Windows.Forms.Button()
+        Me.Button46 = New System.Windows.Forms.Button()
+        Me.Button47 = New System.Windows.Forms.Button()
+        Me.Button48 = New System.Windows.Forms.Button()
+        Me.Button49 = New System.Windows.Forms.Button()
+        Me.Button50 = New System.Windows.Forms.Button()
+        Me.Button51 = New System.Windows.Forms.Button()
+        Me.Button52 = New System.Windows.Forms.Button()
+        Me.Button53 = New System.Windows.Forms.Button()
+        Me.Button54 = New System.Windows.Forms.Button()
+        Me.Button42 = New System.Windows.Forms.Button()
+        Me.Button28 = New System.Windows.Forms.Button()
+        Me.Button26 = New System.Windows.Forms.Button()
+        Me.Button41 = New System.Windows.Forms.Button()
+        Me.Button27 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.drinks_panemenubtn2 = New System.Windows.Forms.Button()
+        Me.drinks_panemenubtn1 = New System.Windows.Forms.Button()
         Me.panAccounts = New System.Windows.Forms.Panel()
         Me.panHome = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.picLogout = New System.Windows.Forms.PictureBox()
-        Me.lbllogout = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ltime = New System.Windows.Forms.Label()
         Me.lDate = New System.Windows.Forms.Label()
@@ -94,6 +170,8 @@ Partial Class frmMain
         Me.tmrContent = New System.Windows.Forms.Timer(Me.components)
         Me.tDateTime = New System.Windows.Forms.Timer(Me.components)
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
         CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,18 +181,32 @@ Partial Class frmMain
         CType(Me.picHome, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panHeading.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panContent.SuspendLayout()
         Me.panMenu.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menu.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.sub_panmenu1.SuspendLayout()
+        Me.main_panmenu.SuspendLayout()
+        Me.main_panmenu1.SuspendLayout()
         Me.Drinks_panmenu.SuspendLayout()
         Me.drinks_panmenu1.SuspendLayout()
-        Me.main_menuPanel.SuspendLayout()
-        Me.sub_menuPanel.SuspendLayout()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panHome.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.panInventory.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -340,6 +432,7 @@ Partial Class frmMain
         'panHeading
         '
         Me.panHeading.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.panHeading.Controls.Add(Me.Panel2)
         Me.panHeading.Controls.Add(Me.piclogout2)
         Me.panHeading.Controls.Add(Me.btnMenu)
         Me.panHeading.Dock = System.Windows.Forms.DockStyle.Top
@@ -348,6 +441,38 @@ Partial Class frmMain
         Me.panHeading.Name = "panHeading"
         Me.panHeading.Size = New System.Drawing.Size(1366, 75)
         Me.panHeading.TabIndex = 8
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.picLogout)
+        Me.Panel2.Controls.Add(Me.lbllogout)
+        Me.Panel2.Location = New System.Drawing.Point(1175, 12)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(135, 45)
+        Me.Panel2.TabIndex = 13
+        Me.Panel2.Visible = False
+        '
+        'picLogout
+        '
+        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
+        Me.picLogout.Location = New System.Drawing.Point(4, 9)
+        Me.picLogout.Name = "picLogout"
+        Me.picLogout.Size = New System.Drawing.Size(40, 27)
+        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogout.TabIndex = 14
+        Me.picLogout.TabStop = False
+        '
+        'lbllogout
+        '
+        Me.lbllogout.AutoSize = True
+        Me.lbllogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbllogout.Location = New System.Drawing.Point(62, 15)
+        Me.lbllogout.Name = "lbllogout"
+        Me.lbllogout.Size = New System.Drawing.Size(40, 13)
+        Me.lbllogout.TabIndex = 0
+        Me.lbllogout.Text = "Logout"
+        Me.lbllogout.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'piclogout2
         '
@@ -397,131 +522,1105 @@ Partial Class frmMain
         '
         'panMenu
         '
+        Me.panMenu.Controls.Add(Me.GroupBox1)
         Me.panMenu.Controls.Add(Me.menu)
         Me.panMenu.Location = New System.Drawing.Point(3, 1401)
         Me.panMenu.Name = "panMenu"
         Me.panMenu.Size = New System.Drawing.Size(1360, 702)
         Me.panMenu.TabIndex = 11
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.DataGridView2)
+        Me.GroupBox1.Location = New System.Drawing.Point(803, 1)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(554, 697)
+        Me.GroupBox1.TabIndex = 26
+        Me.GroupBox1.TabStop = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(263, 16)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(53, 13)
+        Me.Label9.TabIndex = 43
+        Me.Label9.Text = "ORDERS"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(396, 521)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(42, 13)
+        Me.Label8.TabIndex = 42
+        Me.Label8.Text = "number"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(396, 449)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(42, 13)
+        Me.Label7.TabIndex = 41
+        Me.Label7.Text = "number"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(245, 521)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.TabIndex = 40
+        Me.Label6.Text = "Label6"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(245, 449)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.TabIndex = 39
+        Me.Label5.Text = "Label5"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(46, 521)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 38
+        Me.Label4.Text = "Label4"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(46, 487)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 37
+        Me.Label3.Text = "Label3"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(46, 449)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 36
+        Me.Label2.Text = "Label2"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column7, Me.Column8, Me.Column9})
+        Me.DataGridView2.Location = New System.Drawing.Point(4, 38)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(544, 385)
+        Me.DataGridView2.TabIndex = 35
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "item no."
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 130
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Qty"
+        Me.Column7.Name = "Column7"
+        Me.Column7.Width = 120
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Price"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 130
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "Total"
+        Me.Column9.Name = "Column9"
+        Me.Column9.Width = 121
+        '
         'menu
         '
+        Me.menu.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.menu.Controls.Add(Me.submenu_panbtn2)
+        Me.menu.Controls.Add(Me.submenu_panmenu1)
+        Me.menu.Controls.Add(Me.Panel3)
+        Me.menu.Controls.Add(Me.drinks_panemenubtn3)
+        Me.menu.Controls.Add(Me.main_panemenubtn2)
+        Me.menu.Controls.Add(Me.main_panemenubtn1)
+        Me.menu.Controls.Add(Me.main_panmenu)
         Me.menu.Controls.Add(Me.Drinks_panmenu)
         Me.menu.Controls.Add(Me.drinks_panemenubtn2)
         Me.menu.Controls.Add(Me.drinks_panemenubtn1)
-        Me.menu.Controls.Add(Me.main_menuPanel)
-        Me.menu.Controls.Add(Me.sub_menuPanel)
         Me.menu.Location = New System.Drawing.Point(2, 1)
         Me.menu.Name = "menu"
-        Me.menu.Size = New System.Drawing.Size(789, 698)
+        Me.menu.Size = New System.Drawing.Size(795, 698)
         Me.menu.TabIndex = 25
         Me.menu.TabStop = False
         Me.menu.Text = "Menu"
         '
+        'submenu_panbtn2
+        '
+        Me.submenu_panbtn2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.submenu_panbtn2.Location = New System.Drawing.Point(381, 422)
+        Me.submenu_panbtn2.Name = "submenu_panbtn2"
+        Me.submenu_panbtn2.Size = New System.Drawing.Size(27, 22)
+        Me.submenu_panbtn2.TabIndex = 57
+        Me.submenu_panbtn2.UseVisualStyleBackColor = False
+        '
+        'submenu_panmenu1
+        '
+        Me.submenu_panmenu1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.submenu_panmenu1.Location = New System.Drawing.Point(328, 422)
+        Me.submenu_panmenu1.Name = "submenu_panmenu1"
+        Me.submenu_panmenu1.Size = New System.Drawing.Size(27, 22)
+        Me.submenu_panmenu1.TabIndex = 56
+        Me.submenu_panmenu1.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.sub_panmenu1)
+        Me.Panel3.Location = New System.Drawing.Point(24, 292)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(748, 121)
+        Me.Panel3.TabIndex = 55
+        '
+        'sub_panmenu1
+        '
+        Me.sub_panmenu1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.sub_panmenu1.Controls.Add(Me.Button65)
+        Me.sub_panmenu1.Controls.Add(Me.Button66)
+        Me.sub_panmenu1.Controls.Add(Me.Button67)
+        Me.sub_panmenu1.Controls.Add(Me.Button68)
+        Me.sub_panmenu1.Controls.Add(Me.Button69)
+        Me.sub_panmenu1.Controls.Add(Me.Button59)
+        Me.sub_panmenu1.Controls.Add(Me.Button60)
+        Me.sub_panmenu1.Controls.Add(Me.Button61)
+        Me.sub_panmenu1.Controls.Add(Me.Button62)
+        Me.sub_panmenu1.Controls.Add(Me.Button63)
+        Me.sub_panmenu1.Location = New System.Drawing.Point(0, 3)
+        Me.sub_panmenu1.Name = "sub_panmenu1"
+        Me.sub_panmenu1.Size = New System.Drawing.Size(1530, 115)
+        Me.sub_panmenu1.TabIndex = 55
+        '
+        'Button65
+        '
+        Me.Button65.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button65.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button65.Location = New System.Drawing.Point(1374, 20)
+        Me.Button65.Name = "Button65"
+        Me.Button65.Size = New System.Drawing.Size(119, 74)
+        Me.Button65.TabIndex = 60
+        Me.Button65.Text = "Chessy Carbonara"
+        Me.Button65.UseVisualStyleBackColor = False
+        '
+        'Button66
+        '
+        Me.Button66.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button66.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button66.Location = New System.Drawing.Point(1233, 20)
+        Me.Button66.Name = "Button66"
+        Me.Button66.Size = New System.Drawing.Size(119, 74)
+        Me.Button66.TabIndex = 61
+        Me.Button66.Text = "Vanilla Cloud"
+        Me.Button66.UseVisualStyleBackColor = False
+        '
+        'Button67
+        '
+        Me.Button67.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button67.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button67.Location = New System.Drawing.Point(1082, 20)
+        Me.Button67.Name = "Button67"
+        Me.Button67.Size = New System.Drawing.Size(119, 74)
+        Me.Button67.TabIndex = 62
+        Me.Button67.Text = "Peachy Keen"
+        Me.Button67.UseVisualStyleBackColor = False
+        '
+        'Button68
+        '
+        Me.Button68.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button68.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button68.Location = New System.Drawing.Point(931, 20)
+        Me.Button68.Name = "Button68"
+        Me.Button68.Size = New System.Drawing.Size(119, 74)
+        Me.Button68.TabIndex = 63
+        Me.Button68.Text = "Purple Brew"
+        Me.Button68.UseVisualStyleBackColor = False
+        '
+        'Button69
+        '
+        Me.Button69.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button69.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button69.Location = New System.Drawing.Point(781, 20)
+        Me.Button69.Name = "Button69"
+        Me.Button69.Size = New System.Drawing.Size(119, 74)
+        Me.Button69.TabIndex = 64
+        Me.Button69.Text = " Hotsilog"
+        Me.Button69.UseVisualStyleBackColor = False
+        '
+        'Button59
+        '
+        Me.Button59.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button59.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button59.Location = New System.Drawing.Point(610, 20)
+        Me.Button59.Name = "Button59"
+        Me.Button59.Size = New System.Drawing.Size(119, 74)
+        Me.Button59.TabIndex = 55
+        Me.Button59.Text = "Chessy Carbonara"
+        Me.Button59.UseVisualStyleBackColor = False
+        '
+        'Button60
+        '
+        Me.Button60.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button60.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button60.Location = New System.Drawing.Point(469, 20)
+        Me.Button60.Name = "Button60"
+        Me.Button60.Size = New System.Drawing.Size(119, 74)
+        Me.Button60.TabIndex = 56
+        Me.Button60.Text = "Vanilla Cloud"
+        Me.Button60.UseVisualStyleBackColor = False
+        '
+        'Button61
+        '
+        Me.Button61.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button61.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button61.Location = New System.Drawing.Point(318, 20)
+        Me.Button61.Name = "Button61"
+        Me.Button61.Size = New System.Drawing.Size(119, 74)
+        Me.Button61.TabIndex = 57
+        Me.Button61.Text = "Peachy Keen"
+        Me.Button61.UseVisualStyleBackColor = False
+        '
+        'Button62
+        '
+        Me.Button62.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button62.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button62.Location = New System.Drawing.Point(167, 20)
+        Me.Button62.Name = "Button62"
+        Me.Button62.Size = New System.Drawing.Size(119, 74)
+        Me.Button62.TabIndex = 58
+        Me.Button62.Text = "Purple Brew"
+        Me.Button62.UseVisualStyleBackColor = False
+        '
+        'Button63
+        '
+        Me.Button63.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button63.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button63.Location = New System.Drawing.Point(17, 20)
+        Me.Button63.Name = "Button63"
+        Me.Button63.Size = New System.Drawing.Size(119, 74)
+        Me.Button63.TabIndex = 59
+        Me.Button63.Text = " Hotsilog"
+        Me.Button63.UseVisualStyleBackColor = False
+        '
+        'drinks_panemenubtn3
+        '
+        Me.drinks_panemenubtn3.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.drinks_panemenubtn3.Location = New System.Drawing.Point(433, 254)
+        Me.drinks_panemenubtn3.Name = "drinks_panemenubtn3"
+        Me.drinks_panemenubtn3.Size = New System.Drawing.Size(27, 22)
+        Me.drinks_panemenubtn3.TabIndex = 8
+        Me.drinks_panemenubtn3.UseVisualStyleBackColor = False
+        '
+        'main_panemenubtn2
+        '
+        Me.main_panemenubtn2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.main_panemenubtn2.Location = New System.Drawing.Point(381, 669)
+        Me.main_panemenubtn2.Name = "main_panemenubtn2"
+        Me.main_panemenubtn2.Size = New System.Drawing.Size(27, 22)
+        Me.main_panemenubtn2.TabIndex = 6
+        Me.main_panemenubtn2.UseVisualStyleBackColor = False
+        '
+        'main_panemenubtn1
+        '
+        Me.main_panemenubtn1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.main_panemenubtn1.Location = New System.Drawing.Point(328, 670)
+        Me.main_panemenubtn1.Name = "main_panemenubtn1"
+        Me.main_panemenubtn1.Size = New System.Drawing.Size(27, 22)
+        Me.main_panemenubtn1.TabIndex = 7
+        Me.main_panemenubtn1.UseVisualStyleBackColor = False
+        '
+        'main_panmenu
+        '
+        Me.main_panmenu.Controls.Add(Me.main_panmenu1)
+        Me.main_panmenu.Location = New System.Drawing.Point(23, 452)
+        Me.main_panmenu.Name = "main_panmenu"
+        Me.main_panmenu.Size = New System.Drawing.Size(750, 203)
+        Me.main_panmenu.TabIndex = 5
+        '
+        'main_panmenu1
+        '
+        Me.main_panmenu1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.main_panmenu1.Controls.Add(Me.Button7)
+        Me.main_panmenu1.Controls.Add(Me.Button8)
+        Me.main_panmenu1.Controls.Add(Me.Button11)
+        Me.main_panmenu1.Controls.Add(Me.Button16)
+        Me.main_panmenu1.Controls.Add(Me.Button17)
+        Me.main_panmenu1.Controls.Add(Me.Button18)
+        Me.main_panmenu1.Controls.Add(Me.Button19)
+        Me.main_panmenu1.Controls.Add(Me.Button20)
+        Me.main_panmenu1.Controls.Add(Me.Button57)
+        Me.main_panmenu1.Controls.Add(Me.Button58)
+        Me.main_panmenu1.Controls.Add(Me.Button33)
+        Me.main_panmenu1.Controls.Add(Me.Button34)
+        Me.main_panmenu1.Controls.Add(Me.Button35)
+        Me.main_panmenu1.Controls.Add(Me.Button36)
+        Me.main_panmenu1.Controls.Add(Me.Button37)
+        Me.main_panmenu1.Controls.Add(Me.Button38)
+        Me.main_panmenu1.Controls.Add(Me.Button39)
+        Me.main_panmenu1.Controls.Add(Me.Button40)
+        Me.main_panmenu1.Controls.Add(Me.Button55)
+        Me.main_panmenu1.Controls.Add(Me.Button56)
+        Me.main_panmenu1.Location = New System.Drawing.Point(0, 0)
+        Me.main_panmenu1.Margin = New System.Windows.Forms.Padding(0)
+        Me.main_panmenu1.Name = "main_panmenu1"
+        Me.main_panmenu1.Size = New System.Drawing.Size(1515, 202)
+        Me.main_panmenu1.TabIndex = 1
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button7.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button7.Location = New System.Drawing.Point(1374, 113)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(119, 74)
+        Me.Button7.TabIndex = 40
+        Me.Button7.Text = "Pizza Pasta"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button8.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button8.Location = New System.Drawing.Point(1233, 113)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(119, 74)
+        Me.Button8.TabIndex = 41
+        Me.Button8.Text = "Spamsilog"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button11.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button11.Location = New System.Drawing.Point(1082, 113)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(119, 74)
+        Me.Button11.TabIndex = 42
+        Me.Button11.Text = "Chicksilog"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Button16
+        '
+        Me.Button16.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button16.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button16.Location = New System.Drawing.Point(1374, 23)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(119, 74)
+        Me.Button16.TabIndex = 43
+        Me.Button16.Text = "Chessy Carbonara"
+        Me.Button16.UseVisualStyleBackColor = False
+        '
+        'Button17
+        '
+        Me.Button17.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button17.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button17.Location = New System.Drawing.Point(1233, 23)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(119, 74)
+        Me.Button17.TabIndex = 44
+        Me.Button17.Text = "Vanilla Cloud"
+        Me.Button17.UseVisualStyleBackColor = False
+        '
+        'Button18
+        '
+        Me.Button18.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button18.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button18.Location = New System.Drawing.Point(931, 113)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(119, 74)
+        Me.Button18.TabIndex = 45
+        Me.Button18.Text = "Emsilog"
+        Me.Button18.UseVisualStyleBackColor = False
+        '
+        'Button19
+        '
+        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button19.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button19.Location = New System.Drawing.Point(1082, 23)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(119, 74)
+        Me.Button19.TabIndex = 46
+        Me.Button19.Text = "Peachy Keen"
+        Me.Button19.UseVisualStyleBackColor = False
+        '
+        'Button20
+        '
+        Me.Button20.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button20.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button20.Location = New System.Drawing.Point(782, 113)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(119, 74)
+        Me.Button20.TabIndex = 47
+        Me.Button20.Text = "Longsilog"
+        Me.Button20.UseVisualStyleBackColor = False
+        '
+        'Button57
+        '
+        Me.Button57.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button57.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button57.Location = New System.Drawing.Point(931, 23)
+        Me.Button57.Name = "Button57"
+        Me.Button57.Size = New System.Drawing.Size(119, 74)
+        Me.Button57.TabIndex = 48
+        Me.Button57.Text = "Purple Brew"
+        Me.Button57.UseVisualStyleBackColor = False
+        '
+        'Button58
+        '
+        Me.Button58.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button58.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button58.Location = New System.Drawing.Point(781, 23)
+        Me.Button58.Name = "Button58"
+        Me.Button58.Size = New System.Drawing.Size(119, 74)
+        Me.Button58.TabIndex = 49
+        Me.Button58.Text = " Hotsilog"
+        Me.Button58.UseVisualStyleBackColor = False
+        '
+        'Button33
+        '
+        Me.Button33.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button33.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button33.Location = New System.Drawing.Point(612, 113)
+        Me.Button33.Name = "Button33"
+        Me.Button33.Size = New System.Drawing.Size(119, 74)
+        Me.Button33.TabIndex = 30
+        Me.Button33.Text = "Pizza Pasta"
+        Me.Button33.UseVisualStyleBackColor = False
+        '
+        'Button34
+        '
+        Me.Button34.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button34.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button34.Location = New System.Drawing.Point(471, 113)
+        Me.Button34.Name = "Button34"
+        Me.Button34.Size = New System.Drawing.Size(119, 74)
+        Me.Button34.TabIndex = 31
+        Me.Button34.Text = "Spamsilog"
+        Me.Button34.UseVisualStyleBackColor = False
+        '
+        'Button35
+        '
+        Me.Button35.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button35.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button35.Location = New System.Drawing.Point(320, 113)
+        Me.Button35.Name = "Button35"
+        Me.Button35.Size = New System.Drawing.Size(119, 74)
+        Me.Button35.TabIndex = 32
+        Me.Button35.Text = "Chicksilog"
+        Me.Button35.UseVisualStyleBackColor = False
+        '
+        'Button36
+        '
+        Me.Button36.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button36.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button36.Location = New System.Drawing.Point(613, 23)
+        Me.Button36.Name = "Button36"
+        Me.Button36.Size = New System.Drawing.Size(119, 74)
+        Me.Button36.TabIndex = 33
+        Me.Button36.Text = "Chessy Carbonara"
+        Me.Button36.UseVisualStyleBackColor = False
+        '
+        'Button37
+        '
+        Me.Button37.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button37.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button37.Location = New System.Drawing.Point(472, 23)
+        Me.Button37.Name = "Button37"
+        Me.Button37.Size = New System.Drawing.Size(119, 74)
+        Me.Button37.TabIndex = 34
+        Me.Button37.Text = "Vanilla Cloud"
+        Me.Button37.UseVisualStyleBackColor = False
+        '
+        'Button38
+        '
+        Me.Button38.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button38.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button38.Location = New System.Drawing.Point(169, 113)
+        Me.Button38.Name = "Button38"
+        Me.Button38.Size = New System.Drawing.Size(119, 74)
+        Me.Button38.TabIndex = 35
+        Me.Button38.Text = "Emsilog"
+        Me.Button38.UseVisualStyleBackColor = False
+        '
+        'Button39
+        '
+        Me.Button39.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button39.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button39.Location = New System.Drawing.Point(321, 23)
+        Me.Button39.Name = "Button39"
+        Me.Button39.Size = New System.Drawing.Size(119, 74)
+        Me.Button39.TabIndex = 36
+        Me.Button39.Text = "Peachy Keen"
+        Me.Button39.UseVisualStyleBackColor = False
+        '
+        'Button40
+        '
+        Me.Button40.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button40.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button40.Location = New System.Drawing.Point(20, 113)
+        Me.Button40.Name = "Button40"
+        Me.Button40.Size = New System.Drawing.Size(119, 74)
+        Me.Button40.TabIndex = 37
+        Me.Button40.Text = "Longsilog"
+        Me.Button40.UseVisualStyleBackColor = False
+        '
+        'Button55
+        '
+        Me.Button55.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button55.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button55.Location = New System.Drawing.Point(170, 23)
+        Me.Button55.Name = "Button55"
+        Me.Button55.Size = New System.Drawing.Size(119, 74)
+        Me.Button55.TabIndex = 38
+        Me.Button55.Text = "Purple Brew"
+        Me.Button55.UseVisualStyleBackColor = False
+        '
+        'Button56
+        '
+        Me.Button56.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button56.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button56.Location = New System.Drawing.Point(20, 23)
+        Me.Button56.Name = "Button56"
+        Me.Button56.Size = New System.Drawing.Size(119, 74)
+        Me.Button56.TabIndex = 39
+        Me.Button56.Text = " Hotsilog"
+        Me.Button56.UseVisualStyleBackColor = False
+        '
         'Drinks_panmenu
         '
-        Me.Drinks_panmenu.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Drinks_panmenu.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Drinks_panmenu.Controls.Add(Me.drinks_panmenu1)
-        Me.Drinks_panmenu.Location = New System.Drawing.Point(11, 38)
+        Me.Drinks_panmenu.Location = New System.Drawing.Point(23, 38)
         Me.Drinks_panmenu.Name = "Drinks_panmenu"
-        Me.Drinks_panmenu.Size = New System.Drawing.Size(762, 194)
+        Me.Drinks_panmenu.Size = New System.Drawing.Size(750, 205)
         Me.Drinks_panmenu.TabIndex = 4
         '
         'drinks_panmenu1
         '
-        Me.drinks_panmenu1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.drinks_panmenu1.Controls.Add(Me.Button24)
-        Me.drinks_panmenu1.Controls.Add(Me.Button23)
-        Me.drinks_panmenu1.Controls.Add(Me.Button22)
+        Me.drinks_panmenu1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.drinks_panmenu1.Controls.Add(Me.Button21)
+        Me.drinks_panmenu1.Controls.Add(Me.Button22)
+        Me.drinks_panmenu1.Controls.Add(Me.Button23)
+        Me.drinks_panmenu1.Controls.Add(Me.Button24)
+        Me.drinks_panmenu1.Controls.Add(Me.Button29)
+        Me.drinks_panmenu1.Controls.Add(Me.Button30)
+        Me.drinks_panmenu1.Controls.Add(Me.Button31)
+        Me.drinks_panmenu1.Controls.Add(Me.Button32)
+        Me.drinks_panmenu1.Controls.Add(Me.Button43)
+        Me.drinks_panmenu1.Controls.Add(Me.Button44)
+        Me.drinks_panmenu1.Controls.Add(Me.Label1)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox22)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox23)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox24)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox25)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox26)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox27)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox28)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox29)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox30)
+        Me.drinks_panmenu1.Controls.Add(Me.PictureBox31)
+        Me.drinks_panmenu1.Controls.Add(Me.Button45)
+        Me.drinks_panmenu1.Controls.Add(Me.Button46)
+        Me.drinks_panmenu1.Controls.Add(Me.Button47)
+        Me.drinks_panmenu1.Controls.Add(Me.Button48)
+        Me.drinks_panmenu1.Controls.Add(Me.Button49)
+        Me.drinks_panmenu1.Controls.Add(Me.Button50)
+        Me.drinks_panmenu1.Controls.Add(Me.Button51)
+        Me.drinks_panmenu1.Controls.Add(Me.Button52)
+        Me.drinks_panmenu1.Controls.Add(Me.Button53)
+        Me.drinks_panmenu1.Controls.Add(Me.Button54)
+        Me.drinks_panmenu1.Controls.Add(Me.Button42)
+        Me.drinks_panmenu1.Controls.Add(Me.Button28)
+        Me.drinks_panmenu1.Controls.Add(Me.Button26)
+        Me.drinks_panmenu1.Controls.Add(Me.Button41)
+        Me.drinks_panmenu1.Controls.Add(Me.Button27)
         Me.drinks_panmenu1.Controls.Add(Me.Button6)
+        Me.drinks_panmenu1.Controls.Add(Me.Button25)
+        Me.drinks_panmenu1.Controls.Add(Me.Button1)
         Me.drinks_panmenu1.Controls.Add(Me.Button3)
         Me.drinks_panmenu1.Controls.Add(Me.Button2)
-        Me.drinks_panmenu1.Controls.Add(Me.Button1)
-        Me.drinks_panmenu1.Location = New System.Drawing.Point(0, 0)
+        Me.drinks_panmenu1.Location = New System.Drawing.Point(0, -1)
+        Me.drinks_panmenu1.Margin = New System.Windows.Forms.Padding(0)
         Me.drinks_panmenu1.Name = "drinks_panmenu1"
-        Me.drinks_panmenu1.Size = New System.Drawing.Size(1524, 194)
+        Me.drinks_panmenu1.Size = New System.Drawing.Size(2274, 206)
         Me.drinks_panmenu1.TabIndex = 0
-        '
-        'Button24
-        '
-        Me.Button24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button24.Location = New System.Drawing.Point(1338, 20)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(160, 152)
-        Me.Button24.TabIndex = 29
-        Me.Button24.Text = "Button24"
-        Me.Button24.UseVisualStyleBackColor = True
-        '
-        'Button23
-        '
-        Me.Button23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button23.Location = New System.Drawing.Point(1156, 20)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(160, 152)
-        Me.Button23.TabIndex = 28
-        Me.Button23.Text = "Button23"
-        Me.Button23.UseVisualStyleBackColor = True
-        '
-        'Button22
-        '
-        Me.Button22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button22.Location = New System.Drawing.Point(970, 20)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(160, 152)
-        Me.Button22.TabIndex = 27
-        Me.Button22.Text = "Button22"
-        Me.Button22.UseVisualStyleBackColor = True
         '
         'Button21
         '
-        Me.Button21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button21.Location = New System.Drawing.Point(789, 20)
+        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button21.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button21.Location = New System.Drawing.Point(1374, 112)
         Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(160, 152)
-        Me.Button21.TabIndex = 26
-        Me.Button21.Text = "Button21"
-        Me.Button21.UseVisualStyleBackColor = True
+        Me.Button21.Size = New System.Drawing.Size(119, 74)
+        Me.Button21.TabIndex = 53
+        Me.Button21.Text = "Lychee"
+        Me.Button21.UseVisualStyleBackColor = False
+        '
+        'Button22
+        '
+        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button22.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button22.Location = New System.Drawing.Point(1233, 112)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(119, 74)
+        Me.Button22.TabIndex = 54
+        Me.Button22.Text = "Mango"
+        Me.Button22.UseVisualStyleBackColor = False
+        '
+        'Button23
+        '
+        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button23.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button23.Location = New System.Drawing.Point(1082, 112)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(119, 74)
+        Me.Button23.TabIndex = 55
+        Me.Button23.Text = " Strawberry"
+        Me.Button23.UseVisualStyleBackColor = False
+        '
+        'Button24
+        '
+        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button24.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button24.Location = New System.Drawing.Point(1374, 20)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(119, 74)
+        Me.Button24.TabIndex = 56
+        Me.Button24.Text = " Peach"
+        Me.Button24.UseVisualStyleBackColor = False
+        '
+        'Button29
+        '
+        Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button29.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button29.Location = New System.Drawing.Point(1233, 20)
+        Me.Button29.Name = "Button29"
+        Me.Button29.Size = New System.Drawing.Size(119, 74)
+        Me.Button29.TabIndex = 57
+        Me.Button29.Text = "Kiwi"
+        Me.Button29.UseVisualStyleBackColor = False
+        '
+        'Button30
+        '
+        Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button30.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button30.Location = New System.Drawing.Point(931, 112)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Size = New System.Drawing.Size(119, 74)
+        Me.Button30.TabIndex = 58
+        Me.Button30.Text = " Green Apple"
+        Me.Button30.UseVisualStyleBackColor = False
+        '
+        'Button31
+        '
+        Me.Button31.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button31.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button31.Location = New System.Drawing.Point(1082, 20)
+        Me.Button31.Name = "Button31"
+        Me.Button31.Size = New System.Drawing.Size(119, 74)
+        Me.Button31.TabIndex = 59
+        Me.Button31.Text = " Blueberry"
+        Me.Button31.UseVisualStyleBackColor = False
+        '
+        'Button32
+        '
+        Me.Button32.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button32.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button32.Location = New System.Drawing.Point(782, 112)
+        Me.Button32.Name = "Button32"
+        Me.Button32.Size = New System.Drawing.Size(119, 74)
+        Me.Button32.TabIndex = 60
+        Me.Button32.Text = "Oreo Wacko"
+        Me.Button32.UseVisualStyleBackColor = False
+        '
+        'Button43
+        '
+        Me.Button43.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button43.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button43.Location = New System.Drawing.Point(931, 20)
+        Me.Button43.Name = "Button43"
+        Me.Button43.Size = New System.Drawing.Size(119, 74)
+        Me.Button43.TabIndex = 61
+        Me.Button43.Text = "Oreo Wacko"
+        Me.Button43.UseVisualStyleBackColor = False
+        '
+        'Button44
+        '
+        Me.Button44.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button44.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button44.Location = New System.Drawing.Point(781, 20)
+        Me.Button44.Name = "Button44"
+        Me.Button44.Size = New System.Drawing.Size(119, 74)
+        Me.Button44.TabIndex = 62
+        Me.Button44.Text = "Winter Choco"
+        Me.Button44.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(-1562, 4)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 52
+        Me.Label1.Text = "Label1"
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox22.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox22.Location = New System.Drawing.Point(1559, 138)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox22.TabIndex = 51
+        Me.PictureBox22.TabStop = False
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox23.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox23.Location = New System.Drawing.Point(2151, 138)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox23.TabIndex = 49
+        Me.PictureBox23.TabStop = False
+        '
+        'PictureBox24
+        '
+        Me.PictureBox24.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox24.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox24.Location = New System.Drawing.Point(2010, 138)
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox24.TabIndex = 48
+        Me.PictureBox24.TabStop = False
+        '
+        'PictureBox25
+        '
+        Me.PictureBox25.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox25.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox25.Location = New System.Drawing.Point(1859, 138)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox25.TabIndex = 47
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox26
+        '
+        Me.PictureBox26.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox26.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox26.Location = New System.Drawing.Point(2151, 17)
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox26.TabIndex = 46
+        Me.PictureBox26.TabStop = False
+        '
+        'PictureBox27
+        '
+        Me.PictureBox27.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox27.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox27.Location = New System.Drawing.Point(1708, 138)
+        Me.PictureBox27.Name = "PictureBox27"
+        Me.PictureBox27.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox27.TabIndex = 45
+        Me.PictureBox27.TabStop = False
+        '
+        'PictureBox28
+        '
+        Me.PictureBox28.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox28.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox28.Location = New System.Drawing.Point(2010, 17)
+        Me.PictureBox28.Name = "PictureBox28"
+        Me.PictureBox28.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox28.TabIndex = 44
+        Me.PictureBox28.TabStop = False
+        '
+        'PictureBox29
+        '
+        Me.PictureBox29.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox29.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox29.Location = New System.Drawing.Point(1859, 17)
+        Me.PictureBox29.Name = "PictureBox29"
+        Me.PictureBox29.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox29.TabIndex = 43
+        Me.PictureBox29.TabStop = False
+        '
+        'PictureBox30
+        '
+        Me.PictureBox30.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox30.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox30.Location = New System.Drawing.Point(1708, 17)
+        Me.PictureBox30.Name = "PictureBox30"
+        Me.PictureBox30.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox30.TabIndex = 50
+        Me.PictureBox30.TabStop = False
+        '
+        'PictureBox31
+        '
+        Me.PictureBox31.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PictureBox31.Image = Global.teablendcafe.My.Resources.Resources.interlaced2
+        Me.PictureBox31.Location = New System.Drawing.Point(1558, 17)
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.Size = New System.Drawing.Size(87, 83)
+        Me.PictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox31.TabIndex = 42
+        Me.PictureBox31.TabStop = False
+        '
+        'Button45
+        '
+        Me.Button45.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button45.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button45.Location = New System.Drawing.Point(2136, 219)
+        Me.Button45.Name = "Button45"
+        Me.Button45.Size = New System.Drawing.Size(119, 28)
+        Me.Button45.TabIndex = 40
+        Me.Button45.Text = "Zesty Dew"
+        Me.Button45.UseVisualStyleBackColor = False
+        '
+        'Button46
+        '
+        Me.Button46.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button46.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button46.Location = New System.Drawing.Point(1995, 219)
+        Me.Button46.Name = "Button46"
+        Me.Button46.Size = New System.Drawing.Size(119, 28)
+        Me.Button46.TabIndex = 39
+        Me.Button46.Text = "Taro Treat"
+        Me.Button46.UseVisualStyleBackColor = False
+        '
+        'Button47
+        '
+        Me.Button47.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button47.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button47.Location = New System.Drawing.Point(1844, 219)
+        Me.Button47.Name = "Button47"
+        Me.Button47.Size = New System.Drawing.Size(119, 28)
+        Me.Button47.TabIndex = 38
+        Me.Button47.Text = "Tropical Mango"
+        Me.Button47.UseVisualStyleBackColor = False
+        '
+        'Button48
+        '
+        Me.Button48.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button48.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button48.Location = New System.Drawing.Point(2136, 98)
+        Me.Button48.Name = "Button48"
+        Me.Button48.Size = New System.Drawing.Size(119, 28)
+        Me.Button48.TabIndex = 37
+        Me.Button48.Text = "Melon Swirl"
+        Me.Button48.UseVisualStyleBackColor = False
+        '
+        'Button49
+        '
+        Me.Button49.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button49.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button49.Location = New System.Drawing.Point(1995, 98)
+        Me.Button49.Name = "Button49"
+        Me.Button49.Size = New System.Drawing.Size(119, 28)
+        Me.Button49.TabIndex = 36
+        Me.Button49.Text = "Vanilla Cloud"
+        Me.Button49.UseVisualStyleBackColor = False
+        '
+        'Button50
+        '
+        Me.Button50.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button50.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button50.Location = New System.Drawing.Point(1693, 219)
+        Me.Button50.Name = "Button50"
+        Me.Button50.Size = New System.Drawing.Size(119, 28)
+        Me.Button50.TabIndex = 35
+        Me.Button50.Text = "Strawberry Blush"
+        Me.Button50.UseVisualStyleBackColor = False
+        '
+        'Button51
+        '
+        Me.Button51.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button51.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button51.Location = New System.Drawing.Point(1844, 98)
+        Me.Button51.Name = "Button51"
+        Me.Button51.Size = New System.Drawing.Size(119, 28)
+        Me.Button51.TabIndex = 34
+        Me.Button51.Text = "Peachy Keen"
+        Me.Button51.UseVisualStyleBackColor = False
+        '
+        'Button52
+        '
+        Me.Button52.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button52.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button52.Location = New System.Drawing.Point(1544, 219)
+        Me.Button52.Name = "Button52"
+        Me.Button52.Size = New System.Drawing.Size(119, 28)
+        Me.Button52.TabIndex = 33
+        Me.Button52.Text = "Choco Loco"
+        Me.Button52.UseVisualStyleBackColor = False
+        '
+        'Button53
+        '
+        Me.Button53.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button53.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button53.Location = New System.Drawing.Point(1693, 98)
+        Me.Button53.Name = "Button53"
+        Me.Button53.Size = New System.Drawing.Size(119, 28)
+        Me.Button53.TabIndex = 41
+        Me.Button53.Text = "Purple Brew"
+        Me.Button53.UseVisualStyleBackColor = False
+        '
+        'Button54
+        '
+        Me.Button54.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button54.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button54.Location = New System.Drawing.Point(1543, 98)
+        Me.Button54.Name = "Button54"
+        Me.Button54.Size = New System.Drawing.Size(119, 28)
+        Me.Button54.TabIndex = 32
+        Me.Button54.Text = "Melon Swirl"
+        Me.Button54.UseVisualStyleBackColor = False
+        '
+        'Button42
+        '
+        Me.Button42.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button42.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button42.Location = New System.Drawing.Point(612, 111)
+        Me.Button42.Name = "Button42"
+        Me.Button42.Size = New System.Drawing.Size(119, 74)
+        Me.Button42.TabIndex = 0
+        Me.Button42.Text = "Zesty Dew"
+        Me.Button42.UseVisualStyleBackColor = False
+        '
+        'Button28
+        '
+        Me.Button28.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button28.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button28.Location = New System.Drawing.Point(471, 111)
+        Me.Button28.Name = "Button28"
+        Me.Button28.Size = New System.Drawing.Size(119, 74)
+        Me.Button28.TabIndex = 0
+        Me.Button28.Text = "Taro Treat"
+        Me.Button28.UseVisualStyleBackColor = False
+        '
+        'Button26
+        '
+        Me.Button26.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button26.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button26.Location = New System.Drawing.Point(320, 111)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Size = New System.Drawing.Size(119, 74)
+        Me.Button26.TabIndex = 0
+        Me.Button26.Text = "Tropical Mango"
+        Me.Button26.UseVisualStyleBackColor = False
+        '
+        'Button41
+        '
+        Me.Button41.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button41.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button41.Location = New System.Drawing.Point(612, 19)
+        Me.Button41.Name = "Button41"
+        Me.Button41.Size = New System.Drawing.Size(119, 74)
+        Me.Button41.TabIndex = 0
+        Me.Button41.Text = "Melon Swirl"
+        Me.Button41.UseVisualStyleBackColor = False
+        '
+        'Button27
+        '
+        Me.Button27.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button27.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button27.Location = New System.Drawing.Point(471, 19)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Size = New System.Drawing.Size(119, 74)
+        Me.Button27.TabIndex = 0
+        Me.Button27.Text = "Vanilla Cloud"
+        Me.Button27.UseVisualStyleBackColor = False
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(576, 20)
+        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button6.Location = New System.Drawing.Point(169, 111)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(160, 152)
-        Me.Button6.TabIndex = 3
-        Me.Button6.Text = "Button6"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.Size = New System.Drawing.Size(119, 74)
+        Me.Button6.TabIndex = 0
+        Me.Button6.Text = "Strawberry Blush"
+        Me.Button6.UseVisualStyleBackColor = False
         '
-        'Button3
+        'Button25
         '
-        Me.Button3.Location = New System.Drawing.Point(394, 20)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(160, 152)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(208, 20)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(160, 152)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button25.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button25.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button25.Location = New System.Drawing.Point(320, 19)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(119, 74)
+        Me.Button25.TabIndex = 0
+        Me.Button25.Text = "Peachy Keen"
+        Me.Button25.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(27, 20)
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button1.Location = New System.Drawing.Point(20, 111)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(160, 152)
+        Me.Button1.Size = New System.Drawing.Size(119, 74)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Choco Loco"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button3.Location = New System.Drawing.Point(169, 19)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(119, 74)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "Purple Brew"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button2.Location = New System.Drawing.Point(19, 19)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(119, 74)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "Melon Swirl"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'drinks_panemenubtn2
         '
         Me.drinks_panemenubtn2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.drinks_panemenubtn2.Location = New System.Drawing.Point(394, 238)
+        Me.drinks_panemenubtn2.Location = New System.Drawing.Point(381, 254)
         Me.drinks_panemenubtn2.Name = "drinks_panemenubtn2"
         Me.drinks_panemenubtn2.Size = New System.Drawing.Size(27, 22)
         Me.drinks_panemenubtn2.TabIndex = 3
@@ -530,105 +1629,11 @@ Partial Class frmMain
         'drinks_panemenubtn1
         '
         Me.drinks_panemenubtn1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.drinks_panemenubtn1.Location = New System.Drawing.Point(361, 238)
+        Me.drinks_panemenubtn1.Location = New System.Drawing.Point(328, 254)
         Me.drinks_panemenubtn1.Name = "drinks_panemenubtn1"
         Me.drinks_panemenubtn1.Size = New System.Drawing.Size(27, 22)
         Me.drinks_panemenubtn1.TabIndex = 3
         Me.drinks_panemenubtn1.UseVisualStyleBackColor = False
-        '
-        'main_menuPanel
-        '
-        Me.main_menuPanel.Controls.Add(Me.Button20)
-        Me.main_menuPanel.Controls.Add(Me.Button19)
-        Me.main_menuPanel.Controls.Add(Me.Button17)
-        Me.main_menuPanel.Controls.Add(Me.Button18)
-        Me.main_menuPanel.Location = New System.Drawing.Point(23, 505)
-        Me.main_menuPanel.Name = "main_menuPanel"
-        Me.main_menuPanel.Size = New System.Drawing.Size(741, 171)
-        Me.main_menuPanel.TabIndex = 2
-        '
-        'Button20
-        '
-        Me.Button20.Location = New System.Drawing.Point(564, 10)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(160, 152)
-        Me.Button20.TabIndex = 3
-        Me.Button20.Text = "Button6"
-        Me.Button20.UseVisualStyleBackColor = True
-        '
-        'Button19
-        '
-        Me.Button19.Location = New System.Drawing.Point(382, 10)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(160, 152)
-        Me.Button19.TabIndex = 2
-        Me.Button19.Text = "Button3"
-        Me.Button19.UseVisualStyleBackColor = True
-        '
-        'Button17
-        '
-        Me.Button17.Location = New System.Drawing.Point(196, 10)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(160, 152)
-        Me.Button17.TabIndex = 1
-        Me.Button17.Text = "Button2"
-        Me.Button17.UseVisualStyleBackColor = True
-        '
-        'Button18
-        '
-        Me.Button18.Location = New System.Drawing.Point(15, 10)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(160, 152)
-        Me.Button18.TabIndex = 0
-        Me.Button18.Text = "Button1"
-        Me.Button18.UseVisualStyleBackColor = True
-        '
-        'sub_menuPanel
-        '
-        Me.sub_menuPanel.Controls.Add(Me.Button16)
-        Me.sub_menuPanel.Controls.Add(Me.Button11)
-        Me.sub_menuPanel.Controls.Add(Me.Button7)
-        Me.sub_menuPanel.Controls.Add(Me.Button8)
-        Me.sub_menuPanel.Location = New System.Drawing.Point(23, 270)
-        Me.sub_menuPanel.Name = "sub_menuPanel"
-        Me.sub_menuPanel.Size = New System.Drawing.Size(741, 171)
-        Me.sub_menuPanel.TabIndex = 1
-        '
-        'Button16
-        '
-        Me.Button16.Location = New System.Drawing.Point(564, 11)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(160, 152)
-        Me.Button16.TabIndex = 3
-        Me.Button16.Text = "Button6"
-        Me.Button16.UseVisualStyleBackColor = True
-        '
-        'Button11
-        '
-        Me.Button11.Location = New System.Drawing.Point(382, 11)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(160, 152)
-        Me.Button11.TabIndex = 2
-        Me.Button11.Text = "Button3"
-        Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(15, 11)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(160, 152)
-        Me.Button7.TabIndex = 0
-        Me.Button7.Text = "Button1"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(196, 11)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(160, 152)
-        Me.Button8.TabIndex = 1
-        Me.Button8.Text = "Button2"
-        Me.Button8.UseVisualStyleBackColor = True
         '
         'panAccounts
         '
@@ -643,45 +1648,12 @@ Partial Class frmMain
         Me.panHome.BackColor = System.Drawing.Color.Transparent
         Me.panHome.BackgroundImage = Global.teablendcafe.My.Resources.Resources.logobgcropped
         Me.panHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.panHome.Controls.Add(Me.Panel2)
         Me.panHome.Controls.Add(Me.Panel1)
         Me.panHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.panHome.Location = New System.Drawing.Point(0, 0)
+        Me.panHome.Location = New System.Drawing.Point(0, 3)
         Me.panHome.Name = "panHome"
         Me.panHome.Size = New System.Drawing.Size(1366, 700)
         Me.panHome.TabIndex = 9
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.picLogout)
-        Me.Panel2.Controls.Add(Me.lbllogout)
-        Me.Panel2.Location = New System.Drawing.Point(1232, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(135, 48)
-        Me.Panel2.TabIndex = 13
-        Me.Panel2.Visible = False
-        '
-        'picLogout
-        '
-        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
-        Me.picLogout.Location = New System.Drawing.Point(4, 9)
-        Me.picLogout.Name = "picLogout"
-        Me.picLogout.Size = New System.Drawing.Size(40, 27)
-        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogout.TabIndex = 14
-        Me.picLogout.TabStop = False
-        '
-        'lbllogout
-        '
-        Me.lbllogout.AutoSize = True
-        Me.lbllogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbllogout.Location = New System.Drawing.Point(57, 15)
-        Me.lbllogout.Name = "lbllogout"
-        Me.lbllogout.Size = New System.Drawing.Size(40, 13)
-        Me.lbllogout.TabIndex = 0
-        Me.lbllogout.Text = "Logout"
-        Me.lbllogout.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Panel1
         '
@@ -865,6 +1837,14 @@ Partial Class frmMain
         '
         Me.tmrDrinks1.Interval = 10
         '
+        'tmrMain2
+        '
+        Me.tmrMain2.Interval = 10
+        '
+        'tmrSubmenu
+        '
+        Me.tmrSubmenu.Interval = 10
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -889,19 +1869,35 @@ Partial Class frmMain
         CType(Me.picHome, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panHeading.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panContent.ResumeLayout(False)
         Me.panMenu.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.menu.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.sub_panmenu1.ResumeLayout(False)
+        Me.main_panmenu.ResumeLayout(False)
+        Me.main_panmenu1.ResumeLayout(False)
         Me.Drinks_panmenu.ResumeLayout(False)
         Me.drinks_panmenu1.ResumeLayout(False)
-        Me.main_menuPanel.ResumeLayout(False)
-        Me.sub_menuPanel.ResumeLayout(False)
+        Me.drinks_panmenu1.PerformLayout()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panHome.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.panInventory.ResumeLayout(False)
@@ -960,25 +1956,103 @@ Partial Class frmMain
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Drinks_panmenu As Panel
     Friend WithEvents drinks_panmenu1 As Panel
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents drinks_panemenubtn2 As Button
     Friend WithEvents drinks_panemenubtn1 As Button
-    Friend WithEvents main_menuPanel As Panel
-    Friend WithEvents Button20 As Button
-    Friend WithEvents Button19 As Button
-    Friend WithEvents Button17 As Button
-    Friend WithEvents Button18 As Button
-    Friend WithEvents sub_menuPanel As Panel
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Button11 As Button
+    Friend WithEvents tmrDrinks1 As Timer
+    Friend WithEvents main_panmenu As Panel
+    Friend WithEvents main_panmenu1 As Panel
+    Friend WithEvents tmrMain2 As Timer
+    Friend WithEvents main_panemenubtn2 As Button
+    Friend WithEvents main_panemenubtn1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button42 As Button
+    Friend WithEvents Button28 As Button
+    Friend WithEvents Button26 As Button
+    Friend WithEvents Button41 As Button
+    Friend WithEvents Button27 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button25 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents drinks_panemenubtn3 As Button
+    Friend WithEvents PictureBox22 As PictureBox
+    Friend WithEvents PictureBox23 As PictureBox
+    Friend WithEvents PictureBox24 As PictureBox
+    Friend WithEvents PictureBox25 As PictureBox
+    Friend WithEvents PictureBox26 As PictureBox
+    Friend WithEvents PictureBox27 As PictureBox
+    Friend WithEvents PictureBox28 As PictureBox
+    Friend WithEvents PictureBox29 As PictureBox
+    Friend WithEvents PictureBox30 As PictureBox
+    Friend WithEvents PictureBox31 As PictureBox
+    Friend WithEvents Button45 As Button
+    Friend WithEvents Button46 As Button
+    Friend WithEvents Button47 As Button
+    Friend WithEvents Button48 As Button
+    Friend WithEvents Button49 As Button
+    Friend WithEvents Button50 As Button
+    Friend WithEvents Button51 As Button
+    Friend WithEvents Button52 As Button
+    Friend WithEvents Button53 As Button
+    Friend WithEvents Button54 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button33 As Button
+    Friend WithEvents Button34 As Button
+    Friend WithEvents Button35 As Button
+    Friend WithEvents Button36 As Button
+    Friend WithEvents Button37 As Button
+    Friend WithEvents Button38 As Button
+    Friend WithEvents Button39 As Button
+    Friend WithEvents Button40 As Button
+    Friend WithEvents Button55 As Button
+    Friend WithEvents Button56 As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
-    Friend WithEvents Button24 As Button
-    Friend WithEvents Button23 As Button
-    Friend WithEvents Button22 As Button
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Button16 As Button
+    Friend WithEvents Button17 As Button
+    Friend WithEvents Button18 As Button
+    Friend WithEvents Button19 As Button
+    Friend WithEvents Button20 As Button
+    Friend WithEvents Button57 As Button
+    Friend WithEvents Button58 As Button
     Friend WithEvents Button21 As Button
-    Friend WithEvents tmrDrinks1 As Timer
+    Friend WithEvents Button22 As Button
+    Friend WithEvents Button23 As Button
+    Friend WithEvents Button24 As Button
+    Friend WithEvents Button29 As Button
+    Friend WithEvents Button30 As Button
+    Friend WithEvents Button31 As Button
+    Friend WithEvents Button32 As Button
+    Friend WithEvents Button43 As Button
+    Friend WithEvents Button44 As Button
+    Friend WithEvents submenu_panmenu1 As Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents sub_panmenu1 As Panel
+    Friend WithEvents Button65 As Button
+    Friend WithEvents Button66 As Button
+    Friend WithEvents Button67 As Button
+    Friend WithEvents Button68 As Button
+    Friend WithEvents Button69 As Button
+    Friend WithEvents Button59 As Button
+    Friend WithEvents Button60 As Button
+    Friend WithEvents Button61 As Button
+    Friend WithEvents Button62 As Button
+    Friend WithEvents Button63 As Button
+    Friend WithEvents tmrSubmenu As Timer
+    Friend WithEvents submenu_panbtn2 As Button
 End Class

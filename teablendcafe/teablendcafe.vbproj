@@ -314,6 +314,30 @@
   <ItemGroup>
     <None Include="Resources\logout1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\milkteaslogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revised.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revised1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\milktealogolast.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interlaced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonshitmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interlaced1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interlaced2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

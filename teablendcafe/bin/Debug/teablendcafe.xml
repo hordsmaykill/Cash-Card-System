@@ -82,6 +82,11 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:teablendcafe.My.Resources.Resources.buttonshitmenu">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:teablendcafe.My.Resources.Resources.home_125">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -108,6 +113,21 @@ teablendcafe
 </summary>
 </member>
 <member name="P:teablendcafe.My.Resources.Resources.ikot221">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.interlaced">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.interlaced1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.interlaced2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -238,6 +258,26 @@ teablendcafe
 </summary>
 </member>
 <member name="P:teablendcafe.My.Resources.Resources.menuHover">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.milktealogolast">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.milkteaslogo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.revised">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.revised1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
