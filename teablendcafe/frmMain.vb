@@ -380,7 +380,7 @@ Public Class frmMain
 
         Select Case drinksLocation
             Case DRINKS_MENU1 ' btn 1
-                If drinksLocationX = -DRINKS_PANMENU_WIDTH Then
+                If drinksLocationX < 0 Then
                     drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
                     If drinks_panmenu1.Location.X = 0 Then
                         tmrDrinks1.Enabled = False
@@ -391,12 +391,28 @@ Public Class frmMain
             Case DRINKS_MENU2 'btn 2
                 If drinksLocationX = 0 Then
                     drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
+
+                    If drinks_panmenu1.Location.X = -DRINKS_PANMENU_WIDTH Then
+                        tmrDrinks1.Enabled = False
+                    End If
+
+                ElseIf drinksLocationX = -(MAIN_PANMENU_WIDTH * 2)
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
+
                     If drinks_panmenu1.Location.X = -DRINKS_PANMENU_WIDTH Then
                         tmrDrinks1.Enabled = False
                     End If
                 End If
 
 
+
+            Case DRINKS_MENU3 ' btn 3
+                If drinksLocationX > -(DRINKS_PANMENU_WIDTH * 2) Then
+                    drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X - DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
+                    If drinks_panmenu1.Location.X = -(DRINKS_PANMENU_WIDTH * 2) Then
+                        tmrDrinks1.Enabled = False
+                    End If
+                End If
 
         End Select
 
