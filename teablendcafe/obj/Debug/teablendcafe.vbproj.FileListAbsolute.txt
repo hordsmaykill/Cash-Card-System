@@ -87,3 +87,7 @@ C:\Users\Kizaku\Desktop\teablendcafemainmain_2\teablendcafe\teablendcafe\bin\Deb
 C:\Users\Kizaku\Desktop\teablendcafemainmain_2\teablendcafe\teablendcafe\bin\Debug\teablendcafe.pdb
 C:\Users\Kizaku\Desktop\teablendcafemainmain_2\teablendcafe\teablendcafe\bin\Debug\teablendcafe.xml
 C:\Users\Kizaku\Desktop\teablendcafemainmain_2\teablendcafe\teablendcafe\bin\Debug\MySql.Data.dll
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\bin\Debug\teablendcafe.exe.config
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.exe
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.xml
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.pdb
