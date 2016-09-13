@@ -55,7 +55,7 @@ Partial Class frmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.dgvorders = New System.Windows.Forms.DataGridView()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -94,28 +94,48 @@ Partial Class frmMain
         Me.Button56 = New System.Windows.Forms.Button()
         Me.Drinks_panmenu = New System.Windows.Forms.Panel()
         Me.drinks_panmenu1 = New System.Windows.Forms.Panel()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.menu_d_wc_G = New System.Windows.Forms.Button()
+        Me.menu_d_wc_V = New System.Windows.Forms.Button()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.menu_d_zd_G = New System.Windows.Forms.Button()
+        Me.menu_d_zd_V = New System.Windows.Forms.Button()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.menu_d_vc_G = New System.Windows.Forms.Button()
+        Me.menu_d_vc_V = New System.Windows.Forms.Button()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.menu_d_tt_G = New System.Windows.Forms.Button()
+        Me.menu_d_tt_V = New System.Windows.Forms.Button()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.menu_d_tm_G = New System.Windows.Forms.Button()
+        Me.menu_d_tm_V = New System.Windows.Forms.Button()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.menu_d_pk_G = New System.Windows.Forms.Button()
+        Me.menu_d_pk_V = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.menu_d_cl_V = New System.Windows.Forms.Button()
+        Me.menu_d_cl_G = New System.Windows.Forms.Button()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.menu_d_sb_V = New System.Windows.Forms.Button()
+        Me.menu_d_sb_G = New System.Windows.Forms.Button()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.menu_d_pb_G = New System.Windows.Forms.Button()
+        Me.menu_d_pb_V = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.menu_d_ms_V = New System.Windows.Forms.Button()
+        Me.menu_d_ms_G = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.Button24 = New System.Windows.Forms.Button()
-        Me.Button29 = New System.Windows.Forms.Button()
-        Me.Button30 = New System.Windows.Forms.Button()
-        Me.Button31 = New System.Windows.Forms.Button()
-        Me.Button32 = New System.Windows.Forms.Button()
-        Me.Button43 = New System.Windows.Forms.Button()
-        Me.Button44 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button42 = New System.Windows.Forms.Button()
-        Me.Button28 = New System.Windows.Forms.Button()
-        Me.Button26 = New System.Windows.Forms.Button()
-        Me.Button41 = New System.Windows.Forms.Button()
-        Me.Button27 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button25 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.drinks_panemenubtn2 = New System.Windows.Forms.Button()
         Me.drinks_panemenubtn1 = New System.Windows.Forms.Button()
         Me.panAccounts = New System.Windows.Forms.Panel()
@@ -145,6 +165,46 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.menu_d_ow_G = New System.Windows.Forms.Button()
+        Me.menu_d_ow_V = New System.Windows.Forms.Button()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.menu_d_gat_G = New System.Windows.Forms.Button()
+        Me.menu_d_gat_V = New System.Windows.Forms.Button()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.menu_d_bbt_G = New System.Windows.Forms.Button()
+        Me.menu_d_bbt_V = New System.Windows.Forms.Button()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.menu_d_sbt_G = New System.Windows.Forms.Button()
+        Me.menu_d_sbt_V = New System.Windows.Forms.Button()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.menu_d_kt_G = New System.Windows.Forms.Button()
+        Me.menu_d_kt_V = New System.Windows.Forms.Button()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.menu_d_mt_G = New System.Windows.Forms.Button()
+        Me.menu_d_mt_V = New System.Windows.Forms.Button()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.menu_d_pt_G = New System.Windows.Forms.Button()
+        Me.menu_d_pt_V = New System.Windows.Forms.Button()
+        Me.Panel21 = New System.Windows.Forms.Panel()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.menu_d_lt_G = New System.Windows.Forms.Button()
+        Me.menu_d_lt_V = New System.Windows.Forms.Button()
+        Me.Panel22 = New System.Windows.Forms.Panel()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.menu_d_lemont_G = New System.Windows.Forms.Button()
+        Me.menu_d_lemont_V = New System.Windows.Forms.Button()
+        Me.Panel23 = New System.Windows.Forms.Panel()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.menu_d_wm_G = New System.Windows.Forms.Button()
+        Me.menu_d_wm_V = New System.Windows.Forms.Button()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
         CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,7 +221,7 @@ Partial Class frmMain
         Me.panContent.SuspendLayout()
         Me.panMenu.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvorders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panmenumenu.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.sub_panmenu1.SuspendLayout()
@@ -169,11 +229,31 @@ Partial Class frmMain
         Me.main_panmenu1.SuspendLayout()
         Me.Drinks_panmenu.SuspendLayout()
         Me.drinks_panmenu1.SuspendLayout()
+        Me.Panel13.SuspendLayout()
+        Me.Panel12.SuspendLayout()
+        Me.Panel11.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        Me.Panel9.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.panHome.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.panInventory.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panWrapper.SuspendLayout()
+        Me.Panel14.SuspendLayout()
+        Me.Panel15.SuspendLayout()
+        Me.Panel16.SuspendLayout()
+        Me.Panel17.SuspendLayout()
+        Me.Panel18.SuspendLayout()
+        Me.Panel19.SuspendLayout()
+        Me.Panel20.SuspendLayout()
+        Me.Panel21.SuspendLayout()
+        Me.Panel22.SuspendLayout()
+        Me.Panel23.SuspendLayout()
         Me.SuspendLayout()
         '
         'panSideMenu
@@ -410,7 +490,7 @@ Partial Class frmMain
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.Panel2.Controls.Add(Me.picLogout)
         Me.Panel2.Controls.Add(Me.lbllogout)
-        Me.Panel2.Location = New System.Drawing.Point(1175, 12)
+        Me.Panel2.Location = New System.Drawing.Point(1174, 12)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(135, 45)
         Me.Panel2.TabIndex = 13
@@ -502,7 +582,7 @@ Partial Class frmMain
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.DataGridView2)
+        Me.GroupBox1.Controls.Add(Me.dgvorders)
         Me.GroupBox1.Location = New System.Drawing.Point(803, 1)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(554, 697)
@@ -512,7 +592,7 @@ Partial Class frmMain
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(263, 16)
+        Me.Label9.Location = New System.Drawing.Point(247, 16)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(53, 13)
         Me.Label9.TabIndex = 43
@@ -581,14 +661,14 @@ Partial Class frmMain
         Me.Label2.TabIndex = 36
         Me.Label2.Text = "Label2"
         '
-        'DataGridView2
+        'dgvorders
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        Me.DataGridView2.Location = New System.Drawing.Point(4, 38)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(544, 385)
-        Me.DataGridView2.TabIndex = 35
+        Me.dgvorders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvorders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column7, Me.Column8, Me.Column9})
+        Me.dgvorders.Location = New System.Drawing.Point(4, 38)
+        Me.dgvorders.Name = "dgvorders"
+        Me.dgvorders.Size = New System.Drawing.Size(544, 385)
+        Me.dgvorders.TabIndex = 35
         '
         'Column6
         '
@@ -988,33 +1068,473 @@ Partial Class frmMain
         'drinks_panmenu1
         '
         Me.drinks_panmenu1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.drinks_panmenu1.Controls.Add(Me.Panel23)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel21)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel22)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel20)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel17)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel19)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel16)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel18)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel15)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel14)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel13)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel12)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel11)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel10)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel9)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel8)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel5)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel7)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel6)
+        Me.drinks_panmenu1.Controls.Add(Me.Panel4)
         Me.drinks_panmenu1.Controls.Add(Me.Button7)
-        Me.drinks_panmenu1.Controls.Add(Me.Button21)
-        Me.drinks_panmenu1.Controls.Add(Me.Button22)
-        Me.drinks_panmenu1.Controls.Add(Me.Button23)
-        Me.drinks_panmenu1.Controls.Add(Me.Button24)
-        Me.drinks_panmenu1.Controls.Add(Me.Button29)
-        Me.drinks_panmenu1.Controls.Add(Me.Button30)
-        Me.drinks_panmenu1.Controls.Add(Me.Button31)
-        Me.drinks_panmenu1.Controls.Add(Me.Button32)
-        Me.drinks_panmenu1.Controls.Add(Me.Button43)
-        Me.drinks_panmenu1.Controls.Add(Me.Button44)
         Me.drinks_panmenu1.Controls.Add(Me.Label1)
-        Me.drinks_panmenu1.Controls.Add(Me.Button42)
-        Me.drinks_panmenu1.Controls.Add(Me.Button28)
-        Me.drinks_panmenu1.Controls.Add(Me.Button26)
-        Me.drinks_panmenu1.Controls.Add(Me.Button41)
-        Me.drinks_panmenu1.Controls.Add(Me.Button27)
-        Me.drinks_panmenu1.Controls.Add(Me.Button6)
-        Me.drinks_panmenu1.Controls.Add(Me.Button25)
-        Me.drinks_panmenu1.Controls.Add(Me.Button1)
-        Me.drinks_panmenu1.Controls.Add(Me.Button3)
-        Me.drinks_panmenu1.Controls.Add(Me.Button2)
         Me.drinks_panmenu1.Location = New System.Drawing.Point(0, 0)
         Me.drinks_panmenu1.Margin = New System.Windows.Forms.Padding(0)
         Me.drinks_panmenu1.Name = "drinks_panmenu1"
         Me.drinks_panmenu1.Size = New System.Drawing.Size(2286, 202)
         Me.drinks_panmenu1.TabIndex = 0
+        '
+        'Panel13
+        '
+        Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel13.Controls.Add(Me.Label19)
+        Me.Panel13.Controls.Add(Me.menu_d_wc_G)
+        Me.Panel13.Controls.Add(Me.menu_d_wc_V)
+        Me.Panel13.Location = New System.Drawing.Point(602, 107)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(136, 84)
+        Me.Panel13.TabIndex = 65
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label19.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label19.Location = New System.Drawing.Point(8, 7)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(125, 24)
+        Me.Label19.TabIndex = 1
+        Me.Label19.Text = "Winter Choco"
+        '
+        'menu_d_wc_G
+        '
+        Me.menu_d_wc_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_wc_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_wc_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_wc_G.Name = "menu_d_wc_G"
+        Me.menu_d_wc_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_wc_G.TabIndex = 0
+        Me.menu_d_wc_G.Text = "Grande"
+        Me.menu_d_wc_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_wc_V
+        '
+        Me.menu_d_wc_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_wc_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_wc_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_wc_V.Name = "menu_d_wc_V"
+        Me.menu_d_wc_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_wc_V.TabIndex = 0
+        Me.menu_d_wc_V.Text = "Venti"
+        Me.menu_d_wc_V.UseVisualStyleBackColor = False
+        '
+        'Panel12
+        '
+        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel12.Controls.Add(Me.Label18)
+        Me.Panel12.Controls.Add(Me.menu_d_zd_G)
+        Me.Panel12.Controls.Add(Me.menu_d_zd_V)
+        Me.Panel12.Location = New System.Drawing.Point(602, 10)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(136, 84)
+        Me.Panel12.TabIndex = 65
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label18.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label18.Location = New System.Drawing.Point(21, 7)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(98, 24)
+        Me.Label18.TabIndex = 1
+        Me.Label18.Text = "Zesty Dew"
+        '
+        'menu_d_zd_G
+        '
+        Me.menu_d_zd_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_zd_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_zd_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_zd_G.Name = "menu_d_zd_G"
+        Me.menu_d_zd_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_zd_G.TabIndex = 0
+        Me.menu_d_zd_G.Text = "Grande"
+        Me.menu_d_zd_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_zd_V
+        '
+        Me.menu_d_zd_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_zd_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_zd_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_zd_V.Name = "menu_d_zd_V"
+        Me.menu_d_zd_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_zd_V.TabIndex = 0
+        Me.menu_d_zd_V.Text = "Venti"
+        Me.menu_d_zd_V.UseVisualStyleBackColor = False
+        '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel11.Controls.Add(Me.Label17)
+        Me.Panel11.Controls.Add(Me.menu_d_vc_G)
+        Me.Panel11.Controls.Add(Me.menu_d_vc_V)
+        Me.Panel11.Location = New System.Drawing.Point(455, 10)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(136, 84)
+        Me.Panel11.TabIndex = 65
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label17.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label17.Location = New System.Drawing.Point(8, 7)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(121, 24)
+        Me.Label17.TabIndex = 1
+        Me.Label17.Text = "Vanilla Cloud"
+        '
+        'menu_d_vc_G
+        '
+        Me.menu_d_vc_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_vc_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_vc_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_vc_G.Name = "menu_d_vc_G"
+        Me.menu_d_vc_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_vc_G.TabIndex = 0
+        Me.menu_d_vc_G.Text = "Grande"
+        Me.menu_d_vc_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_vc_V
+        '
+        Me.menu_d_vc_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_vc_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_vc_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_vc_V.Name = "menu_d_vc_V"
+        Me.menu_d_vc_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_vc_V.TabIndex = 0
+        Me.menu_d_vc_V.Text = "Venti"
+        Me.menu_d_vc_V.UseVisualStyleBackColor = False
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel10.Controls.Add(Me.Label16)
+        Me.Panel10.Controls.Add(Me.menu_d_tt_G)
+        Me.Panel10.Controls.Add(Me.menu_d_tt_V)
+        Me.Panel10.Location = New System.Drawing.Point(455, 107)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(136, 84)
+        Me.Panel10.TabIndex = 65
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label16.Location = New System.Drawing.Point(18, 7)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(97, 24)
+        Me.Label16.TabIndex = 1
+        Me.Label16.Text = "Taro Treat"
+        '
+        'menu_d_tt_G
+        '
+        Me.menu_d_tt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_tt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_tt_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_tt_G.Name = "menu_d_tt_G"
+        Me.menu_d_tt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_tt_G.TabIndex = 0
+        Me.menu_d_tt_G.Text = "Grande"
+        Me.menu_d_tt_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_tt_V
+        '
+        Me.menu_d_tt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_tt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_tt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_tt_V.Name = "menu_d_tt_V"
+        Me.menu_d_tt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_tt_V.TabIndex = 0
+        Me.menu_d_tt_V.Text = "Venti"
+        Me.menu_d_tt_V.UseVisualStyleBackColor = False
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.Label15)
+        Me.Panel9.Controls.Add(Me.menu_d_tm_G)
+        Me.Panel9.Controls.Add(Me.menu_d_tm_V)
+        Me.Panel9.Location = New System.Drawing.Point(307, 107)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(136, 84)
+        Me.Panel9.TabIndex = 65
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label15.Location = New System.Drawing.Point(5, 8)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(126, 20)
+        Me.Label15.TabIndex = 1
+        Me.Label15.Text = "Trophical Mango"
+        '
+        'menu_d_tm_G
+        '
+        Me.menu_d_tm_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_tm_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_tm_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_tm_G.Name = "menu_d_tm_G"
+        Me.menu_d_tm_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_tm_G.TabIndex = 0
+        Me.menu_d_tm_G.Text = "Grande"
+        Me.menu_d_tm_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_tm_V
+        '
+        Me.menu_d_tm_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_tm_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_tm_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_tm_V.Name = "menu_d_tm_V"
+        Me.menu_d_tm_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_tm_V.TabIndex = 0
+        Me.menu_d_tm_V.Text = "Venti"
+        Me.menu_d_tm_V.UseVisualStyleBackColor = False
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.Label14)
+        Me.Panel8.Controls.Add(Me.menu_d_pk_G)
+        Me.Panel8.Controls.Add(Me.menu_d_pk_V)
+        Me.Panel8.Location = New System.Drawing.Point(307, 10)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(136, 84)
+        Me.Panel8.TabIndex = 65
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label14.Location = New System.Drawing.Point(8, 7)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(123, 24)
+        Me.Label14.TabIndex = 1
+        Me.Label14.Text = "Peachy Keen"
+        '
+        'menu_d_pk_G
+        '
+        Me.menu_d_pk_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pk_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_pk_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_pk_G.Name = "menu_d_pk_G"
+        Me.menu_d_pk_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pk_G.TabIndex = 0
+        Me.menu_d_pk_G.Text = "Grande"
+        Me.menu_d_pk_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_pk_V
+        '
+        Me.menu_d_pk_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pk_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_pk_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_pk_V.Name = "menu_d_pk_V"
+        Me.menu_d_pk_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pk_V.TabIndex = 0
+        Me.menu_d_pk_V.Text = "Venti"
+        Me.menu_d_pk_V.UseVisualStyleBackColor = False
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.Label11)
+        Me.Panel5.Controls.Add(Me.menu_d_cl_V)
+        Me.Panel5.Controls.Add(Me.menu_d_cl_G)
+        Me.Panel5.Location = New System.Drawing.Point(10, 107)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(136, 84)
+        Me.Panel5.TabIndex = 64
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label11.Location = New System.Drawing.Point(15, 7)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(107, 24)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "Choco loco"
+        '
+        'menu_d_cl_V
+        '
+        Me.menu_d_cl_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_cl_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_cl_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_cl_V.Name = "menu_d_cl_V"
+        Me.menu_d_cl_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_cl_V.TabIndex = 0
+        Me.menu_d_cl_V.Text = "Venti"
+        Me.menu_d_cl_V.UseVisualStyleBackColor = False
+        '
+        'menu_d_cl_G
+        '
+        Me.menu_d_cl_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_cl_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_cl_G.Location = New System.Drawing.Point(3, 35)
+        Me.menu_d_cl_G.Name = "menu_d_cl_G"
+        Me.menu_d_cl_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_cl_G.TabIndex = 0
+        Me.menu_d_cl_G.Text = "Grande"
+        Me.menu_d_cl_G.UseVisualStyleBackColor = False
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel7.Controls.Add(Me.Label13)
+        Me.Panel7.Controls.Add(Me.menu_d_sb_V)
+        Me.Panel7.Controls.Add(Me.menu_d_sb_G)
+        Me.Panel7.Location = New System.Drawing.Point(159, 107)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(136, 84)
+        Me.Panel7.TabIndex = 64
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label13.Location = New System.Drawing.Point(3, 8)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(129, 20)
+        Me.Label13.TabIndex = 1
+        Me.Label13.Text = "Strawberry Blush"
+        '
+        'menu_d_sb_V
+        '
+        Me.menu_d_sb_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_sb_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_sb_V.Location = New System.Drawing.Point(68, 35)
+        Me.menu_d_sb_V.Name = "menu_d_sb_V"
+        Me.menu_d_sb_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_sb_V.TabIndex = 0
+        Me.menu_d_sb_V.Text = "Venti"
+        Me.menu_d_sb_V.UseVisualStyleBackColor = False
+        '
+        'menu_d_sb_G
+        '
+        Me.menu_d_sb_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_sb_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_sb_G.Location = New System.Drawing.Point(3, 35)
+        Me.menu_d_sb_G.Name = "menu_d_sb_G"
+        Me.menu_d_sb_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_sb_G.TabIndex = 0
+        Me.menu_d_sb_G.Text = "Grande"
+        Me.menu_d_sb_G.UseVisualStyleBackColor = False
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.Label12)
+        Me.Panel6.Controls.Add(Me.menu_d_pb_G)
+        Me.Panel6.Controls.Add(Me.menu_d_pb_V)
+        Me.Panel6.Location = New System.Drawing.Point(159, 10)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(136, 84)
+        Me.Panel6.TabIndex = 64
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label12.Location = New System.Drawing.Point(13, 7)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(113, 24)
+        Me.Label12.TabIndex = 1
+        Me.Label12.Text = "Purple Brew"
+        '
+        'menu_d_pb_G
+        '
+        Me.menu_d_pb_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pb_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_pb_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_pb_G.Name = "menu_d_pb_G"
+        Me.menu_d_pb_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pb_G.TabIndex = 0
+        Me.menu_d_pb_G.Text = "Grande"
+        Me.menu_d_pb_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_pb_V
+        '
+        Me.menu_d_pb_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pb_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_pb_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_pb_V.Name = "menu_d_pb_V"
+        Me.menu_d_pb_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pb_V.TabIndex = 0
+        Me.menu_d_pb_V.Text = "Venti"
+        Me.menu_d_pb_V.UseVisualStyleBackColor = False
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Label10)
+        Me.Panel4.Controls.Add(Me.menu_d_ms_V)
+        Me.Panel4.Controls.Add(Me.menu_d_ms_G)
+        Me.Panel4.Location = New System.Drawing.Point(10, 10)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(136, 84)
+        Me.Panel4.TabIndex = 64
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label10.Location = New System.Drawing.Point(15, 7)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(108, 24)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "Melon Swirl"
+        '
+        'menu_d_ms_V
+        '
+        Me.menu_d_ms_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ms_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_ms_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_ms_V.Name = "menu_d_ms_V"
+        Me.menu_d_ms_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ms_V.TabIndex = 0
+        Me.menu_d_ms_V.Text = "Venti"
+        Me.menu_d_ms_V.UseVisualStyleBackColor = False
+        '
+        'menu_d_ms_G
+        '
+        Me.menu_d_ms_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ms_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_ms_G.Location = New System.Drawing.Point(3, 35)
+        Me.menu_d_ms_G.Name = "menu_d_ms_G"
+        Me.menu_d_ms_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ms_G.TabIndex = 0
+        Me.menu_d_ms_G.Text = "Grande"
+        Me.menu_d_ms_G.UseVisualStyleBackColor = False
         '
         'Button7
         '
@@ -1025,116 +1545,6 @@ Partial Class frmMain
         Me.Button7.Text = "Button7"
         Me.Button7.UseVisualStyleBackColor = True
         '
-        'Button21
-        '
-        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button21.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button21.Location = New System.Drawing.Point(1374, 112)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(119, 74)
-        Me.Button21.TabIndex = 53
-        Me.Button21.Text = "Lychee"
-        Me.Button21.UseVisualStyleBackColor = False
-        '
-        'Button22
-        '
-        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button22.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button22.Location = New System.Drawing.Point(1233, 112)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(119, 74)
-        Me.Button22.TabIndex = 54
-        Me.Button22.Text = "Mango"
-        Me.Button22.UseVisualStyleBackColor = False
-        '
-        'Button23
-        '
-        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button23.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button23.Location = New System.Drawing.Point(1082, 112)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(119, 74)
-        Me.Button23.TabIndex = 55
-        Me.Button23.Text = " Strawberry"
-        Me.Button23.UseVisualStyleBackColor = False
-        '
-        'Button24
-        '
-        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button24.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button24.Location = New System.Drawing.Point(1374, 20)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(119, 74)
-        Me.Button24.TabIndex = 56
-        Me.Button24.Text = " Peach"
-        Me.Button24.UseVisualStyleBackColor = False
-        '
-        'Button29
-        '
-        Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button29.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button29.Location = New System.Drawing.Point(1233, 20)
-        Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(119, 74)
-        Me.Button29.TabIndex = 57
-        Me.Button29.Text = "Kiwi"
-        Me.Button29.UseVisualStyleBackColor = False
-        '
-        'Button30
-        '
-        Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button30.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button30.Location = New System.Drawing.Point(931, 112)
-        Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(119, 74)
-        Me.Button30.TabIndex = 58
-        Me.Button30.Text = " Green Apple"
-        Me.Button30.UseVisualStyleBackColor = False
-        '
-        'Button31
-        '
-        Me.Button31.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button31.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button31.Location = New System.Drawing.Point(1082, 20)
-        Me.Button31.Name = "Button31"
-        Me.Button31.Size = New System.Drawing.Size(119, 74)
-        Me.Button31.TabIndex = 59
-        Me.Button31.Text = " Blueberry"
-        Me.Button31.UseVisualStyleBackColor = False
-        '
-        'Button32
-        '
-        Me.Button32.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button32.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button32.Location = New System.Drawing.Point(782, 112)
-        Me.Button32.Name = "Button32"
-        Me.Button32.Size = New System.Drawing.Size(119, 74)
-        Me.Button32.TabIndex = 60
-        Me.Button32.Text = "Oreo Wacko"
-        Me.Button32.UseVisualStyleBackColor = False
-        '
-        'Button43
-        '
-        Me.Button43.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button43.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button43.Location = New System.Drawing.Point(931, 20)
-        Me.Button43.Name = "Button43"
-        Me.Button43.Size = New System.Drawing.Size(119, 74)
-        Me.Button43.TabIndex = 61
-        Me.Button43.Text = "Oreo Wacko"
-        Me.Button43.UseVisualStyleBackColor = False
-        '
-        'Button44
-        '
-        Me.Button44.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button44.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button44.Location = New System.Drawing.Point(781, 20)
-        Me.Button44.Name = "Button44"
-        Me.Button44.Size = New System.Drawing.Size(119, 74)
-        Me.Button44.TabIndex = 62
-        Me.Button44.Text = "Winter Choco"
-        Me.Button44.UseVisualStyleBackColor = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -1143,116 +1553,6 @@ Partial Class frmMain
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 52
         Me.Label1.Text = "Label1"
-        '
-        'Button42
-        '
-        Me.Button42.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button42.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button42.Location = New System.Drawing.Point(612, 111)
-        Me.Button42.Name = "Button42"
-        Me.Button42.Size = New System.Drawing.Size(119, 74)
-        Me.Button42.TabIndex = 0
-        Me.Button42.Text = "Zesty Dew"
-        Me.Button42.UseVisualStyleBackColor = False
-        '
-        'Button28
-        '
-        Me.Button28.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button28.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button28.Location = New System.Drawing.Point(471, 111)
-        Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(119, 74)
-        Me.Button28.TabIndex = 0
-        Me.Button28.Text = "Taro Treat"
-        Me.Button28.UseVisualStyleBackColor = False
-        '
-        'Button26
-        '
-        Me.Button26.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button26.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button26.Location = New System.Drawing.Point(320, 111)
-        Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(119, 74)
-        Me.Button26.TabIndex = 0
-        Me.Button26.Text = "Tropical Mango"
-        Me.Button26.UseVisualStyleBackColor = False
-        '
-        'Button41
-        '
-        Me.Button41.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button41.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button41.Location = New System.Drawing.Point(612, 19)
-        Me.Button41.Name = "Button41"
-        Me.Button41.Size = New System.Drawing.Size(119, 74)
-        Me.Button41.TabIndex = 0
-        Me.Button41.Text = "Melon Swirl"
-        Me.Button41.UseVisualStyleBackColor = False
-        '
-        'Button27
-        '
-        Me.Button27.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button27.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button27.Location = New System.Drawing.Point(471, 19)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(119, 74)
-        Me.Button27.TabIndex = 0
-        Me.Button27.Text = "Vanilla Cloud"
-        Me.Button27.UseVisualStyleBackColor = False
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button6.Location = New System.Drawing.Point(169, 111)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(119, 74)
-        Me.Button6.TabIndex = 0
-        Me.Button6.Text = "Strawberry Blush"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'Button25
-        '
-        Me.Button25.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button25.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button25.Location = New System.Drawing.Point(320, 19)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(119, 74)
-        Me.Button25.TabIndex = 0
-        Me.Button25.Text = "Peachy Keen"
-        Me.Button25.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button1.Location = New System.Drawing.Point(20, 111)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(119, 74)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Choco Loco"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button3.Location = New System.Drawing.Point(169, 19)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(119, 74)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Purple Brew"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button2.Location = New System.Drawing.Point(19, 19)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(119, 74)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Melon Swirl"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'drinks_panemenubtn2
         '
@@ -1482,6 +1782,446 @@ Partial Class frmMain
         '
         Me.tmrSubmenu.Interval = 10
         '
+        'Panel14
+        '
+        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel14.Controls.Add(Me.Label20)
+        Me.Panel14.Controls.Add(Me.menu_d_ow_G)
+        Me.Panel14.Controls.Add(Me.menu_d_ow_V)
+        Me.Panel14.Location = New System.Drawing.Point(773, 10)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(136, 84)
+        Me.Panel14.TabIndex = 66
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label20.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label20.Location = New System.Drawing.Point(8, 7)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(116, 24)
+        Me.Label20.TabIndex = 1
+        Me.Label20.Text = "Oreo Wacko"
+        '
+        'menu_d_ow_G
+        '
+        Me.menu_d_ow_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ow_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_ow_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_ow_G.Name = "menu_d_ow_G"
+        Me.menu_d_ow_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ow_G.TabIndex = 0
+        Me.menu_d_ow_G.Text = "Grande"
+        Me.menu_d_ow_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_ow_V
+        '
+        Me.menu_d_ow_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ow_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_ow_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_ow_V.Name = "menu_d_ow_V"
+        Me.menu_d_ow_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ow_V.TabIndex = 0
+        Me.menu_d_ow_V.Text = "Venti"
+        Me.menu_d_ow_V.UseVisualStyleBackColor = False
+        '
+        'Panel15
+        '
+        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel15.Controls.Add(Me.Label21)
+        Me.Panel15.Controls.Add(Me.menu_d_gat_G)
+        Me.Panel15.Controls.Add(Me.menu_d_gat_V)
+        Me.Panel15.Location = New System.Drawing.Point(773, 104)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(136, 84)
+        Me.Panel15.TabIndex = 66
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label21.Location = New System.Drawing.Point(3, 8)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(130, 20)
+        Me.Label21.TabIndex = 1
+        Me.Label21.Text = "Green Apple Tea"
+        '
+        'menu_d_gat_G
+        '
+        Me.menu_d_gat_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_gat_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_gat_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_gat_G.Name = "menu_d_gat_G"
+        Me.menu_d_gat_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_gat_G.TabIndex = 0
+        Me.menu_d_gat_G.Text = "Grande"
+        Me.menu_d_gat_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_gat_V
+        '
+        Me.menu_d_gat_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_gat_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_gat_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_gat_V.Name = "menu_d_gat_V"
+        Me.menu_d_gat_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_gat_V.TabIndex = 0
+        Me.menu_d_gat_V.Text = "Venti"
+        Me.menu_d_gat_V.UseVisualStyleBackColor = False
+        '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel16.Controls.Add(Me.Label22)
+        Me.Panel16.Controls.Add(Me.menu_d_bbt_G)
+        Me.Panel16.Controls.Add(Me.menu_d_bbt_V)
+        Me.Panel16.Location = New System.Drawing.Point(921, 10)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(136, 84)
+        Me.Panel16.TabIndex = 66
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label22.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label22.Location = New System.Drawing.Point(1, 7)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(134, 24)
+        Me.Label22.TabIndex = 1
+        Me.Label22.Text = " Blueberry Tea"
+        '
+        'menu_d_bbt_G
+        '
+        Me.menu_d_bbt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_bbt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_bbt_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_bbt_G.Name = "menu_d_bbt_G"
+        Me.menu_d_bbt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_bbt_G.TabIndex = 0
+        Me.menu_d_bbt_G.Text = "Grande"
+        Me.menu_d_bbt_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_bbt_V
+        '
+        Me.menu_d_bbt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_bbt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_bbt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_bbt_V.Name = "menu_d_bbt_V"
+        Me.menu_d_bbt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_bbt_V.TabIndex = 0
+        Me.menu_d_bbt_V.Text = "Venti"
+        Me.menu_d_bbt_V.UseVisualStyleBackColor = False
+        '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel17.Controls.Add(Me.Label23)
+        Me.Panel17.Controls.Add(Me.menu_d_sbt_G)
+        Me.Panel17.Controls.Add(Me.menu_d_sbt_V)
+        Me.Panel17.Location = New System.Drawing.Point(921, 104)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(136, 84)
+        Me.Panel17.TabIndex = 66
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label23.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label23.Location = New System.Drawing.Point(0, 7)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(137, 24)
+        Me.Label23.TabIndex = 1
+        Me.Label23.Text = "Strawberry Tea"
+        '
+        'menu_d_sbt_G
+        '
+        Me.menu_d_sbt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_sbt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_sbt_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_sbt_G.Name = "menu_d_sbt_G"
+        Me.menu_d_sbt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_sbt_G.TabIndex = 0
+        Me.menu_d_sbt_G.Text = "Grande"
+        Me.menu_d_sbt_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_sbt_V
+        '
+        Me.menu_d_sbt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_sbt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_sbt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_sbt_V.Name = "menu_d_sbt_V"
+        Me.menu_d_sbt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_sbt_V.TabIndex = 0
+        Me.menu_d_sbt_V.Text = "Venti"
+        Me.menu_d_sbt_V.UseVisualStyleBackColor = False
+        '
+        'Panel18
+        '
+        Me.Panel18.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel18.Controls.Add(Me.Label24)
+        Me.Panel18.Controls.Add(Me.menu_d_kt_G)
+        Me.Panel18.Controls.Add(Me.menu_d_kt_V)
+        Me.Panel18.Location = New System.Drawing.Point(1067, 10)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(136, 84)
+        Me.Panel18.TabIndex = 66
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label24.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label24.Location = New System.Drawing.Point(25, 7)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(87, 24)
+        Me.Label24.TabIndex = 1
+        Me.Label24.Text = " Kiwi Tea"
+        '
+        'menu_d_kt_G
+        '
+        Me.menu_d_kt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_kt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_kt_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_kt_G.Name = "menu_d_kt_G"
+        Me.menu_d_kt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_kt_G.TabIndex = 0
+        Me.menu_d_kt_G.Text = "Grande"
+        Me.menu_d_kt_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_kt_V
+        '
+        Me.menu_d_kt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_kt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_kt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_kt_V.Name = "menu_d_kt_V"
+        Me.menu_d_kt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_kt_V.TabIndex = 0
+        Me.menu_d_kt_V.Text = "Venti"
+        Me.menu_d_kt_V.UseVisualStyleBackColor = False
+        '
+        'Panel19
+        '
+        Me.Panel19.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel19.Controls.Add(Me.Label25)
+        Me.Panel19.Controls.Add(Me.menu_d_mt_G)
+        Me.Panel19.Controls.Add(Me.menu_d_mt_V)
+        Me.Panel19.Location = New System.Drawing.Point(1067, 104)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(136, 84)
+        Me.Panel19.TabIndex = 66
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label25.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label25.Location = New System.Drawing.Point(16, 7)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(107, 24)
+        Me.Label25.TabIndex = 1
+        Me.Label25.Text = "Mango Tea"
+        '
+        'menu_d_mt_G
+        '
+        Me.menu_d_mt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_mt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_mt_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_mt_G.Name = "menu_d_mt_G"
+        Me.menu_d_mt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_mt_G.TabIndex = 0
+        Me.menu_d_mt_G.Text = "Grande"
+        Me.menu_d_mt_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_mt_V
+        '
+        Me.menu_d_mt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_mt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_mt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_mt_V.Name = "menu_d_mt_V"
+        Me.menu_d_mt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_mt_V.TabIndex = 0
+        Me.menu_d_mt_V.Text = "Venti"
+        Me.menu_d_mt_V.UseVisualStyleBackColor = False
+        '
+        'Panel20
+        '
+        Me.Panel20.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel20.Controls.Add(Me.Label26)
+        Me.Panel20.Controls.Add(Me.menu_d_pt_G)
+        Me.Panel20.Controls.Add(Me.menu_d_pt_V)
+        Me.Panel20.Location = New System.Drawing.Point(1215, 10)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(136, 84)
+        Me.Panel20.TabIndex = 66
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label26.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label26.Location = New System.Drawing.Point(18, 7)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(102, 24)
+        Me.Label26.TabIndex = 1
+        Me.Label26.Text = "Peach Tea"
+        '
+        'menu_d_pt_G
+        '
+        Me.menu_d_pt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_pt_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_pt_G.Name = "menu_d_pt_G"
+        Me.menu_d_pt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pt_G.TabIndex = 0
+        Me.menu_d_pt_G.Text = "Grande"
+        Me.menu_d_pt_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_pt_V
+        '
+        Me.menu_d_pt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_pt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_pt_V.Name = "menu_d_pt_V"
+        Me.menu_d_pt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pt_V.TabIndex = 0
+        Me.menu_d_pt_V.Text = "Venti"
+        Me.menu_d_pt_V.UseVisualStyleBackColor = False
+        '
+        'Panel21
+        '
+        Me.Panel21.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel21.Controls.Add(Me.Label27)
+        Me.Panel21.Controls.Add(Me.menu_d_lt_G)
+        Me.Panel21.Controls.Add(Me.menu_d_lt_V)
+        Me.Panel21.Location = New System.Drawing.Point(1215, 104)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(136, 84)
+        Me.Panel21.TabIndex = 66
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label27.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label27.Location = New System.Drawing.Point(15, 5)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(110, 24)
+        Me.Label27.TabIndex = 1
+        Me.Label27.Text = "Lychee Tea"
+        '
+        'menu_d_lt_G
+        '
+        Me.menu_d_lt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_lt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_lt_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_lt_G.Name = "menu_d_lt_G"
+        Me.menu_d_lt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_lt_G.TabIndex = 0
+        Me.menu_d_lt_G.Text = "Grande"
+        Me.menu_d_lt_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_lt_V
+        '
+        Me.menu_d_lt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_lt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_lt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_lt_V.Name = "menu_d_lt_V"
+        Me.menu_d_lt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_lt_V.TabIndex = 0
+        Me.menu_d_lt_V.Text = "Venti"
+        Me.menu_d_lt_V.UseVisualStyleBackColor = False
+        '
+        'Panel22
+        '
+        Me.Panel22.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel22.Controls.Add(Me.Label28)
+        Me.Panel22.Controls.Add(Me.menu_d_lemont_G)
+        Me.Panel22.Controls.Add(Me.menu_d_lemont_V)
+        Me.Panel22.Location = New System.Drawing.Point(1364, 10)
+        Me.Panel22.Name = "Panel22"
+        Me.Panel22.Size = New System.Drawing.Size(136, 84)
+        Me.Panel22.TabIndex = 66
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label28.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label28.Location = New System.Drawing.Point(17, 7)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(107, 24)
+        Me.Label28.TabIndex = 1
+        Me.Label28.Text = "Lemon Tea"
+        '
+        'menu_d_lemont_G
+        '
+        Me.menu_d_lemont_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_lemont_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_lemont_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_lemont_G.Name = "menu_d_lemont_G"
+        Me.menu_d_lemont_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_lemont_G.TabIndex = 0
+        Me.menu_d_lemont_G.Text = "Grande"
+        Me.menu_d_lemont_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_lemont_V
+        '
+        Me.menu_d_lemont_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_lemont_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_lemont_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_lemont_V.Name = "menu_d_lemont_V"
+        Me.menu_d_lemont_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_lemont_V.TabIndex = 0
+        Me.menu_d_lemont_V.Text = "Venti"
+        Me.menu_d_lemont_V.UseVisualStyleBackColor = False
+        '
+        'Panel23
+        '
+        Me.Panel23.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel23.Controls.Add(Me.Label29)
+        Me.Panel23.Controls.Add(Me.menu_d_wm_G)
+        Me.Panel23.Controls.Add(Me.menu_d_wm_V)
+        Me.Panel23.Location = New System.Drawing.Point(1364, 104)
+        Me.Panel23.Name = "Panel23"
+        Me.Panel23.Size = New System.Drawing.Size(136, 84)
+        Me.Panel23.TabIndex = 66
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label29.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label29.Location = New System.Drawing.Point(8, 7)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(122, 24)
+        Me.Label29.TabIndex = 1
+        Me.Label29.Text = "Winter Melon"
+        '
+        'menu_d_wm_G
+        '
+        Me.menu_d_wm_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_wm_G.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_wm_G.Location = New System.Drawing.Point(3, 36)
+        Me.menu_d_wm_G.Name = "menu_d_wm_G"
+        Me.menu_d_wm_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_wm_G.TabIndex = 0
+        Me.menu_d_wm_G.Text = "Grande"
+        Me.menu_d_wm_G.UseVisualStyleBackColor = False
+        '
+        'menu_d_wm_V
+        '
+        Me.menu_d_wm_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_wm_V.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menu_d_wm_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_wm_V.Name = "menu_d_wm_V"
+        Me.menu_d_wm_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_wm_V.TabIndex = 0
+        Me.menu_d_wm_V.Text = "Venti"
+        Me.menu_d_wm_V.UseVisualStyleBackColor = False
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1515,7 +2255,7 @@ Partial Class frmMain
         Me.panMenu.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvorders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panmenumenu.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.sub_panmenu1.ResumeLayout(False)
@@ -1524,12 +2264,52 @@ Partial Class frmMain
         Me.Drinks_panmenu.ResumeLayout(False)
         Me.drinks_panmenu1.ResumeLayout(False)
         Me.drinks_panmenu1.PerformLayout()
+        Me.Panel13.ResumeLayout(False)
+        Me.Panel13.PerformLayout()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.panHome.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.panInventory.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panWrapper.ResumeLayout(False)
+        Me.Panel14.ResumeLayout(False)
+        Me.Panel14.PerformLayout()
+        Me.Panel15.ResumeLayout(False)
+        Me.Panel15.PerformLayout()
+        Me.Panel16.ResumeLayout(False)
+        Me.Panel16.PerformLayout()
+        Me.Panel17.ResumeLayout(False)
+        Me.Panel17.PerformLayout()
+        Me.Panel18.ResumeLayout(False)
+        Me.Panel18.PerformLayout()
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel19.PerformLayout()
+        Me.Panel20.ResumeLayout(False)
+        Me.Panel20.PerformLayout()
+        Me.Panel21.ResumeLayout(False)
+        Me.Panel21.PerformLayout()
+        Me.Panel22.ResumeLayout(False)
+        Me.Panel22.PerformLayout()
+        Me.Panel23.ResumeLayout(False)
+        Me.Panel23.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1591,16 +2371,7 @@ Partial Class frmMain
     Friend WithEvents tmrMain2 As Timer
     Friend WithEvents main_panemenubtn2 As Button
     Friend WithEvents main_panemenubtn1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button42 As Button
-    Friend WithEvents Button28 As Button
-    Friend WithEvents Button26 As Button
-    Friend WithEvents Button41 As Button
-    Friend WithEvents Button27 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button25 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents menu_d_ms_G As Button
     Friend WithEvents drinks_panemenubtn3 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Button33 As Button
@@ -1622,7 +2393,7 @@ Partial Class frmMain
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents dgvorders As DataGridView
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
@@ -1631,16 +2402,6 @@ Partial Class frmMain
     Friend WithEvents Button19 As Button
     Friend WithEvents Button57 As Button
     Friend WithEvents Button58 As Button
-    Friend WithEvents Button21 As Button
-    Friend WithEvents Button22 As Button
-    Friend WithEvents Button23 As Button
-    Friend WithEvents Button24 As Button
-    Friend WithEvents Button29 As Button
-    Friend WithEvents Button30 As Button
-    Friend WithEvents Button31 As Button
-    Friend WithEvents Button32 As Button
-    Friend WithEvents Button43 As Button
-    Friend WithEvents Button44 As Button
     Friend WithEvents submenu_panmenu1 As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents sub_panmenu1 As Panel
@@ -1655,4 +2416,83 @@ Partial Class frmMain
     Friend WithEvents tmrSubmenu As Timer
     Friend WithEvents submenu_panbtn2 As Button
     Friend WithEvents Button7 As Button
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents menu_d_cl_V As Button
+    Friend WithEvents menu_d_cl_G As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label10 As Label
+    Friend WithEvents menu_d_ms_V As Button
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label12 As Label
+    Friend WithEvents menu_d_pb_V As Button
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents menu_d_sb_V As Button
+    Friend WithEvents menu_d_sb_G As Button
+    Friend WithEvents menu_d_pb_G As Button
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents Label19 As Label
+    Friend WithEvents menu_d_wc_G As Button
+    Friend WithEvents menu_d_wc_V As Button
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents Label18 As Label
+    Friend WithEvents menu_d_zd_G As Button
+    Friend WithEvents menu_d_zd_V As Button
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Label17 As Label
+    Friend WithEvents menu_d_vc_G As Button
+    Friend WithEvents menu_d_vc_V As Button
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Label16 As Label
+    Friend WithEvents menu_d_tt_G As Button
+    Friend WithEvents menu_d_tt_V As Button
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents menu_d_tm_G As Button
+    Friend WithEvents menu_d_tm_V As Button
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Label14 As Label
+    Friend WithEvents menu_d_pk_G As Button
+    Friend WithEvents menu_d_pk_V As Button
+    Friend WithEvents Panel23 As Panel
+    Friend WithEvents Label29 As Label
+    Friend WithEvents menu_d_wm_G As Button
+    Friend WithEvents menu_d_wm_V As Button
+    Friend WithEvents Panel21 As Panel
+    Friend WithEvents Label27 As Label
+    Friend WithEvents menu_d_lt_G As Button
+    Friend WithEvents menu_d_lt_V As Button
+    Friend WithEvents Panel22 As Panel
+    Friend WithEvents Label28 As Label
+    Friend WithEvents menu_d_lemont_G As Button
+    Friend WithEvents menu_d_lemont_V As Button
+    Friend WithEvents Panel20 As Panel
+    Friend WithEvents Label26 As Label
+    Friend WithEvents menu_d_pt_G As Button
+    Friend WithEvents menu_d_pt_V As Button
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents Label23 As Label
+    Friend WithEvents menu_d_sbt_G As Button
+    Friend WithEvents menu_d_sbt_V As Button
+    Friend WithEvents Panel19 As Panel
+    Friend WithEvents Label25 As Label
+    Friend WithEvents menu_d_mt_G As Button
+    Friend WithEvents menu_d_mt_V As Button
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents Label22 As Label
+    Friend WithEvents menu_d_bbt_G As Button
+    Friend WithEvents menu_d_bbt_V As Button
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents Label24 As Label
+    Friend WithEvents menu_d_kt_G As Button
+    Friend WithEvents menu_d_kt_V As Button
+    Friend WithEvents Panel15 As Panel
+    Friend WithEvents Label21 As Label
+    Friend WithEvents menu_d_gat_G As Button
+    Friend WithEvents menu_d_gat_V As Button
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents Label20 As Label
+    Friend WithEvents menu_d_ow_G As Button
+    Friend WithEvents menu_d_ow_V As Button
 End Class
