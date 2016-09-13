@@ -299,7 +299,7 @@ Public Class frmMain
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 
-        For Each ctrl As Control In menu.Controls
+        For Each ctrl As Control In panmenumenu.Controls
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 

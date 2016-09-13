@@ -60,7 +60,7 @@ Partial Class frmMain
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.menu = New System.Windows.Forms.GroupBox()
+        Me.panmenumenu = New System.Windows.Forms.GroupBox()
         Me.submenu_panbtn2 = New System.Windows.Forms.Button()
         Me.submenu_panmenu1 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -94,6 +94,7 @@ Partial Class frmMain
         Me.Button56 = New System.Windows.Forms.Button()
         Me.Drinks_panmenu = New System.Windows.Forms.Panel()
         Me.drinks_panmenu1 = New System.Windows.Forms.Panel()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Button23 = New System.Windows.Forms.Button()
@@ -144,7 +145,6 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
         CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,7 +162,7 @@ Partial Class frmMain
         Me.panMenu.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.menu.SuspendLayout()
+        Me.panmenumenu.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.sub_panmenu1.SuspendLayout()
         Me.main_panmenu.SuspendLayout()
@@ -486,7 +486,7 @@ Partial Class frmMain
         'panMenu
         '
         Me.panMenu.Controls.Add(Me.GroupBox1)
-        Me.panMenu.Controls.Add(Me.menu)
+        Me.panMenu.Controls.Add(Me.panmenumenu)
         Me.panMenu.Location = New System.Drawing.Point(3, 1401)
         Me.panMenu.Name = "panMenu"
         Me.panMenu.Size = New System.Drawing.Size(1360, 702)
@@ -614,25 +614,25 @@ Partial Class frmMain
         Me.Column9.Name = "Column9"
         Me.Column9.Width = 121
         '
-        'menu
+        'panmenumenu
         '
-        Me.menu.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.menu.Controls.Add(Me.submenu_panbtn2)
-        Me.menu.Controls.Add(Me.submenu_panmenu1)
-        Me.menu.Controls.Add(Me.Panel3)
-        Me.menu.Controls.Add(Me.drinks_panemenubtn3)
-        Me.menu.Controls.Add(Me.main_panemenubtn2)
-        Me.menu.Controls.Add(Me.main_panemenubtn1)
-        Me.menu.Controls.Add(Me.main_panmenu)
-        Me.menu.Controls.Add(Me.Drinks_panmenu)
-        Me.menu.Controls.Add(Me.drinks_panemenubtn2)
-        Me.menu.Controls.Add(Me.drinks_panemenubtn1)
-        Me.menu.Location = New System.Drawing.Point(2, 1)
-        Me.menu.Name = "menu"
-        Me.menu.Size = New System.Drawing.Size(795, 698)
-        Me.menu.TabIndex = 25
-        Me.menu.TabStop = False
-        Me.menu.Text = "Menu"
+        Me.panmenumenu.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.panmenumenu.Controls.Add(Me.submenu_panbtn2)
+        Me.panmenumenu.Controls.Add(Me.submenu_panmenu1)
+        Me.panmenumenu.Controls.Add(Me.Panel3)
+        Me.panmenumenu.Controls.Add(Me.drinks_panemenubtn3)
+        Me.panmenumenu.Controls.Add(Me.main_panemenubtn2)
+        Me.panmenumenu.Controls.Add(Me.main_panemenubtn1)
+        Me.panmenumenu.Controls.Add(Me.main_panmenu)
+        Me.panmenumenu.Controls.Add(Me.Drinks_panmenu)
+        Me.panmenumenu.Controls.Add(Me.drinks_panemenubtn2)
+        Me.panmenumenu.Controls.Add(Me.drinks_panemenubtn1)
+        Me.panmenumenu.Location = New System.Drawing.Point(2, 1)
+        Me.panmenumenu.Name = "panmenumenu"
+        Me.panmenumenu.Size = New System.Drawing.Size(795, 698)
+        Me.panmenumenu.TabIndex = 25
+        Me.panmenumenu.TabStop = False
+        Me.panmenumenu.Text = "Menu"
         '
         'submenu_panbtn2
         '
@@ -1015,6 +1015,15 @@ Partial Class frmMain
         Me.drinks_panmenu1.Name = "drinks_panmenu1"
         Me.drinks_panmenu1.Size = New System.Drawing.Size(2286, 202)
         Me.drinks_panmenu1.TabIndex = 0
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(1684, 46)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(517, 109)
+        Me.Button7.TabIndex = 63
+        Me.Button7.Text = "Button7"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Button21
         '
@@ -1473,15 +1482,6 @@ Partial Class frmMain
         '
         Me.tmrSubmenu.Interval = 10
         '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(1684, 46)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(517, 109)
-        Me.Button7.TabIndex = 63
-        Me.Button7.Text = "Button7"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1516,7 +1516,7 @@ Partial Class frmMain
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.menu.ResumeLayout(False)
+        Me.panmenumenu.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.sub_panmenu1.ResumeLayout(False)
         Me.main_panmenu.ResumeLayout(False)
@@ -1578,7 +1578,7 @@ Partial Class frmMain
     Friend WithEvents lbllogout As Label
     Friend WithEvents picLogout As PictureBox
     Friend WithEvents panMenu As Panel
-    Friend WithEvents menu As GroupBox
+    Friend WithEvents panmenumenu As GroupBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Drinks_panmenu As Panel
