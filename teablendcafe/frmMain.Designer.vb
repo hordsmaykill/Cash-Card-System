@@ -719,6 +719,7 @@ Partial Class frmMain
         Me.dgvorders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column7, Me.Column8, Me.Column9})
         Me.dgvorders.Location = New System.Drawing.Point(4, 38)
         Me.dgvorders.Name = "dgvorders"
+        Me.dgvorders.ReadOnly = True
         Me.dgvorders.Size = New System.Drawing.Size(544, 385)
         Me.dgvorders.TabIndex = 35
         '
@@ -726,24 +727,28 @@ Partial Class frmMain
         '
         Me.Column6.HeaderText = "item no."
         Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         Me.Column6.Width = 130
         '
         'Column7
         '
         Me.Column7.HeaderText = "Qty"
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         Me.Column7.Width = 120
         '
         'Column8
         '
         Me.Column8.HeaderText = "Price"
         Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         Me.Column8.Width = 130
         '
         'Column9
         '
         Me.Column9.HeaderText = "Total"
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         Me.Column9.Width = 121
         '
         'panmenumenu

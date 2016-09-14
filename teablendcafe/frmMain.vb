@@ -1477,11 +1477,6 @@ Public Class frmMain
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
 
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
         dgvorders.Rows.Add()
         For i As Integer = 0 To column - 1
 
@@ -1500,10 +1495,6 @@ Public Class frmMain
         Reader.Read()
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
 
 
         dgvorders.Rows.Add()
