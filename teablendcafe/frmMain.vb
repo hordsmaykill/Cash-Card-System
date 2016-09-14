@@ -1466,6 +1466,7 @@ Public Class frmMain
         Reader.Close()
     End Sub
 
+
     Private Sub menu_d_pmk_G_Click(sender As Object, e As EventArgs) Handles menu_d_pmk_G.Click
         With Command
             .Connection = Connect
