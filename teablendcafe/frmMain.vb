@@ -574,7 +574,6 @@ Public Class frmMain
     End Sub
 
     Private Sub menu_d_ms_V_Click(sender As Object, e As EventArgs) Handles menu_d_ms_V.Click
-        frmquantity.Show()
         drinksToDGV("D_MS", DRINKS_SIZEV)
     End Sub
     'choco loco'
