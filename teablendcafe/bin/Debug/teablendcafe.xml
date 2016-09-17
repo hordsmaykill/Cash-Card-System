@@ -22,36 +22,6 @@ teablendcafe
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources._123">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources._1231">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources._33">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources._331">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources._332">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources._333">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:teablendcafe.My.Resources.Resources.aaaa">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -128,76 +98,6 @@ teablendcafe
 </summary>
 </member>
 <member name="P:teablendcafe.My.Resources.Resources.interlaced2">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in1">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in2">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in21">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in22">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in23">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in3">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in31">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in32">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in33">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in34">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in35">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in36">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in4">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -297,57 +197,7 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources.splashhhhUntitled_1">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.splashhhhUntitled_11">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.splashhhhUntitled_12">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:teablendcafe.My.Resources.Resources.sublogo">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Untitled_1">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Untitled_11">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Untitled_12">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Untitled_2">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Untitled_21">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Untitled_22">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Untitled_23">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

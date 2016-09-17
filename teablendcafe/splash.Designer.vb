@@ -40,7 +40,6 @@ Partial Class splash
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.teablendcafe.My.Resources.Resources._333
         Me.PictureBox2.Location = New System.Drawing.Point(36, 45)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(525, 416)

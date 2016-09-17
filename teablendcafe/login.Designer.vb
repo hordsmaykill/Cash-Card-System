@@ -97,7 +97,6 @@ Partial Class login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
-        Me.BackgroundImage = Global.teablendcafe.My.Resources.Resources.log_in4
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(656, 523)
         Me.Controls.Add(Me.btnexit)
