@@ -513,11 +513,11 @@ Public Class frmMain
         Dim sql As String = ""
         Select Case size
             Case DRINKS_SIZEG
-                sql = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
+                sql = "SELECT prod_code, prod_name,prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
 
             Case DRINKS_SIZEV
-                sql = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
+                sql = "SELECT prod_code, prod_name,prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
 
 
