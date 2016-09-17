@@ -13,7 +13,7 @@ Public Class frmMain
             Connect.ConnectionString = str
             Connect.Open()
 
-            qtyRetrieved = 0
+            qtyRetrieved = 5
 
         End If
     End Sub
@@ -536,8 +536,12 @@ Public Class frmMain
 
         dgvorders.Rows.Add()
         For i As Integer = 0 To column - 1
-            dgvorders.Item(i, row).Value = Reader.Item(i)
+            If i <> 2 Then
+                dgvorders.Item(i, row).Value = Reader.Item(i)
+            End If
         Next
+
+        dgvorders.Item(2, row).Value = qtyRetrieved
         Reader.Close()
     End Sub
 
