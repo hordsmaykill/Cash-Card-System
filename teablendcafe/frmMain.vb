@@ -857,4 +857,8 @@ Public Class frmMain
     Private Sub menu_btn_spam_Click(sender As Object, e As EventArgs) Handles menu_btn_spam.Click
         drinksToDGV("DSH_SS", DRINKS_SIZEG)
     End Sub
+
+    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, Panel2.MouseClick
+
+    End Sub
 End Class

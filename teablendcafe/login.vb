@@ -57,7 +57,7 @@ Public Class login
 
         reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
         If reply = MsgBoxResult.Yes Then
-            End
+            Environment.Exit(0)
         End If
     End Sub
 End Class
