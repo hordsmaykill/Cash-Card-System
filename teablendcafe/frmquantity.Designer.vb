@@ -32,12 +32,12 @@ Partial Class frmquantity
         '
         'txtNum
         '
-        Me.txtNum.Enabled = False
         Me.txtNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNum.Location = New System.Drawing.Point(82, 57)
         Me.txtNum.Name = "txtNum"
         Me.txtNum.Size = New System.Drawing.Size(111, 47)
         Me.txtNum.TabIndex = 1
+        Me.txtNum.Text = "1"
         Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1

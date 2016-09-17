@@ -542,6 +542,9 @@ Public Class frmMain
         Next
 
         dgvorders.Item(2, row).Value = qtyRetrieved
+
+        ' reset qty
+        qtyRetrieved = 1
         Reader.Close()
     End Sub
 
