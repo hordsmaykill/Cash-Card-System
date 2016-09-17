@@ -531,9 +531,24 @@ Public Class frmMain
         End With
         Reader = Command.ExecuteReader
         Reader.Read()
+
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
 
+        ' check if prod is already at the dgv
+        For i As Integer = 0 To row - 1
+            Dim curProdCode As String
+            curProdCode = dgvorders.Item(0, i).Value
+            If prodCode = curProdCode Then
+                ' overwrite the qty
+                dgvorders.Item(2, i).Value = qtyRetrieved
+                Exit Sub
+            End If
+
+        Next
+
+
+        ' create new row
         dgvorders.Rows.Add()
         For i As Integer = 0 To column - 1
             If i <> 2 Then
