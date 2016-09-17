@@ -13,7 +13,7 @@ Public Class frmMain
             Connect.ConnectionString = str
             Connect.Open()
 
-            qtyRetrieved = 5
+            qtyRetrieved = 0
 
         End If
     End Sub
