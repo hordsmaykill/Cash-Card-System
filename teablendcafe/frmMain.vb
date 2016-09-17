@@ -5,12 +5,15 @@ Public Class frmMain
     Dim Connect As New MySqlConnection
     Dim str As String
 
+    Public qtyRetrieved As Integer
 
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
             str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
             Connect.ConnectionString = str
             Connect.Open()
+
+            qtyRetrieved = 0
 
         End If
     End Sub
@@ -519,8 +522,6 @@ Public Class frmMain
             Case DRINKS_SIZEV
                 sql = "SELECT prod_code, prod_name,prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
-
-
         End Select
 
 
@@ -542,7 +543,7 @@ Public Class frmMain
 
     Private Sub menu_d_ms_G_Click(sender As Object, e As EventArgs) Handles menu_d_ms_G.Click
         'melon swirl'
-        frmquantity.Show()
+        frmquantity.ShowDialog()
         drinksToDGV("D_MS", DRINKS_SIZEG)
     End Sub
 

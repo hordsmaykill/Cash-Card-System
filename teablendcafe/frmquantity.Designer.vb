@@ -22,22 +22,23 @@ Partial Class frmquantity
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtNum = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnOk = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnMin = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtNum
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(82, 57)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(111, 47)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtNum.Enabled = False
+        Me.txtNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNum.Location = New System.Drawing.Point(82, 57)
+        Me.txtNum.Name = "txtNum"
+        Me.txtNum.Size = New System.Drawing.Size(111, 47)
+        Me.txtNum.TabIndex = 1
+        Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
@@ -50,41 +51,41 @@ Partial Class frmquantity
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Quantity"
         '
-        'Button1
+        'btnOk
         '
-        Me.Button1.Location = New System.Drawing.Point(24, 125)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 39)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnOk.Location = New System.Drawing.Point(24, 125)
+        Me.btnOk.Name = "btnOk"
+        Me.btnOk.Size = New System.Drawing.Size(107, 39)
+        Me.btnOk.TabIndex = 3
+        Me.btnOk.Text = "Ok"
+        Me.btnOk.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnCancel
         '
-        Me.Button2.Location = New System.Drawing.Point(140, 125)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(107, 39)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Button1"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancel.Location = New System.Drawing.Point(140, 125)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(107, 39)
+        Me.btnCancel.TabIndex = 3
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnMin
         '
-        Me.Button3.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Minus_Math__48
-        Me.Button3.Location = New System.Drawing.Point(24, 57)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(48, 48)
-        Me.Button3.TabIndex = 5
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnMin.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Minus_Math__48
+        Me.btnMin.Location = New System.Drawing.Point(24, 57)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Size = New System.Drawing.Size(48, 48)
+        Me.btnMin.TabIndex = 5
+        Me.btnMin.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnAdd
         '
-        Me.Button4.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Plus_Math_48
-        Me.Button4.Location = New System.Drawing.Point(199, 57)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(48, 48)
-        Me.Button4.TabIndex = 5
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnAdd.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Plus_Math_48
+        Me.btnAdd.Location = New System.Drawing.Point(199, 57)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(48, 48)
+        Me.btnAdd.TabIndex = 5
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'frmquantity
         '
@@ -92,25 +93,25 @@ Partial Class frmquantity
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.teablendcafe.My.Resources.Resources.frm_quantity
         Me.ClientSize = New System.Drawing.Size(271, 185)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnMin)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNum)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmquantity"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNum As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnOk As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnMin As Button
+    Friend WithEvents btnAdd As Button
 End Class
