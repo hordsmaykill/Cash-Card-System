@@ -10,10 +10,13 @@
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         frmMain.qtyRetrieved = qty
         Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        frmMain.qtyRetrieved = -1
         Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click

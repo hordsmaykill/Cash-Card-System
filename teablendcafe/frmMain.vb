@@ -515,6 +515,11 @@ Public Class frmMain
         ' get qty
         frmquantity.ShowDialog()
 
+        ' exit if cancel
+        If qtyRetrieved = -1 Then
+            Exit Sub
+        End If
+
         Dim sql As String = ""
         Select Case size
             Case DRINKS_SIZEG
