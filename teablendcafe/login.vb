@@ -35,7 +35,6 @@ Public Class login
             .CommandText = "SELECT Username,Password FROM tblAdministrators WHERE Username = '" &
                 tbusername.Text & "' AND Password = '" &
                 tbpassword.Text & "'"
-
         End With
 
         Reader = Command.ExecuteReader
