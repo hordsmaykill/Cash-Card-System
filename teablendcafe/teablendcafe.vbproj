@@ -121,6 +121,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmquantity.resx">
+      <DependentUpon>frmquantity.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +355,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\log-in37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frm_quantity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus Math -48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus Math-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -542,11 +542,12 @@ Public Class frmMain
 
     Private Sub menu_d_ms_G_Click(sender As Object, e As EventArgs) Handles menu_d_ms_G.Click
         'melon swirl'
+        frmquantity.Show()
         drinksToDGV("D_MS", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_ms_V_Click(sender As Object, e As EventArgs) Handles menu_d_ms_V.Click
-
+        frmquantity.Show()
         drinksToDGV("D_MS", DRINKS_SIZEV)
     End Sub
     'choco loco'

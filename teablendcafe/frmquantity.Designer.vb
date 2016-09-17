@@ -70,6 +70,7 @@ Partial Class frmquantity
         '
         'Button3
         '
+        Me.Button3.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Minus_Math__48
         Me.Button3.Location = New System.Drawing.Point(24, 57)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(48, 48)
@@ -78,6 +79,7 @@ Partial Class frmquantity
         '
         'Button4
         '
+        Me.Button4.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Plus_Math_48
         Me.Button4.Location = New System.Drawing.Point(199, 57)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(48, 48)
@@ -88,6 +90,7 @@ Partial Class frmquantity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.teablendcafe.My.Resources.Resources.frm_quantity
         Me.ClientSize = New System.Drawing.Size(271, 185)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
