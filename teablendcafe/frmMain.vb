@@ -520,6 +520,7 @@ Public Class frmMain
                 sql = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
 
+
         End Select
 
 
@@ -779,5 +780,81 @@ Public Class frmMain
 
     Private Sub menu_d_mm_V_Click(sender As Object, e As EventArgs) Handles menu_d_mm_V.Click
         drinksToDGV("D_MM", DRINKS_SIZEV)
+    End Sub
+
+    Private Sub menu_btn_c_Click(sender As Object, e As EventArgs) Handles menu_btn_c.Click
+        drinksToDGV("DSH_C", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_cbf_Click(sender As Object, e As EventArgs) Handles menu_btn_cbf.Click
+        drinksToDGV("DSH_CB", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_ss_Click(sender As Object, e As EventArgs) Handles menu_btn_ss.Click
+        drinksToDGV("DSH_SS", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_te_Click(sender As Object, e As EventArgs) Handles menu_btn_te.Click
+        drinksToDGV("DSH_TE", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_fbw_Click(sender As Object, e As EventArgs) Handles menu_btn_fbw.Click
+        drinksToDGV("DSH_FB", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_n_Click(sender As Object, e As EventArgs) Handles menu_btn_n.Click
+        drinksToDGV("DSH_N", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_sbs_Click(sender As Object, e As EventArgs) Handles menu_btn_sbs.Click
+        drinksToDGV("DSH_SB", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_bbq_Click(sender As Object, e As EventArgs) Handles menu_btn_bbq.Click
+        drinksToDGV("DSH_BB", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_ib_Click(sender As Object, e As EventArgs) Handles menu_btn_ib.Click
+        drinksToDGV("DSH_IB", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_es_Click(sender As Object, e As EventArgs) Handles menu_btn_es.Click
+        drinksToDGV("DSH_ES", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_ucb_Click(sender As Object, e As EventArgs) Handles menu_btn_ucb.Click
+        drinksToDGV("DSH_UC", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_tdd_Click(sender As Object, e As EventArgs) Handles menu_btn_tdd.Click
+        drinksToDGV("DSH_TD", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_cc_Click(sender As Object, e As EventArgs) Handles menu_btn_cc.Click
+        drinksToDGV("DSH_CC", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_pp_Click(sender As Object, e As EventArgs) Handles menu_btn_pp.Click
+        drinksToDGV("DSH_PP", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_cp_Click(sender As Object, e As EventArgs) Handles menu_btn_cp.Click
+        drinksToDGV("DSH_CP", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_h_Click(sender As Object, e As EventArgs) Handles menu_btn_h.Click
+        drinksToDGV("DSH_HS", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_l_Click(sender As Object, e As EventArgs) Handles menu_btn_l.Click
+        drinksToDGV("DSH_LS", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_cs_Click(sender As Object, e As EventArgs) Handles menu_btn_cs.Click
+        drinksToDGV("DSH_CS", DRINKS_SIZEG)
+    End Sub
+
+    Private Sub menu_btn_spam_Click(sender As Object, e As EventArgs) Handles menu_btn_spam.Click
+        drinksToDGV("DSH_SS", DRINKS_SIZEG)
     End Sub
 End Class
