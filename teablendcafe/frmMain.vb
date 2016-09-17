@@ -73,7 +73,11 @@ Public Class frmMain
 
 
     'end menus'
+    ''
+    Private Const DRINKS_SIZEG = 0
+    Private Const DRINKS_SIZEV = 1
 
+    ''
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' default states
@@ -503,1438 +507,277 @@ Public Class frmMain
         tmrSubmenu.Enabled = True
     End Sub
 
-    Private Sub menu_d_ms_G_Click(sender As Object, e As EventArgs) Handles menu_d_ms_G.Click
-        'melon swirl'
+
+    Private Sub drinksToDGV(prodCode As String, size As Integer)
+
+        Dim sql As String = ""
+        Select Case size
+            Case DRINKS_SIZEG
+                sql = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
+            prod_code ='" & prodCode & "'"
+
+            Case DRINKS_SIZEV
+                sql = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
+            prod_code ='" & prodCode & "'"
+
+        End Select
+
+
         With Command
             .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_MS'"
+            .CommandText = sql
         End With
         Reader = Command.ExecuteReader
         Reader.Read()
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
 
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
         dgvorders.Rows.Add()
         For i As Integer = 0 To column - 1
-
             dgvorders.Item(i, row).Value = Reader.Item(i)
         Next
         Reader.Close()
+    End Sub
+
+    Private Sub menu_d_ms_G_Click(sender As Object, e As EventArgs) Handles menu_d_ms_G.Click
+        'melon swirl'
+        drinksToDGV("D_MS", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_ms_V_Click(sender As Object, e As EventArgs) Handles menu_d_ms_V.Click
 
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_MS'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_MS", DRINKS_SIZEV)
     End Sub
     'choco loco'
     Private Sub menu_d_cl_G_Click(sender As Object, e As EventArgs) Handles menu_d_cl_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_CL'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
-
+        drinksToDGV("D_CL", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_cl_V_Click(sender As Object, e As EventArgs) Handles menu_d_cl_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_CL'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_CL", DRINKS_SIZEV)
     End Sub
     'purple brew'
     Private Sub menu_d_pb_G_Click(sender As Object, e As EventArgs) Handles menu_d_pb_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_PB'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_PB", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_pb_V_Click(sender As Object, e As EventArgs) Handles menu_d_pb_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_PB'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_PB", DRINKS_SIZEV)
     End Sub
     'Strawberry blush' 
     Private Sub menu_d_sb_G_Click(sender As Object, e As EventArgs) Handles menu_d_sb_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_SB'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_SB", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_sb_V_Click(sender As Object, e As EventArgs) Handles menu_d_sb_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_SB'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_SB", DRINKS_SIZEV)
     End Sub
     'peachy keech'
     Private Sub menu_d_pk_G_Click(sender As Object, e As EventArgs) Handles menu_d_pk_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_PK'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_PK", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_pk_V_Click(sender As Object, e As EventArgs) Handles menu_d_pk_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_PK'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_PK", DRINKS_SIZEV)
     End Sub
     'trophical Mango'
     Private Sub menu_d_tm_G_Click(sender As Object, e As EventArgs) Handles menu_d_tm_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_TM'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_TM", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_tm_V_Click(sender As Object, e As EventArgs) Handles menu_d_tm_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_TM'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_TM", DRINKS_SIZEV)
     End Sub
     'vanilla cloud'
     Private Sub menu_d_vc_G_Click(sender As Object, e As EventArgs) Handles menu_d_vc_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_VC'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_VC", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_vc_V_Click(sender As Object, e As EventArgs) Handles menu_d_vc_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_VC'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_VC", DRINKS_SIZEV)
     End Sub
     'taro treat'
     Private Sub menu_d_tt_G_Click(sender As Object, e As EventArgs) Handles menu_d_tt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_TT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_TT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_tt_V_Click(sender As Object, e As EventArgs) Handles menu_d_tt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_TT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_TT", DRINKS_SIZEV)
     End Sub
     'Zesty dew'
     Private Sub menu_d_zd_G_Click(sender As Object, e As EventArgs) Handles menu_d_zd_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_ZD'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_ZD", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_zd_V_Click(sender As Object, e As EventArgs) Handles menu_d_zd_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_ZD'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_ZD", DRINKS_SIZEV)
     End Sub
     'Winter Choco'
     Private Sub menu_d_wc_G_Click(sender As Object, e As EventArgs) Handles menu_d_wc_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_WC'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_WC", DRINKS_SIZEG)
     End Sub
-
     Private Sub menu_d_wc_V_Click(sender As Object, e As EventArgs) Handles menu_d_wc_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_WC'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_WC", DRINKS_SIZEV)
     End Sub
     'oreo wacko'
     Private Sub menu_d_oc_G_Click(sender As Object, e As EventArgs) Handles menu_d_ow_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_OW'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_OW", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_ow_V_Click(sender As Object, e As EventArgs) Handles menu_d_ow_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_OW'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_OW", DRINKS_SIZEV)
     End Sub
     'Green Apple Tea'
     Private Sub menu_d_gat_G_Click(sender As Object, e As EventArgs) Handles menu_d_gat_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_GAT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_GAT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_gat_V_Click(sender As Object, e As EventArgs) Handles menu_d_gat_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_GAT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_GAT", DRINKS_SIZEV)
     End Sub
     'Blue berry Tea'
     Private Sub menu_d_bbt_G_Click(sender As Object, e As EventArgs) Handles menu_d_bbt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_BBT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_BBT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_bbt_V_Click(sender As Object, e As EventArgs) Handles menu_d_bbt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_GAT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_BBT", DRINKS_SIZEV)
     End Sub
     'Strawberry TEa'
     Private Sub menu_d_sbt_G_Click(sender As Object, e As EventArgs) Handles menu_d_sbt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_ST'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_ST", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_sbt_V_Click(sender As Object, e As EventArgs) Handles menu_d_sbt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_ST'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_ST", DRINKS_SIZEV)
     End Sub
     ' Kiwi Tea'
     Private Sub menu_d_kt_G_Click(sender As Object, e As EventArgs) Handles menu_d_kt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_KT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_KT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_kt_V_Click(sender As Object, e As EventArgs) Handles menu_d_kt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_KT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_KT", DRINKS_SIZEV)
     End Sub
     'Mango Tea'
     Private Sub menu_d_mt_G_Click(sender As Object, e As EventArgs) Handles menu_d_mt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_MT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_MT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_mt_V_Click(sender As Object, e As EventArgs) Handles menu_d_mt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_MT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_MT", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_pt_G_Click(sender As Object, e As EventArgs) Handles menu_d_pt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_PT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_PT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_pt_V_Click(sender As Object, e As EventArgs) Handles menu_d_pt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_PT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_PT", DRINKS_SIZEV)
     End Sub
     'Lychee Tea'
     Private Sub menu_d_lt_G_Click(sender As Object, e As EventArgs) Handles menu_d_lt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_LT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_LT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_lt_V_Click(sender As Object, e As EventArgs) Handles menu_d_lt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_LT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_LT", DRINKS_SIZEV)
     End Sub
     'Lemon Tea'
     Private Sub menu_d_lemont_G_Click(sender As Object, e As EventArgs) Handles menu_d_lemont_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_Lemo'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_Lemo", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_lemont_V_Click(sender As Object, e As EventArgs) Handles menu_d_lemont_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_Lemo'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_Lemo", DRINKS_SIZEV)
     End Sub
     'Winter Melon'
     Private Sub menu_d_wm_G_Click(sender As Object, e As EventArgs) Handles menu_d_wm_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_WM'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_WM", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_wm_V_Click(sender As Object, e As EventArgs) Handles menu_d_wm_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_WM'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_WM", DRINKS_SIZEV)
     End Sub
 
 
     Private Sub menu_d_pmk_G_Click(sender As Object, e As EventArgs) Handles menu_d_pmk_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_PMK'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_PMK", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_pmk_V_Click(sender As Object, e As EventArgs) Handles menu_d_pmk_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_PMK'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_PMK", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_smk_G_Click(sender As Object, e As EventArgs) Handles menu_d_smk_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_SMT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_SMT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_smk_V_Click(sender As Object, e As EventArgs) Handles menu_d_smk_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_SMT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_SMT", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_bmk_G_Click(sender As Object, e As EventArgs) Handles menu_d_bmk_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_BMT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_BMT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_bmk_V_Click(sender As Object, e As EventArgs) Handles menu_d_bmk_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_BMT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_BMT", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_mmk_G_Click(sender As Object, e As EventArgs) Handles menu_d_mmt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_MMT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_MMT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_mmk_V_Click(sender As Object, e As EventArgs) Handles menu_d_mmt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_MMT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_MMT", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_hmt_G_Click(sender As Object, e As EventArgs) Handles menu_d_hmt_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_HMT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_HMT", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_hmt_V_Click(sender As Object, e As EventArgs) Handles menu_d_hmt_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_HMT'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_HMT", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_cm_G_Click(sender As Object, e As EventArgs) Handles menu_d_cm_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_CK'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_CK", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_cm_V_Click(sender As Object, e As EventArgs) Handles menu_d_cm_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_CK'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_CK", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_ss_G_Click(sender As Object, e As EventArgs) Handles menu_d_ss_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_SS'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_SS", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_ss_V_Click(sender As Object, e As EventArgs) Handles menu_d_ss_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_SS'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_SS", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_ll_G_Click(sender As Object, e As EventArgs) Handles menu_d_ll_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_LL'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_LL", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_ll_V_Click(sender As Object, e As EventArgs) Handles menu_d_ll_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_LL'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_LL", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_dp_G_Click(sender As Object, e As EventArgs) Handles menu_d_dp_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_DP'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_DP", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_dp_V_Click(sender As Object, e As EventArgs) Handles menu_d_dp_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_DP'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_LL", DRINKS_SIZEV)
     End Sub
 
     Private Sub menu_d_mm_G_Click(sender As Object, e As EventArgs) Handles menu_d_mm_G.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
-            prod_code ='D_MM'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_MM", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_mm_V_Click(sender As Object, e As EventArgs) Handles menu_d_mm_V.Click
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='D_MM'"
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        If row > 0 Then
-            row = row - 1
-        End If
-
-
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-
-            dgvorders.Item(i, row).Value = Reader.Item(i)
-        Next
-        Reader.Close()
+        drinksToDGV("D_MM", DRINKS_SIZEV)
     End Sub
 End Class

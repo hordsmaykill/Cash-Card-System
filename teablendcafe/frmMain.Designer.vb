@@ -67,7 +67,6 @@ Partial Class frmMain
         Me.sub_panmenu1 = New System.Windows.Forms.Panel()
         Me.Button67 = New System.Windows.Forms.Button()
         Me.Button68 = New System.Windows.Forms.Button()
-        Me.Button69 = New System.Windows.Forms.Button()
         Me.Button59 = New System.Windows.Forms.Button()
         Me.Button60 = New System.Windows.Forms.Button()
         Me.Button61 = New System.Windows.Forms.Button()
@@ -802,7 +801,6 @@ Partial Class frmMain
         Me.sub_panmenu1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.sub_panmenu1.Controls.Add(Me.Button67)
         Me.sub_panmenu1.Controls.Add(Me.Button68)
-        Me.sub_panmenu1.Controls.Add(Me.Button69)
         Me.sub_panmenu1.Controls.Add(Me.Button59)
         Me.sub_panmenu1.Controls.Add(Me.Button60)
         Me.sub_panmenu1.Controls.Add(Me.Button61)
@@ -817,7 +815,7 @@ Partial Class frmMain
         '
         Me.Button67.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.Button67.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button67.Location = New System.Drawing.Point(1082, 20)
+        Me.Button67.Location = New System.Drawing.Point(926, 21)
         Me.Button67.Name = "Button67"
         Me.Button67.Size = New System.Drawing.Size(119, 74)
         Me.Button67.TabIndex = 62
@@ -828,23 +826,12 @@ Partial Class frmMain
         '
         Me.Button68.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.Button68.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button68.Location = New System.Drawing.Point(931, 20)
+        Me.Button68.Location = New System.Drawing.Point(775, 21)
         Me.Button68.Name = "Button68"
         Me.Button68.Size = New System.Drawing.Size(119, 74)
         Me.Button68.TabIndex = 63
         Me.Button68.Text = "Nachos"
         Me.Button68.UseVisualStyleBackColor = False
-        '
-        'Button69
-        '
-        Me.Button69.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Button69.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button69.Location = New System.Drawing.Point(781, 20)
-        Me.Button69.Name = "Button69"
-        Me.Button69.Size = New System.Drawing.Size(119, 74)
-        Me.Button69.TabIndex = 64
-        Me.Button69.Text = "Tofu Express"
-        Me.Button69.UseVisualStyleBackColor = False
         '
         'Button59
         '
@@ -865,7 +852,7 @@ Partial Class frmMain
         Me.Button60.Name = "Button60"
         Me.Button60.Size = New System.Drawing.Size(119, 74)
         Me.Button60.TabIndex = 56
-        Me.Button60.Text = "Vanilla Cloud"
+        Me.Button60.Text = "Tofu Express"
         Me.Button60.UseVisualStyleBackColor = False
         '
         'Button61
@@ -883,7 +870,7 @@ Partial Class frmMain
         '
         Me.Button62.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.Button62.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button62.Location = New System.Drawing.Point(167, 20)
+        Me.Button62.Location = New System.Drawing.Point(175, 20)
         Me.Button62.Name = "Button62"
         Me.Button62.Size = New System.Drawing.Size(119, 74)
         Me.Button62.TabIndex = 58
@@ -1156,7 +1143,7 @@ Partial Class frmMain
         Me.drinks_panmenu1.Controls.Add(Me.Panel6)
         Me.drinks_panmenu1.Controls.Add(Me.Panel4)
         Me.drinks_panmenu1.Controls.Add(Me.Label1)
-        Me.drinks_panmenu1.Location = New System.Drawing.Point(-1524, 0)
+        Me.drinks_panmenu1.Location = New System.Drawing.Point(0, 0)
         Me.drinks_panmenu1.Margin = New System.Windows.Forms.Padding(0)
         Me.drinks_panmenu1.Name = "drinks_panmenu1"
         Me.drinks_panmenu1.Size = New System.Drawing.Size(2286, 202)
@@ -2924,7 +2911,6 @@ Partial Class frmMain
     Friend WithEvents sub_panmenu1 As Panel
     Friend WithEvents Button67 As Button
     Friend WithEvents Button68 As Button
-    Friend WithEvents Button69 As Button
     Friend WithEvents Button59 As Button
     Friend WithEvents Button60 As Button
     Friend WithEvents Button61 As Button
