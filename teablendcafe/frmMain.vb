@@ -512,6 +512,8 @@ Public Class frmMain
 
 
     Private Sub drinksToDGV(prodCode As String, size As Integer)
+        ' get qty
+        frmquantity.ShowDialog()
 
         Dim sql As String = ""
         Select Case size
@@ -544,9 +546,7 @@ Public Class frmMain
                 dgvorders.Item(2, i).Value = qtyRetrieved
                 Exit Sub
             End If
-
         Next
-
 
         ' create new row
         dgvorders.Rows.Add()
@@ -565,7 +565,6 @@ Public Class frmMain
 
     Private Sub menu_d_ms_G_Click(sender As Object, e As EventArgs) Handles menu_d_ms_G.Click
         'melon swirl'
-        frmquantity.ShowDialog()
         drinksToDGV("D_MS", DRINKS_SIZEG)
     End Sub
 
