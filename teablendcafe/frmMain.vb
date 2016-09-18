@@ -5,12 +5,15 @@ Public Class frmMain
     Dim Connect As New MySqlConnection
     Dim str As String
 
+    Public qtyRetrieved As Integer
 
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
             str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
             Connect.ConnectionString = str
             Connect.Open()
+
+            qtyRetrieved = 0
 
         End If
     End Sub
@@ -509,6 +512,13 @@ Public Class frmMain
 
 
     Private Sub drinksToDGV(prodCode As String, size As Integer)
+        ' get qty
+        frmquantity.ShowDialog()
+
+        ' exit if cancel
+        If qtyRetrieved = -1 Then
+            Exit Sub
+        End If
 
         Dim sql As String = ""
         Select Case size
@@ -519,8 +529,6 @@ Public Class frmMain
             Case DRINKS_SIZEV
                 sql = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
-
-
         End Select
 
 
@@ -530,24 +538,47 @@ Public Class frmMain
         End With
         Reader = Command.ExecuteReader
         Reader.Read()
+
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
 
-        dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
-            dgvorders.Item(i, row).Value = Reader.Item(i)
+        ' check if prod is already at the dgv
+        For i As Integer = 0 To row - 1
+            Dim curProdCode As String
+
+            curProdCode = dgvorders.Item(0, i).Value
+            curProdCode = dgvorders.Item(2, i).Value
+
+            If prodCode = curProdCode Then
+                ' overwrite the qty
+                dgvorders.Item(2, i).Value = qtyRetrieved
+                Reader.Close()
+                Exit Sub
+            End If
         Next
+
+        ' create new row
+        dgvorders.Rows.Add()
+        For i As Integer = 0 To 3
+            If i <> 2 Then
+                dgvorders.Item(i, row).Value = Reader.Item(0)
+            End If
+        Next
+
+
+        dgvorders.Item(2, row).Value = qtyRetrieved
+        Reader.Close()
+        ' reset qty
+        qtyRetrieved = 1
         Reader.Close()
     End Sub
 
     Private Sub menu_d_ms_G_Click(sender As Object, e As EventArgs) Handles menu_d_ms_G.Click
         'melon swirl'
-        frmquantity.Show()
         drinksToDGV("D_MS", DRINKS_SIZEG)
     End Sub
 
     Private Sub menu_d_ms_V_Click(sender As Object, e As EventArgs) Handles menu_d_ms_V.Click
-        frmquantity.Show()
         drinksToDGV("D_MS", DRINKS_SIZEV)
     End Sub
     'choco loco'

@@ -100,3 +100,4 @@ C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.log
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.Resources.resources
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.splash.resources
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.vbproj.GenerateResource.Cache
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmquantity.resources
