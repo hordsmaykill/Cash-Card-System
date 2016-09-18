@@ -523,11 +523,11 @@ Public Class frmMain
         Dim sql As String = ""
         Select Case size
             Case DRINKS_SIZEG
-                sql = "SELECT prod_code, prod_name,prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
+                sql = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
 
             Case DRINKS_SIZEV
-                sql = "SELECT prod_code, prod_name,prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
+                sql = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
         End Select
 
@@ -545,24 +545,29 @@ Public Class frmMain
         ' check if prod is already at the dgv
         For i As Integer = 0 To row - 1
             Dim curProdCode As String
+
             curProdCode = dgvorders.Item(0, i).Value
+            curProdCode = dgvorders.Item(2, i).Value
+
             If prodCode = curProdCode Then
                 ' overwrite the qty
                 dgvorders.Item(2, i).Value = qtyRetrieved
+                Reader.Close()
                 Exit Sub
             End If
         Next
 
         ' create new row
         dgvorders.Rows.Add()
-        For i As Integer = 0 To column - 1
+        For i As Integer = 0 To 3
             If i <> 2 Then
-                dgvorders.Item(i, row).Value = Reader.Item(i)
+                dgvorders.Item(i, row).Value = Reader.Item(0)
             End If
         Next
 
-        dgvorders.Item(2, row).Value = qtyRetrieved
 
+        dgvorders.Item(2, row).Value = qtyRetrieved
+        Reader.Close()
         ' reset qty
         qtyRetrieved = 1
         Reader.Close()
