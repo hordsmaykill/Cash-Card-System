@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Teablend</string>
+    <string name="app_name">Teablend Reader</string>
+
+    <string name="explanation">NFC Works!</string>
 </resources>
