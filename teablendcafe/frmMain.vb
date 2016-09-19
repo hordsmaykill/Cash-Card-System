@@ -921,12 +921,22 @@ Public Class frmMain
         If Delete = vbYes Then
             With Command
                 .Connection = Connect
-                .CommandText = "DELETE FROM tblAdministrators WHERE Nickname = '" & SelectedAdmin & "'"
+                .CommandText = "DELETE FROM tblAdministrators WHERE username = '" & SelectedAdmin & "'"
                 .ExecuteNonQuery()
             End With
             AccountsDGV()
             MsgBox("Administrator " + SelectedAdmin + " successfully deleted!", vbOKOnly + vbInformation, "Message")
         End If
+    End Sub
+
+
+
+    Private Sub account_addbtn_Click(sender As Object, e As EventArgs) Handles account_addbtn.Click
+        formadmincreatenew.ShowDialog()
+    End Sub
+
+    Private Sub account_editbtn_Click(sender As Object, e As EventArgs) Handles account_editbtn.Click
+
     End Sub
 
     ''
