@@ -6,6 +6,7 @@ Public Class frmMain
     Dim str As String
 
     Public qtyRetrieved As Integer
+    Dim SelectedAdmin As String
 
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
@@ -86,6 +87,7 @@ Public Class frmMain
         ' default states
         menuHideLoad()
         Call ConnectDB()
+        Call AccountsDGV()
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
 
@@ -890,5 +892,43 @@ Public Class frmMain
         drinksToDGV("DSH_SS", DRINKS_SIZEG)
     End Sub
 
+
+    'datagrid'
+    Private Sub AccountsDGV()
+        accounts_dgv.Rows.Clear()
+
+        With Command
+            .Connection = Connect
+            .CommandText = "SELECT * FROM tbladministrators"
+        End With
+        Reader = Command.ExecuteReader
+
+        If Reader.HasRows Then
+            While Reader.Read
+                accounts_dgv.Rows.Add(Reader.Item(0), Reader.Item(1))
+            End While
+        End If
+        Reader.Close()
+
+    End Sub
+
+    Private Sub account_delbtn_Click(sender As Object, e As EventArgs) Handles account_delbtn.Click
+        Dim Delete As String
+
+        SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
+
+        Delete = MsgBox("Are you sure you want to delete Administrator " + SelectedAdmin + "?", vbYesNo + vbQuestion, "Message")
+        If Delete = vbYes Then
+            With Command
+                .Connection = Connect
+                .CommandText = "DELETE FROM tblAdministrators WHERE Nickname = '" & SelectedAdmin & "'"
+                .ExecuteNonQuery()
+            End With
+            AccountsDGV()
+            MsgBox("Administrator " + SelectedAdmin + " successfully deleted!", vbOKOnly + vbInformation, "Message")
+        End If
+    End Sub
+
+    ''
 
 End Class
