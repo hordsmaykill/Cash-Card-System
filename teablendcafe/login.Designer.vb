@@ -45,6 +45,7 @@ Partial Class login
         Me.tbpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbpassword.Location = New System.Drawing.Point(198, 304)
         Me.tbpassword.Name = "tbpassword"
+        Me.tbpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbpassword.Size = New System.Drawing.Size(252, 29)
         Me.tbpassword.TabIndex = 1
         '

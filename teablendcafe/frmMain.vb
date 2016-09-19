@@ -546,7 +546,7 @@ Public Class frmMain
         For i As Integer = 0 To row - 1
             Dim curProdCode As String
 
-            curProdCode = dgvorders.Item(0, i).Value
+            curProdCode = dgvorders.Item(3, i).Value
             curProdCode = dgvorders.Item(2, i).Value
 
             If prodCode = curProdCode Then
@@ -890,7 +890,5 @@ Public Class frmMain
         drinksToDGV("DSH_SS", DRINKS_SIZEG)
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, Panel2.MouseClick
 
-    End Sub
 End Class
