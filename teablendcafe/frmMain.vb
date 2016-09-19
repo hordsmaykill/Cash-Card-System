@@ -82,12 +82,15 @@ Public Class frmMain
     Private Const DRINKS_SIZEV = 1
 
     ''
+    ' accounts vars
+    Public userSelected As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' default states
         menuHideLoad()
         Call ConnectDB()
         Call AccountsDGV()
+        Call ChangePass()
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
 
@@ -894,7 +897,7 @@ Public Class frmMain
 
 
     'datagrid'
-    Private Sub AccountsDGV()
+    Public Sub AccountsDGV()
         accounts_dgv.Rows.Clear()
 
         With Command
@@ -905,7 +908,7 @@ Public Class frmMain
 
         If Reader.HasRows Then
             While Reader.Read
-                accounts_dgv.Rows.Add(Reader.Item(0), Reader.Item(1))
+                accounts_dgv.Rows.Add(Reader.Item(0), Reader.Item(2))
             End While
         End If
         Reader.Close()
@@ -936,8 +939,20 @@ Public Class frmMain
     End Sub
 
     Private Sub account_editbtn_Click(sender As Object, e As EventArgs) Handles account_editbtn.Click
-
+        SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
+        userSelected = SelectedAdmin
+        typeadminpassword.ShowDialog()
     End Sub
+
+    ''
+    Private Sub ChangePass()
+        Dim Username As String
+        SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
+        Username = SelectedAdmin
+        accountsEdit.lUsername.Text = Username
+    End Sub
+
+
 
     ''
 

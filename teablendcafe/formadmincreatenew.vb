@@ -7,38 +7,34 @@ Public Class formadmincreatenew
 
     Private Sub formadmincreatenew_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call ConnectDB()
-        Call UpdateDGV()
-
+        frmMain.AccountsDGV()
     End Sub
 
-    Public qtyRetrieved As Integer
+
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
             str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
             Connect.ConnectionString = str
             Connect.Open()
-
-            qtyRetrieved = 0
-
         End If
     End Sub
 
-    Private Sub UpdateDGV()
-        frmMain.accounts_dgv.Rows.Clear()
+    'Private Sub UpdateDGV()
+    '    frmMain.accounts_dgv.Rows.Clear()
 
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT * FROM tbladministrators"
-        End With
-        Reader = Command.ExecuteReader
+    '    With Command
+    '        .Connection = Connect
+    '        .CommandText = "SELECT * FROM tbladministrators"
+    '    End With
+    '    Reader = Command.ExecuteReader
 
-        If Reader.HasRows Then
-            While Reader.Read
-                frmMain.accounts_dgv.Rows.Add(Reader.Item(0), Reader.Item(1))
-            End While
-        End If
-        Reader.Close()
-    End Sub
+    '    If Reader.HasRows Then
+    '        While Reader.Read
+    '            frmMain.accounts_dgv.Rows.Add(Reader.Item(0), Reader.Item(1))
+    '        End While
+    '    End If
+    '    Reader.Close()
+    'End Sub
     Private Sub btncreate_newuser_Click(sender As Object, e As EventArgs) Handles btncreate_newuser.Click
         If tbnewuser.Text = "" Or tbnewpassword.Text = "" Then
             MsgBox("Please make sure all boxes are filled.", vbOKOnly + vbInformation, "Message")
@@ -48,12 +44,12 @@ Public Class formadmincreatenew
                 .Connection = Connect
                 .CommandText = "INSERT INTO tbladministrators VALUES('" &
                     tbnewuser.Text & "', '" &
-                    cbadminpreviledges.Text & "', '" &
-                    tbnewpassword.Text & "')"
+                    tbnewpassword.Text & "', '" &
+                     cbadminpreviledges.Text & "')"
                 .ExecuteNonQuery()
             End With
             MsgBox("Administrator " + cbadminpreviledges.Text + " successfully created!", vbOKOnly + vbInformation, "Message")
-            Call UpdateDGV()
+            frmMain.AccountsDGV()
             Me.Dispose()
         End If
     End Sub

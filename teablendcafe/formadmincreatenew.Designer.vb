@@ -65,7 +65,7 @@ Partial Class formadmincreatenew
         Me.btncreate_newuser.Location = New System.Drawing.Point(30, 148)
         Me.btncreate_newuser.Name = "btncreate_newuser"
         Me.btncreate_newuser.Size = New System.Drawing.Size(90, 23)
-        Me.btncreate_newuser.TabIndex = 1
+        Me.btncreate_newuser.TabIndex = 3
         Me.btncreate_newuser.Text = "Create"
         Me.btncreate_newuser.UseVisualStyleBackColor = True
         '
@@ -74,7 +74,7 @@ Partial Class formadmincreatenew
         Me.btncancel_newbtn.Location = New System.Drawing.Point(145, 148)
         Me.btncancel_newbtn.Name = "btncancel_newbtn"
         Me.btncancel_newbtn.Size = New System.Drawing.Size(98, 23)
-        Me.btncancel_newbtn.TabIndex = 1
+        Me.btncancel_newbtn.TabIndex = 4
         Me.btncancel_newbtn.Text = "Cancel"
         Me.btncancel_newbtn.UseVisualStyleBackColor = True
         '
@@ -83,7 +83,7 @@ Partial Class formadmincreatenew
         Me.tbnewuser.Location = New System.Drawing.Point(114, 86)
         Me.tbnewuser.Name = "tbnewuser"
         Me.tbnewuser.Size = New System.Drawing.Size(121, 20)
-        Me.tbnewuser.TabIndex = 2
+        Me.tbnewuser.TabIndex = 1
         '
         'tbnewpassword
         '
@@ -103,12 +103,13 @@ Partial Class formadmincreatenew
         '
         'cbadminpreviledges
         '
+        Me.cbadminpreviledges.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbadminpreviledges.FormattingEnabled = True
         Me.cbadminpreviledges.Items.AddRange(New Object() {"Super User", "User"})
         Me.cbadminpreviledges.Location = New System.Drawing.Point(141, 59)
         Me.cbadminpreviledges.Name = "cbadminpreviledges"
         Me.cbadminpreviledges.Size = New System.Drawing.Size(94, 21)
-        Me.cbadminpreviledges.TabIndex = 3
+        Me.cbadminpreviledges.TabIndex = 0
         '
         'formadmincreatenew
         '
