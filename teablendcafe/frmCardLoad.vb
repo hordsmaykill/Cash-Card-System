@@ -9,21 +9,14 @@ Public Class frmCardLoad
     Public customerId As String = "tbc123"
 
     Dim Connect As New MySqlConnection
-    Dim Reader As MySqlDataReader
+    Dim TransactionReader As MySqlDataReader
 
     Private Sub frmCardLoad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
 
-        ' reset to defaults all members
-        Dim Command As New MySqlCommand
-
-        With Command
-            .Connection = Connect
-            .CommandText = "UPDATE tblcustomers SET isTransacting='false' WHERE isTransacting='true'"
-            .ExecuteNonQuery()
-        End With
-
-
+        ' reset db
+        closeTransaction()
+        tmrCheck.Enabled = True
     End Sub
 
     Public Sub ConnectDB()
@@ -38,17 +31,32 @@ Public Class frmCardLoad
     End Sub
 
     Private Sub closeTransaction()
-        Reader.Close()
         tmrCheck.Enabled = False
 
         Dim Command As New MySqlCommand
 
         With Command
             .Connection = Connect
-            .CommandText = "UPDATE tblcustomers SET isTransacting='false' WHERE cus_no='" & customerId & "'"
+            .CommandText = "UPDATE tbltransaction SET cus_no='0' WHERE id=1"
             .ExecuteNonQuery()
         End With
     End Sub
+
+    Function getName(cusNo As String) As String
+        Dim name As String
+        Dim command As New MySqlCommand
+        Dim reader As MySqlDataReader
+
+        With command
+            .Connection = Connect
+            .CommandText = "SELECT cus_name FROM tblcustomers WHERE cus_no='" & cusNo & "'"
+        End With
+        reader = command.ExecuteReader()
+        reader.Read()
+        name = reader.Item(0)
+
+        Return name
+    End Function
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         closeTransaction()
@@ -60,22 +68,26 @@ Public Class frmCardLoad
 
         Dim Command As New MySqlCommand
 
-            With Command
-                .Connection = Connect
-                .CommandText = "SELECT isTransacting FROM tblcustomers WHERE cus_no='" & customerId & "'"
-            End With
-            Reader = Command.ExecuteReader()
-            Reader.Read()
+        With Command
+            .Connection = Connect
+            .CommandText = "SELECT cus_no FROM tbltransaction WHERE id=1"
+        End With
+        TransactionReader = Command.ExecuteReader()
+        TransactionReader.Read()
 
-        If Reader.Item(0) = "true" Then
+        Dim customerNumber As String = TransactionReader.Item(0)
+
+        If customerNumber <> "0" Then
             tmrCheck.Enabled = False
-            Reader.Close()
-            MsgBox("NAPALITAN NA!!! BALIK KNA SA MAIN BES.")
+            TransactionReader.Close()
+            MsgBox("NAPALITAN NA!!! MAG MINUS KNA BES.")
+
+            ' minus here
+            MsgBox("ANG MABABAWASAN AY SI " & getName(customerNumber))
+
             Me.Close()
         End If
 
-
-
-        Reader.Close()
+        TransactionReader.Close()
     End Sub
 End Class
