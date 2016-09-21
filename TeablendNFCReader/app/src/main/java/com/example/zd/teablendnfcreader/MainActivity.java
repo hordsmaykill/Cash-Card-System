@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... strings) {
 
             //String loginUrl = "http://" + ip + "/tbc/update.php";
-            String loginUrl = "http://192.168.22.10/tbc/update.php";
+            String loginUrl = "http://192.168.22.11/tbc/update.php";
 
             try {
                 String cusNo = strings[0];
