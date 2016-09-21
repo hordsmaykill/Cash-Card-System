@@ -24,8 +24,8 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panSideMenu = New System.Windows.Forms.Panel()
         Me.panButtons = New System.Windows.Forms.TableLayoutPanel()
         Me.picAccounts = New System.Windows.Forms.PictureBox()
@@ -51,7 +51,7 @@ Partial Class frmMain
         Me.panMenu = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnDeleteOrder = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnOrder = New System.Windows.Forms.Button()
         Me.txtTotalOrder = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -644,7 +644,7 @@ Partial Class frmMain
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.btnDeleteOrder)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnOrder)
         Me.GroupBox1.Controls.Add(Me.txtTotalOrder)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -665,14 +665,15 @@ Partial Class frmMain
         Me.btnDeleteOrder.Text = "DELETE"
         Me.btnDeleteOrder.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnOrder
         '
-        Me.Button1.Location = New System.Drawing.Point(388, 620)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(129, 67)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "ORDER"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnOrder.Enabled = False
+        Me.btnOrder.Location = New System.Drawing.Point(388, 620)
+        Me.btnOrder.Name = "btnOrder"
+        Me.btnOrder.Size = New System.Drawing.Size(129, 67)
+        Me.btnOrder.TabIndex = 45
+        Me.btnOrder.Text = "ORDER"
+        Me.btnOrder.UseVisualStyleBackColor = True
         '
         'txtTotalOrder
         '
@@ -2512,21 +2513,21 @@ Partial Class frmMain
         'accounts_dgv
         '
         Me.accounts_dgv.AllowUserToAddRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.accounts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.accounts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column13})
         Me.accounts_dgv.Location = New System.Drawing.Point(2, 85)
         Me.accounts_dgv.Name = "accounts_dgv"
         Me.accounts_dgv.ReadOnly = True
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.accounts_dgv.Size = New System.Drawing.Size(1364, 476)
         Me.accounts_dgv.TabIndex = 0
         '
@@ -3164,7 +3165,7 @@ Partial Class frmMain
     Friend WithEvents Label39 As Label
     Friend WithEvents menu_d_pmk_G As Button
     Friend WithEvents menu_d_pmk_V As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnOrder As Button
     Friend WithEvents txtTotalOrder As TextBox
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn

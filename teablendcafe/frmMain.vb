@@ -306,9 +306,11 @@ Public Class frmMain
             Next
             txtTotalOrder.Text = FormatNumber(total)
             btnDeleteOrder.Enabled = True
+            btnOrder.Enabled = True
         Else
             txtTotalOrder.Text = "0"
             btnDeleteOrder.Enabled = False
+            btnOrder.Enabled = True
         End If
     End Sub
 
@@ -1041,7 +1043,7 @@ Public Class frmMain
     End Sub
 
     Private Sub dgvorders_RowStateChanged(sender As Object, e As DataGridViewRowStateChangedEventArgs) Handles dgvorders.RowStateChanged
-        updateTotalOrders
+        updateTotalOrders()
     End Sub
 
 
