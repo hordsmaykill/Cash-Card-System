@@ -952,6 +952,10 @@ Public Class frmMain
         accountsEdit.lUsername.Text = Username
     End Sub
 
+    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, Panel2.MouseClick
+
+    End Sub
+
 
 
     ''

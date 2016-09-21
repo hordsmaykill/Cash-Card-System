@@ -401,6 +401,18 @@
   <ItemGroup>
     <None Include="Resources\frm_edit_accounts.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_panwrapper_img.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
