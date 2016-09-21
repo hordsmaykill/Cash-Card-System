@@ -22,6 +22,7 @@ Partial Class frmquantity
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmquantity))
         Me.txtNum = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnOk = New System.Windows.Forms.Button()
@@ -71,6 +72,7 @@ Partial Class frmquantity
         '
         'btnMin
         '
+        Me.btnMin.BackgroundImage = CType(resources.GetObject("btnMin.BackgroundImage"), System.Drawing.Image)
         Me.btnMin.Location = New System.Drawing.Point(24, 57)
         Me.btnMin.Name = "btnMin"
         Me.btnMin.Size = New System.Drawing.Size(48, 48)
@@ -79,6 +81,7 @@ Partial Class frmquantity
         '
         'btnAdd
         '
+        Me.btnAdd.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Plus
         Me.btnAdd.Location = New System.Drawing.Point(199, 57)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(48, 48)
