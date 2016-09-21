@@ -24,8 +24,8 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panSideMenu = New System.Windows.Forms.Panel()
         Me.panButtons = New System.Windows.Forms.TableLayoutPanel()
         Me.picAccounts = New System.Windows.Forms.PictureBox()
@@ -50,9 +50,9 @@ Partial Class frmMain
         Me.panContent = New System.Windows.Forms.Panel()
         Me.panMenu = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnDeleteOrder = New System.Windows.Forms.Button()
+        Me.btnOrder = New System.Windows.Forms.Button()
+        Me.txtTotalOrder = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvorders = New System.Windows.Forms.DataGridView()
@@ -219,8 +219,6 @@ Partial Class frmMain
         Me.account_delbtn = New System.Windows.Forms.Button()
         Me.account_editbtn = New System.Windows.Forms.Button()
         Me.account_addbtn = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.accounts_dgv = New System.Windows.Forms.DataGridView()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -229,6 +227,17 @@ Partial Class frmMain
         Me.ltime = New System.Windows.Forms.Label()
         Me.lDate = New System.Windows.Forms.Label()
         Me.panAssessment = New System.Windows.Forms.Panel()
+        Me.Panel34 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btnmembers_del = New System.Windows.Forms.Button()
+        Me.btnmembers_add = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.dgv_members = New System.Windows.Forms.DataGridView()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panInventory = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -308,6 +317,9 @@ Partial Class frmMain
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panHome.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.panAssessment.SuspendLayout()
+        Me.Panel34.SuspendLayout()
+        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panInventory.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panWrapper.SuspendLayout()
@@ -631,9 +643,9 @@ Partial Class frmMain
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.btnDeleteOrder)
+        Me.GroupBox1.Controls.Add(Me.btnOrder)
+        Me.GroupBox1.Controls.Add(Me.txtTotalOrder)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.dgvorders)
@@ -643,31 +655,33 @@ Partial Class frmMain
         Me.GroupBox1.TabIndex = 26
         Me.GroupBox1.TabStop = False
         '
-        'Button2
+        'btnDeleteOrder
         '
-        Me.Button2.Location = New System.Drawing.Point(250, 620)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(129, 67)
-        Me.Button2.TabIndex = 45
-        Me.Button2.Text = "DELETE"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDeleteOrder.Enabled = False
+        Me.btnDeleteOrder.Location = New System.Drawing.Point(250, 620)
+        Me.btnDeleteOrder.Name = "btnDeleteOrder"
+        Me.btnDeleteOrder.Size = New System.Drawing.Size(129, 67)
+        Me.btnDeleteOrder.TabIndex = 45
+        Me.btnDeleteOrder.Text = "DELETE"
+        Me.btnDeleteOrder.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnOrder
         '
-        Me.Button1.Location = New System.Drawing.Point(388, 620)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(129, 67)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "ORDER"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnOrder.Enabled = False
+        Me.btnOrder.Location = New System.Drawing.Point(388, 620)
+        Me.btnOrder.Name = "btnOrder"
+        Me.btnOrder.Size = New System.Drawing.Size(129, 67)
+        Me.btnOrder.TabIndex = 45
+        Me.btnOrder.Text = "ORDER"
+        Me.btnOrder.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtTotalOrder
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(128, 656)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 31)
-        Me.TextBox1.TabIndex = 44
+        Me.txtTotalOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalOrder.Location = New System.Drawing.Point(128, 656)
+        Me.txtTotalOrder.Name = "txtTotalOrder"
+        Me.txtTotalOrder.Size = New System.Drawing.Size(100, 31)
+        Me.txtTotalOrder.TabIndex = 44
         '
         'Label9
         '
@@ -2463,8 +2477,6 @@ Partial Class frmMain
         Me.panAccounts.Controls.Add(Me.account_delbtn)
         Me.panAccounts.Controls.Add(Me.account_editbtn)
         Me.panAccounts.Controls.Add(Me.account_addbtn)
-        Me.panAccounts.Controls.Add(Me.TextBox2)
-        Me.panAccounts.Controls.Add(Me.Button3)
         Me.panAccounts.Controls.Add(Me.accounts_dgv)
         Me.panAccounts.Location = New System.Drawing.Point(0, 2800)
         Me.panAccounts.Name = "panAccounts"
@@ -2498,40 +2510,24 @@ Partial Class frmMain
         Me.account_addbtn.Text = "add"
         Me.account_addbtn.UseVisualStyleBackColor = True
         '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(1079, 28)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(199, 38)
-        Me.TextBox2.TabIndex = 2
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(1288, 24)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(50, 46)
-        Me.Button3.TabIndex = 1
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'accounts_dgv
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.accounts_dgv.AllowUserToAddRows = False
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.accounts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.accounts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column13})
         Me.accounts_dgv.Location = New System.Drawing.Point(2, 85)
         Me.accounts_dgv.Name = "accounts_dgv"
         Me.accounts_dgv.ReadOnly = True
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.accounts_dgv.Size = New System.Drawing.Size(1364, 476)
         Me.accounts_dgv.TabIndex = 0
         '
@@ -2596,12 +2592,103 @@ Partial Class frmMain
         'panAssessment
         '
         Me.panAssessment.BackColor = System.Drawing.Color.Transparent
-        Me.panAssessment.BackgroundImage = Global.teablendcafe.My.Resources.Resources.brknimages
         Me.panAssessment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.panAssessment.Controls.Add(Me.Panel34)
         Me.panAssessment.Location = New System.Drawing.Point(0, 2105)
         Me.panAssessment.Name = "panAssessment"
         Me.panAssessment.Size = New System.Drawing.Size(1366, 695)
         Me.panAssessment.TabIndex = 8
+        '
+        'Panel34
+        '
+        Me.Panel34.Controls.Add(Me.Button3)
+        Me.Panel34.Controls.Add(Me.TextBox2)
+        Me.Panel34.Controls.Add(Me.btnmembers_del)
+        Me.Panel34.Controls.Add(Me.btnmembers_add)
+        Me.Panel34.Controls.Add(Me.Button6)
+        Me.Panel34.Controls.Add(Me.dgv_members)
+        Me.Panel34.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel34.Location = New System.Drawing.Point(0, 0)
+        Me.Panel34.Name = "Panel34"
+        Me.Panel34.Size = New System.Drawing.Size(1366, 695)
+        Me.Panel34.TabIndex = 0
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(1269, 25)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(1149, 27)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 2
+        '
+        'btnmembers_del
+        '
+        Me.btnmembers_del.Location = New System.Drawing.Point(846, 589)
+        Me.btnmembers_del.Name = "btnmembers_del"
+        Me.btnmembers_del.Size = New System.Drawing.Size(134, 65)
+        Me.btnmembers_del.TabIndex = 1
+        Me.btnmembers_del.Text = "delete"
+        Me.btnmembers_del.UseVisualStyleBackColor = True
+        '
+        'btnmembers_add
+        '
+        Me.btnmembers_add.Location = New System.Drawing.Point(1028, 589)
+        Me.btnmembers_add.Name = "btnmembers_add"
+        Me.btnmembers_add.Size = New System.Drawing.Size(134, 65)
+        Me.btnmembers_add.TabIndex = 1
+        Me.btnmembers_add.Text = "add"
+        Me.btnmembers_add.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(1204, 589)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(134, 65)
+        Me.Button6.TabIndex = 1
+        Me.Button6.Text = "Button6"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'dgv_members
+        '
+        Me.dgv_members.AllowUserToAddRows = False
+        Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
+        Me.dgv_members.Location = New System.Drawing.Point(2, 62)
+        Me.dgv_members.Name = "dgv_members"
+        Me.dgv_members.Size = New System.Drawing.Size(1361, 461)
+        Me.dgv_members.TabIndex = 0
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "cus_num"
+        Me.Column12.Name = "Column12"
+        Me.Column12.Width = 330
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "cus_name"
+        Me.Column14.Name = "Column14"
+        Me.Column14.Width = 330
+        '
+        'Column15
+        '
+        Me.Column15.HeaderText = "cus_since"
+        Me.Column15.Name = "Column15"
+        Me.Column15.Width = 330
+        '
+        'Column16
+        '
+        Me.Column16.HeaderText = "cus_loadwallet"
+        Me.Column16.Name = "Column16"
+        Me.Column16.Width = 330
         '
         'panInventory
         '
@@ -2856,11 +2943,14 @@ Partial Class frmMain
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.panAccounts.ResumeLayout(False)
-        Me.panAccounts.PerformLayout()
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panHome.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.panAssessment.ResumeLayout(False)
+        Me.Panel34.ResumeLayout(False)
+        Me.Panel34.PerformLayout()
+        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panInventory.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panWrapper.ResumeLayout(False)
@@ -3075,20 +3165,29 @@ Partial Class frmMain
     Friend WithEvents Label39 As Label
     Friend WithEvents menu_d_pmk_G As Button
     Friend WithEvents menu_d_pmk_V As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnOrder As Button
+    Friend WithEvents txtTotalOrder As TextBox
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnDeleteOrder As Button
     Friend WithEvents account_delbtn As Button
     Friend WithEvents account_editbtn As Button
     Friend WithEvents account_addbtn As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button3 As Button
     Friend WithEvents accounts_dgv As DataGridView
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel34 As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btnmembers_del As Button
+    Friend WithEvents btnmembers_add As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents dgv_members As DataGridView
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
+    Friend WithEvents Column16 As DataGridViewTextBoxColumn
 End Class

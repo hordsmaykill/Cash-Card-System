@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SPLASH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SPLASH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,9 +126,6 @@
   </data>
   <data name="ic_person_outline_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_person_outline_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="frm_edit_accounts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frm_edit_accounts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="revised1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\revised1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +142,8 @@
   <data name="menu_125" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_125.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="brknimages" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brknimages.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menuHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_125" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_125.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,6 +159,9 @@
   </data>
   <data name="splash111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splash111.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="splash_panwrapper_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splash_panwrapper_img.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mainlogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainlogo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +184,8 @@
   <data name="revised" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\revised.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="milkteaslogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\milkteaslogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="assessment_105" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assessment_105.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ikot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ikot.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,8 +208,14 @@
   <data name="arrowdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="login2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="splash11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splash11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="interlaced2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\interlaced2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,28 +223,25 @@
   <data name="interlaced" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\interlaced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menuHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SPLASH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SPLASH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttons1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttons" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logobgtest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logobgtest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frm_edit_accounts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frm_edit_accounts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="assessment_105" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\assessment_105.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="milkteaslogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\milkteaslogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="splash_panwrapper_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splash_panwrapper_img.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frm_edit_accounts1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frm_edit_accounts1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
