@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2016 at 08:48 AM
+-- Generation Time: Sep 21, 2016 at 11:47 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -48,10 +48,11 @@ INSERT INTO `tbladministrators` (`username`, `password`, `type`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tblcustomers` (
-  `cus_no` int(5) NOT NULL,
+  `cus_no` varchar(10) NOT NULL,
   `cus_name` varchar(25) NOT NULL,
   `cus_since` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `cus_loadwallet` int(4) NOT NULL,
+  `cus_loadwallet` int(6) NOT NULL,
+  `isTransacting` varchar(5) NOT NULL DEFAULT 'false',
   PRIMARY KEY (`cus_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -59,8 +60,9 @@ CREATE TABLE IF NOT EXISTS `tblcustomers` (
 -- Dumping data for table `tblcustomers`
 --
 
-INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`) VALUES
-(23, 'dfg', '2016-09-19 11:56:43', 2132123);
+INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`, `isTransacting`) VALUES
+('tbc123', 'dfg', '2016-09-21 21:43:22', 500, 'true'),
+('tbc456', 'testing test', '2016-09-21 21:14:58', 300, 'false');
 
 -- --------------------------------------------------------
 
