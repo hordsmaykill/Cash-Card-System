@@ -547,14 +547,23 @@ Public Class frmMain
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
 
+        ' update product name
+        Dim curProdName As String = ""
+
+        Select Case size
+            Case DRINKS_SIZEG
+                curProdName = Reader.Item(1) & " Grande"
+            Case DRINKS_SIZEV
+                curProdName = Reader.Item(1) & " Venti"
+        End Select
+
+
         ' check if prod is already at the dgv
         For i As Integer = 0 To row - 1
-            Dim curProdCode As String
+            Dim selProdName As String ' selected from dgv
+            selProdName = dgvorders.Item(1, i).Value
 
-            curProdCode = dgvorders.Item(3, i).Value
-            curProdCode = dgvorders.Item(2, i).Value
-
-            If prodCode = curProdCode Then
+            If curProdName = selProdName Then
                 ' overwrite the qty
                 dgvorders.Item(2, i).Value = qtyRetrieved
                 Reader.Close()
@@ -564,17 +573,22 @@ Public Class frmMain
 
         ' create new row
         dgvorders.Rows.Add()
-        For i As Integer = 0 To 3
-            If i <> 2 Then
-                dgvorders.Item(i, row).Value = Reader.Item(0)
-            End If
-        Next
+        ' prod code
+        dgvorders.Item(0, row).Value = Reader.Item(0)
 
 
+        ' prod name
+        dgvorders.Item(1, row).Value = curProdName
+
+        ' quantity
         dgvorders.Item(2, row).Value = qtyRetrieved
-        Reader.Close()
+
+        ' price
+        dgvorders.Item(3, row).Value = Reader.Item(3)
+
         ' reset qty
         qtyRetrieved = 1
+
         Reader.Close()
     End Sub
 
