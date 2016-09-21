@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 21, 2016 at 11:47 PM
+-- Generation Time: Sep 22, 2016 at 01:14 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -52,7 +52,6 @@ CREATE TABLE IF NOT EXISTS `tblcustomers` (
   `cus_name` varchar(25) NOT NULL,
   `cus_since` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `cus_loadwallet` int(6) NOT NULL,
-  `isTransacting` varchar(5) NOT NULL DEFAULT 'false',
   PRIMARY KEY (`cus_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -60,9 +59,9 @@ CREATE TABLE IF NOT EXISTS `tblcustomers` (
 -- Dumping data for table `tblcustomers`
 --
 
-INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`, `isTransacting`) VALUES
-('tbc123', 'dfg', '2016-09-21 21:43:22', 500, 'true'),
-('tbc456', 'testing test', '2016-09-21 21:14:58', 300, 'false');
+INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`) VALUES
+('tbc123', 'dfg', '2016-09-21 22:11:07', 500),
+('tbc456', 'testing test', '2016-09-21 21:14:58', 300);
 
 -- --------------------------------------------------------
 
@@ -176,6 +175,25 @@ INSERT INTO `tblproducts` (`prod_code`, `prod_name`, `prod_priceG`, `prod_priceV
 ('D_WC', 'Winter Choco', 55, 70, 'drinks_icetea'),
 ('D_WM', 'Winter Melon', 55, 65, 'drinks_tea'),
 ('D_ZD', 'Zesty Dew', 55, 70, 'drinks_icetea');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbltransaction`
+--
+
+CREATE TABLE IF NOT EXISTS `tbltransaction` (
+  `id` int(1) NOT NULL,
+  `cus_no` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbltransaction`
+--
+
+INSERT INTO `tbltransaction` (`id`, `cus_no`) VALUES
+(1, 'tbc123');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
