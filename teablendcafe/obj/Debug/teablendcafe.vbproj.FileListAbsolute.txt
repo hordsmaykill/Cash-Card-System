@@ -104,3 +104,16 @@ C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frm
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.formadmincreatenew.resources
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.accountsEdit.resources
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.typeadminpassword.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\bin\Debug\teablendcafe.exe
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\bin\Debug\teablendcafe.pdb
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\bin\Debug\teablendcafe.xml
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.vbprojResolveAssemblyReference.cache
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.accountsEdit.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.formadmincreatenew.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmMain.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmquantity.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.login.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.Resources.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.splash.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.typeadminpassword.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.vbproj.GenerateResource.Cache

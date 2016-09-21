@@ -23,8 +23,8 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panSideMenu = New System.Windows.Forms.Panel()
         Me.panButtons = New System.Windows.Forms.TableLayoutPanel()
         Me.picAccounts = New System.Windows.Forms.PictureBox()
@@ -614,7 +614,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -2800)
+        Me.panContent.Location = New System.Drawing.Point(230, -700)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -2516,21 +2516,23 @@ Partial Class frmMain
         '
         'accounts_dgv
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.accounts_dgv.AllowUserToAddRows = False
+        Me.accounts_dgv.AllowUserToDeleteRows = False
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.accounts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.accounts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column13})
         Me.accounts_dgv.Location = New System.Drawing.Point(2, 85)
         Me.accounts_dgv.Name = "accounts_dgv"
         Me.accounts_dgv.ReadOnly = True
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.accounts_dgv.Size = New System.Drawing.Size(1364, 476)
         Me.accounts_dgv.TabIndex = 0
         '
