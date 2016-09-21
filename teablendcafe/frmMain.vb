@@ -526,17 +526,8 @@ Public Class frmMain
             Exit Sub
         End If
 
-        Dim sql As String = ""
-        Select Case size
-            Case DRINKS_SIZEG
-                sql = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
+        Dim sql As String = "SELECT prod_code, prod_name, prod_priceG, prod_priceV FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
-
-            Case DRINKS_SIZEV
-                sql = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='" & prodCode & "'"
-        End Select
-
 
         With Command
             .Connection = Connect
@@ -548,14 +539,34 @@ Public Class frmMain
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
 
+        ' get prices
+        Dim priceG = Reader.Item(2)
+        Dim priceV = Reader.Item(3)
+
+
+        ' if it's a dish don't concat size
+        Dim curProdName As String = ""
+
+
+        ' update product name concat size
+        Select Case size
+            Case DRINKS_SIZEG
+                If Not IsDBNull(priceV) Then
+                    curProdName = Reader.Item(1) & " Grande"
+                Else
+                    curProdName = Reader.Item(1)
+                End If
+            Case DRINKS_SIZEV
+                curProdName = Reader.Item(1) & " Venti"
+        End Select
+
+
         ' check if prod is already at the dgv
         For i As Integer = 0 To row - 1
-            Dim curProdCode As String
+            Dim selProdName As String ' selected from dgv
+            selProdName = dgvorders.Item(1, i).Value
 
-            curProdCode = dgvorders.Item(3, i).Value
-            curProdCode = dgvorders.Item(2, i).Value
-
-            If prodCode = curProdCode Then
+            If curProdName = selProdName Then
                 ' overwrite the qty
                 dgvorders.Item(2, i).Value = qtyRetrieved
                 Reader.Close()
@@ -565,17 +576,28 @@ Public Class frmMain
 
         ' create new row
         dgvorders.Rows.Add()
-        For i As Integer = 0 To 3
-            If i <> 2 Then
-                dgvorders.Item(i, row).Value = Reader.Item(0)
-            End If
-        Next
+        ' prod code
+        dgvorders.Item(0, row).Value = Reader.Item(0)
 
+        ' prod name
+        dgvorders.Item(1, row).Value = curProdName
 
+        ' quantity
         dgvorders.Item(2, row).Value = qtyRetrieved
-        Reader.Close()
+
+        ' price
+        Select Case size
+            Case DRINKS_SIZEG
+                dgvorders.Item(3, row).Value = priceG
+            Case DRINKS_SIZEV
+                dgvorders.Item(3, row).Value = priceV
+        End Select
+
+
+
         ' reset qty
         qtyRetrieved = 1
+
         Reader.Close()
     End Sub
 
