@@ -121,9 +121,6 @@
   <data name="SPLASH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SPLASH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Plus Math-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Plus Math-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,14 +166,8 @@
   <data name="menuDefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menuDefault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="splash_&amp;_panwrapper_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splash_&amp;_panwrapper_img.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="log-in3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-in37.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,17 +211,11 @@
   <data name="splash11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splash11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="splash_&amp;_panwrapper_img1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splash_&amp;_panwrapper_img1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="interlaced2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\interlaced2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="interlaced" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\interlaced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Minus Math -48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minus Math -48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttons1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
