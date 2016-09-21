@@ -19,13 +19,26 @@
 
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         If qty <> 1 Then
-            qty = qty - 1
+            qty -= 1
         End If
         txtNum.Text = qty
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        qty = qty + 1
+        qty += 1
+        txtNum.Text = qty
+    End Sub
+
+    Private Sub txtNum_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNum.KeyDown
+        If e.KeyCode >= 65 And e.KeyCode <= 90 Then
+            MsgBox("Please enter a number.")
+            txtNum.Text = 1
+        End If
+
+    End Sub
+
+    Private Sub txtNum_TextChanged(sender As Object, e As EventArgs) Handles txtNum.TextChanged
+        Integer.TryParse(txtNum.Text, qty)
         txtNum.Text = qty
     End Sub
 End Class

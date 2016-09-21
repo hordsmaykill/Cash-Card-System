@@ -22,23 +22,13 @@ Partial Class frmquantity
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtNum = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
+        Me.txtNum = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
-        '
-        'txtNum
-        '
-        Me.txtNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNum.Location = New System.Drawing.Point(82, 57)
-        Me.txtNum.Name = "txtNum"
-        Me.txtNum.Size = New System.Drawing.Size(111, 47)
-        Me.txtNum.TabIndex = 1
-        Me.txtNum.Text = "1"
-        Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
@@ -87,6 +77,16 @@ Partial Class frmquantity
         Me.btnAdd.TabIndex = 5
         Me.btnAdd.UseVisualStyleBackColor = True
         '
+        'txtNum
+        '
+        Me.txtNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNum.Location = New System.Drawing.Point(82, 57)
+        Me.txtNum.Name = "txtNum"
+        Me.txtNum.Size = New System.Drawing.Size(111, 47)
+        Me.txtNum.TabIndex = 1
+        Me.txtNum.Text = "1"
+        Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'frmquantity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -107,11 +107,10 @@ Partial Class frmquantity
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtNum As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnOk As Button
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnMin As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents txtNum As TextBox
 End Class
