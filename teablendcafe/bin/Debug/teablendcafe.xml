@@ -22,11 +22,6 @@ teablendcafe
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources.aaaa">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:teablendcafe.My.Resources.Resources.arrowdown">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -122,17 +117,17 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in3">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:teablendcafe.My.Resources.Resources.login">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:teablendcafe.My.Resources.Resources.login1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.login2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -197,12 +192,7 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources.Minus_Math__48">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Plus_Math_48">
+<member name="P:teablendcafe.My.Resources.Resources.Plus">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -222,12 +212,7 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources.splash___panwrapper_img">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.splash___panwrapper_img1">
+<member name="P:teablendcafe.My.Resources.Resources.splash_panwrapper_img">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
