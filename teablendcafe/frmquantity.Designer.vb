@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmquantity
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,25 @@ Partial Class frmquantity
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.txtNum = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.txtNum = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
+        '
+        'txtNum
+        '
+        Me.txtNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNum.Location = New System.Drawing.Point(82, 57)
+        Me.txtNum.Name = "txtNum"
+        Me.txtNum.Size = New System.Drawing.Size(111, 47)
+        Me.txtNum.TabIndex = 1
+        Me.txtNum.Text = "1"
+        Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
@@ -61,7 +71,6 @@ Partial Class frmquantity
         '
         'btnMin
         '
-        Me.btnMin.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Minus_Math__48
         Me.btnMin.Location = New System.Drawing.Point(24, 57)
         Me.btnMin.Name = "btnMin"
         Me.btnMin.Size = New System.Drawing.Size(48, 48)
@@ -70,22 +79,11 @@ Partial Class frmquantity
         '
         'btnAdd
         '
-        Me.btnAdd.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Plus_Math_48
         Me.btnAdd.Location = New System.Drawing.Point(199, 57)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(48, 48)
         Me.btnAdd.TabIndex = 5
         Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'txtNum
-        '
-        Me.txtNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNum.Location = New System.Drawing.Point(82, 57)
-        Me.txtNum.Name = "txtNum"
-        Me.txtNum.Size = New System.Drawing.Size(111, 47)
-        Me.txtNum.TabIndex = 1
-        Me.txtNum.Text = "1"
-        Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'frmquantity
         '
@@ -107,10 +105,11 @@ Partial Class frmquantity
         Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents txtNum As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnOk As Button
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnMin As Button
     Friend WithEvents btnAdd As Button
-    Friend WithEvents txtNum As TextBox
 End Class
