@@ -22,11 +22,6 @@ teablendcafe
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources.aaaa">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:teablendcafe.My.Resources.Resources.arrowdown">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -122,11 +117,6 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources.log_in3">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:teablendcafe.My.Resources.Resources.login">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -197,16 +187,6 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:teablendcafe.My.Resources.Resources.Minus_Math__48">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.Plus_Math_48">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:teablendcafe.My.Resources.Resources.revised">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -218,16 +198,6 @@ teablendcafe
 </summary>
 </member>
 <member name="P:teablendcafe.My.Resources.Resources.SPLASH">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.splash___panwrapper_img">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:teablendcafe.My.Resources.Resources.splash___panwrapper_img1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

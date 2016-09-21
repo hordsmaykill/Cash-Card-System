@@ -41,6 +41,7 @@ Partial Class splash
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.WindowFrame
+        Me.PictureBox2.Image = Global.teablendcafe.My.Resources.Resources.splash_panwrapper_img
         Me.PictureBox2.Location = New System.Drawing.Point(0, 2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(588, 603)
