@@ -97,6 +97,219 @@ Public Class frmMain
 
     End Sub
 
+    Private Sub setMenuColors()
+        lblHome.BackColor = Color.FromArgb(67, 41, 6)
+        picHome.BackColor = Color.FromArgb(67, 41, 6)
+
+        lblInventory.BackColor = Color.FromArgb(67, 41, 6)
+        picInventory.BackColor = Color.FromArgb(67, 41, 6)
+
+        lblMenu.BackColor = Color.FromArgb(67, 41, 6)
+        picMenu.BackColor = Color.FromArgb(67, 41, 6)
+
+        lblAssessment.BackColor = Color.FromArgb(67, 41, 6)
+        picAssessment.BackColor = Color.FromArgb(67, 41, 6)
+
+        lblAccounts.BackColor = Color.FromArgb(67, 41, 6)
+        picAccounts.BackColor = Color.FromArgb(67, 41, 6)
+
+        Select Case contentLocation
+            Case SIDE_MENU_HOME
+                lblHome.BackColor = Color.FromArgb(111, 68, 10)
+                picHome.BackColor = Color.FromArgb(111, 68, 10)
+
+            Case SIDE_MENU_INVENTORY
+                lblInventory.BackColor = Color.FromArgb(111, 68, 10)
+                picInventory.BackColor = Color.FromArgb(111, 68, 10)
+
+            Case SIDE_MENU_MENU
+                lblMenu.BackColor = Color.FromArgb(111, 68, 10)
+                picMenu.BackColor = Color.FromArgb(111, 68, 10)
+
+            Case SIDE_MENU_ASSESSMENT
+                lblAssessment.BackColor = Color.FromArgb(111, 68, 10)
+                picAssessment.BackColor = Color.FromArgb(111, 68, 10)
+
+            Case SIDE_MENU_ACCOUNTS
+                lblAccounts.BackColor = Color.FromArgb(111, 68, 10)
+                picAccounts.BackColor = Color.FromArgb(111, 68, 10)
+        End Select
+
+    End Sub
+
+    ' menu hide when click on content
+    Private Sub menuHideLoad()
+        For Each ctrl As Control In panContent.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In panHome.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In panInventory.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In panmenumenu.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In panAssessment.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+    End Sub
+
+    Private Sub menuHide() Handles panContent.Click, panHeading.Click
+        ctrl_Click(Me, New EventArgs)
+    End Sub
+
+    'datagrid'
+    Public Sub AccountsDGV()
+        accounts_dgv.Rows.Clear()
+
+        With Command
+            .Connection = Connect
+            .CommandText = "SELECT * FROM tbladministrators"
+        End With
+        Reader = Command.ExecuteReader
+
+        If Reader.HasRows Then
+            While Reader.Read
+                accounts_dgv.Rows.Add(Reader.Item(0), Reader.Item(2))
+            End While
+        End If
+        Reader.Close()
+
+    End Sub
+    'members dgv'
+    Public Sub membersDGV()
+        dgv_members.Rows.Clear()
+
+        With Command
+            .Connection = Connect
+            .CommandText = "SELECT * FROM tblcustomers"
+        End With
+        Reader = Command.ExecuteReader
+
+        If Reader.HasRows Then
+            While Reader.Read
+                dgv_members.Rows.Add(Reader.Item(0), Reader.Item(1), Reader.Item(2), Reader.Item(3))
+            End While
+        End If
+        Reader.Close()
+
+    End Sub
+
+    Private Sub drinksToDGV(prodCode As String, size As Integer)
+        ' get qty
+        frmquantity.ShowDialog()
+
+        ' exit if cancel
+        If qtyRetrieved = -1 Then
+            Exit Sub
+        End If
+
+        Dim sql As String = "SELECT prod_code, prod_name, prod_priceG, prod_priceV FROM tblproducts WHERE 
+            prod_code ='" & prodCode & "'"
+
+        With Command
+            .Connection = Connect
+            .CommandText = sql
+        End With
+        Reader = Command.ExecuteReader
+        Reader.Read()
+
+        Dim column As Integer = dgvorders.ColumnCount
+        Dim row As Integer = dgvorders.RowCount
+
+        ' get prices
+        Dim priceG = Reader.Item(2)
+        Dim priceV = Reader.Item(3)
+
+        ' if it's a dish don't concat size
+        Dim curProdName As String = ""
+
+
+        ' update product name concat size
+        Select Case size
+            Case DRINKS_SIZEG
+                If Not IsDBNull(priceV) Then
+                    curProdName = Reader.Item(1) & " Grande"
+                Else
+                    curProdName = Reader.Item(1)
+                End If
+            Case DRINKS_SIZEV
+                curProdName = Reader.Item(1) & " Venti"
+        End Select
+
+
+        ' check if prod is already at the dgv
+        For i As Integer = 0 To row - 1
+            Dim selProdName As String ' selected from dgv
+            selProdName = dgvorders.Item(1, i).Value
+
+            If curProdName = selProdName Then
+                ' overwrite the qty
+                dgvorders.Item(2, i).Value = qtyRetrieved
+                Reader.Close()
+
+                ' update total
+                Dim qtyUpdate As Integer = dgvorders.Item(2, i).Value
+                Dim priceUpdate As Double = dgvorders.Item(3, i).Value
+                dgvorders.Item(4, i).Value = (qtyUpdate * priceUpdate)
+                updateTotalOrders()
+                Exit Sub
+            End If
+        Next
+
+        ' create new row
+        dgvorders.Rows.Add()
+        ' prod code
+        dgvorders.Item(0, row).Value = Reader.Item(0)
+
+        ' prod name
+        dgvorders.Item(1, row).Value = curProdName
+
+        ' quantity
+        dgvorders.Item(2, row).Value = qtyRetrieved
+
+        ' price
+        Select Case size
+            Case DRINKS_SIZEG
+                dgvorders.Item(3, row).Value = priceG
+            Case DRINKS_SIZEV
+                dgvorders.Item(3, row).Value = priceV
+        End Select
+
+        ' total
+        Dim qty As Integer = dgvorders.Item(2, row).Value
+        Dim price As Double = dgvorders.Item(3, row).Value
+        dgvorders.Item(4, row).Value = (qty * price)
+
+        ' reset qty
+        qtyRetrieved = 1
+
+        Reader.Close()
+    End Sub
+
+    Private Sub updateTotalOrders()
+        If dgvorders.RowCount > 0 Then
+            ' add and update total
+            Dim total As Double = 0
+            For i As Integer = 0 To dgvorders.RowCount - 1
+                total += dgvorders.Item(4, i).Value
+            Next
+
+
+            btnDeleteOrder.Enabled = True
+        Else
+            txtTotalOrder.Text = "0"
+            btnDeleteOrder.Enabled = False
+        End If
+    End Sub
+
     Private Sub btnMenu_MouseEnter(sender As Object, e As EventArgs) Handles btnMenu.MouseEnter
         btnMenu.Image = My.Resources.menuHover
     End Sub
@@ -271,75 +484,6 @@ Public Class frmMain
     End Sub
 
 
-    Private Sub setMenuColors()
-        lblHome.BackColor = Color.FromArgb(67, 41, 6)
-        picHome.BackColor = Color.FromArgb(67, 41, 6)
-
-        lblInventory.BackColor = Color.FromArgb(67, 41, 6)
-        picInventory.BackColor = Color.FromArgb(67, 41, 6)
-
-        lblMenu.BackColor = Color.FromArgb(67, 41, 6)
-        picMenu.BackColor = Color.FromArgb(67, 41, 6)
-
-        lblAssessment.BackColor = Color.FromArgb(67, 41, 6)
-        picAssessment.BackColor = Color.FromArgb(67, 41, 6)
-
-        lblAccounts.BackColor = Color.FromArgb(67, 41, 6)
-        picAccounts.BackColor = Color.FromArgb(67, 41, 6)
-
-        Select Case contentLocation
-            Case SIDE_MENU_HOME
-                lblHome.BackColor = Color.FromArgb(111, 68, 10)
-                picHome.BackColor = Color.FromArgb(111, 68, 10)
-
-            Case SIDE_MENU_INVENTORY
-                lblInventory.BackColor = Color.FromArgb(111, 68, 10)
-                picInventory.BackColor = Color.FromArgb(111, 68, 10)
-
-            Case SIDE_MENU_MENU
-                lblMenu.BackColor = Color.FromArgb(111, 68, 10)
-                picMenu.BackColor = Color.FromArgb(111, 68, 10)
-
-            Case SIDE_MENU_ASSESSMENT
-                lblAssessment.BackColor = Color.FromArgb(111, 68, 10)
-                picAssessment.BackColor = Color.FromArgb(111, 68, 10)
-
-            Case SIDE_MENU_ACCOUNTS
-                lblAccounts.BackColor = Color.FromArgb(111, 68, 10)
-                picAccounts.BackColor = Color.FromArgb(111, 68, 10)
-        End Select
-
-
-    End Sub
-
-    ' menu hide when click on content
-    Private Sub menuHideLoad()
-        For Each ctrl As Control In panContent.Controls
-            AddHandler ctrl.Click, AddressOf ctrl_Click
-        Next
-
-        For Each ctrl As Control In panHome.Controls
-            AddHandler ctrl.Click, AddressOf ctrl_Click
-        Next
-
-        For Each ctrl As Control In panInventory.Controls
-            AddHandler ctrl.Click, AddressOf ctrl_Click
-        Next
-
-        For Each ctrl As Control In panmenumenu.Controls
-            AddHandler ctrl.Click, AddressOf ctrl_Click
-        Next
-
-        For Each ctrl As Control In panAssessment.Controls
-            AddHandler ctrl.Click, AddressOf ctrl_Click
-        Next
-
-    End Sub
-
-    Private Sub menuHide() Handles panContent.Click, panHeading.Click
-        ctrl_Click(Me, New EventArgs)
-    End Sub
-
     Private Sub ctrl_Click(sender As Object, e As EventArgs)
         If isMenuHidden Then
             isMenuHidden = False
@@ -399,9 +543,6 @@ Public Class frmMain
         MAINLocation = MAIN_MENU2
         tmrMain2.Enabled = True
     End Sub
-
-
-
 
     Private Sub tmrDrinks1_Tick(sender As Object, e As EventArgs) Handles tmrDrinks1.Tick
 
@@ -488,9 +629,6 @@ Public Class frmMain
         End Select
     End Sub
 
-
-
-
     Private Sub panHome_MouseEnter(sender As Object, e As EventArgs) Handles panHome.MouseEnter
         Panel2.Hide()
     End Sub
@@ -514,91 +652,6 @@ Public Class frmMain
         SUBLocationX = sub_panmenu1.Location.X
         SUBLocation = SUB_MENU2
         tmrSubmenu.Enabled = True
-    End Sub
-
-
-    Private Sub drinksToDGV(prodCode As String, size As Integer)
-        ' get qty
-        frmquantity.ShowDialog()
-
-        ' exit if cancel
-        If qtyRetrieved = -1 Then
-            Exit Sub
-        End If
-
-        Dim sql As String = "SELECT prod_code, prod_name, prod_priceG, prod_priceV FROM tblproducts WHERE 
-            prod_code ='" & prodCode & "'"
-
-        With Command
-            .Connection = Connect
-            .CommandText = sql
-        End With
-        Reader = Command.ExecuteReader
-        Reader.Read()
-
-        Dim column As Integer = dgvorders.ColumnCount
-        Dim row As Integer = dgvorders.RowCount
-
-        ' get prices
-        Dim priceG = Reader.Item(2)
-        Dim priceV = Reader.Item(3)
-
-
-        ' if it's a dish don't concat size
-        Dim curProdName As String = ""
-
-
-        ' update product name concat size
-        Select Case size
-            Case DRINKS_SIZEG
-                If Not IsDBNull(priceV) Then
-                    curProdName = Reader.Item(1) & " Grande"
-                Else
-                    curProdName = Reader.Item(1)
-                End If
-            Case DRINKS_SIZEV
-                curProdName = Reader.Item(1) & " Venti"
-        End Select
-
-
-        ' check if prod is already at the dgv
-        For i As Integer = 0 To row - 1
-            Dim selProdName As String ' selected from dgv
-            selProdName = dgvorders.Item(1, i).Value
-
-            If curProdName = selProdName Then
-                ' overwrite the qty
-                dgvorders.Item(2, i).Value = qtyRetrieved
-                Reader.Close()
-                Exit Sub
-            End If
-        Next
-
-        ' create new row
-        dgvorders.Rows.Add()
-        ' prod code
-        dgvorders.Item(0, row).Value = Reader.Item(0)
-
-        ' prod name
-        dgvorders.Item(1, row).Value = curProdName
-
-        ' quantity
-        dgvorders.Item(2, row).Value = qtyRetrieved
-
-        ' price
-        Select Case size
-            Case DRINKS_SIZEG
-                dgvorders.Item(3, row).Value = priceG
-            Case DRINKS_SIZEV
-                dgvorders.Item(3, row).Value = priceV
-        End Select
-
-
-
-        ' reset qty
-        qtyRetrieved = 1
-
-        Reader.Close()
     End Sub
 
     Private Sub menu_d_ms_G_Click(sender As Object, e As EventArgs) Handles menu_d_ms_G.Click
@@ -919,42 +972,6 @@ Public Class frmMain
     End Sub
 
 
-    'datagrid'
-    Public Sub AccountsDGV()
-        accounts_dgv.Rows.Clear()
-
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT * FROM tbladministrators"
-        End With
-        Reader = Command.ExecuteReader
-
-        If Reader.HasRows Then
-            While Reader.Read
-                accounts_dgv.Rows.Add(Reader.Item(0), Reader.Item(2))
-            End While
-        End If
-        Reader.Close()
-
-    End Sub
-    'members dgv'
-    Public Sub membersDGV()
-        dgv_members.Rows.Clear()
-
-        With Command
-            .Connection = Connect
-            .CommandText = "SELECT * FROM tblcustomers"
-        End With
-        Reader = Command.ExecuteReader
-
-        If Reader.HasRows Then
-            While Reader.Read
-                dgv_members.Rows.Add(Reader.Item(0), Reader.Item(1), Reader.Item(2), Reader.Item(3))
-            End While
-        End If
-        Reader.Close()
-
-    End Sub
     ''
 
     Private Sub account_delbtn_Click(sender As Object, e As EventArgs) Handles account_delbtn.Click
@@ -1017,11 +1034,14 @@ Public Class frmMain
         addcustomer.ShowDialog()
     End Sub
 
+    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, Panel2.MouseClick
+
+    End Sub
+
+    Private Sub dgvorders_RowStateChanged(sender As Object, e As DataGridViewRowStateChangedEventArgs) Handles dgvorders.RowStateChanged
+        updateTotalOrders
+    End Sub
 
 
-
-
-
-    ''
 
 End Class

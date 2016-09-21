@@ -50,9 +50,9 @@ Partial Class frmMain
         Me.panContent = New System.Windows.Forms.Panel()
         Me.panMenu = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnDeleteOrder = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtTotalOrder = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvorders = New System.Windows.Forms.DataGridView()
@@ -233,6 +233,11 @@ Partial Class frmMain
         Me.btnmembers_del = New System.Windows.Forms.Button()
         Me.btnmembers_add = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.dgv_members = New System.Windows.Forms.DataGridView()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panInventory = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -254,11 +259,6 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dgv_members = New System.Windows.Forms.DataGridView()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
         CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -319,10 +319,10 @@ Partial Class frmMain
         Me.Panel1.SuspendLayout()
         Me.panAssessment.SuspendLayout()
         Me.Panel34.SuspendLayout()
+        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panInventory.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panWrapper.SuspendLayout()
-        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panSideMenu
@@ -627,7 +627,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -2100)
+        Me.panContent.Location = New System.Drawing.Point(230, -1400)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -643,9 +643,9 @@ Partial Class frmMain
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.btnDeleteOrder)
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtTotalOrder)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.dgvorders)
@@ -655,14 +655,15 @@ Partial Class frmMain
         Me.GroupBox1.TabIndex = 26
         Me.GroupBox1.TabStop = False
         '
-        'Button2
+        'btnDeleteOrder
         '
-        Me.Button2.Location = New System.Drawing.Point(250, 620)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(129, 67)
-        Me.Button2.TabIndex = 45
-        Me.Button2.Text = "DELETE"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDeleteOrder.Enabled = False
+        Me.btnDeleteOrder.Location = New System.Drawing.Point(250, 620)
+        Me.btnDeleteOrder.Name = "btnDeleteOrder"
+        Me.btnDeleteOrder.Size = New System.Drawing.Size(129, 67)
+        Me.btnDeleteOrder.TabIndex = 45
+        Me.btnDeleteOrder.Text = "DELETE"
+        Me.btnDeleteOrder.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -673,13 +674,13 @@ Partial Class frmMain
         Me.Button1.Text = "ORDER"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtTotalOrder
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(128, 656)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 31)
-        Me.TextBox1.TabIndex = 44
+        Me.txtTotalOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalOrder.Location = New System.Drawing.Point(128, 656)
+        Me.txtTotalOrder.Name = "txtTotalOrder"
+        Me.txtTotalOrder.Size = New System.Drawing.Size(100, 31)
+        Me.txtTotalOrder.TabIndex = 44
         '
         'Label9
         '
@@ -2654,6 +2655,40 @@ Partial Class frmMain
         Me.Button6.Text = "Button6"
         Me.Button6.UseVisualStyleBackColor = True
         '
+        'dgv_members
+        '
+        Me.dgv_members.AllowUserToAddRows = False
+        Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
+        Me.dgv_members.Location = New System.Drawing.Point(2, 62)
+        Me.dgv_members.Name = "dgv_members"
+        Me.dgv_members.Size = New System.Drawing.Size(1361, 461)
+        Me.dgv_members.TabIndex = 0
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "cus_num"
+        Me.Column12.Name = "Column12"
+        Me.Column12.Width = 330
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "cus_name"
+        Me.Column14.Name = "Column14"
+        Me.Column14.Width = 330
+        '
+        'Column15
+        '
+        Me.Column15.HeaderText = "cus_since"
+        Me.Column15.Name = "Column15"
+        Me.Column15.Width = 330
+        '
+        'Column16
+        '
+        Me.Column16.HeaderText = "cus_loadwallet"
+        Me.Column16.Name = "Column16"
+        Me.Column16.Width = 330
+        '
         'panInventory
         '
         Me.panInventory.BackColor = System.Drawing.Color.Transparent
@@ -2804,40 +2839,6 @@ Partial Class frmMain
         '
         Me.tmrSubmenu.Interval = 10
         '
-        'Column16
-        '
-        Me.Column16.HeaderText = "cus_loadwallet"
-        Me.Column16.Name = "Column16"
-        Me.Column16.Width = 330
-        '
-        'Column15
-        '
-        Me.Column15.HeaderText = "cus_since"
-        Me.Column15.Name = "Column15"
-        Me.Column15.Width = 330
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "cus_name"
-        Me.Column14.Name = "Column14"
-        Me.Column14.Width = 330
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "cus_num"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 330
-        '
-        'dgv_members
-        '
-        Me.dgv_members.AllowUserToAddRows = False
-        Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
-        Me.dgv_members.Location = New System.Drawing.Point(2, 62)
-        Me.dgv_members.Name = "dgv_members"
-        Me.dgv_members.Size = New System.Drawing.Size(1361, 461)
-        Me.dgv_members.TabIndex = 0
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2948,10 +2949,10 @@ Partial Class frmMain
         Me.panAssessment.ResumeLayout(False)
         Me.Panel34.ResumeLayout(False)
         Me.Panel34.PerformLayout()
+        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panInventory.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panWrapper.ResumeLayout(False)
-        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3164,13 +3165,13 @@ Partial Class frmMain
     Friend WithEvents menu_d_pmk_G As Button
     Friend WithEvents menu_d_pmk_V As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtTotalOrder As TextBox
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnDeleteOrder As Button
     Friend WithEvents account_delbtn As Button
     Friend WithEvents account_editbtn As Button
     Friend WithEvents account_addbtn As Button
