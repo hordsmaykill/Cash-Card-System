@@ -291,6 +291,9 @@ Public Class frmMain
         ' reset qty
         qtyRetrieved = 1
 
+        ' update total
+        updateTotalOrders()
+
         Reader.Close()
     End Sub
 
@@ -301,8 +304,7 @@ Public Class frmMain
             For i As Integer = 0 To dgvorders.RowCount - 1
                 total += dgvorders.Item(4, i).Value
             Next
-
-
+            txtTotalOrder.Text = FormatNumber(total)
             btnDeleteOrder.Enabled = True
         Else
             txtTotalOrder.Text = "0"
