@@ -94,6 +94,12 @@
     <Compile Include="formadmincreatenew.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCardLoad.Designer.vb">
+      <DependentUpon>frmCardLoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCardLoad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formadmincreatenew.resx">
       <DependentUpon>formadmincreatenew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCardLoad.resx">
+      <DependentUpon>frmCardLoad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
