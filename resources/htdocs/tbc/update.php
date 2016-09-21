@@ -1,14 +1,20 @@
 <?php
 	
-   require "conn.php";
-    
-    $customerId = $_POST['customerId'];
+    define('HOST', 'localhost');
+    define('USER', 'root');
+    define('PASS', '');
+    define('DB', 'dbtbc');
 
-    $sql = "UPDATE isTransacting FROM tblcustomers WHERE isTransacting=true;";
+    $conn = mysqli_connect(HOST, USER, PASS, DB);
+    
+    // $cusNo = $_POST['cusNo'];
+    $cusNo ="tbc123";
+
+    $sql = "UPDATE tbltransaction SET cus_no='$cusNo' WHERE id='1';";
 
 	$res = mysqli_query($conn, $sql);
 
-	if(mysqli_fetch_array($res)) {
+	if($res) {
         echo 'success';
     } else {
         echo 'fail';
