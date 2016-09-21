@@ -222,7 +222,10 @@ Partial Class frmMain
         Me.accounts_dgv = New System.Windows.Forms.DataGridView()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-<<<<<<< HEAD
+        Me.panHome = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ltime = New System.Windows.Forms.Label()
+        Me.lDate = New System.Windows.Forms.Label()
         Me.panAssessment = New System.Windows.Forms.Panel()
         Me.Panel34 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -230,18 +233,6 @@ Partial Class frmMain
         Me.btnmembers_del = New System.Windows.Forms.Button()
         Me.btnmembers_add = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.dgv_members = New System.Windows.Forms.DataGridView()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-=======
-        Me.panHome = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ltime = New System.Windows.Forms.Label()
-        Me.lDate = New System.Windows.Forms.Label()
-        Me.panAssessment = New System.Windows.Forms.Panel()
->>>>>>> refs/remotes/origin/master
         Me.panInventory = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -263,22 +254,11 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
-<<<<<<< HEAD
-        Me.panHome = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ltime = New System.Windows.Forms.Label()
-        Me.lDate = New System.Windows.Forms.Label()
-        Me.picAccounts = New System.Windows.Forms.PictureBox()
-        Me.picAssessment = New System.Windows.Forms.PictureBox()
-        Me.picMenu = New System.Windows.Forms.PictureBox()
-        Me.picInventory = New System.Windows.Forms.PictureBox()
-        Me.picHome = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.picLogout = New System.Windows.Forms.PictureBox()
-        Me.piclogout2 = New System.Windows.Forms.PictureBox()
-        Me.btnMenu = New System.Windows.Forms.PictureBox()
-=======
->>>>>>> refs/remotes/origin/master
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgv_members = New System.Windows.Forms.DataGridView()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
         CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -335,17 +315,14 @@ Partial Class frmMain
         Me.Panel4.SuspendLayout()
         Me.panAccounts.SuspendLayout()
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
-<<<<<<< HEAD
-        Me.panAssessment.SuspendLayout()
-        Me.Panel34.SuspendLayout()
-        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
-=======
         Me.panHome.SuspendLayout()
         Me.Panel1.SuspendLayout()
->>>>>>> refs/remotes/origin/master
+        Me.panAssessment.SuspendLayout()
+        Me.Panel34.SuspendLayout()
         Me.panInventory.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panWrapper.SuspendLayout()
+        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panSideMenu
@@ -650,11 +627,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-<<<<<<< HEAD
         Me.panContent.Location = New System.Drawing.Point(230, -2100)
-=======
-        Me.panContent.Location = New System.Drawing.Point(230, -1400)
->>>>>>> refs/remotes/origin/master
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -2570,13 +2543,6 @@ Partial Class frmMain
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 660
         '
-<<<<<<< HEAD
-        'panAssessment
-        '
-        Me.panAssessment.BackColor = System.Drawing.Color.Transparent
-        Me.panAssessment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.panAssessment.Controls.Add(Me.Panel34)
-=======
         'panHome
         '
         Me.panHome.BackColor = System.Drawing.Color.Transparent
@@ -2624,15 +2590,13 @@ Partial Class frmMain
         'panAssessment
         '
         Me.panAssessment.BackColor = System.Drawing.Color.Transparent
-        Me.panAssessment.BackgroundImage = Global.teablendcafe.My.Resources.Resources.brknimages
         Me.panAssessment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
->>>>>>> refs/remotes/origin/master
+        Me.panAssessment.Controls.Add(Me.Panel34)
         Me.panAssessment.Location = New System.Drawing.Point(0, 2105)
         Me.panAssessment.Name = "panAssessment"
         Me.panAssessment.Size = New System.Drawing.Size(1366, 695)
         Me.panAssessment.TabIndex = 8
         '
-<<<<<<< HEAD
         'Panel34
         '
         Me.Panel34.Controls.Add(Me.Button3)
@@ -2690,42 +2654,6 @@ Partial Class frmMain
         Me.Button6.Text = "Button6"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'dgv_members
-        '
-        Me.dgv_members.AllowUserToAddRows = False
-        Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
-        Me.dgv_members.Location = New System.Drawing.Point(2, 62)
-        Me.dgv_members.Name = "dgv_members"
-        Me.dgv_members.Size = New System.Drawing.Size(1361, 461)
-        Me.dgv_members.TabIndex = 0
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "cus_num"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 330
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "cus_name"
-        Me.Column14.Name = "Column14"
-        Me.Column14.Width = 330
-        '
-        'Column15
-        '
-        Me.Column15.HeaderText = "cus_since"
-        Me.Column15.Name = "Column15"
-        Me.Column15.Width = 330
-        '
-        'Column16
-        '
-        Me.Column16.HeaderText = "cus_loadwallet"
-        Me.Column16.Name = "Column16"
-        Me.Column16.Width = 330
-        '
-=======
->>>>>>> refs/remotes/origin/master
         'panInventory
         '
         Me.panInventory.BackColor = System.Drawing.Color.Transparent
@@ -2876,168 +2804,40 @@ Partial Class frmMain
         '
         Me.tmrSubmenu.Interval = 10
         '
-<<<<<<< HEAD
-        'panHome
+        'Column16
         '
-        Me.panHome.BackColor = System.Drawing.Color.Transparent
-        Me.panHome.BackgroundImage = Global.teablendcafe.My.Resources.Resources.logobgcropped
-        Me.panHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.panHome.Controls.Add(Me.Panel1)
-        Me.panHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.panHome.Location = New System.Drawing.Point(0, 3)
-        Me.panHome.Name = "panHome"
-        Me.panHome.Size = New System.Drawing.Size(1366, 700)
-        Me.panHome.TabIndex = 9
+        Me.Column16.HeaderText = "cus_loadwallet"
+        Me.Column16.Name = "Column16"
+        Me.Column16.Width = 330
         '
-        'Panel1
+        'Column15
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.ltime)
-        Me.Panel1.Controls.Add(Me.lDate)
-        Me.Panel1.Location = New System.Drawing.Point(0, 655)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1366, 48)
-        Me.Panel1.TabIndex = 0
+        Me.Column15.HeaderText = "cus_since"
+        Me.Column15.Name = "Column15"
+        Me.Column15.Width = 330
         '
-        'ltime
+        'Column14
         '
-        Me.ltime.AutoSize = True
-        Me.ltime.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ltime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ltime.Location = New System.Drawing.Point(1282, 17)
-        Me.ltime.Name = "ltime"
-        Me.ltime.Size = New System.Drawing.Size(41, 16)
-        Me.ltime.TabIndex = 1
-        Me.ltime.Text = "DATE"
+        Me.Column14.HeaderText = "cus_name"
+        Me.Column14.Name = "Column14"
+        Me.Column14.Width = 330
         '
-        'lDate
+        'Column12
         '
-        Me.lDate.AutoSize = True
-        Me.lDate.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lDate.Location = New System.Drawing.Point(13, 17)
-        Me.lDate.Name = "lDate"
-        Me.lDate.Size = New System.Drawing.Size(41, 16)
-        Me.lDate.TabIndex = 0
-        Me.lDate.Text = "DATE"
+        Me.Column12.HeaderText = "cus_num"
+        Me.Column12.Name = "Column12"
+        Me.Column12.Width = 330
         '
-        'picAccounts
+        'dgv_members
         '
-        Me.picAccounts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.picAccounts.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picAccounts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picAccounts.Image = Global.teablendcafe.My.Resources.Resources.ic_person_outline_white_48dp_2x
-        Me.picAccounts.Location = New System.Drawing.Point(0, 196)
-        Me.picAccounts.Margin = New System.Windows.Forms.Padding(0)
-        Me.picAccounts.Name = "picAccounts"
-        Me.picAccounts.Size = New System.Drawing.Size(46, 49)
-        Me.picAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picAccounts.TabIndex = 12
-        Me.picAccounts.TabStop = False
+        Me.dgv_members.AllowUserToAddRows = False
+        Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
+        Me.dgv_members.Location = New System.Drawing.Point(2, 62)
+        Me.dgv_members.Name = "dgv_members"
+        Me.dgv_members.Size = New System.Drawing.Size(1361, 461)
+        Me.dgv_members.TabIndex = 0
         '
-        'picAssessment
-        '
-        Me.picAssessment.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picAssessment.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picAssessment.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picAssessment.Image = Global.teablendcafe.My.Resources.Resources.assessment_105
-        Me.picAssessment.Location = New System.Drawing.Point(0, 147)
-        Me.picAssessment.Margin = New System.Windows.Forms.Padding(0)
-        Me.picAssessment.Name = "picAssessment"
-        Me.picAssessment.Size = New System.Drawing.Size(46, 49)
-        Me.picAssessment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picAssessment.TabIndex = 11
-        Me.picAssessment.TabStop = False
-        '
-        'picMenu
-        '
-        Me.picMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picMenu.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picMenu.Image = Global.teablendcafe.My.Resources.Resources.menu_1251
-        Me.picMenu.Location = New System.Drawing.Point(0, 98)
-        Me.picMenu.Margin = New System.Windows.Forms.Padding(0)
-        Me.picMenu.Name = "picMenu"
-        Me.picMenu.Size = New System.Drawing.Size(46, 49)
-        Me.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picMenu.TabIndex = 10
-        Me.picMenu.TabStop = False
-        '
-        'picInventory
-        '
-        Me.picInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picInventory.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picInventory.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picInventory.Image = Global.teablendcafe.My.Resources.Resources.assignment_125
-        Me.picInventory.Location = New System.Drawing.Point(0, 49)
-        Me.picInventory.Margin = New System.Windows.Forms.Padding(0)
-        Me.picInventory.Name = "picInventory"
-        Me.picInventory.Size = New System.Drawing.Size(46, 49)
-        Me.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picInventory.TabIndex = 9
-        Me.picInventory.TabStop = False
-        '
-        'picHome
-        '
-        Me.picHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picHome.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picHome.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picHome.Image = Global.teablendcafe.My.Resources.Resources.home_125
-        Me.picHome.Location = New System.Drawing.Point(0, 0)
-        Me.picHome.Margin = New System.Windows.Forms.Padding(0)
-        Me.picHome.Name = "picHome"
-        Me.picHome.Size = New System.Drawing.Size(46, 49)
-        Me.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picHome.TabIndex = 1
-        Me.picHome.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(62, 31)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(95, 82)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
-        'picLogout
-        '
-        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
-        Me.picLogout.Location = New System.Drawing.Point(4, 9)
-        Me.picLogout.Name = "picLogout"
-        Me.picLogout.Size = New System.Drawing.Size(40, 27)
-        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogout.TabIndex = 14
-        Me.picLogout.TabStop = False
-        '
-        'piclogout2
-        '
-        Me.piclogout2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.piclogout2.Image = Global.teablendcafe.My.Resources.Resources.arrowdown
-        Me.piclogout2.Location = New System.Drawing.Point(1310, 22)
-        Me.piclogout2.Name = "piclogout2"
-        Me.piclogout2.Size = New System.Drawing.Size(34, 22)
-        Me.piclogout2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.piclogout2.TabIndex = 10
-        Me.piclogout2.TabStop = False
-        '
-        'btnMenu
-        '
-        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMenu.Image = Global.teablendcafe.My.Resources.Resources.menuDefault
-        Me.btnMenu.Location = New System.Drawing.Point(0, -6)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(71, 78)
-        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMenu.TabIndex = 9
-        Me.btnMenu.TabStop = False
-        '
-=======
->>>>>>> refs/remotes/origin/master
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3142,22 +2942,16 @@ Partial Class frmMain
         Me.Panel4.PerformLayout()
         Me.panAccounts.ResumeLayout(False)
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).EndInit()
-<<<<<<< HEAD
-        Me.panAssessment.ResumeLayout(False)
-        Me.Panel34.ResumeLayout(False)
-        Me.Panel34.PerformLayout()
-        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panInventory.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panWrapper.ResumeLayout(False)
-=======
->>>>>>> refs/remotes/origin/master
         Me.panHome.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.panAssessment.ResumeLayout(False)
+        Me.Panel34.ResumeLayout(False)
+        Me.Panel34.PerformLayout()
         Me.panInventory.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panWrapper.ResumeLayout(False)
+        CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3384,12 +3178,12 @@ Partial Class frmMain
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Panel34 As Panel
-    Friend WithEvents dgv_members As DataGridView
     Friend WithEvents Button3 As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents btnmembers_del As Button
     Friend WithEvents btnmembers_add As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents dgv_members As DataGridView
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
