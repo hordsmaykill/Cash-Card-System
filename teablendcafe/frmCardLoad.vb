@@ -13,6 +13,17 @@ Public Class frmCardLoad
 
     Private Sub frmCardLoad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
+
+        ' reset to defaults all members
+        Dim Command As New MySqlCommand
+
+        With Command
+            .Connection = Connect
+            .CommandText = "UPDATE tblcustomers SET isTransacting='false' WHERE isTransacting='true'"
+            .ExecuteNonQuery()
+        End With
+
+
     End Sub
 
     Public Sub ConnectDB()
