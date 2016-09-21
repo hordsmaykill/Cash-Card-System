@@ -423,7 +423,7 @@ Partial Class frmMain
         Me.lblAssessment.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.lblAssessment.Size = New System.Drawing.Size(186, 49)
         Me.lblAssessment.TabIndex = 8
-        Me.lblAssessment.Text = "Assessment"
+        Me.lblAssessment.Text = "Members"
         Me.lblAssessment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblMenu
@@ -474,7 +474,7 @@ Partial Class frmMain
         Me.lblHome.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.lblHome.Size = New System.Drawing.Size(186, 49)
         Me.lblHome.TabIndex = 0
-        Me.lblHome.Text = "Home"
+        Me.lblHome.Text = "Dashboard"
         Me.lblHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'picHome
@@ -614,7 +614,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -2800)
+        Me.panContent.Location = New System.Drawing.Point(230, 0)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
