@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmquantity
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmquantity
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.txtNum = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -71,7 +71,6 @@ Partial Class frmquantity
         '
         'btnMin
         '
-        Me.btnMin.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Minus_Math__48
         Me.btnMin.Location = New System.Drawing.Point(24, 57)
         Me.btnMin.Name = "btnMin"
         Me.btnMin.Size = New System.Drawing.Size(48, 48)
@@ -80,7 +79,6 @@ Partial Class frmquantity
         '
         'btnAdd
         '
-        Me.btnAdd.BackgroundImage = Global.teablendcafe.My.Resources.Resources.Plus_Math_48
         Me.btnAdd.Location = New System.Drawing.Point(199, 57)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(48, 48)
