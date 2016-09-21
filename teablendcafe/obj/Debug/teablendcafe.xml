@@ -67,6 +67,11 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:teablendcafe.My.Resources.Resources.frm_edit_accounts1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:teablendcafe.My.Resources.Resources.frm_quantity">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

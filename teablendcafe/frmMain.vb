@@ -7,6 +7,7 @@ Public Class frmMain
 
     Public qtyRetrieved As Integer
     Dim SelectedAdmin As String
+    Dim SelectedMember As String
 
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
@@ -914,6 +915,25 @@ Public Class frmMain
         Reader.Close()
 
     End Sub
+    'members dgv'
+    Public Sub membersDGV()
+        dgv_members.Rows.Clear()
+
+        With Command
+            .Connection = Connect
+            .CommandText = "SELECT * FROM tblcustomers"
+        End With
+        Reader = Command.ExecuteReader
+
+        If Reader.HasRows Then
+            While Reader.Read
+                dgv_members.Rows.Add(Reader.Item(0), Reader.Item(1), Reader.Item(2), Reader.Item(3))
+            End While
+        End If
+        Reader.Close()
+
+    End Sub
+    ''
 
     Private Sub account_delbtn_Click(sender As Object, e As EventArgs) Handles account_delbtn.Click
         Dim Delete As String
@@ -952,9 +972,31 @@ Public Class frmMain
         accountsEdit.lUsername.Text = Username
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, Panel2.MouseClick
 
+
+    Private Sub btnmembers_del_Click(sender As Object, e As EventArgs) Handles btnmembers_del.Click
+        Dim Delete As String
+
+        SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
+
+        Delete = MsgBox("Are you sure you want to delete this Member " + SelectedMember + "?", vbYesNo + vbQuestion, "Message")
+        If Delete = vbYes Then
+            With Command
+                .Connection = Connect
+                .CommandText = "DELETE FROM tblcustomers WHERE cus_no = '" & SelectedMember & "'"
+                .ExecuteNonQuery()
+            End With
+            membersDGV()
+            MsgBox("Member " + SelectedMember + " successfully deleted!", vbOKOnly + vbInformation, "Message")
+        End If
     End Sub
+
+    Private Sub btnmembers_add_Click(sender As Object, e As EventArgs) Handles btnmembers_add.Click
+        addcustomer.ShowDialog()
+    End Sub
+
+
+
 
 
 
