@@ -525,17 +525,8 @@ Public Class frmMain
             Exit Sub
         End If
 
-        Dim sql As String = ""
-        Select Case size
-            Case DRINKS_SIZEG
-                sql = "SELECT prod_code, prod_name, prod_priceG, prod_class FROM tblproducts WHERE 
+        Dim sql As String = "SELECT prod_code, prod_name, prod_priceG, prod_priceV FROM tblproducts WHERE 
             prod_code ='" & prodCode & "'"
-
-            Case DRINKS_SIZEV
-                sql = "SELECT prod_code, prod_name, prod_priceV, prod_class FROM tblproducts WHERE 
-            prod_code ='" & prodCode & "'"
-        End Select
-
 
         With Command
             .Connection = Connect
@@ -547,12 +538,23 @@ Public Class frmMain
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
 
-        ' update product name
+        ' get prices
+        Dim priceG = Reader.Item(2)
+        Dim priceV = Reader.Item(3)
+
+
+        ' if it's a dish don't concat size
         Dim curProdName As String = ""
 
+
+        ' update product name concat size
         Select Case size
             Case DRINKS_SIZEG
-                curProdName = Reader.Item(1) & " Grande"
+                If Not IsDBNull(priceV) Then
+                    curProdName = Reader.Item(1) & " Grande"
+                Else
+                    curProdName = Reader.Item(1)
+                End If
             Case DRINKS_SIZEV
                 curProdName = Reader.Item(1) & " Venti"
         End Select
@@ -576,7 +578,6 @@ Public Class frmMain
         ' prod code
         dgvorders.Item(0, row).Value = Reader.Item(0)
 
-
         ' prod name
         dgvorders.Item(1, row).Value = curProdName
 
@@ -584,7 +585,14 @@ Public Class frmMain
         dgvorders.Item(2, row).Value = qtyRetrieved
 
         ' price
-        dgvorders.Item(3, row).Value = Reader.Item(3)
+        Select Case size
+            Case DRINKS_SIZEG
+                dgvorders.Item(3, row).Value = priceG
+            Case DRINKS_SIZEV
+                dgvorders.Item(3, row).Value = priceV
+        End Select
+
+
 
         ' reset qty
         qtyRetrieved = 1
