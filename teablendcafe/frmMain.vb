@@ -92,6 +92,7 @@ Public Class frmMain
         Call ConnectDB()
         Call AccountsDGV()
         Call ChangePass()
+        Call DGVINV()
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
 
@@ -1049,4 +1050,22 @@ Public Class frmMain
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
         cash_card.ShowDialog()
     End Sub
+
+
+    Public Sub DGVINV()
+        With Command
+            .Connection = Connect
+            .CommandText = "SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class FROM tblproducts AS p, tblinventory AS i WHERE p.prod_code = i.inv_prod_code"
+        End With
+        Reader = Command.ExecuteReader
+
+        If Reader.HasRows Then
+            While Reader.Read
+                inventorydgv.Rows.Add(Reader.Item(0), Reader.Item(1), Reader.Item(2), Reader.Item(3))
+            End While
+        End If
+        Reader.Close()
+
+    End Sub
 End Class
+
