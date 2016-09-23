@@ -94,6 +94,7 @@ Public Class frmMain
         Call AccountsDGV()
         Call ChangePass()
         Call DGVINV()
+
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
 
@@ -295,6 +296,7 @@ Public Class frmMain
 
         ' update total
         updateTotalOrders()
+
 
         Reader.Close()
     End Sub
@@ -1054,11 +1056,14 @@ Public Class frmMain
 
 
     Public Sub DGVINV()
-        inventorydgv.Rows.Clear()
+        DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class FROM tblproducts AS p, tblinventory AS i WHERE p.prod_code = i.inv_prod_code")
+    End Sub
 
+    Public Sub DGVINV(sql As String)
+        inventorydgv.Rows.Clear()
         With Command
             .Connection = Connect
-            .CommandText = "SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class FROM tblproducts AS p, tblinventory AS i WHERE p.prod_code = i.inv_prod_code"
+            .CommandText = sql
         End With
         Reader = Command.ExecuteReader
 
@@ -1068,11 +1073,92 @@ Public Class frmMain
             End While
         End If
         Reader.Close()
+    End Sub
+
+    'start search shit'
+    Private Sub updateSearchInput(ByVal command As String)
+
+        cboinventory2.DropDownStyle = ComboBoxStyle.DropDown
+        cboinventory2.FlatStyle = FlatStyle.Standard
+
+        Dim cmd As New MySqlCommand
+        Dim dr As MySqlDataReader
+        cboinventory2.Items.Clear()
+        cboinventory2.AutoCompleteCustomSource.Clear()
+        With cmd
+            .Connection = Connect
+            .CommandText = command
+        End With
+        dr = cmd.ExecuteReader
+        If dr.HasRows Then
+            While dr.Read
+                cboinventory2.Items.Add(dr.Item(0))
+                cboinventory2.AutoCompleteCustomSource.Add(dr.Item(0))
+            End While
+        End If
+        dr.Close()
 
     End Sub
 
+
+
     Private Sub inv_add_Click(sender As Object, e As EventArgs) Handles inv_edit.Click
         frminvedit.ShowDialog()
+    End Sub
+
+
+
+    ''
+    Private Sub cboinventory1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboinventory1.SelectedIndexChanged
+        'Reset components
+
+        cboinventory2.Text = ""
+        cboinventory2.Items.Clear()
+        DGVINV()
+        If cboinventory1.SelectedIndex = -1 Then
+            cboinventory2.Enabled = False
+            Exit Sub
+        End If
+        cboinventory2.Enabled = True
+
+        Select Case cboinventory1.SelectedIndex
+            Case 0
+                ' prodcode
+                updateSearchInput("SELECT p.prod_code FROM tblproducts p, tblinventory i WHERE p.prod_code = i.inv_prod_code")
+            Case 1
+                ' prodename
+                updateSearchInput("SELECT prod_name FROM tblproducts")
+
+            Case 2
+                ' availability
+                cboinventory2.DropDownStyle = ComboBoxStyle.DropDownList
+                cboinventory2.FlatStyle = FlatStyle.Flat
+                cboinventory2.Items.Clear()
+                cboinventory2.Items.Add("drinks_icetea")
+                cboinventory2.Items.Add("drinks_smoothie")
+        End Select
+    End Sub
+
+    Private Sub cboinventory2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboinventory2.SelectedIndexChanged, cboinventory2.TextChanged
+        If cboinventory2.SelectedIndex = -1 And cboinventory2.Text = "" Then
+            DGVINV()
+            Exit Sub
+        End If
+
+        Select Case cboinventory1.SelectedIndex
+            Case 0
+                ' prod_code
+                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_code='" & cboinventory2.Text & "'")
+            Case 1
+                ' prod_name 
+                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_name='" & cboinventory2.Text & "')")
+
+            Case 2
+                ' type
+                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_class='" & cboinventory2.Text & "')")
+
+        End Select
+
     End Sub
 End Class
 

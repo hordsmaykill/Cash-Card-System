@@ -24,8 +24,9 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panSideMenu = New System.Windows.Forms.Panel()
         Me.panButtons = New System.Windows.Forms.TableLayoutPanel()
         Me.picAccounts = New System.Windows.Forms.PictureBox()
@@ -259,6 +260,9 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cboinventory1 = New System.Windows.Forms.ComboBox()
+        Me.cboinventory2 = New System.Windows.Forms.ComboBox()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
         CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2513,21 +2517,21 @@ Partial Class frmMain
         'accounts_dgv
         '
         Me.accounts_dgv.AllowUserToAddRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
         Me.accounts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.accounts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column13})
         Me.accounts_dgv.Location = New System.Drawing.Point(2, 85)
         Me.accounts_dgv.Name = "accounts_dgv"
         Me.accounts_dgv.ReadOnly = True
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle27
         Me.accounts_dgv.Size = New System.Drawing.Size(1364, 476)
         Me.accounts_dgv.TabIndex = 0
         '
@@ -2693,6 +2697,9 @@ Partial Class frmMain
         'panInventory
         '
         Me.panInventory.BackColor = System.Drawing.Color.Transparent
+        Me.panInventory.Controls.Add(Me.cboinventory2)
+        Me.panInventory.Controls.Add(Me.cboinventory1)
+        Me.panInventory.Controls.Add(Me.Label3)
         Me.panInventory.Controls.Add(Me.inv_edit)
         Me.panInventory.Controls.Add(Me.inventorydgv)
         Me.panInventory.Location = New System.Drawing.Point(0, 700)
@@ -2702,9 +2709,9 @@ Partial Class frmMain
         '
         'inv_edit
         '
-        Me.inv_edit.Location = New System.Drawing.Point(1075, 636)
+        Me.inv_edit.Location = New System.Drawing.Point(13, 16)
         Me.inv_edit.Name = "inv_edit"
-        Me.inv_edit.Size = New System.Drawing.Size(97, 44)
+        Me.inv_edit.Size = New System.Drawing.Size(94, 46)
         Me.inv_edit.TabIndex = 1
         Me.inv_edit.Text = "Add quantity"
         Me.inv_edit.UseVisualStyleBackColor = True
@@ -2713,11 +2720,19 @@ Partial Class frmMain
         '
         Me.inventorydgv.AllowUserToAddRows = False
         Me.inventorydgv.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.inventorydgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
         Me.inventorydgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.inventorydgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column1, Me.Column2, Me.Column5})
-        Me.inventorydgv.Location = New System.Drawing.Point(0, 0)
+        Me.inventorydgv.Location = New System.Drawing.Point(0, 72)
         Me.inventorydgv.Name = "inventorydgv"
-        Me.inventorydgv.Size = New System.Drawing.Size(1366, 614)
+        Me.inventorydgv.Size = New System.Drawing.Size(1366, 628)
         Me.inventorydgv.TabIndex = 0
         '
         'Column3
@@ -2845,6 +2860,37 @@ Partial Class frmMain
         '
         Me.tmrSubmenu.Interval = 10
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(827, 32)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(126, 29)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Search by:"
+        '
+        'cboinventory1
+        '
+        Me.cboinventory1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboinventory1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboinventory1.FormattingEnabled = True
+        Me.cboinventory1.Items.AddRange(New Object() {"prod_code", "prod_name", "type"})
+        Me.cboinventory1.Location = New System.Drawing.Point(971, 29)
+        Me.cboinventory1.Name = "cboinventory1"
+        Me.cboinventory1.Size = New System.Drawing.Size(191, 37)
+        Me.cboinventory1.TabIndex = 3
+        '
+        'cboinventory2
+        '
+        Me.cboinventory2.Enabled = False
+        Me.cboinventory2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboinventory2.FormattingEnabled = True
+        Me.cboinventory2.Location = New System.Drawing.Point(1177, 29)
+        Me.cboinventory2.Name = "cboinventory2"
+        Me.cboinventory2.Size = New System.Drawing.Size(177, 37)
+        Me.cboinventory2.TabIndex = 3
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2957,6 +3003,7 @@ Partial Class frmMain
         Me.Panel34.PerformLayout()
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panInventory.ResumeLayout(False)
+        Me.panInventory.PerformLayout()
         CType(Me.inventorydgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panWrapper.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -3195,4 +3242,7 @@ Partial Class frmMain
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents cboinventory2 As ComboBox
+    Friend WithEvents cboinventory1 As ComboBox
+    Friend WithEvents Label3 As Label
 End Class
