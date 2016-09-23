@@ -1046,6 +1046,7 @@ Public Class frmMain
         updateTotalOrders()
     End Sub
 
-
-
+    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
+        cash_card.ShowDialog()
+    End Sub
 End Class

@@ -24,7 +24,7 @@ Public Class frmCardLoad
         Dim str As String
         If Connect.State = ConnectionState.Closed Then
             str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
+            'Connect.ConnectionString = str
             Connect.Open()
         End If
 
@@ -90,4 +90,6 @@ Public Class frmCardLoad
 
         TransactionReader.Close()
     End Sub
+
+
 End Class
