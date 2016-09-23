@@ -9,6 +9,7 @@ Public Class frmMain
     Dim SelectedAdmin As String
     Dim SelectedMember As String
 
+
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
             str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
@@ -1053,6 +1054,8 @@ Public Class frmMain
 
 
     Public Sub DGVINV()
+        inventorydgv.Rows.Clear()
+
         With Command
             .Connection = Connect
             .CommandText = "SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class FROM tblproducts AS p, tblinventory AS i WHERE p.prod_code = i.inv_prod_code"
@@ -1066,6 +1069,10 @@ Public Class frmMain
         End If
         Reader.Close()
 
+    End Sub
+
+    Private Sub inv_add_Click(sender As Object, e As EventArgs) Handles inv_edit.Click
+        frminvedit.ShowDialog()
     End Sub
 End Class
 

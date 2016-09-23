@@ -106,6 +106,12 @@
     <Compile Include="frmCardLoad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frminvedit.Designer.vb">
+      <DependentUpon>frminvedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frminvedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCardLoad.resx">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frminvedit.resx">
+      <DependentUpon>frminvedit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
