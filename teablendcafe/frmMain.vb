@@ -1169,6 +1169,9 @@ Public Class frmMain
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
 
+        SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
+        userSelected = SelectedMember
+        frmmemers_editchoices.ShowDialog()
     End Sub
 End Class
 

@@ -100,6 +100,12 @@
     <Compile Include="formadmincreatenew.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmaddLoad.Designer.vb">
+      <DependentUpon>FrmaddLoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmaddLoad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCardLoad.Designer.vb">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
     </Compile>
@@ -117,6 +123,18 @@
     </Compile>
     <Compile Include="frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmemberedit.Designer.vb">
+      <DependentUpon>frmmemberedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmmemberedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmemers_editchoices.Designer.vb">
+      <DependentUpon>frmmemers_editchoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmmemers_editchoices.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmquantity.Designer.vb">
@@ -172,6 +190,9 @@
     <EmbeddedResource Include="formadmincreatenew.resx">
       <DependentUpon>formadmincreatenew.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmaddLoad.resx">
+      <DependentUpon>FrmaddLoad.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCardLoad.resx">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmemberedit.resx">
+      <DependentUpon>frmmemberedit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmemers_editchoices.resx">
+      <DependentUpon>frmmemers_editchoices.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmquantity.resx">
       <DependentUpon>frmquantity.vb</DependentUpon>
