@@ -94,6 +94,7 @@ Public Class frmMain
         Call AccountsDGV()
         Call ChangePass()
         Call DGVINV()
+        membersDGV()
 
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
@@ -1136,6 +1137,11 @@ Public Class frmMain
                 cboinventory2.Items.Clear()
                 cboinventory2.Items.Add("drinks_icetea")
                 cboinventory2.Items.Add("drinks_smoothie")
+                cboinventory2.Items.Add("drinks_milktea")
+                cboinventory2.Items.Add("For sharing")
+                cboinventory2.Items.Add("Pasta")
+                cboinventory2.Items.Add("Sandwich")
+                cboinventory2.Items.Add("SILOG")
         End Select
     End Sub
 
@@ -1148,16 +1154,20 @@ Public Class frmMain
         Select Case cboinventory1.SelectedIndex
             Case 0
                 ' prod_code
-                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_code='" & cboinventory2.Text & "'")
+                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_code LIKE '%" & cboinventory2.Text & "%'")
             Case 1
                 ' prod_name 
-                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_name='" & cboinventory2.Text & "')")
+                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_name LIKE '%" & cboinventory2.Text & "%'")
 
             Case 2
                 ' type
-                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_class='" & cboinventory2.Text & "')")
+                DGVINV("Select p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code And p.prod_class='" & cboinventory2.Text & "'")
 
         End Select
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
 
     End Sub
 End Class
