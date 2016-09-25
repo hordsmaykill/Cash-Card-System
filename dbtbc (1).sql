@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2016 at 01:14 AM
+-- Generation Time: Sep 24, 2016 at 12:39 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -60,7 +60,8 @@ CREATE TABLE IF NOT EXISTS `tblcustomers` (
 --
 
 INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`) VALUES
-('tbc123', 'dfg', '2016-09-21 22:11:07', 500),
+('tbc1', 'tst', '2016-09-23 22:31:09', 1110),
+('tbc123', 'dfg', '2016-09-23 22:00:05', 200),
 ('tbc456', 'testing test', '2016-09-21 21:14:58', 300);
 
 -- --------------------------------------------------------
@@ -80,7 +81,54 @@ CREATE TABLE IF NOT EXISTS `tblinventory` (
 --
 
 INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
-('', 0);
+('DSG_SS', 30),
+('DSH_BB', 30),
+('DSH_C', 30),
+('DSH_CB', 30),
+('DSH_CC', 30),
+('DSH_CP', 30),
+('DSH_CS', 30),
+('DSH_ES', 30),
+('DSH_FB', 30),
+('DSH_HS', 30),
+('DSH_IB', 30),
+('DSH_LS', 30),
+('DSH_N', 30),
+('DSH_PP', 30),
+('DSH_SB', 30),
+('DSH_SS', 30),
+('DSH_TD', 30),
+('DSH_TE', 30),
+('DSH_UC', 30),
+('D_BBT', 30),
+('D_CK', 30),
+('D_CL', 30),
+('D_DP', 30),
+('D_GAT', 30),
+('D_HMT', 30),
+('D_KT', 30),
+('D_Lemo', 30),
+('D_LL', 30),
+('D_LT', 30),
+('D_MM', 30),
+('D_MMT', 30),
+('D_MS', 30),
+('D_MT', 30),
+('D_OW', 30),
+('D_PB', 30),
+('D_PK', 30),
+('D_PMK', 30),
+('D_PT', 30),
+('D_SB', 30),
+('D_SMT', 30),
+('D_SS', 30),
+('D_ST', 30),
+('D_TM', 30),
+('D_TT', 30),
+('D_VC', 30),
+('D_WC', 30),
+('D_WM', 30),
+('D_ZD', 30);
 
 -- --------------------------------------------------------
 
@@ -193,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `tbltransaction` (
 --
 
 INSERT INTO `tbltransaction` (`id`, `cus_no`) VALUES
-(1, 'tbc123');
+(1, '0');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
