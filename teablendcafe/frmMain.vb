@@ -223,6 +223,11 @@ Public Class frmMain
         Reader = Command.ExecuteReader
         Reader.Read()
 
+        If Not Reader.HasRows Then
+            MsgBox("An error has occurred.")
+            Exit Sub
+        End If
+
         Dim column As Integer = dgvorders.ColumnCount
         Dim row As Integer = dgvorders.RowCount
 
@@ -308,11 +313,13 @@ Public Class frmMain
                 total += dgvorders.Item(4, i).Value
             Next
             txtTotalOrder.Text = FormatNumber(total)
-            btnDeleteOrder.Enabled = True
+            btnDeleteOrders.Enabled = True
+            btnclearorder.Enabled = True
             btnOrder.Enabled = True
         Else
             txtTotalOrder.Text = "0"
-            btnDeleteOrder.Enabled = False
+            btnDeleteOrders.Enabled = False
+            btnclearorder.Enabled = True
             btnOrder.Enabled = True
         End If
     End Sub
@@ -1171,5 +1178,19 @@ Public Class frmMain
         userSelected = SelectedMember
         frmmemers_editchoices.ShowDialog()
     End Sub
+
+    Private Sub btnclearorder_Click(sender As Object, e As EventArgs) Handles btnclearorder.Click
+        Dim reply As MsgBoxResult
+
+        reply = MsgBox("Do you really want to Clear?", MsgBoxStyle.YesNoCancel, "Clear")
+        If reply = MsgBoxResult.Yes Then
+            dgvorders.Rows.Clear()
+            End
+        End If
+
+
+    End Sub
+
+
 End Class
 

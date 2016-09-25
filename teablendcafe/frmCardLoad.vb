@@ -14,12 +14,7 @@ Public Class frmCardLoad
 
         ' reset db
         resetTransaction()
-        'tmrCheck.Enabled = True
-
-        ' test code for adding
-
-
-
+        tmrCheck.Enabled = True
 
     End Sub
 
@@ -52,7 +47,7 @@ Public Class frmCardLoad
             wallet = reader.Item(0)
         End If
         If wallet < total Then
-            MsgBox("Not enought balance in account" & vbNewLine & "Remaining account load is: " & total)
+            MsgBox("Not enought balance in account" & vbNewLine & "Remaining account load is: " & wallet)
             reader.Close()
             Exit Sub
         End If
@@ -63,6 +58,7 @@ Public Class frmCardLoad
 
         With cmd
             .CommandText = "UPDATE tblcustomers SET cus_loadwallet = " & walletTotal & " WHERE cus_no='" & customerNumber & "'"
+            .ExecuteNonQuery()
         End With
 
         ' update products and inventories
@@ -71,7 +67,7 @@ Public Class frmCardLoad
         ' generate random
         Randomize()
         Dim rand As Integer = CInt(Int((99999 * Rnd()))) + 1
-        Dim dateConcat As String = (Date.Now()).ToString("ddMMyy")
+        Dim dateConcat As String = (DateTime.Now()).ToString("ddMMyyhhmmss")
         Dim ord_code As String = dateConcat & "-" & rand
 
         ' get data
@@ -108,11 +104,22 @@ Public Class frmCardLoad
             reader.Close()
 
             Dim qtyVal As Integer = qtyFromDB - qty
-            MsgBox(qtyVal)
             cmd.CommandText = "UPDATE tblinventory SET inv_qty=" & qtyVal & " WHERE inv_prod_code='" & prodCode & "'"
             cmd.ExecuteNonQuery()
 
         Next
+
+        ' update wallet value
+        cmd.CommandText = "SELECT cus_loadwallet FROM tblcustomers"
+        reader = cmd.ExecuteReader()
+
+        reader.Read()
+        If reader.HasRows Then
+            wallet = reader.Item(0)
+        End If
+        reader.Close()
+
+        MsgBox("Remaining account load is: " & wallet)
     End Sub
 
     Private Sub resetTransaction()

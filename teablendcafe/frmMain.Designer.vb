@@ -51,7 +51,8 @@ Partial Class frmMain
         Me.panContent = New System.Windows.Forms.Panel()
         Me.panMenu = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnDeleteOrder = New System.Windows.Forms.Button()
+        Me.btnclearorder = New System.Windows.Forms.Button()
+        Me.btnDeleteOrders = New System.Windows.Forms.Button()
         Me.btnOrder = New System.Windows.Forms.Button()
         Me.txtTotalOrder = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -645,7 +646,8 @@ Partial Class frmMain
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnDeleteOrder)
+        Me.GroupBox1.Controls.Add(Me.btnclearorder)
+        Me.GroupBox1.Controls.Add(Me.btnDeleteOrders)
         Me.GroupBox1.Controls.Add(Me.btnOrder)
         Me.GroupBox1.Controls.Add(Me.txtTotalOrder)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -657,22 +659,32 @@ Partial Class frmMain
         Me.GroupBox1.TabIndex = 26
         Me.GroupBox1.TabStop = False
         '
-        'btnDeleteOrder
+        'btnclearorder
         '
-        Me.btnDeleteOrder.Enabled = False
-        Me.btnDeleteOrder.Location = New System.Drawing.Point(250, 620)
-        Me.btnDeleteOrder.Name = "btnDeleteOrder"
-        Me.btnDeleteOrder.Size = New System.Drawing.Size(138, 67)
-        Me.btnDeleteOrder.TabIndex = 45
-        Me.btnDeleteOrder.Text = "DELETE"
-        Me.btnDeleteOrder.UseVisualStyleBackColor = True
+        Me.btnclearorder.Enabled = False
+        Me.btnclearorder.Location = New System.Drawing.Point(237, 620)
+        Me.btnclearorder.Name = "btnclearorder"
+        Me.btnclearorder.Size = New System.Drawing.Size(94, 67)
+        Me.btnclearorder.TabIndex = 45
+        Me.btnclearorder.Text = "CLEAR"
+        Me.btnclearorder.UseVisualStyleBackColor = True
+        '
+        'btnDeleteOrders
+        '
+        Me.btnDeleteOrders.Enabled = False
+        Me.btnDeleteOrders.Location = New System.Drawing.Point(345, 620)
+        Me.btnDeleteOrders.Name = "btnDeleteOrders"
+        Me.btnDeleteOrders.Size = New System.Drawing.Size(94, 67)
+        Me.btnDeleteOrders.TabIndex = 45
+        Me.btnDeleteOrders.Text = "DELETE"
+        Me.btnDeleteOrders.UseVisualStyleBackColor = True
         '
         'btnOrder
         '
         Me.btnOrder.Enabled = False
-        Me.btnOrder.Location = New System.Drawing.Point(410, 620)
+        Me.btnOrder.Location = New System.Drawing.Point(454, 620)
         Me.btnOrder.Name = "btnOrder"
-        Me.btnOrder.Size = New System.Drawing.Size(138, 67)
+        Me.btnOrder.Size = New System.Drawing.Size(94, 71)
         Me.btnOrder.TabIndex = 45
         Me.btnOrder.Text = "ORDER"
         Me.btnOrder.UseVisualStyleBackColor = True
@@ -680,10 +692,10 @@ Partial Class frmMain
         'txtTotalOrder
         '
         Me.txtTotalOrder.Enabled = False
-        Me.txtTotalOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalOrder.Location = New System.Drawing.Point(126, 629)
+        Me.txtTotalOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalOrder.Location = New System.Drawing.Point(115, 632)
         Me.txtTotalOrder.Name = "txtTotalOrder"
-        Me.txtTotalOrder.Size = New System.Drawing.Size(100, 47)
+        Me.txtTotalOrder.Size = New System.Drawing.Size(116, 40)
         Me.txtTotalOrder.TabIndex = 44
         '
         'Label9
@@ -3199,7 +3211,7 @@ Partial Class frmMain
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents btnDeleteOrder As Button
+    Friend WithEvents btnDeleteOrders As Button
     Friend WithEvents account_delbtn As Button
     Friend WithEvents account_editbtn As Button
     Friend WithEvents account_addbtn As Button
@@ -3223,4 +3235,5 @@ Partial Class frmMain
     Friend WithEvents cboinventory2 As ComboBox
     Friend WithEvents cboinventory1 As ComboBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnclearorder As Button
 End Class
