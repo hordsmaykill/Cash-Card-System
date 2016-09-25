@@ -17,6 +17,11 @@ Public Class frmCardLoad
         'tmrCheck.Enabled = True
 
         ' test code for adding
+
+        ' check if member still have remaining money
+
+
+
         Dim curDate As String = Date.Today.ToString("yyyy-MM-dd")
 
         ' generate random
@@ -44,8 +49,29 @@ Public Class frmCardLoad
 
             cmd.CommandText = "INSERT INTO tblorder_prod VALUES('" & ord_code & "', '" & prodCode & "', '" & prodName & "', " & qty & ", " & price & ")"
             cmd.ExecuteNonQuery()
-        Next
 
+            ' decrement a qty in tblinventory
+            With cmd
+                .Connection = Connect
+                .CommandText = "SELECT inv_qty FROM tblinventory WHERE inv_prod_code='" & prodCode & "'"
+            End With
+
+            Dim reader As MySqlDataReader
+            Dim qtyFromDB As Integer
+            reader = cmd.ExecuteReader()
+
+            reader.Read()
+            If reader.HasRows Then
+                qtyFromDB = reader.Item(0)
+            End If
+            reader.Close()
+
+            Dim qtyVal As Integer = qtyFromDB - qty
+            MsgBox(qtyVal)
+            cmd.CommandText = "UPDATE tblinventory SET inv_qty=" & qtyVal & " WHERE inv_prod_code='" & prodCode & "'"
+            cmd.ExecuteNonQuery()
+
+        Next
 
 
     End Sub

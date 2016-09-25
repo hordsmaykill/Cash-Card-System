@@ -8,8 +8,11 @@ Public Class frmquantity
     Public qty As Integer
 
     Private Sub frmquantity_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        conn.ConnectionString = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-        conn.Open()
+
+        If conn.State = ConnectionState.Closed Then
+            conn.ConnectionString = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
+            conn.Open()
+        End If
 
 
         qty = 1
@@ -39,10 +42,11 @@ Public Class frmquantity
         If diff <= 0 Then
             MsgBox("There are only " & qtyFromDB & " remaining")
             frmMain.qtyRetrieved = -1
+            reader.Close()
             Exit Sub
         End If
 
-
+        reader.Close()
         frmMain.qtyRetrieved = qty
 
 
