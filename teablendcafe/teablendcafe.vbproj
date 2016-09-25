@@ -137,6 +137,12 @@
     <Compile Include="frmmemers_editchoices.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmordersadminpassclear.Designer.vb">
+      <DependentUpon>frmordersadminpassclear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmordersadminpassclear.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmquantity.Designer.vb">
       <DependentUpon>frmquantity.vb</DependentUpon>
     </Compile>
@@ -176,6 +182,12 @@
     <Compile Include="typeadminpassword.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="typeadminpassworddelete.Designer.vb">
+      <DependentUpon>typeadminpassworddelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="typeadminpassworddelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="accountsEdit.resx">
@@ -208,6 +220,9 @@
     <EmbeddedResource Include="frmmemers_editchoices.resx">
       <DependentUpon>frmmemers_editchoices.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmordersadminpassclear.resx">
+      <DependentUpon>frmordersadminpassclear.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmquantity.resx">
       <DependentUpon>frmquantity.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="typeadminpassword.resx">
       <DependentUpon>typeadminpassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="typeadminpassworddelete.resx">
+      <DependentUpon>typeadminpassworddelete.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

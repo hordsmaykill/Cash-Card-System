@@ -10,6 +10,7 @@ Public Class frmMain
     Dim SelectedMember As String
 
 
+
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
             str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
@@ -1180,17 +1181,11 @@ Public Class frmMain
     End Sub
 
     Private Sub btnclearorder_Click(sender As Object, e As EventArgs) Handles btnclearorder.Click
-        Dim reply As MsgBoxResult
-
-        reply = MsgBox("Do you really want to Clear?", MsgBoxStyle.YesNoCancel, "Clear")
-        If reply = MsgBoxResult.Yes Then
-            dgvorders.Rows.Clear()
-            End
-        End If
-
-
+        frmordersadminpassclear.ShowDialog()
     End Sub
 
-
+    Private Sub btnDeleteOrders_Click(sender As Object, e As EventArgs) Handles btnDeleteOrders.Click
+        typeadminpassworddelete.ShowDialog()
+    End Sub
 End Class
 
