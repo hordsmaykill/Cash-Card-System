@@ -679,6 +679,7 @@ Partial Class frmMain
         '
         'txtTotalOrder
         '
+        Me.txtTotalOrder.Enabled = False
         Me.txtTotalOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotalOrder.Location = New System.Drawing.Point(126, 629)
         Me.txtTotalOrder.Name = "txtTotalOrder"

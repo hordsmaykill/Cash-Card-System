@@ -1,14 +1,51 @@
-﻿Public Class frmquantity
+﻿Imports MySql.Data.MySqlClient
 
-    Dim qty As Integer
+Public Class frmquantity
+
+    Dim conn As New MySqlConnection
+
+    Public prodCode As String
+    Public qty As Integer
 
     Private Sub frmquantity_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conn.ConnectionString = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
+        conn.Open()
+
+
         qty = 1
         txtNum.Text = qty
     End Sub
 
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
+        ' check if the input qty is valid
+        Dim cmd As New MySqlCommand
+        Dim reader As MySqlDataReader
+
+        Dim qtyFromDB As Integer
+
+
+        With cmd
+            .Connection = conn
+            .CommandText = "SELECT inv_qty FROM tblinventory WHERE inv_prod_code='" & prodCode & "'"
+        End With
+        reader = cmd.ExecuteReader()
+
+        reader.Read()
+        If reader.HasRows Then
+            qtyFromDB = reader.Item(0)
+        End If
+
+        Dim diff As Integer = qtyFromDB - qty
+        If diff <= 0 Then
+            MsgBox("There are only " & qtyFromDB & " remaining")
+            frmMain.qtyRetrieved = -1
+            Exit Sub
+        End If
+
+
         frmMain.qtyRetrieved = qty
+
+
         Me.Close()
     End Sub
 

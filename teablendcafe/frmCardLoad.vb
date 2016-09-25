@@ -41,6 +41,7 @@ Public Class frmCardLoad
             Dim prodName As String = frmMain.dgvorders.Item(1, i).Value
             Dim qty As Integer = frmMain.dgvorders.Item(2, i).Value
             Dim price As Integer = frmMain.dgvorders.Item(3, i).Value
+
             cmd.CommandText = "INSERT INTO tblorder_prod VALUES('" & ord_code & "', '" & prodCode & "', '" & prodName & "', " & qty & ", " & price & ")"
             cmd.ExecuteNonQuery()
         Next

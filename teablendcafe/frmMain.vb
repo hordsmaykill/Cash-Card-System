@@ -203,7 +203,9 @@ Public Class frmMain
     End Sub
 
     Private Sub drinksToDGV(prodCode As String, size As Integer)
+
         ' get qty
+        frmquantity.prodCode = prodCode
         frmquantity.ShowDialog()
 
         ' exit if cancel
