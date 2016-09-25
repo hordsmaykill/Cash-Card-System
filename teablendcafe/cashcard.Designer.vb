@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class cash_card
+Partial Class cashcard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,7 +24,8 @@ Partial Class cash_card
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btncash = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -32,7 +33,7 @@ Partial Class cash_card
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btncash)
         Me.Panel1.Location = New System.Drawing.Point(12, 25)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(315, 104)
@@ -47,24 +48,38 @@ Partial Class cash_card
         Me.Button2.Text = "CARD"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btncash
         '
-        Me.Button1.Location = New System.Drawing.Point(13, 10)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 85)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "CASH"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btncash.Location = New System.Drawing.Point(13, 10)
+        Me.btncash.Name = "btncash"
+        Me.btncash.Size = New System.Drawing.Size(136, 85)
+        Me.btncash.TabIndex = 2
+        Me.btncash.Text = "CASH"
+        Me.btncash.UseVisualStyleBackColor = True
         '
-        'cash_card
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Tan
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button3.ForeColor = System.Drawing.Color.DarkRed
+        Me.Button3.Location = New System.Drawing.Point(269, 8)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(58, 11)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "x"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'cashcard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(339, 141)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "cash_card"
+        Me.Name = "cashcard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "cash_card"
         Me.Panel1.ResumeLayout(False)
@@ -74,5 +89,6 @@ Partial Class cash_card
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btncash As Button
+    Friend WithEvents Button3 As Button
 End Class

@@ -88,10 +88,10 @@
     <Compile Include="addcustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cash_card.Designer.vb">
-      <DependentUpon>cash_card.vb</DependentUpon>
+    <Compile Include="cashcard.Designer.vb">
+      <DependentUpon>cashcard.vb</DependentUpon>
     </Compile>
-    <Compile Include="cash_card.vb">
+    <Compile Include="cashcard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formadmincreatenew.Designer.vb">
@@ -196,8 +196,8 @@
     <EmbeddedResource Include="addcustomer.resx">
       <DependentUpon>addcustomer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cash_card.resx">
-      <DependentUpon>cash_card.vb</DependentUpon>
+    <EmbeddedResource Include="cashcard.resx">
+      <DependentUpon>cashcard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formadmincreatenew.resx">
       <DependentUpon>formadmincreatenew.vb</DependentUpon>
