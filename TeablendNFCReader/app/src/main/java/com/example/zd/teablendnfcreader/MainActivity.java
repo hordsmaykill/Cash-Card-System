@@ -13,7 +13,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.UnsupportedEncodingException;
@@ -23,16 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "NFC";
     public static final String MIME_TEXT_PLAIN = "text/plain";
-
-    private TextView mTextView;
     private NfcAdapter mNfcAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mTextView = (TextView) findViewById(R.id.textViewExplanation);
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
@@ -41,16 +36,15 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
             finish();
             return;
-
         }
 
         if (!mNfcAdapter.isEnabled()) {
-            mTextView.setText("NFC is disabled.");
-        } else {
-            mTextView.setText(R.string.explanation);
+            Toast.makeText(getApplicationContext(), "NFC is Disabled.\nPlease Enable NFC", Toast.LENGTH_SHORT).show();
         }
-
         handleIntent(getIntent());
+
+        // nfc is present
+        // update cus_no
     }
 
     @Override
@@ -190,12 +184,13 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            if (result != null) {
-                mTextView.setText("Read content: " + result);
-            }
+            Log.i("NFO", "Result is: " + result);
+            Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
+            intent.putExtra("result", result);
+            startActivity(intent);
+            finish();
         }
 
     }
-
 
 }
