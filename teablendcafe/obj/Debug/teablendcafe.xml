@@ -22,6 +22,11 @@ teablendcafe
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:teablendcafe.My.Resources.Resources._default">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:teablendcafe.My.Resources.Resources.arrowdown">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

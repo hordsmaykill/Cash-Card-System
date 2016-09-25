@@ -88,10 +88,22 @@
     <Compile Include="addcustomer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="cash_card.Designer.vb">
+      <DependentUpon>cash_card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cash_card.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formadmincreatenew.Designer.vb">
       <DependentUpon>formadmincreatenew.vb</DependentUpon>
     </Compile>
     <Compile Include="formadmincreatenew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmaddLoad.Designer.vb">
+      <DependentUpon>FrmaddLoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmaddLoad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCardLoad.Designer.vb">
@@ -100,11 +112,29 @@
     <Compile Include="frmCardLoad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frminvedit.Designer.vb">
+      <DependentUpon>frminvedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frminvedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmemberedit.Designer.vb">
+      <DependentUpon>frmmemberedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmmemberedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmemers_editchoices.Designer.vb">
+      <DependentUpon>frmmemers_editchoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmmemers_editchoices.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmquantity.Designer.vb">
@@ -154,14 +184,29 @@
     <EmbeddedResource Include="addcustomer.resx">
       <DependentUpon>addcustomer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cash_card.resx">
+      <DependentUpon>cash_card.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formadmincreatenew.resx">
       <DependentUpon>formadmincreatenew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmaddLoad.resx">
+      <DependentUpon>FrmaddLoad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCardLoad.resx">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frminvedit.resx">
+      <DependentUpon>frminvedit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmemberedit.resx">
+      <DependentUpon>frmmemberedit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmemers_editchoices.resx">
+      <DependentUpon>frmmemers_editchoices.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmquantity.resx">
       <DependentUpon>frmquantity.vb</DependentUpon>
@@ -433,6 +478,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\frm_edit_accounts1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -90,4 +90,6 @@ Public Class frmCardLoad
 
         TransactionReader.Close()
     End Sub
+
+
 End Class

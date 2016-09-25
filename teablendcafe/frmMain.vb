@@ -9,6 +9,7 @@ Public Class frmMain
     Dim SelectedAdmin As String
     Dim SelectedMember As String
 
+
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
             str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
@@ -92,6 +93,9 @@ Public Class frmMain
         Call ConnectDB()
         Call AccountsDGV()
         Call ChangePass()
+        Call DGVINV()
+        membersDGV()
+
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
 
@@ -293,6 +297,7 @@ Public Class frmMain
 
         ' update total
         updateTotalOrders()
+
 
         Reader.Close()
     End Sub
@@ -1046,6 +1051,127 @@ Public Class frmMain
         updateTotalOrders()
     End Sub
 
+    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
+        cash_card.ShowDialog()
+    End Sub
 
 
+    Public Sub DGVINV()
+        DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class FROM tblproducts AS p, tblinventory AS i WHERE p.prod_code = i.inv_prod_code")
+    End Sub
+
+    Public Sub DGVINV(sql As String)
+        inventorydgv.Rows.Clear()
+        With Command
+            .Connection = Connect
+            .CommandText = sql
+        End With
+        Reader = Command.ExecuteReader
+
+        If Reader.HasRows Then
+            While Reader.Read
+                inventorydgv.Rows.Add(Reader.Item(0), Reader.Item(1), Reader.Item(2), Reader.Item(3))
+            End While
+        End If
+        Reader.Close()
+    End Sub
+
+    'start search shit'
+    Private Sub updateSearchInput(ByVal command As String)
+
+        cboinventory2.DropDownStyle = ComboBoxStyle.DropDown
+        cboinventory2.FlatStyle = FlatStyle.Standard
+
+        Dim cmd As New MySqlCommand
+        Dim dr As MySqlDataReader
+        cboinventory2.Items.Clear()
+        cboinventory2.AutoCompleteCustomSource.Clear()
+        With cmd
+            .Connection = Connect
+            .CommandText = command
+        End With
+        dr = cmd.ExecuteReader
+        If dr.HasRows Then
+            While dr.Read
+                cboinventory2.Items.Add(dr.Item(0))
+                cboinventory2.AutoCompleteCustomSource.Add(dr.Item(0))
+            End While
+        End If
+        dr.Close()
+
+    End Sub
+
+
+
+    Private Sub inv_add_Click(sender As Object, e As EventArgs) Handles inv_edit.Click
+        frminvedit.ShowDialog()
+    End Sub
+
+
+
+    ''
+    Private Sub cboinventory1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboinventory1.SelectedIndexChanged
+        'Reset components
+
+        cboinventory2.Text = ""
+        cboinventory2.Items.Clear()
+        DGVINV()
+        If cboinventory1.SelectedIndex = -1 Then
+            cboinventory2.Enabled = False
+            Exit Sub
+        End If
+        cboinventory2.Enabled = True
+
+        Select Case cboinventory1.SelectedIndex
+            Case 0
+                ' prodcode
+                updateSearchInput("SELECT p.prod_code FROM tblproducts p, tblinventory i WHERE p.prod_code = i.inv_prod_code")
+            Case 1
+                ' prodename
+                updateSearchInput("SELECT prod_name FROM tblproducts")
+
+            Case 2
+                ' availability
+                cboinventory2.DropDownStyle = ComboBoxStyle.DropDownList
+                cboinventory2.FlatStyle = FlatStyle.Flat
+                cboinventory2.Items.Clear()
+                cboinventory2.Items.Add("drinks_icetea")
+                cboinventory2.Items.Add("drinks_smoothie")
+                cboinventory2.Items.Add("drinks_milktea")
+                cboinventory2.Items.Add("For sharing")
+                cboinventory2.Items.Add("Pasta")
+                cboinventory2.Items.Add("Sandwich")
+                cboinventory2.Items.Add("SILOG")
+        End Select
+    End Sub
+
+    Private Sub cboinventory2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboinventory2.SelectedIndexChanged, cboinventory2.TextChanged
+        If cboinventory2.SelectedIndex = -1 And cboinventory2.Text = "" Then
+            DGVINV()
+            Exit Sub
+        End If
+
+        Select Case cboinventory1.SelectedIndex
+            Case 0
+                ' prod_code
+                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_code LIKE '%" & cboinventory2.Text & "%'")
+            Case 1
+                ' prod_name 
+                DGVINV("SELECT p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code AND p.prod_name LIKE '%" & cboinventory2.Text & "%'")
+
+            Case 2
+                ' type
+                DGVINV("Select p.prod_code, p.prod_name, i.inv_qty, p.prod_class  FROM tblproducts p, tblinventory i WHERE i.inv_prod_code = p.prod_code And p.prod_class='" & cboinventory2.Text & "'")
+
+        End Select
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
+        SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
+        userSelected = SelectedMember
+        frmmemers_editchoices.ShowDialog()
+    End Sub
 End Class
+
