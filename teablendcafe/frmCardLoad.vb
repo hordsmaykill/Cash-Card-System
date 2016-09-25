@@ -6,8 +6,6 @@ Imports MySql.Data.MySqlClient
 
 Public Class frmCardLoad
 
-    Public customerId As String = "tbc123"
-
     Dim Connect As New MySqlConnection
     Dim TransactionReader As MySqlDataReader
 
