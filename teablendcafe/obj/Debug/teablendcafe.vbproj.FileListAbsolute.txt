@@ -124,3 +124,10 @@ C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frm
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmmemberedit.resources
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmmemers_editchoices.resources
 C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.FrmaddLoad.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.addcustomer.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.cash_card.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.FrmaddLoad.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmCardLoad.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frminvedit.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmmemberedit.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmmemers_editchoices.resources

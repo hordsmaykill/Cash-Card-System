@@ -45,7 +45,6 @@ Public Class frmMain
     ' END NAVIGAION VARS
 
     'menus'
-    ' try to CAPSLOCK constant variables
     Private Const DRINKS_PANMENU_WIDTH = 762
     Private Const DRINKS_SCROLL_SPEED = 127
 
@@ -56,7 +55,7 @@ Public Class frmMain
     Dim drinksLocation = 1
     Dim drinksLocationX = 0
 
-    'sub menus'
+    ' Sub Menus
     Private Const SUB_PANMENU_WIDTH = 762
     Private Const SUB_SCROLL_SPEED = 127
 
@@ -66,7 +65,7 @@ Public Class frmMain
 
     Dim SUBLocation = 1
     Dim SUBLocationX = 0
-    'end sub menus'
+
     'main'
     Private Const MAIN_PANMENU_WIDTH = 762
     Private Const MAIN_SCROLL_SPEED = 127
@@ -77,13 +76,10 @@ Public Class frmMain
     Dim MAINLocation = 1
     Dim MAINLocationX = 0
 
-
-    'end menus'
-    ''
     Private Const DRINKS_SIZEG = 0
     Private Const DRINKS_SIZEV = 1
 
-    ''
+
     ' accounts vars
     Public userSelected As String
 
@@ -207,7 +203,9 @@ Public Class frmMain
     End Sub
 
     Private Sub drinksToDGV(prodCode As String, size As Integer)
+
         ' get qty
+        frmquantity.prodCode = prodCode
         frmquantity.ShowDialog()
 
         ' exit if cancel

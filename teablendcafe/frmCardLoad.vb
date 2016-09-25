@@ -13,8 +13,14 @@ Public Class frmCardLoad
         ConnectDB()
 
         ' reset db
-        closeTransaction()
-        tmrCheck.Enabled = True
+        resetTransaction()
+        'tmrCheck.Enabled = True
+
+        ' test code for adding
+
+
+
+
     End Sub
 
     Public Sub ConnectDB()
@@ -28,7 +34,88 @@ Public Class frmCardLoad
 
     End Sub
 
-    Private Sub closeTransaction()
+    Private Sub updateDatabase(customerNumber As String)
+        ' check if member still have remaining money
+        Dim reader As MySqlDataReader
+        Dim cmd As New MySqlCommand
+        cmd.Connection = Connect
+
+        ' get customer wallet
+        Dim total As Double = frmMain.txtTotalOrder.Text
+
+        Dim wallet As Double
+        cmd.CommandText = "SELECT cus_loadwallet FROM tblcustomers"
+        reader = cmd.ExecuteReader()
+
+        reader.Read()
+        If reader.HasRows Then
+            wallet = reader.Item(0)
+        End If
+        If wallet < total Then
+            MsgBox("Not enought balance in account" & vbNewLine & "Remaining account load is: " & total)
+            reader.Close()
+            Exit Sub
+        End If
+        reader.Close()
+
+        ' update load
+        Dim walletTotal As Double = wallet - total
+
+        With cmd
+            .CommandText = "UPDATE tblcustomers SET cus_loadwallet = " & walletTotal & " WHERE cus_no='" & customerNumber & "'"
+        End With
+
+        ' update products and inventories
+        Dim curDate As String = Date.Today.ToString("yyyy-MM-dd")
+
+        ' generate random
+        Randomize()
+        Dim rand As Integer = CInt(Int((99999 * Rnd()))) + 1
+        Dim dateConcat As String = (Date.Now()).ToString("ddMMyy")
+        Dim ord_code As String = dateConcat & "-" & rand
+
+        ' get data
+
+
+        ' insert id and date
+        cmd.CommandText = "INSERT INTO tblorders VALUES('" & ord_code & "', " & total & ", '" & curDate & "')"
+        cmd.ExecuteNonQuery()
+
+        For i As Integer = 0 To frmMain.dgvorders.RowCount - 1
+            Dim prodCode As String = frmMain.dgvorders.Item(0, i).Value
+            Dim prodName As String = frmMain.dgvorders.Item(1, i).Value
+            Dim qty As Integer = frmMain.dgvorders.Item(2, i).Value
+            Dim price As Integer = frmMain.dgvorders.Item(3, i).Value
+
+            ' insert all product codes with qty
+            cmd.CommandText = "INSERT INTO tblorder_prod VALUES('" & ord_code & "', '" & prodCode & "', '" & prodName & "', " & qty & ", " & price & ")"
+            cmd.ExecuteNonQuery()
+
+            ' decrement a qty in tblinventory
+            With cmd
+                .Connection = Connect
+                .CommandText = "SELECT inv_qty FROM tblinventory WHERE inv_prod_code='" & prodCode & "'"
+            End With
+
+
+            Dim qtyFromDB As Integer
+            reader = cmd.ExecuteReader()
+
+            reader.Read()
+            If reader.HasRows Then
+                qtyFromDB = reader.Item(0)
+            End If
+            reader.Close()
+
+            Dim qtyVal As Integer = qtyFromDB - qty
+            MsgBox(qtyVal)
+            cmd.CommandText = "UPDATE tblinventory SET inv_qty=" & qtyVal & " WHERE inv_prod_code='" & prodCode & "'"
+            cmd.ExecuteNonQuery()
+
+        Next
+    End Sub
+
+    Private Sub resetTransaction()
         tmrCheck.Enabled = False
 
         Dim Command As New MySqlCommand
@@ -40,30 +127,26 @@ Public Class frmCardLoad
         End With
     End Sub
 
-    Function getName(cusNo As String) As String
-        Dim name As String
+    Private Sub insertTest()
+
         Dim command As New MySqlCommand
-        Dim reader As MySqlDataReader
 
         With command
             .Connection = Connect
-            .CommandText = "SELECT cus_name FROM tblcustomers WHERE cus_no='" & cusNo & "'"
+            .CommandText = "INSERT INTO tblorders(ord_code, ord_date) VALUES (2, '2008-11-11')"
+            .ExecuteNonQuery()
         End With
-        reader = command.ExecuteReader()
-        reader.Read()
-        name = reader.Item(0)
 
-        Return name
-    End Function
+    End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        closeTransaction()
+        resetTransaction()
         Me.Close()
     End Sub
 
     Private Sub tmrCheck_Tick(sender As Object, e As EventArgs) Handles tmrCheck.Tick
-        ' checks if isTransaction is true
 
+        ' checks if isTransaction is open
         Dim Command As New MySqlCommand
 
         With Command
@@ -78,11 +161,9 @@ Public Class frmCardLoad
         If customerNumber <> "0" Then
             tmrCheck.Enabled = False
             TransactionReader.Close()
-            MsgBox("NAPALITAN NA!!! MAG MINUS KNA BES.")
 
             ' minus here
-            MsgBox("ANG MABABAWASAN AY SI " & getName(customerNumber))
-
+            updateDatabase(customerNumber)
             Me.Close()
         End If
 
