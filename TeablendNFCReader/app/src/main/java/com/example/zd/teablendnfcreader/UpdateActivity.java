@@ -2,6 +2,7 @@ package com.example.zd.teablendnfcreader;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,14 +22,16 @@ import java.net.URLEncoder;
 
 public class UpdateActivity extends AppCompatActivity {
 
-    String ip;
+    private SharedPreferences prefs;
+    private String ip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
 
-        ip = "192.168.1.16";
+        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        ip = prefs.getString("ip", "10.0.0.2");
 
         Bundle extras = getIntent().getExtras();
         String result = extras.getString("result");
