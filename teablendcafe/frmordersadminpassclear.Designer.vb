@@ -23,10 +23,10 @@ Partial Class frmordersadminpassclear
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.adminclearorder = New System.Windows.Forms.Button()
-        Me.cancelcc = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.adminclearorder = New System.Windows.Forms.Button()
+        Me.cancelcc = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,6 +41,24 @@ Partial Class frmordersadminpassclear
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(304, 75)
         Me.Panel1.TabIndex = 0
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(134, 12)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
+        Me.TextBox1.TabIndex = 9
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(9, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(119, 13)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Administrator Password:"
         '
         'adminclearorder
         '
@@ -59,23 +77,6 @@ Partial Class frmordersadminpassclear
         Me.cancelcc.TabIndex = 8
         Me.cancelcc.Text = "Cancel"
         Me.cancelcc.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(134, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox1.TabIndex = 9
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(9, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(119, 13)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Administrator Password:"
         '
         'frmordersadminpassclear
         '

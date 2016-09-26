@@ -62,6 +62,7 @@ Partial Class typeadminpassworddelete
         '
         Me.TextBox1.Location = New System.Drawing.Point(145, 26)
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1.Size = New System.Drawing.Size(157, 20)
         Me.TextBox1.TabIndex = 4
         '
