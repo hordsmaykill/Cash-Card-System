@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
@@ -13,6 +14,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.UnsupportedEncodingException;
@@ -23,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = "NFC";
     public static final String MIME_TEXT_PLAIN = "text/plain";
     private NfcAdapter mNfcAdapter;
+
+    private SharedPreferences prefs;
+    private EditText txtIp;
+
+    private String ip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
         // nfc is present
         // update cus_no
+        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        txtIp.setText("IP: " + prefs.getString("ip", "10.0.0.2"));
+
     }
 
     @Override
@@ -62,6 +73,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         handleIntent(intent);
+    }
+
+    public void onClickUpdate(View view) {
+
+        SharedPreferences.Editor prefsEditor = prefs.edit();
+        txtIp = (EditText) findViewById(R.id.txtIp);
+        ip = txtIp.getText().toString();
+        prefsEditor.putString("ip", ip);
+        prefsEditor.apply();
+        Toast.makeText(this, "The IP is now Updated! " + ip, Toast.LENGTH_SHORT).show();
     }
 
     private void handleIntent(Intent intent) {
