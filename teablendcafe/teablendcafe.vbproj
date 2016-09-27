@@ -94,6 +94,12 @@
     <Compile Include="cashcard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="editaccounts.Designer.vb">
+      <DependentUpon>editaccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="editaccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formadmincreatenew.Designer.vb">
       <DependentUpon>formadmincreatenew.vb</DependentUpon>
     </Compile>
@@ -170,6 +176,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="panconmembersdelete.Designer.vb">
+      <DependentUpon>panconmembersdelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="panconmembersdelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="splash.Designer.vb">
       <DependentUpon>splash.vb</DependentUpon>
     </Compile>
@@ -198,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cashcard.resx">
       <DependentUpon>cashcard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editaccounts.resx">
+      <DependentUpon>editaccounts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formadmincreatenew.resx">
       <DependentUpon>formadmincreatenew.vb</DependentUpon>
@@ -234,6 +249,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panconmembersdelete.resx">
+      <DependentUpon>panconmembersdelete.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.vb</DependentUpon>

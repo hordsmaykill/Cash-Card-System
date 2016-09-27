@@ -990,6 +990,9 @@ Public Class frmMain
     ''
 
     Private Sub account_delbtn_Click(sender As Object, e As EventArgs) Handles account_delbtn.Click
+        panconmembersdelete.ShowDialog()
+
+
         Dim Delete As String
 
         SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
@@ -1029,6 +1032,8 @@ Public Class frmMain
 
 
     Private Sub btnmembers_del_Click(sender As Object, e As EventArgs) Handles btnmembers_del.Click
+        panconmembersdelete.ShowDialog()
+
         Dim Delete As String
 
         SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
@@ -1187,5 +1192,7 @@ Public Class frmMain
     Private Sub btnDeleteOrders_Click(sender As Object, e As EventArgs) Handles btnDeleteOrders.Click
         typeadminpassworddelete.ShowDialog()
     End Sub
+
+
 End Class
 

@@ -42,8 +42,9 @@ Public Class login
 
 
         If Reader.HasRows Then
-            MsgBox("Welcome" & Reader.Item(0).ToString & "" & Reader.Item(1).ToString, vbInformation + vbOKOnly, "Message")
+            MsgBox("Welcome" & Reader.Item(0).ToString & "", vbInformation + vbOKOnly, "Message")
             Reader.Close()
+            Call checkingpriviledges()
             frmMain.Show()
             Me.Close()
         Else
@@ -60,4 +61,30 @@ Public Class login
             Environment.Exit(0)
         End If
     End Sub
+
+    'checking of priveledges'
+    Public Sub checkingpriviledges()
+
+        Dim priviledges As String
+        With Command
+            .Connection = Connect
+            .CommandText = "SELECT type FROM tbladministrators WHERE Username = '" &
+                tbusername.Text & "'"
+        End With
+        Reader = Command.ExecuteReader
+        Reader.Read()
+
+        If Reader.HasRows Then
+            priviledges = Reader.Item(0)
+        End If
+
+
+
+        If priviledges = "cashier" Then
+            frmMain.lblAccounts.Hide()
+            frmMain.picAccounts.Hide()
+        End If
+
+    End Sub
+    ''
 End Class
