@@ -94,6 +94,12 @@
     <Compile Include="cashcard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="deletemem.Designer.vb">
+      <DependentUpon>deletemem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deletemem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="editaccounts.Designer.vb">
       <DependentUpon>editaccounts.vb</DependentUpon>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cashcard.resx">
       <DependentUpon>cashcard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletemem.resx">
+      <DependentUpon>deletemem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editaccounts.resx">
       <DependentUpon>editaccounts.vb</DependentUpon>

@@ -34,4 +34,8 @@ Public Class editaccounts
         MsgBox("Account " & SelectedAccount & "has successfully been updated!", vbOKOnly + vbInformation, "Message")
         Me.Close()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Dispose()
+    End Sub
 End Class
