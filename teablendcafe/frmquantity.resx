@@ -120,9 +120,9 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnMin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAA1SURBVGhD7c2xDQAwCAQx9l+aLPAlRBS2dPUVAAAAwHn9uXFpstm4NNlsXJpsBgAAAHBW1QOI
-        lm+RNekvvwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAADVJREFUaEPt
+        zbENADAIBDH2X5os8CVEFLZ09RUAAADAef25cWmy2bg02WxcmmwGAAAAcFbVA4iWb5E16S+/AAAAAElF
+        TkSuQmCC
 </value>
   </data>
 </root>

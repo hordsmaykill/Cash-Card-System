@@ -17,9 +17,11 @@ Public Class frmquantity
 
         qty = 1
         txtNum.Text = qty
+
+
     End Sub
 
-    Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
+    Private Sub btnOk_Click(sender As Object, e As EventArgs)
         ' check if the input qty is valid
         Dim cmd As New MySqlCommand
         Dim reader As MySqlDataReader
@@ -53,24 +55,24 @@ Public Class frmquantity
         Me.Close()
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
         frmMain.qtyRetrieved = -1
         Me.Close()
     End Sub
 
-    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+    Private Sub btnMin_Click(sender As Object, e As EventArgs)
         If qty <> 1 Then
             qty -= 1
         End If
         txtNum.Text = qty
     End Sub
 
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs)
         qty += 1
         txtNum.Text = qty
     End Sub
 
-    Private Sub txtNum_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNum.KeyDown
+    Private Sub txtNum_KeyDown(sender As Object, e As KeyEventArgs)
         If e.KeyCode >= 65 And e.KeyCode <= 90 Then
             MsgBox("Please enter a number.")
             txtNum.Text = 1
@@ -78,8 +80,10 @@ Public Class frmquantity
 
     End Sub
 
-    Private Sub txtNum_TextChanged(sender As Object, e As EventArgs) Handles txtNum.TextChanged
+    Private Sub txtNum_TextChanged(sender As Object, e As EventArgs)
         Integer.TryParse(txtNum.Text, qty)
         txtNum.Text = qty
     End Sub
+
+
 End Class
