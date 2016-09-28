@@ -39,7 +39,7 @@ Public Class frmquantity
         End If
 
         Dim diff As Integer = qtyFromDB - qty
-        If diff <= 0 Then
+        If diff < 0 Then
             MsgBox("There are only " & qtyFromDB & " remaining")
             frmMain.qtyRetrieved = -1
             reader.Close()
