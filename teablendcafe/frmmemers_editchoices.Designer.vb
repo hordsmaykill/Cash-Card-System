@@ -22,9 +22,10 @@ Partial Class frmmemers_editchoices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmmemers_editchoices))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -39,15 +40,6 @@ Partial Class frmmemers_editchoices
         Me.Panel1.Size = New System.Drawing.Size(297, 122)
         Me.Panel1.TabIndex = 0
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(16, 21)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 90)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Edit Name of the member"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(159, 21)
@@ -56,6 +48,15 @@ Partial Class frmmemers_editchoices
         Me.Button2.TabIndex = 0
         Me.Button2.Text = "Add Load"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(16, 21)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(120, 90)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Edit Name of the member"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -79,6 +80,7 @@ Partial Class frmmemers_editchoices
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmmemers_editchoices"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmmemers_editchoices"
