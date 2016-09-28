@@ -325,6 +325,51 @@ Public Class frmMain
         End If
     End Sub
 
+    ' MENU COLOR STATES
+    ' color states for menu main form
+    Private Sub drinksSelectedPage(selected As Integer)
+        ' reset all colors
+        drinks_panemenubtn1.BackColor = Color.FromArgb(67, 41, 6)
+        drinks_panemenubtn2.BackColor = Color.FromArgb(67, 41, 6)
+        drinks_panemenubtn3.BackColor = Color.FromArgb(67, 41, 6)
+
+        ' set selected color
+        Select Case selected
+            Case 1
+                drinks_panemenubtn1.BackColor = Color.FromArgb(111, 68, 10)
+            Case 2
+                drinks_panemenubtn2.BackColor = Color.FromArgb(111, 68, 10)
+            Case 3
+                drinks_panemenubtn3.BackColor = Color.FromArgb(111, 68, 10)
+        End Select
+    End Sub
+
+    Private Sub foodSelectedPage1(selected As Integer)
+        submenu_panmenu1.BackColor = Color.FromArgb(67, 41, 6)
+        submenu_panbtn2.BackColor = Color.FromArgb(67, 41, 6)
+
+        Select Case selected
+            Case 1
+                submenu_panmenu1.BackColor = Color.FromArgb(111, 68, 10)
+            Case 2
+                submenu_panbtn2.BackColor = Color.FromArgb(111, 68, 10)
+        End Select
+    End Sub
+
+    Private Sub foodSelectedPage2(selected As Integer)
+        main_panemenubtn1.BackColor = Color.FromArgb(67, 41, 6)
+        main_panemenubtn2.BackColor = Color.FromArgb(67, 41, 6)
+
+        Select Case selected
+            Case 1
+                main_panemenubtn1.BackColor = Color.FromArgb(111, 68, 10)
+            Case 2
+                main_panemenubtn2.BackColor = Color.FromArgb(111, 68, 10)
+        End Select
+
+    End Sub
+    ' END MENU COLOR STATES
+
     Private Sub btnMenu_MouseEnter(sender As Object, e As EventArgs) Handles btnMenu.MouseEnter
         btnMenu.Image = My.Resources.menuHover
     End Sub
@@ -531,18 +576,24 @@ Public Class frmMain
         drinksLocationX = drinks_panmenu1.Location.X
         drinksLocation = DRINKS_MENU1
         tmrDrinks1.Enabled = True
+
+        drinksSelectedPage(1)
     End Sub
 
     Private Sub drinks_panemenubtn2_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn2.Click
         drinksLocationX = drinks_panmenu1.Location.X
         drinksLocation = DRINKS_MENU2
         tmrDrinks1.Enabled = True
+
+        drinksSelectedPage(2)
     End Sub
 
     Private Sub drinks_panemenubtn3_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn3.Click
         drinksLocationX = drinks_panmenu1.Location.X
         drinksLocation = DRINKS_MENU3
         tmrDrinks1.Enabled = True
+
+        drinksSelectedPage(3)
     End Sub
     'END DNKS'
     Private Sub main_panemenubtn1_Click(sender As Object, e As EventArgs) Handles main_panemenubtn1.Click
@@ -550,13 +601,15 @@ Public Class frmMain
         MAINLocation = MAIN_MENU1
         tmrMain2.Enabled = True
 
-
+        foodSelectedPage2(1)
     End Sub
 
     Private Sub main_panemenubtn2_Click(sender As Object, e As EventArgs) Handles main_panemenubtn2.Click
         MAINLocationX = main_panmenu1.Location.X
         MAINLocation = MAIN_MENU2
         tmrMain2.Enabled = True
+
+        foodSelectedPage2(2)
     End Sub
 
     Private Sub tmrDrinks1_Tick(sender As Object, e As EventArgs) Handles tmrDrinks1.Tick
@@ -661,12 +714,16 @@ Public Class frmMain
         SUBLocationX = sub_panmenu1.Location.X
         SUBLocation = SUB_MENU1
         tmrSubmenu.Enabled = True
+
+        foodSelectedPage1(1)
     End Sub
 
     Private Sub submenu_panbtn2_Click(sender As Object, e As EventArgs) Handles submenu_panbtn2.Click
         SUBLocationX = sub_panmenu1.Location.X
         SUBLocation = SUB_MENU2
         tmrSubmenu.Enabled = True
+
+        foodSelectedPage1(2)
     End Sub
 
     Private Sub menu_d_ms_G_Click(sender As Object, e As EventArgs) Handles menu_d_ms_G.Click

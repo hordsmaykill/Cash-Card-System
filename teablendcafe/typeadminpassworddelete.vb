@@ -30,14 +30,14 @@ Public Class typeadminpassworddelete
         reply = MsgBox("Do you really want to Delete this current order(s)?", MsgBoxStyle.YesNoCancel, "Clear")
         If reply = MsgBoxResult.Yes Then
             frmMain.dgvorders.Rows.RemoveAt(frmMain.dgvorders.CurrentRow.Index)
-            Me.Dispose()
+            Me.Close()
         End If
     End Sub
 
 
 
     Private Sub cancelc_Click(sender As Object, e As EventArgs) Handles cancelc.Click
-        Me.Dispose()
+        Me.Close()
     End Sub
 
 

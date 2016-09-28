@@ -32,12 +32,12 @@ Public Class frmordersadminpassclear
         reply = MsgBox("Do you really want to Clear?", MsgBoxStyle.YesNoCancel, "Clear")
         If reply = MsgBoxResult.Yes Then
             frmMain.dgvorders.Rows.Clear()
-            Me.Dispose()
+            Me.Close()
         End If
 
     End Sub
 
     Private Sub cancelcc_Click(sender As Object, e As EventArgs) Handles cancelcc.Click
-        Me.Dispose()
+        Me.Close()
     End Sub
 End Class

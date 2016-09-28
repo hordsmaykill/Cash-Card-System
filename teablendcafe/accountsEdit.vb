@@ -14,7 +14,7 @@ Public Class accountsEdit
         End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Dispose()
+        Me.Close()
     End Sub
     'Private Sub AccountsDGV()
     '    frmMain.accounts_dgv.Rows.Clear()
@@ -48,7 +48,7 @@ Public Class accountsEdit
             End With
             frmMain.AccountsDGV()
             MsgBox("Password successfully changed!", vbOKOnly + vbInformation, "Message")
-            Me.Dispose()
+            Me.Close()
         Else
             MsgBox("Please make sure the entered passwords are the same!", vbOKOnly + vbInformation, "Message")
             tboxPassword.Text = ""

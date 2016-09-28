@@ -15,7 +15,7 @@ Public Class typeadminpassword
         End If
     End Sub
     Private Sub admispasswordcancel_Click(sender As Object, e As EventArgs) Handles admispasswordcancel.Click
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub typeadminpassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -33,6 +33,6 @@ Public Class typeadminpassword
         editaccounts.ShowDialog()
 
 
-        Me.Dispose()
+        Me.Close()
     End Sub
 End Class
