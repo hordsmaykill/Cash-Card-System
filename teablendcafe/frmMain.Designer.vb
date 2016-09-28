@@ -23,22 +23,31 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panSideMenu = New System.Windows.Forms.Panel()
         Me.panButtons = New System.Windows.Forms.TableLayoutPanel()
+        Me.picAccounts = New System.Windows.Forms.PictureBox()
+        Me.picAssessment = New System.Windows.Forms.PictureBox()
+        Me.picMenu = New System.Windows.Forms.PictureBox()
+        Me.picInventory = New System.Windows.Forms.PictureBox()
         Me.lblAssessment = New System.Windows.Forms.Label()
         Me.lblMenu = New System.Windows.Forms.Label()
         Me.lblInventory = New System.Windows.Forms.Label()
         Me.lblHome = New System.Windows.Forms.Label()
+        Me.picHome = New System.Windows.Forms.PictureBox()
         Me.lblAccounts = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnUsrMgmt = New System.Windows.Forms.Button()
         Me.panHeading = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.picLogout = New System.Windows.Forms.PictureBox()
         Me.lbllogout = New System.Windows.Forms.Label()
+        Me.piclogout2 = New System.Windows.Forms.PictureBox()
+        Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.tmrMenu = New System.Windows.Forms.Timer(Me.components)
         Me.panContent = New System.Windows.Forms.Panel()
         Me.panMenu = New System.Windows.Forms.Panel()
@@ -216,12 +225,20 @@ Partial Class frmMain
         Me.accounts_dgv = New System.Windows.Forms.DataGridView()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.panHome = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ltime = New System.Windows.Forms.Label()
+        Me.lDate = New System.Windows.Forms.Label()
         Me.panAssessment = New System.Windows.Forms.Panel()
         Me.Panel34 = New System.Windows.Forms.Panel()
         Me.btnmembers_del = New System.Windows.Forms.Button()
         Me.btnmembers_add = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.dgv_members = New System.Windows.Forms.DataGridView()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panInventory = New System.Windows.Forms.Panel()
         Me.cboinventory2 = New System.Windows.Forms.ComboBox()
         Me.cboinventory1 = New System.Windows.Forms.ComboBox()
@@ -246,27 +263,19 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.panHome = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ltime = New System.Windows.Forms.Label()
-        Me.lDate = New System.Windows.Forms.Label()
-        Me.picAccounts = New System.Windows.Forms.PictureBox()
-        Me.picAssessment = New System.Windows.Forms.PictureBox()
-        Me.picMenu = New System.Windows.Forms.PictureBox()
-        Me.picInventory = New System.Windows.Forms.PictureBox()
-        Me.picHome = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.picLogout = New System.Windows.Forms.PictureBox()
-        Me.piclogout2 = New System.Windows.Forms.PictureBox()
-        Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
+        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picHome, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panHeading.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panContent.SuspendLayout()
         Me.panMenu.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -310,23 +319,14 @@ Partial Class frmMain
         Me.Panel4.SuspendLayout()
         Me.panAccounts.SuspendLayout()
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panHome.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.panAssessment.SuspendLayout()
         Me.Panel34.SuspendLayout()
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panInventory.SuspendLayout()
         CType(Me.inventorydgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panWrapper.SuspendLayout()
-        Me.panHome.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picHome, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panSideMenu
@@ -367,6 +367,64 @@ Partial Class frmMain
         Me.panButtons.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.panButtons.Size = New System.Drawing.Size(232, 245)
         Me.panButtons.TabIndex = 7
+        '
+        'picAccounts
+        '
+        Me.picAccounts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.picAccounts.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picAccounts.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picAccounts.Image = Global.teablendcafe.My.Resources.Resources.ic_person_outline_white_48dp_2x
+        Me.picAccounts.Location = New System.Drawing.Point(0, 196)
+        Me.picAccounts.Margin = New System.Windows.Forms.Padding(0)
+        Me.picAccounts.Name = "picAccounts"
+        Me.picAccounts.Size = New System.Drawing.Size(46, 49)
+        Me.picAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picAccounts.TabIndex = 12
+        Me.picAccounts.TabStop = False
+        '
+        'picAssessment
+        '
+        Me.picAssessment.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picAssessment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picAssessment.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picAssessment.Image = Global.teablendcafe.My.Resources.Resources.assessment_105
+        Me.picAssessment.Location = New System.Drawing.Point(0, 147)
+        Me.picAssessment.Margin = New System.Windows.Forms.Padding(0)
+        Me.picAssessment.Name = "picAssessment"
+        Me.picAssessment.Size = New System.Drawing.Size(46, 49)
+        Me.picAssessment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picAssessment.TabIndex = 11
+        Me.picAssessment.TabStop = False
+        '
+        'picMenu
+        '
+        Me.picMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picMenu.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picMenu.Image = Global.teablendcafe.My.Resources.Resources.menu_1251
+        Me.picMenu.Location = New System.Drawing.Point(0, 98)
+        Me.picMenu.Margin = New System.Windows.Forms.Padding(0)
+        Me.picMenu.Name = "picMenu"
+        Me.picMenu.Size = New System.Drawing.Size(46, 49)
+        Me.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picMenu.TabIndex = 10
+        Me.picMenu.TabStop = False
+        '
+        'picInventory
+        '
+        Me.picInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picInventory.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picInventory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picInventory.Image = Global.teablendcafe.My.Resources.Resources.assignment_125
+        Me.picInventory.Location = New System.Drawing.Point(0, 49)
+        Me.picInventory.Margin = New System.Windows.Forms.Padding(0)
+        Me.picInventory.Name = "picInventory"
+        Me.picInventory.Size = New System.Drawing.Size(46, 49)
+        Me.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picInventory.TabIndex = 9
+        Me.picInventory.TabStop = False
         '
         'lblAssessment
         '
@@ -436,6 +494,20 @@ Partial Class frmMain
         Me.lblHome.Text = "Dashboard"
         Me.lblHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'picHome
+        '
+        Me.picHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picHome.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picHome.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picHome.Image = Global.teablendcafe.My.Resources.Resources.home_125
+        Me.picHome.Location = New System.Drawing.Point(0, 0)
+        Me.picHome.Margin = New System.Windows.Forms.Padding(0)
+        Me.picHome.Name = "picHome"
+        Me.picHome.Size = New System.Drawing.Size(46, 49)
+        Me.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picHome.TabIndex = 1
+        Me.picHome.TabStop = False
+        '
         'lblAccounts
         '
         Me.lblAccounts.AutoSize = True
@@ -450,6 +522,17 @@ Partial Class frmMain
         Me.lblAccounts.TabIndex = 13
         Me.lblAccounts.Text = "Accounts"
         Me.lblAccounts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(62, 31)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 82)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
         '
         'btnUsrMgmt
         '
@@ -486,6 +569,16 @@ Partial Class frmMain
         Me.Panel2.TabIndex = 13
         Me.Panel2.Visible = False
         '
+        'picLogout
+        '
+        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
+        Me.picLogout.Location = New System.Drawing.Point(4, 9)
+        Me.picLogout.Name = "picLogout"
+        Me.picLogout.Size = New System.Drawing.Size(40, 27)
+        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogout.TabIndex = 14
+        Me.picLogout.TabStop = False
+        '
         'lbllogout
         '
         Me.lbllogout.AutoSize = True
@@ -496,6 +589,28 @@ Partial Class frmMain
         Me.lbllogout.TabIndex = 0
         Me.lbllogout.Text = "Logout"
         Me.lbllogout.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'piclogout2
+        '
+        Me.piclogout2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.piclogout2.Image = Global.teablendcafe.My.Resources.Resources.arrowdown
+        Me.piclogout2.Location = New System.Drawing.Point(1310, 22)
+        Me.piclogout2.Name = "piclogout2"
+        Me.piclogout2.Size = New System.Drawing.Size(34, 22)
+        Me.piclogout2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.piclogout2.TabIndex = 10
+        Me.piclogout2.TabStop = False
+        '
+        'btnMenu
+        '
+        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMenu.Image = Global.teablendcafe.My.Resources.Resources.menuDefault
+        Me.btnMenu.Location = New System.Drawing.Point(0, -6)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(71, 78)
+        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMenu.TabIndex = 9
+        Me.btnMenu.TabStop = False
         '
         'tmrMenu
         '
@@ -516,7 +631,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, 0)
+        Me.panContent.Location = New System.Drawing.Point(230, -1400)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -562,7 +677,7 @@ Partial Class frmMain
         Me.btnDeleteOrders.Name = "btnDeleteOrders"
         Me.btnDeleteOrders.Size = New System.Drawing.Size(94, 67)
         Me.btnDeleteOrders.TabIndex = 45
-        Me.btnDeleteOrders.Text = "DELETE"
+        Me.btnDeleteOrders.Text = "VOID"
         Me.btnDeleteOrders.UseVisualStyleBackColor = True
         '
         'btnOrder
@@ -715,9 +830,9 @@ Partial Class frmMain
         '
         Me.menu_btn_sbs.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_sbs.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_sbs.Location = New System.Drawing.Point(926, 21)
+        Me.menu_btn_sbs.Location = New System.Drawing.Point(928, 7)
         Me.menu_btn_sbs.Name = "menu_btn_sbs"
-        Me.menu_btn_sbs.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_sbs.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_sbs.TabIndex = 62
         Me.menu_btn_sbs.Text = "Sizzling Burger Steak "
         Me.menu_btn_sbs.UseVisualStyleBackColor = False
@@ -726,9 +841,9 @@ Partial Class frmMain
         '
         Me.menu_btn_n.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_n.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_n.Location = New System.Drawing.Point(775, 21)
+        Me.menu_btn_n.Location = New System.Drawing.Point(777, 7)
         Me.menu_btn_n.Name = "menu_btn_n"
-        Me.menu_btn_n.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_n.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_n.TabIndex = 63
         Me.menu_btn_n.Text = "Nachos"
         Me.menu_btn_n.UseVisualStyleBackColor = False
@@ -737,9 +852,9 @@ Partial Class frmMain
         '
         Me.menu_btn_fbw.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_fbw.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_fbw.Location = New System.Drawing.Point(610, 20)
+        Me.menu_btn_fbw.Location = New System.Drawing.Point(607, 7)
         Me.menu_btn_fbw.Name = "menu_btn_fbw"
-        Me.menu_btn_fbw.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_fbw.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_fbw.TabIndex = 55
         Me.menu_btn_fbw.Text = "Flaming Buffalo Wings"
         Me.menu_btn_fbw.UseVisualStyleBackColor = False
@@ -748,9 +863,9 @@ Partial Class frmMain
         '
         Me.menu_btn_te.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_te.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_te.Location = New System.Drawing.Point(469, 20)
+        Me.menu_btn_te.Location = New System.Drawing.Point(466, 7)
         Me.menu_btn_te.Name = "menu_btn_te"
-        Me.menu_btn_te.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_te.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_te.TabIndex = 56
         Me.menu_btn_te.Text = "Tofu Express"
         Me.menu_btn_te.UseVisualStyleBackColor = False
@@ -759,9 +874,9 @@ Partial Class frmMain
         '
         Me.menu_btn_ss.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_ss.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_ss.Location = New System.Drawing.Point(318, 20)
+        Me.menu_btn_ss.Location = New System.Drawing.Point(315, 7)
         Me.menu_btn_ss.Name = "menu_btn_ss"
-        Me.menu_btn_ss.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_ss.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_ss.TabIndex = 57
         Me.menu_btn_ss.Text = "Sizzling Sisig"
         Me.menu_btn_ss.UseVisualStyleBackColor = False
@@ -770,9 +885,9 @@ Partial Class frmMain
         '
         Me.menu_btn_cbf.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_cbf.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_cbf.Location = New System.Drawing.Point(175, 20)
+        Me.menu_btn_cbf.Location = New System.Drawing.Point(160, 7)
         Me.menu_btn_cbf.Name = "menu_btn_cbf"
-        Me.menu_btn_cbf.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_cbf.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_cbf.TabIndex = 58
         Me.menu_btn_cbf.Text = "Chessy Bacon Fries       "
         Me.menu_btn_cbf.UseVisualStyleBackColor = False
@@ -781,9 +896,9 @@ Partial Class frmMain
         '
         Me.menu_btn_c.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_c.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_c.Location = New System.Drawing.Point(17, 20)
+        Me.menu_btn_c.Location = New System.Drawing.Point(14, 7)
         Me.menu_btn_c.Name = "menu_btn_c"
-        Me.menu_btn_c.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_c.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_c.TabIndex = 59
         Me.menu_btn_c.Text = "Churros"
         Me.menu_btn_c.UseVisualStyleBackColor = False
@@ -791,7 +906,7 @@ Partial Class frmMain
         'drinks_panemenubtn3
         '
         Me.drinks_panemenubtn3.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.drinks_panemenubtn3.Location = New System.Drawing.Point(434, 254)
+        Me.drinks_panemenubtn3.Location = New System.Drawing.Point(434, 264)
         Me.drinks_panemenubtn3.Name = "drinks_panemenubtn3"
         Me.drinks_panemenubtn3.Size = New System.Drawing.Size(27, 22)
         Me.drinks_panemenubtn3.TabIndex = 8
@@ -800,7 +915,7 @@ Partial Class frmMain
         'main_panemenubtn2
         '
         Me.main_panemenubtn2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.main_panemenubtn2.Location = New System.Drawing.Point(381, 669)
+        Me.main_panemenubtn2.Location = New System.Drawing.Point(381, 673)
         Me.main_panemenubtn2.Name = "main_panemenubtn2"
         Me.main_panemenubtn2.Size = New System.Drawing.Size(27, 22)
         Me.main_panemenubtn2.TabIndex = 6
@@ -809,7 +924,7 @@ Partial Class frmMain
         'main_panemenubtn1
         '
         Me.main_panemenubtn1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.main_panemenubtn1.Location = New System.Drawing.Point(328, 670)
+        Me.main_panemenubtn1.Location = New System.Drawing.Point(328, 674)
         Me.main_panemenubtn1.Name = "main_panemenubtn1"
         Me.main_panemenubtn1.Size = New System.Drawing.Size(27, 22)
         Me.main_panemenubtn1.TabIndex = 7
@@ -820,7 +935,7 @@ Partial Class frmMain
         Me.main_panmenu.Controls.Add(Me.main_panmenu1)
         Me.main_panmenu.Location = New System.Drawing.Point(23, 452)
         Me.main_panmenu.Name = "main_panmenu"
-        Me.main_panmenu.Size = New System.Drawing.Size(750, 203)
+        Me.main_panmenu.Size = New System.Drawing.Size(750, 218)
         Me.main_panmenu.TabIndex = 5
         '
         'main_panmenu1
@@ -841,16 +956,16 @@ Partial Class frmMain
         Me.main_panmenu1.Location = New System.Drawing.Point(0, 0)
         Me.main_panmenu1.Margin = New System.Windows.Forms.Padding(0)
         Me.main_panmenu1.Name = "main_panmenu1"
-        Me.main_panmenu1.Size = New System.Drawing.Size(1515, 202)
+        Me.main_panmenu1.Size = New System.Drawing.Size(1515, 218)
         Me.main_panmenu1.TabIndex = 1
         '
         'menu_btn_spam
         '
         Me.menu_btn_spam.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_spam.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_spam.Location = New System.Drawing.Point(931, 23)
+        Me.menu_btn_spam.Location = New System.Drawing.Point(929, 23)
         Me.menu_btn_spam.Name = "menu_btn_spam"
-        Me.menu_btn_spam.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_spam.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_spam.TabIndex = 44
         Me.menu_btn_spam.Text = "Spamsilog"
         Me.menu_btn_spam.UseVisualStyleBackColor = False
@@ -859,9 +974,9 @@ Partial Class frmMain
         '
         Me.menu_btn_cs.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_cs.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_cs.Location = New System.Drawing.Point(780, 23)
+        Me.menu_btn_cs.Location = New System.Drawing.Point(783, 23)
         Me.menu_btn_cs.Name = "menu_btn_cs"
-        Me.menu_btn_cs.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_cs.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_cs.TabIndex = 46
         Me.menu_btn_cs.Text = "Chicksilog"
         Me.menu_btn_cs.UseVisualStyleBackColor = False
@@ -870,9 +985,9 @@ Partial Class frmMain
         '
         Me.menu_btn_l.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_l.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_l.Location = New System.Drawing.Point(612, 113)
+        Me.menu_btn_l.Location = New System.Drawing.Point(613, 108)
         Me.menu_btn_l.Name = "menu_btn_l"
-        Me.menu_btn_l.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_l.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_l.TabIndex = 30
         Me.menu_btn_l.Text = "Longsilog"
         Me.menu_btn_l.UseVisualStyleBackColor = False
@@ -881,9 +996,9 @@ Partial Class frmMain
         '
         Me.menu_btn_h.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_h.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_h.Location = New System.Drawing.Point(471, 113)
+        Me.menu_btn_h.Location = New System.Drawing.Point(472, 108)
         Me.menu_btn_h.Name = "menu_btn_h"
-        Me.menu_btn_h.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_h.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_h.TabIndex = 31
         Me.menu_btn_h.Text = "Hotsilog"
         Me.menu_btn_h.UseVisualStyleBackColor = False
@@ -892,9 +1007,9 @@ Partial Class frmMain
         '
         Me.menu_btn_cp.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_cp.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_cp.Location = New System.Drawing.Point(320, 113)
+        Me.menu_btn_cp.Location = New System.Drawing.Point(321, 108)
         Me.menu_btn_cp.Name = "menu_btn_cp"
-        Me.menu_btn_cp.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_cp.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_cp.TabIndex = 32
         Me.menu_btn_cp.Text = "Creamy Pesto"
         Me.menu_btn_cp.UseVisualStyleBackColor = False
@@ -903,9 +1018,9 @@ Partial Class frmMain
         '
         Me.menu_btn_tdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_tdd.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_tdd.Location = New System.Drawing.Point(613, 23)
+        Me.menu_btn_tdd.Location = New System.Drawing.Point(613, 2)
         Me.menu_btn_tdd.Name = "menu_btn_tdd"
-        Me.menu_btn_tdd.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_tdd.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_tdd.TabIndex = 33
         Me.menu_btn_tdd.Text = "TBC Double Decker"
         Me.menu_btn_tdd.UseVisualStyleBackColor = False
@@ -914,9 +1029,9 @@ Partial Class frmMain
         '
         Me.menu_btn_ucb.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_ucb.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_ucb.Location = New System.Drawing.Point(472, 23)
+        Me.menu_btn_ucb.Location = New System.Drawing.Point(472, 2)
         Me.menu_btn_ucb.Name = "menu_btn_ucb"
-        Me.menu_btn_ucb.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_ucb.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_ucb.TabIndex = 34
         Me.menu_btn_ucb.Text = "Ultimate Cheese Burger"
         Me.menu_btn_ucb.UseVisualStyleBackColor = False
@@ -925,9 +1040,9 @@ Partial Class frmMain
         '
         Me.menu_btn_pp.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_pp.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_pp.Location = New System.Drawing.Point(169, 113)
+        Me.menu_btn_pp.Location = New System.Drawing.Point(170, 108)
         Me.menu_btn_pp.Name = "menu_btn_pp"
-        Me.menu_btn_pp.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_pp.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_pp.TabIndex = 35
         Me.menu_btn_pp.Text = " Pizza Pasta"
         Me.menu_btn_pp.UseVisualStyleBackColor = False
@@ -936,9 +1051,9 @@ Partial Class frmMain
         '
         Me.menu_btn_es.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_es.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_es.Location = New System.Drawing.Point(321, 23)
+        Me.menu_btn_es.Location = New System.Drawing.Point(321, 2)
         Me.menu_btn_es.Name = "menu_btn_es"
-        Me.menu_btn_es.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_es.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_es.TabIndex = 36
         Me.menu_btn_es.Text = "Emsilog"
         Me.menu_btn_es.UseVisualStyleBackColor = False
@@ -947,9 +1062,9 @@ Partial Class frmMain
         '
         Me.menu_btn_cc.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_cc.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_cc.Location = New System.Drawing.Point(20, 113)
+        Me.menu_btn_cc.Location = New System.Drawing.Point(21, 108)
         Me.menu_btn_cc.Name = "menu_btn_cc"
-        Me.menu_btn_cc.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_cc.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_cc.TabIndex = 37
         Me.menu_btn_cc.Text = "Chessy Carbonara"
         Me.menu_btn_cc.UseVisualStyleBackColor = False
@@ -958,9 +1073,9 @@ Partial Class frmMain
         '
         Me.menu_btn_ib.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_ib.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_ib.Location = New System.Drawing.Point(170, 23)
+        Me.menu_btn_ib.Location = New System.Drawing.Point(170, 2)
         Me.menu_btn_ib.Name = "menu_btn_ib"
-        Me.menu_btn_ib.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_ib.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_ib.TabIndex = 38
         Me.menu_btn_ib.Text = "Island Burger"
         Me.menu_btn_ib.UseVisualStyleBackColor = False
@@ -969,9 +1084,9 @@ Partial Class frmMain
         '
         Me.menu_btn_bbq.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.menu_btn_bbq.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_bbq.Location = New System.Drawing.Point(20, 23)
+        Me.menu_btn_bbq.Location = New System.Drawing.Point(20, 2)
         Me.menu_btn_bbq.Name = "menu_btn_bbq"
-        Me.menu_btn_bbq.Size = New System.Drawing.Size(119, 74)
+        Me.menu_btn_bbq.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_bbq.TabIndex = 39
         Me.menu_btn_bbq.Text = "BBQ Burger"
         Me.menu_btn_bbq.UseVisualStyleBackColor = False
@@ -980,9 +1095,9 @@ Partial Class frmMain
         '
         Me.Drinks_panmenu.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Drinks_panmenu.Controls.Add(Me.drinks_panmenu1)
-        Me.Drinks_panmenu.Location = New System.Drawing.Point(23, 38)
+        Me.Drinks_panmenu.Location = New System.Drawing.Point(22, 16)
         Me.Drinks_panmenu.Name = "Drinks_panmenu"
-        Me.Drinks_panmenu.Size = New System.Drawing.Size(750, 202)
+        Me.Drinks_panmenu.Size = New System.Drawing.Size(750, 245)
         Me.Drinks_panmenu.TabIndex = 4
         '
         'drinks_panmenu1
@@ -1019,10 +1134,10 @@ Partial Class frmMain
         Me.drinks_panmenu1.Controls.Add(Me.Panel6)
         Me.drinks_panmenu1.Controls.Add(Me.Panel4)
         Me.drinks_panmenu1.Controls.Add(Me.Label1)
-        Me.drinks_panmenu1.Location = New System.Drawing.Point(0, 0)
+        Me.drinks_panmenu1.Location = New System.Drawing.Point(0, 4)
         Me.drinks_panmenu1.Margin = New System.Windows.Forms.Padding(0)
         Me.drinks_panmenu1.Name = "drinks_panmenu1"
-        Me.drinks_panmenu1.Size = New System.Drawing.Size(2286, 202)
+        Me.drinks_panmenu1.Size = New System.Drawing.Size(2286, 238)
         Me.drinks_panmenu1.TabIndex = 0
         '
         'Panel24
@@ -1031,9 +1146,9 @@ Partial Class frmMain
         Me.Panel24.Controls.Add(Me.Label30)
         Me.Panel24.Controls.Add(Me.menu_d_mm_G)
         Me.Panel24.Controls.Add(Me.menu_d_mm_V)
-        Me.Panel24.Location = New System.Drawing.Point(2133, 104)
+        Me.Panel24.Location = New System.Drawing.Point(2136, 126)
         Me.Panel24.Name = "Panel24"
-        Me.Panel24.Size = New System.Drawing.Size(136, 84)
+        Me.Panel24.Size = New System.Drawing.Size(136, 100)
         Me.Panel24.TabIndex = 67
         '
         'Label30
@@ -1075,9 +1190,9 @@ Partial Class frmMain
         Me.Panel23.Controls.Add(Me.Label29)
         Me.Panel23.Controls.Add(Me.menu_d_wm_G)
         Me.Panel23.Controls.Add(Me.menu_d_wm_V)
-        Me.Panel23.Location = New System.Drawing.Point(1364, 104)
+        Me.Panel23.Location = New System.Drawing.Point(1364, 114)
         Me.Panel23.Name = "Panel23"
-        Me.Panel23.Size = New System.Drawing.Size(136, 84)
+        Me.Panel23.Size = New System.Drawing.Size(136, 100)
         Me.Panel23.TabIndex = 66
         '
         'Label29
@@ -1119,9 +1234,9 @@ Partial Class frmMain
         Me.Panel25.Controls.Add(Me.Label31)
         Me.Panel25.Controls.Add(Me.menu_d_ll_G)
         Me.Panel25.Controls.Add(Me.menu_d_ll_V)
-        Me.Panel25.Location = New System.Drawing.Point(1984, 104)
+        Me.Panel25.Location = New System.Drawing.Point(1987, 126)
         Me.Panel25.Name = "Panel25"
-        Me.Panel25.Size = New System.Drawing.Size(136, 84)
+        Me.Panel25.Size = New System.Drawing.Size(136, 100)
         Me.Panel25.TabIndex = 68
         '
         'Label31
@@ -1163,9 +1278,9 @@ Partial Class frmMain
         Me.Panel21.Controls.Add(Me.Label27)
         Me.Panel21.Controls.Add(Me.menu_d_lt_G)
         Me.Panel21.Controls.Add(Me.menu_d_lt_V)
-        Me.Panel21.Location = New System.Drawing.Point(1215, 104)
+        Me.Panel21.Location = New System.Drawing.Point(1215, 114)
         Me.Panel21.Name = "Panel21"
-        Me.Panel21.Size = New System.Drawing.Size(136, 84)
+        Me.Panel21.Size = New System.Drawing.Size(136, 100)
         Me.Panel21.TabIndex = 66
         '
         'Label27
@@ -1207,9 +1322,9 @@ Partial Class frmMain
         Me.Panel26.Controls.Add(Me.Label32)
         Me.Panel26.Controls.Add(Me.menu_d_dp_G)
         Me.Panel26.Controls.Add(Me.menu_d_dp_V)
-        Me.Panel26.Location = New System.Drawing.Point(2133, 10)
+        Me.Panel26.Location = New System.Drawing.Point(2137, 11)
         Me.Panel26.Name = "Panel26"
-        Me.Panel26.Size = New System.Drawing.Size(136, 84)
+        Me.Panel26.Size = New System.Drawing.Size(136, 100)
         Me.Panel26.TabIndex = 69
         '
         'Label32
@@ -1251,9 +1366,9 @@ Partial Class frmMain
         Me.Panel22.Controls.Add(Me.Label28)
         Me.Panel22.Controls.Add(Me.menu_d_lemont_G)
         Me.Panel22.Controls.Add(Me.menu_d_lemont_V)
-        Me.Panel22.Location = New System.Drawing.Point(1364, 10)
+        Me.Panel22.Location = New System.Drawing.Point(1364, 7)
         Me.Panel22.Name = "Panel22"
-        Me.Panel22.Size = New System.Drawing.Size(136, 84)
+        Me.Panel22.Size = New System.Drawing.Size(136, 100)
         Me.Panel22.TabIndex = 66
         '
         'Label28
@@ -1295,9 +1410,9 @@ Partial Class frmMain
         Me.Panel27.Controls.Add(Me.Label33)
         Me.Panel27.Controls.Add(Me.menu_d_ss_G)
         Me.Panel27.Controls.Add(Me.menu_d_ss_V)
-        Me.Panel27.Location = New System.Drawing.Point(1984, 10)
+        Me.Panel27.Location = New System.Drawing.Point(1988, 11)
         Me.Panel27.Name = "Panel27"
-        Me.Panel27.Size = New System.Drawing.Size(136, 84)
+        Me.Panel27.Size = New System.Drawing.Size(136, 100)
         Me.Panel27.TabIndex = 70
         '
         'Label33
@@ -1339,9 +1454,9 @@ Partial Class frmMain
         Me.Panel20.Controls.Add(Me.Label26)
         Me.Panel20.Controls.Add(Me.menu_d_pt_G)
         Me.Panel20.Controls.Add(Me.menu_d_pt_V)
-        Me.Panel20.Location = New System.Drawing.Point(1215, 10)
+        Me.Panel20.Location = New System.Drawing.Point(1215, 7)
         Me.Panel20.Name = "Panel20"
-        Me.Panel20.Size = New System.Drawing.Size(136, 84)
+        Me.Panel20.Size = New System.Drawing.Size(136, 100)
         Me.Panel20.TabIndex = 66
         '
         'Label26
@@ -1383,9 +1498,9 @@ Partial Class frmMain
         Me.Panel28.Controls.Add(Me.Label34)
         Me.Panel28.Controls.Add(Me.menu_d_mmt_G)
         Me.Panel28.Controls.Add(Me.menu_d_mmt_V)
-        Me.Panel28.Location = New System.Drawing.Point(1690, 104)
+        Me.Panel28.Location = New System.Drawing.Point(1693, 126)
         Me.Panel28.Name = "Panel28"
-        Me.Panel28.Size = New System.Drawing.Size(136, 84)
+        Me.Panel28.Size = New System.Drawing.Size(136, 100)
         Me.Panel28.TabIndex = 71
         '
         'Label34
@@ -1427,9 +1542,9 @@ Partial Class frmMain
         Me.Panel17.Controls.Add(Me.Label23)
         Me.Panel17.Controls.Add(Me.menu_d_sbt_G)
         Me.Panel17.Controls.Add(Me.menu_d_sbt_V)
-        Me.Panel17.Location = New System.Drawing.Point(921, 104)
+        Me.Panel17.Location = New System.Drawing.Point(921, 114)
         Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(136, 84)
+        Me.Panel17.Size = New System.Drawing.Size(136, 100)
         Me.Panel17.TabIndex = 66
         '
         'Label23
@@ -1471,9 +1586,9 @@ Partial Class frmMain
         Me.Panel29.Controls.Add(Me.Label35)
         Me.Panel29.Controls.Add(Me.menu_d_cm_G)
         Me.Panel29.Controls.Add(Me.menu_d_cm_V)
-        Me.Panel29.Location = New System.Drawing.Point(1836, 104)
+        Me.Panel29.Location = New System.Drawing.Point(1839, 126)
         Me.Panel29.Name = "Panel29"
-        Me.Panel29.Size = New System.Drawing.Size(136, 84)
+        Me.Panel29.Size = New System.Drawing.Size(136, 100)
         Me.Panel29.TabIndex = 72
         '
         'Label35
@@ -1515,9 +1630,9 @@ Partial Class frmMain
         Me.Panel19.Controls.Add(Me.Label25)
         Me.Panel19.Controls.Add(Me.menu_d_mt_G)
         Me.Panel19.Controls.Add(Me.menu_d_mt_V)
-        Me.Panel19.Location = New System.Drawing.Point(1067, 104)
+        Me.Panel19.Location = New System.Drawing.Point(1067, 114)
         Me.Panel19.Name = "Panel19"
-        Me.Panel19.Size = New System.Drawing.Size(136, 84)
+        Me.Panel19.Size = New System.Drawing.Size(136, 100)
         Me.Panel19.TabIndex = 66
         '
         'Label25
@@ -1559,9 +1674,9 @@ Partial Class frmMain
         Me.Panel30.Controls.Add(Me.Label36)
         Me.Panel30.Controls.Add(Me.menu_d_bmk_G)
         Me.Panel30.Controls.Add(Me.menu_d_bmk_V)
-        Me.Panel30.Location = New System.Drawing.Point(1690, 10)
+        Me.Panel30.Location = New System.Drawing.Point(1694, 11)
         Me.Panel30.Name = "Panel30"
-        Me.Panel30.Size = New System.Drawing.Size(136, 84)
+        Me.Panel30.Size = New System.Drawing.Size(136, 100)
         Me.Panel30.TabIndex = 73
         '
         'Label36
@@ -1603,9 +1718,9 @@ Partial Class frmMain
         Me.Panel16.Controls.Add(Me.Label22)
         Me.Panel16.Controls.Add(Me.menu_d_bbt_G)
         Me.Panel16.Controls.Add(Me.menu_d_bbt_V)
-        Me.Panel16.Location = New System.Drawing.Point(921, 10)
+        Me.Panel16.Location = New System.Drawing.Point(921, 7)
         Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(136, 84)
+        Me.Panel16.Size = New System.Drawing.Size(136, 100)
         Me.Panel16.TabIndex = 66
         '
         'Label22
@@ -1647,9 +1762,9 @@ Partial Class frmMain
         Me.Panel31.Controls.Add(Me.Label37)
         Me.Panel31.Controls.Add(Me.menu_d_hmt_G)
         Me.Panel31.Controls.Add(Me.menu_d_hmt_V)
-        Me.Panel31.Location = New System.Drawing.Point(1836, 10)
+        Me.Panel31.Location = New System.Drawing.Point(1840, 11)
         Me.Panel31.Name = "Panel31"
-        Me.Panel31.Size = New System.Drawing.Size(136, 84)
+        Me.Panel31.Size = New System.Drawing.Size(136, 100)
         Me.Panel31.TabIndex = 74
         '
         'Label37
@@ -1691,9 +1806,9 @@ Partial Class frmMain
         Me.Panel18.Controls.Add(Me.Label24)
         Me.Panel18.Controls.Add(Me.menu_d_kt_G)
         Me.Panel18.Controls.Add(Me.menu_d_kt_V)
-        Me.Panel18.Location = New System.Drawing.Point(1067, 10)
+        Me.Panel18.Location = New System.Drawing.Point(1067, 7)
         Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(136, 84)
+        Me.Panel18.Size = New System.Drawing.Size(136, 100)
         Me.Panel18.TabIndex = 66
         '
         'Label24
@@ -1735,9 +1850,9 @@ Partial Class frmMain
         Me.Panel32.Controls.Add(Me.Label38)
         Me.Panel32.Controls.Add(Me.menu_d_smk_G)
         Me.Panel32.Controls.Add(Me.menu_d_smk_V)
-        Me.Panel32.Location = New System.Drawing.Point(1542, 104)
+        Me.Panel32.Location = New System.Drawing.Point(1545, 126)
         Me.Panel32.Name = "Panel32"
-        Me.Panel32.Size = New System.Drawing.Size(136, 84)
+        Me.Panel32.Size = New System.Drawing.Size(136, 100)
         Me.Panel32.TabIndex = 75
         '
         'Label38
@@ -1779,9 +1894,9 @@ Partial Class frmMain
         Me.Panel15.Controls.Add(Me.Label21)
         Me.Panel15.Controls.Add(Me.menu_d_gat_G)
         Me.Panel15.Controls.Add(Me.menu_d_gat_V)
-        Me.Panel15.Location = New System.Drawing.Point(773, 104)
+        Me.Panel15.Location = New System.Drawing.Point(773, 114)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(136, 84)
+        Me.Panel15.Size = New System.Drawing.Size(136, 100)
         Me.Panel15.TabIndex = 66
         '
         'Label21
@@ -1823,9 +1938,9 @@ Partial Class frmMain
         Me.Panel33.Controls.Add(Me.Label39)
         Me.Panel33.Controls.Add(Me.menu_d_pmk_G)
         Me.Panel33.Controls.Add(Me.menu_d_pmk_V)
-        Me.Panel33.Location = New System.Drawing.Point(1542, 10)
+        Me.Panel33.Location = New System.Drawing.Point(1546, 11)
         Me.Panel33.Name = "Panel33"
-        Me.Panel33.Size = New System.Drawing.Size(136, 84)
+        Me.Panel33.Size = New System.Drawing.Size(136, 100)
         Me.Panel33.TabIndex = 76
         '
         'Label39
@@ -1867,9 +1982,9 @@ Partial Class frmMain
         Me.Panel14.Controls.Add(Me.Label20)
         Me.Panel14.Controls.Add(Me.menu_d_ow_G)
         Me.Panel14.Controls.Add(Me.menu_d_ow_V)
-        Me.Panel14.Location = New System.Drawing.Point(773, 10)
+        Me.Panel14.Location = New System.Drawing.Point(773, 7)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(136, 84)
+        Me.Panel14.Size = New System.Drawing.Size(136, 100)
         Me.Panel14.TabIndex = 66
         '
         'Label20
@@ -1911,9 +2026,9 @@ Partial Class frmMain
         Me.Panel13.Controls.Add(Me.Label19)
         Me.Panel13.Controls.Add(Me.menu_d_wc_G)
         Me.Panel13.Controls.Add(Me.menu_d_wc_V)
-        Me.Panel13.Location = New System.Drawing.Point(602, 107)
+        Me.Panel13.Location = New System.Drawing.Point(602, 126)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(136, 84)
+        Me.Panel13.Size = New System.Drawing.Size(136, 100)
         Me.Panel13.TabIndex = 65
         '
         'Label19
@@ -1955,9 +2070,9 @@ Partial Class frmMain
         Me.Panel12.Controls.Add(Me.Label18)
         Me.Panel12.Controls.Add(Me.menu_d_zd_G)
         Me.Panel12.Controls.Add(Me.menu_d_zd_V)
-        Me.Panel12.Location = New System.Drawing.Point(602, 10)
+        Me.Panel12.Location = New System.Drawing.Point(602, 12)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(136, 84)
+        Me.Panel12.Size = New System.Drawing.Size(136, 100)
         Me.Panel12.TabIndex = 65
         '
         'Label18
@@ -1999,9 +2114,9 @@ Partial Class frmMain
         Me.Panel11.Controls.Add(Me.Label17)
         Me.Panel11.Controls.Add(Me.menu_d_vc_G)
         Me.Panel11.Controls.Add(Me.menu_d_vc_V)
-        Me.Panel11.Location = New System.Drawing.Point(455, 10)
+        Me.Panel11.Location = New System.Drawing.Point(455, 12)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(136, 84)
+        Me.Panel11.Size = New System.Drawing.Size(136, 100)
         Me.Panel11.TabIndex = 65
         '
         'Label17
@@ -2043,9 +2158,9 @@ Partial Class frmMain
         Me.Panel10.Controls.Add(Me.Label16)
         Me.Panel10.Controls.Add(Me.menu_d_tt_G)
         Me.Panel10.Controls.Add(Me.menu_d_tt_V)
-        Me.Panel10.Location = New System.Drawing.Point(455, 107)
+        Me.Panel10.Location = New System.Drawing.Point(455, 126)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(136, 84)
+        Me.Panel10.Size = New System.Drawing.Size(136, 100)
         Me.Panel10.TabIndex = 65
         '
         'Label16
@@ -2087,9 +2202,9 @@ Partial Class frmMain
         Me.Panel9.Controls.Add(Me.Label15)
         Me.Panel9.Controls.Add(Me.menu_d_tm_G)
         Me.Panel9.Controls.Add(Me.menu_d_tm_V)
-        Me.Panel9.Location = New System.Drawing.Point(307, 107)
+        Me.Panel9.Location = New System.Drawing.Point(307, 126)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(136, 84)
+        Me.Panel9.Size = New System.Drawing.Size(136, 100)
         Me.Panel9.TabIndex = 65
         '
         'Label15
@@ -2131,9 +2246,9 @@ Partial Class frmMain
         Me.Panel8.Controls.Add(Me.Label14)
         Me.Panel8.Controls.Add(Me.menu_d_pk_G)
         Me.Panel8.Controls.Add(Me.menu_d_pk_V)
-        Me.Panel8.Location = New System.Drawing.Point(307, 10)
+        Me.Panel8.Location = New System.Drawing.Point(307, 12)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(136, 84)
+        Me.Panel8.Size = New System.Drawing.Size(136, 100)
         Me.Panel8.TabIndex = 65
         '
         'Label14
@@ -2175,9 +2290,9 @@ Partial Class frmMain
         Me.Panel5.Controls.Add(Me.Label11)
         Me.Panel5.Controls.Add(Me.menu_d_cl_V)
         Me.Panel5.Controls.Add(Me.menu_d_cl_G)
-        Me.Panel5.Location = New System.Drawing.Point(10, 107)
+        Me.Panel5.Location = New System.Drawing.Point(10, 126)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(136, 84)
+        Me.Panel5.Size = New System.Drawing.Size(136, 100)
         Me.Panel5.TabIndex = 64
         '
         'Label11
@@ -2219,9 +2334,9 @@ Partial Class frmMain
         Me.Panel7.Controls.Add(Me.Label13)
         Me.Panel7.Controls.Add(Me.menu_d_sb_V)
         Me.Panel7.Controls.Add(Me.menu_d_sb_G)
-        Me.Panel7.Location = New System.Drawing.Point(159, 107)
+        Me.Panel7.Location = New System.Drawing.Point(159, 126)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(136, 84)
+        Me.Panel7.Size = New System.Drawing.Size(136, 100)
         Me.Panel7.TabIndex = 64
         '
         'Label13
@@ -2263,9 +2378,9 @@ Partial Class frmMain
         Me.Panel6.Controls.Add(Me.Label12)
         Me.Panel6.Controls.Add(Me.menu_d_pb_G)
         Me.Panel6.Controls.Add(Me.menu_d_pb_V)
-        Me.Panel6.Location = New System.Drawing.Point(159, 10)
+        Me.Panel6.Location = New System.Drawing.Point(159, 12)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(136, 84)
+        Me.Panel6.Size = New System.Drawing.Size(136, 100)
         Me.Panel6.TabIndex = 64
         '
         'Label12
@@ -2307,9 +2422,9 @@ Partial Class frmMain
         Me.Panel4.Controls.Add(Me.Label10)
         Me.Panel4.Controls.Add(Me.menu_d_ms_V)
         Me.Panel4.Controls.Add(Me.menu_d_ms_G)
-        Me.Panel4.Location = New System.Drawing.Point(10, 10)
+        Me.Panel4.Location = New System.Drawing.Point(10, 12)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(136, 84)
+        Me.Panel4.Size = New System.Drawing.Size(136, 100)
         Me.Panel4.TabIndex = 64
         '
         'Label10
@@ -2357,7 +2472,7 @@ Partial Class frmMain
         'drinks_panemenubtn2
         '
         Me.drinks_panemenubtn2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.drinks_panemenubtn2.Location = New System.Drawing.Point(381, 254)
+        Me.drinks_panemenubtn2.Location = New System.Drawing.Point(381, 264)
         Me.drinks_panemenubtn2.Name = "drinks_panemenubtn2"
         Me.drinks_panemenubtn2.Size = New System.Drawing.Size(27, 22)
         Me.drinks_panemenubtn2.TabIndex = 3
@@ -2366,7 +2481,7 @@ Partial Class frmMain
         'drinks_panemenubtn1
         '
         Me.drinks_panemenubtn1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.drinks_panemenubtn1.Location = New System.Drawing.Point(328, 254)
+        Me.drinks_panemenubtn1.Location = New System.Drawing.Point(328, 264)
         Me.drinks_panemenubtn1.Name = "drinks_panemenubtn1"
         Me.drinks_panemenubtn1.Size = New System.Drawing.Size(27, 22)
         Me.drinks_panemenubtn1.TabIndex = 3
@@ -2414,21 +2529,21 @@ Partial Class frmMain
         'accounts_dgv
         '
         Me.accounts_dgv.AllowUserToAddRows = False
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.accounts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.accounts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column13})
         Me.accounts_dgv.Location = New System.Drawing.Point(2, 2)
         Me.accounts_dgv.Name = "accounts_dgv"
         Me.accounts_dgv.ReadOnly = True
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.accounts_dgv.Size = New System.Drawing.Size(1364, 600)
         Me.accounts_dgv.TabIndex = 0
         '
@@ -2445,6 +2560,50 @@ Partial Class frmMain
         Me.Column13.Name = "Column13"
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 660
+        '
+        'panHome
+        '
+        Me.panHome.BackColor = System.Drawing.Color.Transparent
+        Me.panHome.BackgroundImage = Global.teablendcafe.My.Resources.Resources.logobgcropped
+        Me.panHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.panHome.Controls.Add(Me.Panel1)
+        Me.panHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.panHome.Location = New System.Drawing.Point(0, 3)
+        Me.panHome.Name = "panHome"
+        Me.panHome.Size = New System.Drawing.Size(1366, 700)
+        Me.panHome.TabIndex = 9
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.ltime)
+        Me.Panel1.Controls.Add(Me.lDate)
+        Me.Panel1.Location = New System.Drawing.Point(0, 655)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1366, 48)
+        Me.Panel1.TabIndex = 0
+        '
+        'ltime
+        '
+        Me.ltime.AutoSize = True
+        Me.ltime.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ltime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ltime.Location = New System.Drawing.Point(1282, 17)
+        Me.ltime.Name = "ltime"
+        Me.ltime.Size = New System.Drawing.Size(41, 16)
+        Me.ltime.TabIndex = 1
+        Me.ltime.Text = "DATE"
+        '
+        'lDate
+        '
+        Me.lDate.AutoSize = True
+        Me.lDate.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lDate.Location = New System.Drawing.Point(13, 17)
+        Me.lDate.Name = "lDate"
+        Me.lDate.Size = New System.Drawing.Size(41, 16)
+        Me.lDate.TabIndex = 0
+        Me.lDate.Text = "DATE"
         '
         'panAssessment
         '
@@ -2498,20 +2657,44 @@ Partial Class frmMain
         'dgv_members
         '
         Me.dgv_members.AllowUserToAddRows = False
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_members.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_members.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
         Me.dgv_members.Location = New System.Drawing.Point(2, 3)
         Me.dgv_members.Name = "dgv_members"
         Me.dgv_members.Size = New System.Drawing.Size(1361, 580)
         Me.dgv_members.TabIndex = 0
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "customer number"
+        Me.Column12.Name = "Column12"
+        Me.Column12.Width = 330
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "customer name"
+        Me.Column14.Name = "Column14"
+        Me.Column14.Width = 330
+        '
+        'Column15
+        '
+        Me.Column15.HeaderText = "customer since"
+        Me.Column15.Name = "Column15"
+        Me.Column15.Width = 330
+        '
+        'Column16
+        '
+        Me.Column16.HeaderText = "customer loadwallet"
+        Me.Column16.Name = "Column16"
+        Me.Column16.Width = 330
         '
         'panInventory
         '
@@ -2570,14 +2753,14 @@ Partial Class frmMain
         '
         Me.inventorydgv.AllowUserToAddRows = False
         Me.inventorydgv.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.inventorydgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.inventorydgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.inventorydgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.inventorydgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column1, Me.Column2, Me.Column5})
         Me.inventorydgv.Location = New System.Drawing.Point(0, 72)
@@ -2710,189 +2893,6 @@ Partial Class frmMain
         '
         Me.tmrSubmenu.Interval = 10
         '
-        'Column12
-        '
-        Me.Column12.HeaderText = "customer number"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 330
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "customer name"
-        Me.Column14.Name = "Column14"
-        Me.Column14.Width = 330
-        '
-        'Column15
-        '
-        Me.Column15.HeaderText = "customer since"
-        Me.Column15.Name = "Column15"
-        Me.Column15.Width = 330
-        '
-        'Column16
-        '
-        Me.Column16.HeaderText = "customer loadwallet"
-        Me.Column16.Name = "Column16"
-        Me.Column16.Width = 330
-        '
-        'panHome
-        '
-        Me.panHome.BackColor = System.Drawing.Color.Transparent
-        Me.panHome.BackgroundImage = Global.teablendcafe.My.Resources.Resources.logobgcropped
-        Me.panHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.panHome.Controls.Add(Me.Panel1)
-        Me.panHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.panHome.Location = New System.Drawing.Point(0, 3)
-        Me.panHome.Name = "panHome"
-        Me.panHome.Size = New System.Drawing.Size(1366, 700)
-        Me.panHome.TabIndex = 9
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.ltime)
-        Me.Panel1.Controls.Add(Me.lDate)
-        Me.Panel1.Location = New System.Drawing.Point(0, 655)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1366, 48)
-        Me.Panel1.TabIndex = 0
-        '
-        'ltime
-        '
-        Me.ltime.AutoSize = True
-        Me.ltime.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ltime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ltime.Location = New System.Drawing.Point(1282, 17)
-        Me.ltime.Name = "ltime"
-        Me.ltime.Size = New System.Drawing.Size(41, 16)
-        Me.ltime.TabIndex = 1
-        Me.ltime.Text = "DATE"
-        '
-        'lDate
-        '
-        Me.lDate.AutoSize = True
-        Me.lDate.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lDate.Location = New System.Drawing.Point(13, 17)
-        Me.lDate.Name = "lDate"
-        Me.lDate.Size = New System.Drawing.Size(41, 16)
-        Me.lDate.TabIndex = 0
-        Me.lDate.Text = "DATE"
-        '
-        'picAccounts
-        '
-        Me.picAccounts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.picAccounts.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picAccounts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picAccounts.Image = Global.teablendcafe.My.Resources.Resources.ic_person_outline_white_48dp_2x
-        Me.picAccounts.Location = New System.Drawing.Point(0, 196)
-        Me.picAccounts.Margin = New System.Windows.Forms.Padding(0)
-        Me.picAccounts.Name = "picAccounts"
-        Me.picAccounts.Size = New System.Drawing.Size(46, 49)
-        Me.picAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picAccounts.TabIndex = 12
-        Me.picAccounts.TabStop = False
-        '
-        'picAssessment
-        '
-        Me.picAssessment.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picAssessment.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picAssessment.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picAssessment.Image = Global.teablendcafe.My.Resources.Resources.assessment_105
-        Me.picAssessment.Location = New System.Drawing.Point(0, 147)
-        Me.picAssessment.Margin = New System.Windows.Forms.Padding(0)
-        Me.picAssessment.Name = "picAssessment"
-        Me.picAssessment.Size = New System.Drawing.Size(46, 49)
-        Me.picAssessment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picAssessment.TabIndex = 11
-        Me.picAssessment.TabStop = False
-        '
-        'picMenu
-        '
-        Me.picMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picMenu.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picMenu.Image = Global.teablendcafe.My.Resources.Resources.menu_1251
-        Me.picMenu.Location = New System.Drawing.Point(0, 98)
-        Me.picMenu.Margin = New System.Windows.Forms.Padding(0)
-        Me.picMenu.Name = "picMenu"
-        Me.picMenu.Size = New System.Drawing.Size(46, 49)
-        Me.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picMenu.TabIndex = 10
-        Me.picMenu.TabStop = False
-        '
-        'picInventory
-        '
-        Me.picInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picInventory.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picInventory.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picInventory.Image = Global.teablendcafe.My.Resources.Resources.assignment_125
-        Me.picInventory.Location = New System.Drawing.Point(0, 49)
-        Me.picInventory.Margin = New System.Windows.Forms.Padding(0)
-        Me.picInventory.Name = "picInventory"
-        Me.picInventory.Size = New System.Drawing.Size(46, 49)
-        Me.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picInventory.TabIndex = 9
-        Me.picInventory.TabStop = False
-        '
-        'picHome
-        '
-        Me.picHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picHome.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picHome.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picHome.Image = Global.teablendcafe.My.Resources.Resources.home_125
-        Me.picHome.Location = New System.Drawing.Point(0, 0)
-        Me.picHome.Margin = New System.Windows.Forms.Padding(0)
-        Me.picHome.Name = "picHome"
-        Me.picHome.Size = New System.Drawing.Size(46, 49)
-        Me.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picHome.TabIndex = 1
-        Me.picHome.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(62, 31)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(95, 82)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
-        'picLogout
-        '
-        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
-        Me.picLogout.Location = New System.Drawing.Point(4, 9)
-        Me.picLogout.Name = "picLogout"
-        Me.picLogout.Size = New System.Drawing.Size(40, 27)
-        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogout.TabIndex = 14
-        Me.picLogout.TabStop = False
-        '
-        'piclogout2
-        '
-        Me.piclogout2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.piclogout2.Image = Global.teablendcafe.My.Resources.Resources.arrowdown
-        Me.piclogout2.Location = New System.Drawing.Point(1310, 22)
-        Me.piclogout2.Name = "piclogout2"
-        Me.piclogout2.Size = New System.Drawing.Size(34, 22)
-        Me.piclogout2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.piclogout2.TabIndex = 10
-        Me.piclogout2.TabStop = False
-        '
-        'btnMenu
-        '
-        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMenu.Image = Global.teablendcafe.My.Resources.Resources.menuDefault
-        Me.btnMenu.Location = New System.Drawing.Point(0, -6)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(71, 78)
-        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMenu.TabIndex = 9
-        Me.btnMenu.TabStop = False
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2910,9 +2910,18 @@ Partial Class frmMain
         Me.panSideMenu.ResumeLayout(False)
         Me.panButtons.ResumeLayout(False)
         Me.panButtons.PerformLayout()
+        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picHome, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panHeading.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panContent.ResumeLayout(False)
         Me.panMenu.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -2988,6 +2997,9 @@ Partial Class frmMain
         Me.Panel4.PerformLayout()
         Me.panAccounts.ResumeLayout(False)
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panHome.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.panAssessment.ResumeLayout(False)
         Me.Panel34.ResumeLayout(False)
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2995,18 +3007,6 @@ Partial Class frmMain
         Me.panInventory.PerformLayout()
         CType(Me.inventorydgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panWrapper.ResumeLayout(False)
-        Me.panHome.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picHome, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

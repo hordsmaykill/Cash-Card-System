@@ -46,7 +46,7 @@ Public Class frmCardLoad
         If reader.HasRows Then
             wallet = reader.Item(0)
         End If
-        If wallet < total Then
+        If wallet <= total Then
             MsgBox("Not enought balance in account" & vbNewLine & "Remaining account load is: " & wallet)
             reader.Close()
             Exit Sub
