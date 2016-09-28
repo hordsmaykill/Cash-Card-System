@@ -18,7 +18,7 @@ Public Class addcustomer
     End Sub
 
     Private Sub btnmembers_addcustomer_cancel_Click(sender As Object, e As EventArgs) Handles btnmembers_addcustomer_cancel.Click
-        Me.Dispose()
+        Me.Close()
 
     End Sub
 
@@ -34,7 +34,7 @@ Public Class addcustomer
             End With
             MsgBox("Administrator " + tbnewcusname.Text + " successfully created!", vbOKOnly + vbInformation, "Message")
             frmMain.membersDGV()
-            Me.Dispose()
+            Me.Close()
         End If
     End Sub
 

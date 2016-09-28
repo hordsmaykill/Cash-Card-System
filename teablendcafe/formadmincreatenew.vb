@@ -50,12 +50,12 @@ Public Class formadmincreatenew
             End With
             MsgBox("Administrator " + cbadminpreviledges.Text + " successfully created!", vbOKOnly + vbInformation, "Message")
             frmMain.AccountsDGV()
-            Me.Dispose()
+            Me.Close()
         End If
     End Sub
 
     Private Sub btncancel_newbtn_Click(sender As Object, e As EventArgs) Handles btncancel_newbtn.Click
-        Me.Dispose()
+        Me.Close()
     End Sub
 
 
