@@ -14,14 +14,16 @@ Public Class frmquantity
             conn.Open()
         End If
 
-
+        txtNum.Text = ""
         qty = 1
-        txtNum.Text = qty
-
 
     End Sub
 
-    Private Sub btnOk_Click(sender As Object, e As EventArgs)
+    Private Sub numClicked(n As String)
+        txtNum.Text &= n
+    End Sub
+
+    Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         ' check if the input qty is valid
         Dim cmd As New MySqlCommand
         Dim reader As MySqlDataReader
@@ -40,6 +42,14 @@ Public Class frmquantity
             qtyFromDB = reader.Item(0)
         End If
 
+        ' update qty
+        If txtNum.Text = "" Then
+            qty = 1
+        Else
+            qty = Integer.Parse(txtNum.Text)
+        End If
+
+
         Dim diff As Integer = qtyFromDB - qty
         If diff < 0 Then
             MsgBox("There are only " & qtyFromDB & " remaining")
@@ -55,19 +65,31 @@ Public Class frmquantity
         Me.Close()
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         frmMain.qtyRetrieved = -1
         Me.Close()
     End Sub
 
-    Private Sub btnMin_Click(sender As Object, e As EventArgs)
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        If txtNum.Text = "" Then
+            qty = 1
+        Else
+            qty = Integer.Parse(txtNum.Text)
+        End If
+
         If qty <> 1 Then
             qty -= 1
         End If
         txtNum.Text = qty
     End Sub
 
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs)
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        If txtNum.Text = "" Then
+            qty = 1
+        Else
+            qty = Integer.Parse(txtNum.Text)
+        End If
+
         qty += 1
         txtNum.Text = qty
     End Sub
@@ -85,5 +107,43 @@ Public Class frmquantity
         txtNum.Text = qty
     End Sub
 
+    Private Sub num0_Click(sender As Object, e As EventArgs) Handles num0.Click
+        numClicked("0")
+    End Sub
 
+    Private Sub num1_Click(sender As Object, e As EventArgs) Handles num1.Click
+        numClicked("1")
+    End Sub
+
+    Private Sub num2_Click(sender As Object, e As EventArgs) Handles num2.Click
+        numClicked("2")
+    End Sub
+
+    Private Sub num3_Click(sender As Object, e As EventArgs) Handles num3.Click
+        numClicked("3")
+    End Sub
+
+    Private Sub num4_Click(sender As Object, e As EventArgs) Handles num4.Click
+        numClicked("4")
+    End Sub
+
+    Private Sub num5_Click(sender As Object, e As EventArgs) Handles num5.Click
+        numClicked("5")
+    End Sub
+
+    Private Sub num6_Click(sender As Object, e As EventArgs) Handles num6.Click
+        numClicked("6")
+    End Sub
+
+    Private Sub num7_Click(sender As Object, e As EventArgs) Handles num7.Click
+        numClicked("7")
+    End Sub
+
+    Private Sub num8_Click(sender As Object, e As EventArgs) Handles num8.Click
+        numClicked("8")
+    End Sub
+
+    Private Sub num9_Click(sender As Object, e As EventArgs) Handles num9.Click
+        numClicked("9")
+    End Sub
 End Class
