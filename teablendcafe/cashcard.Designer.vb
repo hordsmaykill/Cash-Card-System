@@ -34,25 +34,25 @@ Partial Class cashcard
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.btncash)
-        Me.Panel1.Location = New System.Drawing.Point(12, 25)
+        Me.Panel1.Location = New System.Drawing.Point(12, 39)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(315, 104)
+        Me.Panel1.Size = New System.Drawing.Size(329, 117)
         Me.Panel1.TabIndex = 0
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(170, 10)
+        Me.Button2.Location = New System.Drawing.Point(166, 11)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(131, 85)
+        Me.Button2.Size = New System.Drawing.Size(149, 96)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "CARD"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'btncash
         '
-        Me.btncash.Location = New System.Drawing.Point(13, 10)
+        Me.btncash.Location = New System.Drawing.Point(14, 11)
         Me.btncash.Name = "btncash"
-        Me.btncash.Size = New System.Drawing.Size(136, 85)
+        Me.btncash.Size = New System.Drawing.Size(146, 96)
         Me.btncash.TabIndex = 2
         Me.btncash.Text = "CASH"
         Me.btncash.UseVisualStyleBackColor = True
@@ -65,7 +65,7 @@ Partial Class cashcard
         Me.Button3.ForeColor = System.Drawing.Color.DarkRed
         Me.Button3.Location = New System.Drawing.Point(269, 8)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(58, 11)
+        Me.Button3.Size = New System.Drawing.Size(72, 25)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "x"
         Me.Button3.UseVisualStyleBackColor = False
@@ -75,7 +75,7 @@ Partial Class cashcard
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(339, 141)
+        Me.ClientSize = New System.Drawing.Size(353, 168)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
