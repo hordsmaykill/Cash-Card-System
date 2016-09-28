@@ -26,12 +26,12 @@ Public Class panconmembersdelete
             .CommandText = "SELECT password FROM tbladministrators WHERE username = 'admin'"
             .ExecuteNonQuery()
         End With
-        Me.Dispose()
+        Me.Close()
 
 
     End Sub
 
     Private Sub admispasswordcancel_Click(sender As Object, e As EventArgs) Handles admispasswordcancel.Click
-        Me.Dispose()
+        Me.Close()
     End Sub
 End Class

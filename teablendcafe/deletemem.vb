@@ -30,11 +30,11 @@ Public Class deletemem
         reply = MsgBox("Do you really want to Delete this current order(s)?", MsgBoxStyle.YesNoCancel, "Clear")
         If reply = MsgBoxResult.Yes Then
             frmMain.dgv_members.Rows.RemoveAt(frmMain.dgvorders.CurrentRow.Index)
-            Me.Dispose()
+            Me.Close()
         End If
     End Sub
 
     Private Sub admispasswordcancel_Click(sender As Object, e As EventArgs) Handles admispasswordcancel.Click
-        Me.Dispose()
+        Me.Close()
     End Sub
 End Class
