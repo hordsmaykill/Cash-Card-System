@@ -640,7 +640,7 @@ Partial Class frmMain
         '
         Me.panMenu.Controls.Add(Me.GroupBox1)
         Me.panMenu.Controls.Add(Me.panmenumenu)
-        Me.panMenu.Location = New System.Drawing.Point(3, 1401)
+        Me.panMenu.Location = New System.Drawing.Point(3, 700)
         Me.panMenu.Name = "panMenu"
         Me.panMenu.Size = New System.Drawing.Size(1360, 702)
         Me.panMenu.TabIndex = 11
@@ -2903,6 +2903,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.panHeading)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Teablend"

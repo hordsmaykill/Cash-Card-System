@@ -22,15 +22,16 @@ Partial Class editaccounts
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(editaccounts))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cbnewusertype = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbusernameeditpass = New System.Windows.Forms.TextBox()
         Me.tbusernameeditac = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbnewusertype = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,6 +50,25 @@ Partial Class editaccounts
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(303, 155)
         Me.Panel1.TabIndex = 0
+        '
+        'cbnewusertype
+        '
+        Me.cbnewusertype.FormattingEnabled = True
+        Me.cbnewusertype.Items.AddRange(New Object() {"manager", "cashier"})
+        Me.cbnewusertype.Location = New System.Drawing.Point(146, 93)
+        Me.cbnewusertype.Name = "cbnewusertype"
+        Me.cbnewusertype.Size = New System.Drawing.Size(133, 21)
+        Me.cbnewusertype.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(27, 88)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(116, 20)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "New User Type"
         '
         'Label2
         '
@@ -104,25 +124,6 @@ Partial Class editaccounts
         Me.Button1.Text = "Submit"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(27, 88)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(116, 20)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "New User Type"
-        '
-        'cbnewusertype
-        '
-        Me.cbnewusertype.FormattingEnabled = True
-        Me.cbnewusertype.Items.AddRange(New Object() {"manager", "cashier"})
-        Me.cbnewusertype.Location = New System.Drawing.Point(146, 93)
-        Me.cbnewusertype.Name = "cbnewusertype"
-        Me.cbnewusertype.Size = New System.Drawing.Size(133, 21)
-        Me.cbnewusertype.TabIndex = 3
-        '
         'editaccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -131,6 +132,7 @@ Partial Class editaccounts
         Me.ClientSize = New System.Drawing.Size(327, 197)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "editaccounts"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "editaccounts"

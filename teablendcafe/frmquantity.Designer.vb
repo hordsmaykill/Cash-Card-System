@@ -24,7 +24,14 @@ Partial Class frmquantity
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmquantity))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
@@ -33,13 +40,6 @@ Partial Class frmquantity
         Me.btnOk = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNum = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,6 +67,33 @@ Partial Class frmquantity
         Me.Panel1.Size = New System.Drawing.Size(247, 345)
         Me.Panel1.TabIndex = 0
         '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(183, 244)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(52, 51)
+        Me.Button10.TabIndex = 12
+        Me.Button10.Text = "0"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(126, 244)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(52, 51)
+        Me.Button9.TabIndex = 12
+        Me.Button9.Text = "9"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(167, 177)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(52, 51)
+        Me.Button6.TabIndex = 12
+        Me.Button6.Text = "6"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(167, 114)
@@ -75,6 +102,42 @@ Partial Class frmquantity
         Me.Button3.TabIndex = 12
         Me.Button3.Text = "3"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(69, 244)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(52, 51)
+        Me.Button8.TabIndex = 12
+        Me.Button8.Text = "8"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(12, 244)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(52, 51)
+        Me.Button7.TabIndex = 12
+        Me.Button7.Text = "7"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(99, 177)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(52, 51)
+        Me.Button5.TabIndex = 12
+        Me.Button5.Text = "5"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(32, 177)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(52, 51)
+        Me.Button4.TabIndex = 12
+        Me.Button4.Text = "4"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -151,69 +214,6 @@ Partial Class frmquantity
         Me.txtNum.Text = "1"
         Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(32, 177)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(52, 51)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(99, 177)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(52, 51)
-        Me.Button5.TabIndex = 12
-        Me.Button5.Text = "5"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(167, 177)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(52, 51)
-        Me.Button6.TabIndex = 12
-        Me.Button6.Text = "6"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(12, 244)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(52, 51)
-        Me.Button7.TabIndex = 12
-        Me.Button7.Text = "7"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(69, 244)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(52, 51)
-        Me.Button8.TabIndex = 12
-        Me.Button8.Text = "8"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Location = New System.Drawing.Point(126, 244)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(52, 51)
-        Me.Button9.TabIndex = 12
-        Me.Button9.Text = "9"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(183, 244)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(52, 51)
-        Me.Button10.TabIndex = 12
-        Me.Button10.Text = "0"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
         'frmquantity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -222,6 +222,7 @@ Partial Class frmquantity
         Me.ClientSize = New System.Drawing.Size(271, 361)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmquantity"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
