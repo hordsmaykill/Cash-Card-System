@@ -26,14 +26,14 @@ Public Class frmtotal
     Private Sub frmtotal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call ConnectDB()
 
+        paymenttendered.Text = frmetramount.tbenterpayment.Text
+        tendered = Double.Parse(paymenttendered.Text)
 
-
-        tendered = Double.Parse(frmetramount.tbenterpayment.Text)
-        paymenttendered.Text = tendered
-        change = Double.Parse(tbchangee.Text)
+        tbtotal.Text = frmMain.txtTotalOrder.Text
         totalamount = Double.Parse(tbtotal.Text)
 
         change = tendered - totalamount
+        tbchangee.Text = change
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -90,5 +90,8 @@ Public Class frmtotal
             cmd.ExecuteNonQuery()
         Next
         MsgBox("Success!")
+
+        Me.Close()
     End Sub
+
 End Class

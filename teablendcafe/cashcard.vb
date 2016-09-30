@@ -19,10 +19,12 @@ Public Class cashcard
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         frmCardLoad.ShowDialog()
+        Me.Close()
     End Sub
 
     Private Sub btncash_Click(sender As Object, e As EventArgs) Handles btncash.Click
         frmetramount.ShowDialog()
+        Me.Close()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click

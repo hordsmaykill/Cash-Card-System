@@ -29,7 +29,7 @@ Partial Class frmtotal
         Me.tbtotal = New System.Windows.Forms.TextBox()
         Me.paymenttendered = New System.Windows.Forms.TextBox()
         Me.tbchangee = New System.Windows.Forms.TextBox()
-        Me.tbchange = New System.Windows.Forms.Label()
+        Me.lblchange = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -37,7 +37,7 @@ Partial Class frmtotal
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.tbchange)
+        Me.Panel1.Controls.Add(Me.lblchange)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.tbchangee)
@@ -101,15 +101,15 @@ Partial Class frmtotal
         Me.tbchangee.Size = New System.Drawing.Size(179, 26)
         Me.tbchangee.TabIndex = 0
         '
-        'tbchange
+        'lblchange
         '
-        Me.tbchange.AutoSize = True
-        Me.tbchange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbchange.Location = New System.Drawing.Point(113, 129)
-        Me.tbchange.Name = "tbchange"
-        Me.tbchange.Size = New System.Drawing.Size(65, 20)
-        Me.tbchange.TabIndex = 1
-        Me.tbchange.Text = "Change"
+        Me.lblchange.AutoSize = True
+        Me.lblchange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblchange.Location = New System.Drawing.Point(113, 129)
+        Me.lblchange.Name = "lblchange"
+        Me.lblchange.Size = New System.Drawing.Size(65, 20)
+        Me.lblchange.TabIndex = 1
+        Me.lblchange.Text = "Change"
         '
         'frmtotal
         '
@@ -134,6 +134,6 @@ Partial Class frmtotal
     Friend WithEvents Label2 As Label
     Friend WithEvents tbtotal As TextBox
     Friend WithEvents paymenttendered As TextBox
-    Friend WithEvents tbchange As Label
+    Friend WithEvents lblchange As Label
     Friend WithEvents tbchangee As TextBox
 End Class
