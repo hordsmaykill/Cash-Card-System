@@ -72,7 +72,7 @@ Public Class frmquantity
 
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         If txtNum.Text = "" Then
-            qty = 1
+            qty = 0
         Else
             qty = Integer.Parse(txtNum.Text)
         End If
@@ -85,7 +85,7 @@ Public Class frmquantity
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         If txtNum.Text = "" Then
-            qty = 1
+            qty = 0
         Else
             qty = Integer.Parse(txtNum.Text)
         End If
