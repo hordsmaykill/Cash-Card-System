@@ -44,7 +44,7 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnUsrMgmt = New System.Windows.Forms.Button()
         Me.panHeading = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.panLogout = New System.Windows.Forms.Panel()
         Me.picLogout = New System.Windows.Forms.PictureBox()
         Me.lbllogout = New System.Windows.Forms.Label()
         Me.piclogout2 = New System.Windows.Forms.PictureBox()
@@ -273,7 +273,7 @@ Partial Class frmMain
         CType(Me.picHome, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panHeading.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.panLogout.SuspendLayout()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -549,7 +549,7 @@ Partial Class frmMain
         'panHeading
         '
         Me.panHeading.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.panHeading.Controls.Add(Me.Panel2)
+        Me.panHeading.Controls.Add(Me.panLogout)
         Me.panHeading.Controls.Add(Me.piclogout2)
         Me.panHeading.Controls.Add(Me.btnMenu)
         Me.panHeading.Dock = System.Windows.Forms.DockStyle.Top
@@ -559,16 +559,16 @@ Partial Class frmMain
         Me.panHeading.Size = New System.Drawing.Size(1366, 75)
         Me.panHeading.TabIndex = 8
         '
-        'Panel2
+        'panLogout
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.picLogout)
-        Me.Panel2.Controls.Add(Me.lbllogout)
-        Me.Panel2.Location = New System.Drawing.Point(1177, 12)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(135, 45)
-        Me.Panel2.TabIndex = 13
-        Me.Panel2.Visible = False
+        Me.panLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.panLogout.Controls.Add(Me.picLogout)
+        Me.panLogout.Controls.Add(Me.lbllogout)
+        Me.panLogout.Location = New System.Drawing.Point(1177, 12)
+        Me.panLogout.Name = "panLogout"
+        Me.panLogout.Size = New System.Drawing.Size(135, 45)
+        Me.panLogout.TabIndex = 13
+        Me.panLogout.Visible = False
         '
         'picLogout
         '
@@ -3006,8 +3006,8 @@ Partial Class frmMain
         CType(Me.picHome, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panHeading.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.panLogout.ResumeLayout(False)
+        Me.panLogout.PerformLayout()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3140,7 +3140,7 @@ Partial Class frmMain
     Friend WithEvents picLogout As PictureBox
     Friend WithEvents panMenu As Panel
     Friend WithEvents panmenumenu As GroupBox
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents panLogout As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Drinks_panmenu As Panel
     Friend WithEvents drinks_panmenu1 As Panel

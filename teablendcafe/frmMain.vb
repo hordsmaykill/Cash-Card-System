@@ -557,20 +557,30 @@ Public Class frmMain
     End Sub
 
     'logoutbutton'
+    Dim isLogoutShown As Boolean = False
+    Private Sub piclogout2_Click(sender As Object, e As EventArgs) Handles piclogout2.Click
+        If isLogoutShown Then
+            panLogout.Hide()
+            piclogout2.Image = My.Resources.arrowdown
+            panLogout.BackColor = Color.FromArgb(67, 41, 6)
+            isLogoutShown = False
+        Else
+            panLogout.Show()
+            piclogout2.Image = My.Resources.arrowleft
+            isLogoutShown = True
+        End If
 
-    Private Sub piclogout2_MouseEnter(sender As Object, e As EventArgs) Handles piclogout2.MouseEnter
-        Panel2.Show()
     End Sub
 
-    Private Sub Panel2_MouseLeave(sender As Object, e As EventArgs) Handles Panel2.MouseLeave, picLogout.Leave
-        Panel2.Hide()
-        Panel2.BackColor = Color.FromArgb(67, 41, 6)
-    End Sub
-
-    Private Sub Panel2_MouseEnter(sender As Object, e As EventArgs) Handles Panel2.MouseEnter
-        Panel2.BackColor = Color.FromArgb(111, 68, 10)
+    Private Sub Panel2_MouseEnter(sender As Object, e As EventArgs) Handles panLogout.MouseEnter, picLogout.MouseEnter
+        panLogout.BackColor = Color.FromArgb(111, 68, 10)
 
     End Sub
+
+    Private Sub panLogout_MouseLeave(sender As Object, e As EventArgs) Handles panLogout.MouseLeave, picLogout.MouseLeave
+        panLogout.BackColor = Color.FromArgb(67, 41, 6)
+    End Sub
+
     'DRNKS BTN'
     Private Sub drinks_panemenubtn1_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn1.Click
         drinksLocationX = drinks_panmenu1.Location.X
@@ -698,10 +708,10 @@ Public Class frmMain
     End Sub
 
     Private Sub panHome_MouseEnter(sender As Object, e As EventArgs) Handles panHome.MouseEnter
-        Panel2.Hide()
+        panLogout.Hide()
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel2.MouseClick, picLogout.Click
+    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles panLogout.MouseClick, picLogout.Click
         Dim reply As MsgBoxResult
 
         reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
@@ -1111,7 +1121,7 @@ Public Class frmMain
         addcustomer.ShowDialog()
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, Panel2.MouseClick
+    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, panLogout.MouseClick
 
     End Sub
 

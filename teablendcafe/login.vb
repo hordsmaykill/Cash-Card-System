@@ -65,7 +65,7 @@ Public Class login
     'checking of priveledges'
     Public Sub checkingpriviledges()
 
-        Dim priviledges As String
+        Dim priviledges As String = ""
         With Command
             .Connection = Connect
             .CommandText = "SELECT type FROM tbladministrators WHERE Username = '" &
