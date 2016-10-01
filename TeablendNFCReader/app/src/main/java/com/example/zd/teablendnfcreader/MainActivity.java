@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // set ip
+        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        String ipOut = "IP: " + prefs.getString("ip", "10.0.0.2");
+        txtIp = (EditText) findViewById(R.id.txtIp);
+        txtIp.setText(ipOut);
+
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
         if (mNfcAdapter == null) {
@@ -49,13 +55,8 @@ public class MainActivity extends AppCompatActivity {
         if (!mNfcAdapter.isEnabled()) {
             Toast.makeText(getApplicationContext(), "NFC is Disabled.\nPlease Enable NFC", Toast.LENGTH_SHORT).show();
         }
+
         handleIntent(getIntent());
-
-        // nfc is present
-        // update cus_no
-//        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-//        txtIp.setText("IP: " + prefs.getString("ip", "10.0.0.2"));
-
     }
 
     @Override
@@ -77,12 +78,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickUpdate(View view) {
 
-//        SharedPreferences.Editor prefsEditor = prefs.edit();
-//        txtIp = (EditText) findViewById(R.id.txtIp);
-//        ip = txtIp.getText().toString();
-//        prefsEditor.putString("ip", ip);
-//        prefsEditor.apply();
-//        Toast.makeText(this, "The IP is now Updated! " + ip, Toast.LENGTH_SHORT).show();
+        SharedPreferences.Editor prefsEditor = prefs.edit();
+        ip = txtIp.getText().toString();
+        prefsEditor.putString("ip", ip);
+        prefsEditor.apply();
+        Toast.makeText(this, "The IP is now Updated! " + ip, Toast.LENGTH_SHORT).show();
     }
 
     private void handleIntent(Intent intent) {
