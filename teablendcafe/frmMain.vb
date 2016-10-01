@@ -581,7 +581,7 @@ Public Class frmMain
         panLogout.BackColor = Color.FromArgb(67, 41, 6)
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles panLogout.MouseClick, picLogout.Click, lbllogout.Click
+    Private Sub picLogout_Click(sender As Object, e As EventArgs) Handles picLogout.Click, panLogout.Click, lbllogout.Click
         Dim reply As MsgBoxResult
 
         reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
@@ -726,13 +726,6 @@ Public Class frmMain
 
     Private Sub panHome_MouseEnter(sender As Object, e As EventArgs) Handles panHome.MouseEnter
         panLogout.Hide()
-    End Sub
-
-
-        reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
-        If reply = MsgBoxResult.Yes Then
-            End
-        End If
     End Sub
 
     Private Sub submenu_panmenu1_Click(sender As Object, e As EventArgs) Handles submenu_panmenu1.Click
@@ -1269,6 +1262,11 @@ Public Class frmMain
     Private Sub btnDeleteOrders_Click(sender As Object, e As EventArgs) Handles btnDeleteOrders.Click
         typeadminpassworddelete.ShowDialog()
     End Sub
+
+    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs)
+
+    End Sub
+
 
 End Class
 
