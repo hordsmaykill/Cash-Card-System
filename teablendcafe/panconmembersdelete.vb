@@ -5,7 +5,6 @@ Public Class panconmembersdelete
     Dim Reader As MySqlDataReader
     Dim Connect As New MySqlConnection
     Dim str As String
-    Dim SelectedAdmin As String
 
 
     Public Sub ConnectDB()
@@ -18,26 +17,17 @@ Public Class panconmembersdelete
         End If
     End Sub
     Private Sub panconmembersdelete_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call ConnectDB()
-        Call logdgvupdate()
+        ConnectDB()
     End Sub
 
-    Public Sub logdgvupdate()
-        SelectedAdmin = frmMain.accounts_dgv.Item(0, frmMain.accounts_dgv.CurrentRow.Index).Value
-        adminlogs.Text = SelectedAdmin
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         With Command
             .Connection = Connect
-            .CommandText = "SELECT time,description FROM tbltimeintimeout Where user ='" & SelectedAdmin & "'"
-     
+            .CommandText = "SELECT password FROM tbladministrators WHERE username = 'admin'"
+            .ExecuteNonQuery()
         End With
-        Reader = Command.ExecuteReader
+        Me.Close()
 
-        If Reader.HasRows Then
-            While Reader.Read
-                dgvlog.Rows.Add(Reader.Item(0), Reader.Item(1))
-            End While
-        End If
-        Reader.Close()
 
     End Sub
 

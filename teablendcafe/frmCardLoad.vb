@@ -30,7 +30,6 @@ Public Class frmCardLoad
     End Sub
 
     Private Sub updateDatabase(customerNumber As String)
-        MsgBox(customerNumber)
         ' check if member still have remaining money
         Dim reader As MySqlDataReader
         Dim cmd As New MySqlCommand
@@ -72,8 +71,10 @@ Public Class frmCardLoad
         Dim ord_code As String = dateConcat & "-" & rand
 
         ' get data
+
+
         ' insert id and date
-        cmd.CommandText = "INSERT INTO tblorders(ord_code, total, ord_date) VALUES('" & ord_code & "', " & total & ", '" & curDate & "')"
+        cmd.CommandText = "INSERT INTO tblorders VALUES('" & ord_code & "', " & total & ", '" & curDate & "')"
         cmd.ExecuteNonQuery()
 
         For i As Integer = 0 To frmMain.dgvorders.RowCount - 1

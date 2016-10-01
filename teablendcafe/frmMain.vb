@@ -729,6 +729,11 @@ Public Class frmMain
     End Sub
 
 
+        reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
+        If reply = MsgBoxResult.Yes Then
+            End
+        End If
+    End Sub
 
     Private Sub submenu_panmenu1_Click(sender As Object, e As EventArgs) Handles submenu_panmenu1.Click
         SUBLocationX = sub_panmenu1.Location.X
@@ -1060,7 +1065,7 @@ Public Class frmMain
     End Sub
 
     Private Sub menu_btn_spam_Click(sender As Object, e As EventArgs) Handles menu_btn_spam.Click
-        drinksToDGV("DSG_SS", DRINKS_SIZEG)
+        drinksToDGV("DSH_SS", DRINKS_SIZEG)
     End Sub
 
 
@@ -1069,20 +1074,20 @@ Public Class frmMain
     Private Sub account_delbtn_Click(sender As Object, e As EventArgs) Handles account_delbtn.Click
         panconmembersdelete.ShowDialog()
 
-        'Dim Delete As String
+        Dim Delete As String
 
+        SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
 
-
-        'Delete = MsgBox("Are you sure you want to disble Administrator " + SelectedAdmin + "?", vbYesNo + vbQuestion, "Message")
-        'If Delete = vbYes Then
-        '    With Command
-        '        .Connection = Connect
-        '        .CommandText = "DELETE FROM tblAdministrators WHERE username = '" & SelectedAdmin & "'"
-        '        .ExecuteNonQuery()
-        '    End With
-        '    AccountsDGV()
-        '    MsgBox("Administrator " + SelectedAdmin + " successfully deleted!", vbOKOnly + vbInformation, "Message")
-        'End If
+        Delete = MsgBox("Are you sure you want to delete Administrator " + SelectedAdmin + "?", vbYesNo + vbQuestion, "Message")
+        If Delete = vbYes Then
+            With Command
+                .Connection = Connect
+                .CommandText = "DELETE FROM tblAdministrators WHERE username = '" & SelectedAdmin & "'"
+                .ExecuteNonQuery()
+            End With
+            AccountsDGV()
+            MsgBox("Administrator " + SelectedAdmin + " successfully deleted!", vbOKOnly + vbInformation, "Message")
+        End If
     End Sub
 
 
