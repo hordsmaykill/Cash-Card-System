@@ -706,7 +706,8 @@ Public Class frmMain
 
         reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
         If reply = MsgBoxResult.Yes Then
-            End
+            Me.Close()
+            login.Show()
         End If
     End Sub
 
