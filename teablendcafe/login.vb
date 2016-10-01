@@ -48,6 +48,8 @@ Public Class login
 
             Reader.Close()
             Call checkingpriviledges()
+            ' set current user
+            frmMain.currentUser = Reader.Item(0).ToString
 
             With Command
                 .CommandText = "INSERT INTO tbltimeintimeout (user, description) VALUES('" & user & "','in')"

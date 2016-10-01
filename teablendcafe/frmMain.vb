@@ -82,6 +82,7 @@ Public Class frmMain
 
 
     ' accounts vars
+    Public currentUser As String
     Public userSelected As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -95,7 +96,6 @@ Public Class frmMain
 
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
-
     End Sub
 
     Private Sub setMenuColors()
@@ -557,20 +557,47 @@ Public Class frmMain
     End Sub
 
     'logoutbutton'
+    Dim isLogoutShown As Boolean = False
+    Private Sub piclogout2_Click(sender As Object, e As EventArgs) Handles piclogout2.Click
+        If isLogoutShown Then
+            panLogout.Hide()
+            piclogout2.Image = My.Resources.arrowdown
+            panLogout.BackColor = Color.FromArgb(67, 41, 6)
+            isLogoutShown = False
+        Else
+            panLogout.Show()
+            piclogout2.Image = My.Resources.arrowleft
+            isLogoutShown = True
+        End If
 
-    Private Sub piclogout2_MouseEnter(sender As Object, e As EventArgs) Handles piclogout2.MouseEnter
-        Panel2.Show()
     End Sub
 
-    Private Sub Panel2_MouseLeave(sender As Object, e As EventArgs) Handles Panel2.MouseLeave, picLogout.Leave
-        Panel2.Hide()
-        Panel2.BackColor = Color.FromArgb(67, 41, 6)
-    End Sub
-
-    Private Sub Panel2_MouseEnter(sender As Object, e As EventArgs) Handles Panel2.MouseEnter
-        Panel2.BackColor = Color.FromArgb(111, 68, 10)
+    Private Sub Panel2_MouseEnter(sender As Object, e As EventArgs) Handles panLogout.MouseEnter, picLogout.MouseEnter
+        panLogout.BackColor = Color.FromArgb(111, 68, 10)
 
     End Sub
+
+    Private Sub panLogout_MouseLeave(sender As Object, e As EventArgs) Handles panLogout.MouseLeave, picLogout.MouseLeave
+        panLogout.BackColor = Color.FromArgb(67, 41, 6)
+    End Sub
+
+    Private Sub picLogout_Click(sender As Object, e As EventArgs) Handles picLogout.Click, panLogout.Click, lbllogout.Click
+        Dim reply As MsgBoxResult
+
+        reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
+        If reply = MsgBoxResult.Yes Then
+            Dim command As New MySqlCommand
+            With command
+                .Connection = Connect
+                .CommandText = "INSERT INTO tbltimeintimeout(user, description) VALUES('" & currentUser & "', 'out')"
+                .ExecuteNonQuery()
+            End With
+            Me.Close()
+            login.Show()
+        End If
+    End Sub
+
+
     'DRNKS BTN'
     Private Sub drinks_panemenubtn1_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn1.Click
         drinksLocationX = drinks_panmenu1.Location.X
@@ -698,16 +725,7 @@ Public Class frmMain
     End Sub
 
     Private Sub panHome_MouseEnter(sender As Object, e As EventArgs) Handles panHome.MouseEnter
-        Panel2.Hide()
-    End Sub
-
-    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel2.MouseClick, picLogout.Click
-        Dim reply As MsgBoxResult
-
-        reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
-        If reply = MsgBoxResult.Yes Then
-            End
-        End If
+        panLogout.Hide()
     End Sub
 
     Private Sub submenu_panmenu1_Click(sender As Object, e As EventArgs) Handles submenu_panmenu1.Click
@@ -1110,10 +1128,6 @@ Public Class frmMain
         addcustomer.ShowDialog()
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, Panel2.MouseClick
-
-    End Sub
-
     Private Sub dgvorders_RowStateChanged(sender As Object, e As DataGridViewRowStateChangedEventArgs) Handles dgvorders.RowStateChanged
         updateTotalOrders()
     End Sub
@@ -1247,6 +1261,10 @@ Public Class frmMain
 
     Private Sub btnDeleteOrders_Click(sender As Object, e As EventArgs) Handles btnDeleteOrders.Click
         typeadminpassworddelete.ShowDialog()
+    End Sub
+
+    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs)
+
     End Sub
 
 

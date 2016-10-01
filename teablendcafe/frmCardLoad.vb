@@ -39,7 +39,7 @@ Public Class frmCardLoad
         Dim total As Double = frmMain.txtTotalOrder.Text
 
         Dim wallet As Double
-        cmd.CommandText = "SELECT cus_loadwallet FROM tblcustomers"
+        cmd.CommandText = "SELECT cus_loadwallet FROM tblcustomers WHERE cus_no='" & customerNumber & "'"
         reader = cmd.ExecuteReader()
 
         reader.Read()
