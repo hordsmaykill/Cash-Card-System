@@ -25,87 +25,66 @@ Partial Class panconmembersdelete
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(panconmembersdelete))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.admispasswordcancel = New System.Windows.Forms.Button()
-        Me.dgvlog = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.adminlogs = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.dgvlog, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.adminlogs)
-        Me.Panel1.Controls.Add(Me.dgvlog)
         Me.Panel1.Controls.Add(Me.admispasswordcancel)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(329, 295)
+        Me.Panel1.Size = New System.Drawing.Size(329, 72)
         Me.Panel1.TabIndex = 0
         '
         'admispasswordcancel
         '
         Me.admispasswordcancel.BackColor = System.Drawing.Color.White
-        Me.admispasswordcancel.Location = New System.Drawing.Point(0, 269)
+        Me.admispasswordcancel.Location = New System.Drawing.Point(176, 36)
         Me.admispasswordcancel.Name = "admispasswordcancel"
-        Me.admispasswordcancel.Size = New System.Drawing.Size(326, 23)
+        Me.admispasswordcancel.Size = New System.Drawing.Size(112, 23)
         Me.admispasswordcancel.TabIndex = 6
-        Me.admispasswordcancel.Text = "Close"
+        Me.admispasswordcancel.Text = "Cancel"
         Me.admispasswordcancel.UseVisualStyleBackColor = False
         '
-        'dgvlog
+        'Button1
         '
-        Me.dgvlog.AllowUserToAddRows = False
-        Me.dgvlog.AllowUserToDeleteRows = False
-        Me.dgvlog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvlog.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.dgvlog.Location = New System.Drawing.Point(0, 26)
-        Me.dgvlog.Name = "dgvlog"
-        Me.dgvlog.ReadOnly = True
-        Me.dgvlog.Size = New System.Drawing.Size(329, 243)
-        Me.dgvlog.TabIndex = 7
+        Me.Button1.Location = New System.Drawing.Point(46, 36)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Verify"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Column1
+        'TextBox1
         '
-        Me.Column1.HeaderText = "TIME"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 145
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Description"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 145
-        '
-        'adminlogs
-        '
-        Me.adminlogs.AutoSize = True
-        Me.adminlogs.Location = New System.Drawing.Point(135, 10)
-        Me.adminlogs.Name = "adminlogs"
-        Me.adminlogs.Size = New System.Drawing.Size(39, 13)
-        Me.adminlogs.TabIndex = 8
-        Me.adminlogs.Text = "Label1"
+        Me.TextBox1.Location = New System.Drawing.Point(148, 13)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
+        Me.TextBox1.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(59, 10)
+        Me.Label1.Location = New System.Drawing.Point(23, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 13)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Admin logs of"
+        Me.Label1.Size = New System.Drawing.Size(119, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Administrator Password:"
         '
         'panconmembersdelete
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(352, 319)
+        Me.ClientSize = New System.Drawing.Size(352, 93)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -114,16 +93,13 @@ Partial Class panconmembersdelete
         Me.Text = "panconmembersdelete"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.dgvlog, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents admispasswordcancel As Button
-    Friend WithEvents dgvlog As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents adminlogs As Label
 End Class

@@ -6,6 +6,7 @@ Public Class login
     Dim Connect As New MySqlConnection
     Dim str As String
 
+    Dim user As String = ""
 
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
@@ -43,10 +44,18 @@ Public Class login
 
         If Reader.HasRows Then
             MsgBox("Welcome" & Reader.Item(0).ToString & "", vbInformation + vbOKOnly, "Message")
+            user = Reader.Item(0)
+
             Reader.Close()
             Call checkingpriviledges()
             ' set current user
             frmMain.currentUser = Reader.Item(0).ToString
+
+            With Command
+                .CommandText = "INSERT INTO tbltimeintimeout (user, description) VALUES('" & user & "','in')"
+                .ExecuteNonQuery()
+            End With
+            Reader.Close()
             frmMain.Show()
             Me.Close()
         Else
@@ -86,7 +95,7 @@ Public Class login
             frmMain.lblAccounts.Hide()
             frmMain.picAccounts.Hide()
         End If
-
+        Reader.Close()
     End Sub
     ''
 End Class

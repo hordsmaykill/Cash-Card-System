@@ -141,3 +141,6 @@ D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.edit
 D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmordersadminpassclear.resources
 D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.panconmembersdelete.resources
 D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.typeadminpassworddelete.resources
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmetramount.resources
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmtotal.resources
+C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmremainingload.resources

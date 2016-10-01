@@ -35,7 +35,7 @@ Partial Class frmCardLoad
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(101, 141)
+        Me.btnClose.Location = New System.Drawing.Point(97, 141)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(97, 40)
         Me.btnClose.TabIndex = 0
@@ -45,7 +45,7 @@ Partial Class frmCardLoad
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(117, 15)
+        Me.Label1.Location = New System.Drawing.Point(113, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 1
@@ -70,7 +70,7 @@ Partial Class frmCardLoad
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.teablendcafe.My.Resources.Resources._default
-        Me.PictureBox1.Location = New System.Drawing.Point(101, 49)
+        Me.PictureBox1.Location = New System.Drawing.Point(97, 49)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(93, 77)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
