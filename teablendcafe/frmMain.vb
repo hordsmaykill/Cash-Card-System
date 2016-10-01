@@ -82,6 +82,7 @@ Public Class frmMain
 
 
     ' accounts vars
+    Public currentUser As String
     Public userSelected As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -95,7 +96,6 @@ Public Class frmMain
 
         lblHome.BackColor = Color.FromArgb(111, 68, 10)
         picHome.BackColor = Color.FromArgb(111, 68, 10)
-
     End Sub
 
     Private Sub setMenuColors()
@@ -580,6 +580,18 @@ Public Class frmMain
     Private Sub panLogout_MouseLeave(sender As Object, e As EventArgs) Handles panLogout.MouseLeave, picLogout.MouseLeave
         panLogout.BackColor = Color.FromArgb(67, 41, 6)
     End Sub
+
+    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, panLogout.MouseClick, lbllogout.Click
+
+        Dim command As New MySqlCommand
+        With command
+            .Connection = Connect
+            .CommandText = "INSERT INTO tbltimeintimeout(user, description) VALUES('" & currentUser & "', 'out')"
+            .ExecuteNonQuery()
+        End With
+
+    End Sub
+
 
     'DRNKS BTN'
     Private Sub drinks_panemenubtn1_Click(sender As Object, e As EventArgs) Handles drinks_panemenubtn1.Click
@@ -1121,10 +1133,6 @@ Public Class frmMain
         addcustomer.ShowDialog()
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, panLogout.MouseClick
-
-    End Sub
-
     Private Sub dgvorders_RowStateChanged(sender As Object, e As DataGridViewRowStateChangedEventArgs) Handles dgvorders.RowStateChanged
         updateTotalOrders()
     End Sub
@@ -1259,7 +1267,5 @@ Public Class frmMain
     Private Sub btnDeleteOrders_Click(sender As Object, e As EventArgs) Handles btnDeleteOrders.Click
         typeadminpassworddelete.ShowDialog()
     End Sub
-
-
 End Class
 

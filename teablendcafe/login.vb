@@ -45,6 +45,8 @@ Public Class login
             MsgBox("Welcome" & Reader.Item(0).ToString & "", vbInformation + vbOKOnly, "Message")
             Reader.Close()
             Call checkingpriviledges()
+            ' set current user
+            frmMain.currentUser = Reader.Item(0).ToString
             frmMain.Show()
             Me.Close()
         Else
