@@ -581,15 +581,20 @@ Public Class frmMain
         panLogout.BackColor = Color.FromArgb(67, 41, 6)
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs) Handles picLogout.Click, panLogout.MouseClick, lbllogout.Click
+    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles panLogout.MouseClick, picLogout.Click, lbllogout.Click
+        Dim reply As MsgBoxResult
 
-        Dim command As New MySqlCommand
-        With command
-            .Connection = Connect
-            .CommandText = "INSERT INTO tbltimeintimeout(user, description) VALUES('" & currentUser & "', 'out')"
-            .ExecuteNonQuery()
-        End With
-
+        reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
+        If reply = MsgBoxResult.Yes Then
+            Dim command As New MySqlCommand
+            With command
+                .Connection = Connect
+                .CommandText = "INSERT INTO tbltimeintimeout(user, description) VALUES('" & currentUser & "', 'out')"
+                .ExecuteNonQuery()
+            End With
+            Me.Close()
+            login.Show()
+        End If
     End Sub
 
 
@@ -723,15 +728,7 @@ Public Class frmMain
         panLogout.Hide()
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles panLogout.MouseClick, picLogout.Click
-        Dim reply As MsgBoxResult
 
-        reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
-        If reply = MsgBoxResult.Yes Then
-            Me.Close()
-            login.Show()
-        End If
-    End Sub
 
     Private Sub submenu_panmenu1_Click(sender As Object, e As EventArgs) Handles submenu_panmenu1.Click
         SUBLocationX = sub_panmenu1.Location.X
@@ -1267,5 +1264,6 @@ Public Class frmMain
     Private Sub btnDeleteOrders_Click(sender As Object, e As EventArgs) Handles btnDeleteOrders.Click
         typeadminpassworddelete.ShowDialog()
     End Sub
+
 End Class
 
