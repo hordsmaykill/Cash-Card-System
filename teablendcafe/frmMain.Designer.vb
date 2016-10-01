@@ -24,10 +24,11 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panSideMenu = New System.Windows.Forms.Panel()
         Me.panButtons = New System.Windows.Forms.TableLayoutPanel()
         Me.picAccounts = New System.Windows.Forms.PictureBox()
@@ -631,7 +632,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -700)
+        Me.panContent.Location = New System.Drawing.Point(230, -2800)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -640,7 +641,7 @@ Partial Class frmMain
         '
         Me.panMenu.Controls.Add(Me.GroupBox1)
         Me.panMenu.Controls.Add(Me.panmenumenu)
-        Me.panMenu.Location = New System.Drawing.Point(3, 700)
+        Me.panMenu.Location = New System.Drawing.Point(0, 1400)
         Me.panMenu.Name = "panMenu"
         Me.panMenu.Size = New System.Drawing.Size(1360, 702)
         Me.panMenu.TabIndex = 11
@@ -723,6 +724,14 @@ Partial Class frmMain
         Me.dgvorders.AllowUserToAddRows = False
         Me.dgvorders.AllowUserToDeleteRows = False
         Me.dgvorders.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvorders.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvorders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvorders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column10, Me.Column7, Me.Column8, Me.Column9})
         Me.dgvorders.Location = New System.Drawing.Point(4, 38)
@@ -733,20 +742,20 @@ Partial Class frmMain
         '
         'Column6
         '
-        Me.Column6.HeaderText = "prod_code"
+        Me.Column6.HeaderText = "Product Code"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
         '
         'Column10
         '
-        Me.Column10.HeaderText = "prod_name"
+        Me.Column10.HeaderText = "Product Name"
         Me.Column10.Name = "Column10"
         Me.Column10.ReadOnly = True
         Me.Column10.Width = 110
         '
         'Column7
         '
-        Me.Column7.HeaderText = "Qty"
+        Me.Column7.HeaderText = "Quantity"
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 75
@@ -778,7 +787,7 @@ Partial Class frmMain
         Me.panmenumenu.Controls.Add(Me.Drinks_panmenu)
         Me.panmenumenu.Controls.Add(Me.drinks_panemenubtn2)
         Me.panmenumenu.Controls.Add(Me.drinks_panemenubtn1)
-        Me.panmenumenu.Location = New System.Drawing.Point(2, 1)
+        Me.panmenumenu.Location = New System.Drawing.Point(2, 0)
         Me.panmenumenu.Name = "panmenumenu"
         Me.panmenumenu.Size = New System.Drawing.Size(795, 698)
         Me.panmenumenu.TabIndex = 25
@@ -829,6 +838,7 @@ Partial Class frmMain
         'menu_btn_sbs
         '
         Me.menu_btn_sbs.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_sbs.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_sbs.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_sbs.Location = New System.Drawing.Point(928, 7)
         Me.menu_btn_sbs.Name = "menu_btn_sbs"
@@ -840,6 +850,7 @@ Partial Class frmMain
         'menu_btn_n
         '
         Me.menu_btn_n.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_n.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_n.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_n.Location = New System.Drawing.Point(777, 7)
         Me.menu_btn_n.Name = "menu_btn_n"
@@ -851,6 +862,7 @@ Partial Class frmMain
         'menu_btn_fbw
         '
         Me.menu_btn_fbw.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_fbw.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_fbw.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_fbw.Location = New System.Drawing.Point(607, 7)
         Me.menu_btn_fbw.Name = "menu_btn_fbw"
@@ -862,6 +874,7 @@ Partial Class frmMain
         'menu_btn_te
         '
         Me.menu_btn_te.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_te.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_te.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_te.Location = New System.Drawing.Point(466, 7)
         Me.menu_btn_te.Name = "menu_btn_te"
@@ -873,6 +886,7 @@ Partial Class frmMain
         'menu_btn_ss
         '
         Me.menu_btn_ss.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_ss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_ss.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_ss.Location = New System.Drawing.Point(315, 7)
         Me.menu_btn_ss.Name = "menu_btn_ss"
@@ -884,8 +898,9 @@ Partial Class frmMain
         'menu_btn_cbf
         '
         Me.menu_btn_cbf.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_cbf.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_cbf.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_btn_cbf.Location = New System.Drawing.Point(160, 7)
+        Me.menu_btn_cbf.Location = New System.Drawing.Point(164, 7)
         Me.menu_btn_cbf.Name = "menu_btn_cbf"
         Me.menu_btn_cbf.Size = New System.Drawing.Size(119, 100)
         Me.menu_btn_cbf.TabIndex = 58
@@ -895,6 +910,7 @@ Partial Class frmMain
         'menu_btn_c
         '
         Me.menu_btn_c.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_c.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_c.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_c.Location = New System.Drawing.Point(14, 7)
         Me.menu_btn_c.Name = "menu_btn_c"
@@ -962,6 +978,7 @@ Partial Class frmMain
         'menu_btn_spam
         '
         Me.menu_btn_spam.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_spam.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_spam.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_spam.Location = New System.Drawing.Point(929, 23)
         Me.menu_btn_spam.Name = "menu_btn_spam"
@@ -973,6 +990,7 @@ Partial Class frmMain
         'menu_btn_cs
         '
         Me.menu_btn_cs.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_cs.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_cs.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_cs.Location = New System.Drawing.Point(783, 23)
         Me.menu_btn_cs.Name = "menu_btn_cs"
@@ -984,6 +1002,7 @@ Partial Class frmMain
         'menu_btn_l
         '
         Me.menu_btn_l.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_l.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_l.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_l.Location = New System.Drawing.Point(613, 108)
         Me.menu_btn_l.Name = "menu_btn_l"
@@ -995,6 +1014,7 @@ Partial Class frmMain
         'menu_btn_h
         '
         Me.menu_btn_h.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_h.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_h.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_h.Location = New System.Drawing.Point(472, 108)
         Me.menu_btn_h.Name = "menu_btn_h"
@@ -1006,6 +1026,7 @@ Partial Class frmMain
         'menu_btn_cp
         '
         Me.menu_btn_cp.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_cp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_cp.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_cp.Location = New System.Drawing.Point(321, 108)
         Me.menu_btn_cp.Name = "menu_btn_cp"
@@ -1017,6 +1038,7 @@ Partial Class frmMain
         'menu_btn_tdd
         '
         Me.menu_btn_tdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_tdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_tdd.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_tdd.Location = New System.Drawing.Point(613, 2)
         Me.menu_btn_tdd.Name = "menu_btn_tdd"
@@ -1028,6 +1050,7 @@ Partial Class frmMain
         'menu_btn_ucb
         '
         Me.menu_btn_ucb.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_ucb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_ucb.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_ucb.Location = New System.Drawing.Point(472, 2)
         Me.menu_btn_ucb.Name = "menu_btn_ucb"
@@ -1039,6 +1062,7 @@ Partial Class frmMain
         'menu_btn_pp
         '
         Me.menu_btn_pp.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_pp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_pp.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_pp.Location = New System.Drawing.Point(170, 108)
         Me.menu_btn_pp.Name = "menu_btn_pp"
@@ -1050,6 +1074,7 @@ Partial Class frmMain
         'menu_btn_es
         '
         Me.menu_btn_es.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_es.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_es.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_es.Location = New System.Drawing.Point(321, 2)
         Me.menu_btn_es.Name = "menu_btn_es"
@@ -1061,6 +1086,7 @@ Partial Class frmMain
         'menu_btn_cc
         '
         Me.menu_btn_cc.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_cc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_cc.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_cc.Location = New System.Drawing.Point(21, 108)
         Me.menu_btn_cc.Name = "menu_btn_cc"
@@ -1072,6 +1098,7 @@ Partial Class frmMain
         'menu_btn_ib
         '
         Me.menu_btn_ib.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_ib.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_ib.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_ib.Location = New System.Drawing.Point(170, 2)
         Me.menu_btn_ib.Name = "menu_btn_ib"
@@ -1083,6 +1110,7 @@ Partial Class frmMain
         'menu_btn_bbq
         '
         Me.menu_btn_bbq.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_bbq.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_btn_bbq.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_bbq.Location = New System.Drawing.Point(20, 2)
         Me.menu_btn_bbq.Name = "menu_btn_bbq"
@@ -1137,7 +1165,7 @@ Partial Class frmMain
         Me.drinks_panmenu1.Location = New System.Drawing.Point(0, 0)
         Me.drinks_panmenu1.Margin = New System.Windows.Forms.Padding(0)
         Me.drinks_panmenu1.Name = "drinks_panmenu1"
-        Me.drinks_panmenu1.Size = New System.Drawing.Size(2286, 238)
+        Me.drinks_panmenu1.Size = New System.Drawing.Size(2286, 768)
         Me.drinks_panmenu1.TabIndex = 0
         '
         'Panel24
@@ -1165,10 +1193,11 @@ Partial Class frmMain
         'menu_d_mm_G
         '
         Me.menu_d_mm_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_mm_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_mm_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_mm_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_mm_G.Name = "menu_d_mm_G"
-        Me.menu_d_mm_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_mm_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_mm_G.TabIndex = 0
         Me.menu_d_mm_G.Text = "Grande"
         Me.menu_d_mm_G.UseVisualStyleBackColor = False
@@ -1176,10 +1205,11 @@ Partial Class frmMain
         'menu_d_mm_V
         '
         Me.menu_d_mm_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_mm_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_mm_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_mm_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_mm_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_mm_V.Name = "menu_d_mm_V"
-        Me.menu_d_mm_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_mm_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_mm_V.TabIndex = 0
         Me.menu_d_mm_V.Text = "Venti"
         Me.menu_d_mm_V.UseVisualStyleBackColor = False
@@ -1209,10 +1239,11 @@ Partial Class frmMain
         'menu_d_wm_G
         '
         Me.menu_d_wm_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_wm_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_wm_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_wm_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_wm_G.Name = "menu_d_wm_G"
-        Me.menu_d_wm_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_wm_G.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_wm_G.TabIndex = 0
         Me.menu_d_wm_G.Text = "Grande"
         Me.menu_d_wm_G.UseVisualStyleBackColor = False
@@ -1220,10 +1251,11 @@ Partial Class frmMain
         'menu_d_wm_V
         '
         Me.menu_d_wm_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_wm_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_wm_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_wm_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_wm_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_wm_V.Name = "menu_d_wm_V"
-        Me.menu_d_wm_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_wm_V.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_wm_V.TabIndex = 0
         Me.menu_d_wm_V.Text = "Venti"
         Me.menu_d_wm_V.UseVisualStyleBackColor = False
@@ -1253,10 +1285,11 @@ Partial Class frmMain
         'menu_d_ll_G
         '
         Me.menu_d_ll_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ll_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_ll_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_ll_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_ll_G.Name = "menu_d_ll_G"
-        Me.menu_d_ll_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ll_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_ll_G.TabIndex = 0
         Me.menu_d_ll_G.Text = "Grande"
         Me.menu_d_ll_G.UseVisualStyleBackColor = False
@@ -1264,10 +1297,11 @@ Partial Class frmMain
         'menu_d_ll_V
         '
         Me.menu_d_ll_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ll_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_ll_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_ll_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_ll_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_ll_V.Name = "menu_d_ll_V"
-        Me.menu_d_ll_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ll_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_ll_V.TabIndex = 0
         Me.menu_d_ll_V.Text = "Venti"
         Me.menu_d_ll_V.UseVisualStyleBackColor = False
@@ -1297,10 +1331,11 @@ Partial Class frmMain
         'menu_d_lt_G
         '
         Me.menu_d_lt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_lt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_lt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_lt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_lt_G.Name = "menu_d_lt_G"
-        Me.menu_d_lt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_lt_G.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_lt_G.TabIndex = 0
         Me.menu_d_lt_G.Text = "Grande"
         Me.menu_d_lt_G.UseVisualStyleBackColor = False
@@ -1308,10 +1343,11 @@ Partial Class frmMain
         'menu_d_lt_V
         '
         Me.menu_d_lt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_lt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_lt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_lt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_lt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_lt_V.Name = "menu_d_lt_V"
-        Me.menu_d_lt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_lt_V.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_lt_V.TabIndex = 0
         Me.menu_d_lt_V.Text = "Venti"
         Me.menu_d_lt_V.UseVisualStyleBackColor = False
@@ -1341,10 +1377,11 @@ Partial Class frmMain
         'menu_d_dp_G
         '
         Me.menu_d_dp_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_dp_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_dp_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_dp_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_dp_G.Name = "menu_d_dp_G"
-        Me.menu_d_dp_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_dp_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_dp_G.TabIndex = 0
         Me.menu_d_dp_G.Text = "Grande"
         Me.menu_d_dp_G.UseVisualStyleBackColor = False
@@ -1352,10 +1389,11 @@ Partial Class frmMain
         'menu_d_dp_V
         '
         Me.menu_d_dp_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_dp_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_dp_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_dp_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_dp_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_dp_V.Name = "menu_d_dp_V"
-        Me.menu_d_dp_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_dp_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_dp_V.TabIndex = 0
         Me.menu_d_dp_V.Text = "Venti"
         Me.menu_d_dp_V.UseVisualStyleBackColor = False
@@ -1385,10 +1423,11 @@ Partial Class frmMain
         'menu_d_lemont_G
         '
         Me.menu_d_lemont_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_lemont_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_lemont_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_lemont_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_lemont_G.Name = "menu_d_lemont_G"
-        Me.menu_d_lemont_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_lemont_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_lemont_G.TabIndex = 0
         Me.menu_d_lemont_G.Text = "Grande"
         Me.menu_d_lemont_G.UseVisualStyleBackColor = False
@@ -1396,10 +1435,11 @@ Partial Class frmMain
         'menu_d_lemont_V
         '
         Me.menu_d_lemont_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_lemont_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_lemont_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_lemont_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_lemont_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_lemont_V.Name = "menu_d_lemont_V"
-        Me.menu_d_lemont_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_lemont_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_lemont_V.TabIndex = 0
         Me.menu_d_lemont_V.Text = "Venti"
         Me.menu_d_lemont_V.UseVisualStyleBackColor = False
@@ -1429,10 +1469,11 @@ Partial Class frmMain
         'menu_d_ss_G
         '
         Me.menu_d_ss_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ss_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_ss_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_ss_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_ss_G.Name = "menu_d_ss_G"
-        Me.menu_d_ss_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ss_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_ss_G.TabIndex = 0
         Me.menu_d_ss_G.Text = "Grande"
         Me.menu_d_ss_G.UseVisualStyleBackColor = False
@@ -1440,10 +1481,11 @@ Partial Class frmMain
         'menu_d_ss_V
         '
         Me.menu_d_ss_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ss_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_ss_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_ss_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_ss_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_ss_V.Name = "menu_d_ss_V"
-        Me.menu_d_ss_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ss_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_ss_V.TabIndex = 0
         Me.menu_d_ss_V.Text = "Venti"
         Me.menu_d_ss_V.UseVisualStyleBackColor = False
@@ -1473,10 +1515,11 @@ Partial Class frmMain
         'menu_d_pt_G
         '
         Me.menu_d_pt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_pt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_pt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_pt_G.Name = "menu_d_pt_G"
-        Me.menu_d_pt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pt_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_pt_G.TabIndex = 0
         Me.menu_d_pt_G.Text = "Grande"
         Me.menu_d_pt_G.UseVisualStyleBackColor = False
@@ -1484,10 +1527,11 @@ Partial Class frmMain
         'menu_d_pt_V
         '
         Me.menu_d_pt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_pt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_pt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_pt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_pt_V.Name = "menu_d_pt_V"
-        Me.menu_d_pt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pt_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_pt_V.TabIndex = 0
         Me.menu_d_pt_V.Text = "Venti"
         Me.menu_d_pt_V.UseVisualStyleBackColor = False
@@ -1517,10 +1561,11 @@ Partial Class frmMain
         'menu_d_mmt_G
         '
         Me.menu_d_mmt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_mmt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_mmt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_mmt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_mmt_G.Name = "menu_d_mmt_G"
-        Me.menu_d_mmt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_mmt_G.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_mmt_G.TabIndex = 0
         Me.menu_d_mmt_G.Text = "Grande"
         Me.menu_d_mmt_G.UseVisualStyleBackColor = False
@@ -1528,10 +1573,11 @@ Partial Class frmMain
         'menu_d_mmt_V
         '
         Me.menu_d_mmt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_mmt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_mmt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_mmt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_mmt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_mmt_V.Name = "menu_d_mmt_V"
-        Me.menu_d_mmt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_mmt_V.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_mmt_V.TabIndex = 0
         Me.menu_d_mmt_V.Text = "Venti"
         Me.menu_d_mmt_V.UseVisualStyleBackColor = False
@@ -1561,10 +1607,11 @@ Partial Class frmMain
         'menu_d_sbt_G
         '
         Me.menu_d_sbt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_sbt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_sbt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_sbt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_sbt_G.Name = "menu_d_sbt_G"
-        Me.menu_d_sbt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_sbt_G.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_sbt_G.TabIndex = 0
         Me.menu_d_sbt_G.Text = "Grande"
         Me.menu_d_sbt_G.UseVisualStyleBackColor = False
@@ -1572,10 +1619,11 @@ Partial Class frmMain
         'menu_d_sbt_V
         '
         Me.menu_d_sbt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_sbt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_sbt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_sbt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_sbt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_sbt_V.Name = "menu_d_sbt_V"
-        Me.menu_d_sbt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_sbt_V.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_sbt_V.TabIndex = 0
         Me.menu_d_sbt_V.Text = "Venti"
         Me.menu_d_sbt_V.UseVisualStyleBackColor = False
@@ -1605,10 +1653,11 @@ Partial Class frmMain
         'menu_d_cm_G
         '
         Me.menu_d_cm_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_cm_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_cm_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_cm_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_cm_G.Name = "menu_d_cm_G"
-        Me.menu_d_cm_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_cm_G.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_cm_G.TabIndex = 0
         Me.menu_d_cm_G.Text = "Grande"
         Me.menu_d_cm_G.UseVisualStyleBackColor = False
@@ -1616,10 +1665,11 @@ Partial Class frmMain
         'menu_d_cm_V
         '
         Me.menu_d_cm_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_cm_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_cm_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_cm_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_cm_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_cm_V.Name = "menu_d_cm_V"
-        Me.menu_d_cm_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_cm_V.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_cm_V.TabIndex = 0
         Me.menu_d_cm_V.Text = "Venti"
         Me.menu_d_cm_V.UseVisualStyleBackColor = False
@@ -1649,10 +1699,11 @@ Partial Class frmMain
         'menu_d_mt_G
         '
         Me.menu_d_mt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_mt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_mt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_mt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_mt_G.Name = "menu_d_mt_G"
-        Me.menu_d_mt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_mt_G.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_mt_G.TabIndex = 0
         Me.menu_d_mt_G.Text = "Grande"
         Me.menu_d_mt_G.UseVisualStyleBackColor = False
@@ -1660,10 +1711,11 @@ Partial Class frmMain
         'menu_d_mt_V
         '
         Me.menu_d_mt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_mt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_mt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_mt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_mt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_mt_V.Name = "menu_d_mt_V"
-        Me.menu_d_mt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_mt_V.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_mt_V.TabIndex = 0
         Me.menu_d_mt_V.Text = "Venti"
         Me.menu_d_mt_V.UseVisualStyleBackColor = False
@@ -1693,10 +1745,11 @@ Partial Class frmMain
         'menu_d_bmk_G
         '
         Me.menu_d_bmk_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_bmk_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_bmk_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_bmk_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_bmk_G.Name = "menu_d_bmk_G"
-        Me.menu_d_bmk_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_bmk_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_bmk_G.TabIndex = 0
         Me.menu_d_bmk_G.Text = "Grande"
         Me.menu_d_bmk_G.UseVisualStyleBackColor = False
@@ -1704,10 +1757,11 @@ Partial Class frmMain
         'menu_d_bmk_V
         '
         Me.menu_d_bmk_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_bmk_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_bmk_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_bmk_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_bmk_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_bmk_V.Name = "menu_d_bmk_V"
-        Me.menu_d_bmk_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_bmk_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_bmk_V.TabIndex = 0
         Me.menu_d_bmk_V.Text = "Venti"
         Me.menu_d_bmk_V.UseVisualStyleBackColor = False
@@ -1737,10 +1791,11 @@ Partial Class frmMain
         'menu_d_bbt_G
         '
         Me.menu_d_bbt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_bbt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_bbt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_bbt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_bbt_G.Name = "menu_d_bbt_G"
-        Me.menu_d_bbt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_bbt_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_bbt_G.TabIndex = 0
         Me.menu_d_bbt_G.Text = "Grande"
         Me.menu_d_bbt_G.UseVisualStyleBackColor = False
@@ -1748,10 +1803,11 @@ Partial Class frmMain
         'menu_d_bbt_V
         '
         Me.menu_d_bbt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_bbt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_bbt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_bbt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_bbt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_bbt_V.Name = "menu_d_bbt_V"
-        Me.menu_d_bbt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_bbt_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_bbt_V.TabIndex = 0
         Me.menu_d_bbt_V.Text = "Venti"
         Me.menu_d_bbt_V.UseVisualStyleBackColor = False
@@ -1781,10 +1837,11 @@ Partial Class frmMain
         'menu_d_hmt_G
         '
         Me.menu_d_hmt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_hmt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_hmt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_hmt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_hmt_G.Name = "menu_d_hmt_G"
-        Me.menu_d_hmt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_hmt_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_hmt_G.TabIndex = 0
         Me.menu_d_hmt_G.Text = "Grande"
         Me.menu_d_hmt_G.UseVisualStyleBackColor = False
@@ -1792,10 +1849,11 @@ Partial Class frmMain
         'menu_d_hmt_V
         '
         Me.menu_d_hmt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_hmt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_hmt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_hmt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_hmt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_hmt_V.Name = "menu_d_hmt_V"
-        Me.menu_d_hmt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_hmt_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_hmt_V.TabIndex = 0
         Me.menu_d_hmt_V.Text = "Venti"
         Me.menu_d_hmt_V.UseVisualStyleBackColor = False
@@ -1825,10 +1883,11 @@ Partial Class frmMain
         'menu_d_kt_G
         '
         Me.menu_d_kt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_kt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_kt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_kt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_kt_G.Name = "menu_d_kt_G"
-        Me.menu_d_kt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_kt_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_kt_G.TabIndex = 0
         Me.menu_d_kt_G.Text = "Grande"
         Me.menu_d_kt_G.UseVisualStyleBackColor = False
@@ -1836,10 +1895,11 @@ Partial Class frmMain
         'menu_d_kt_V
         '
         Me.menu_d_kt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_kt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_kt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_kt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_kt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_kt_V.Name = "menu_d_kt_V"
-        Me.menu_d_kt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_kt_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_kt_V.TabIndex = 0
         Me.menu_d_kt_V.Text = "Venti"
         Me.menu_d_kt_V.UseVisualStyleBackColor = False
@@ -1869,10 +1929,11 @@ Partial Class frmMain
         'menu_d_smk_G
         '
         Me.menu_d_smk_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_smk_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_smk_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_smk_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_smk_G.Name = "menu_d_smk_G"
-        Me.menu_d_smk_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_smk_G.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_smk_G.TabIndex = 0
         Me.menu_d_smk_G.Text = "Grande"
         Me.menu_d_smk_G.UseVisualStyleBackColor = False
@@ -1880,10 +1941,11 @@ Partial Class frmMain
         'menu_d_smk_V
         '
         Me.menu_d_smk_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_smk_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_smk_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_smk_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_smk_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_smk_V.Name = "menu_d_smk_V"
-        Me.menu_d_smk_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_smk_V.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_smk_V.TabIndex = 0
         Me.menu_d_smk_V.Text = "Venti"
         Me.menu_d_smk_V.UseVisualStyleBackColor = False
@@ -1913,10 +1975,11 @@ Partial Class frmMain
         'menu_d_gat_G
         '
         Me.menu_d_gat_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_gat_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_gat_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_gat_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_gat_G.Name = "menu_d_gat_G"
-        Me.menu_d_gat_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_gat_G.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_gat_G.TabIndex = 0
         Me.menu_d_gat_G.Text = "Grande"
         Me.menu_d_gat_G.UseVisualStyleBackColor = False
@@ -1924,10 +1987,11 @@ Partial Class frmMain
         'menu_d_gat_V
         '
         Me.menu_d_gat_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_gat_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_gat_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_gat_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_gat_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_gat_V.Name = "menu_d_gat_V"
-        Me.menu_d_gat_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_gat_V.Size = New System.Drawing.Size(64, 60)
         Me.menu_d_gat_V.TabIndex = 0
         Me.menu_d_gat_V.Text = "Venti"
         Me.menu_d_gat_V.UseVisualStyleBackColor = False
@@ -1957,10 +2021,11 @@ Partial Class frmMain
         'menu_d_pmk_G
         '
         Me.menu_d_pmk_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pmk_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_pmk_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_pmk_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_pmk_G.Name = "menu_d_pmk_G"
-        Me.menu_d_pmk_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pmk_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_pmk_G.TabIndex = 0
         Me.menu_d_pmk_G.Text = "Grande"
         Me.menu_d_pmk_G.UseVisualStyleBackColor = False
@@ -1968,10 +2033,11 @@ Partial Class frmMain
         'menu_d_pmk_V
         '
         Me.menu_d_pmk_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pmk_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_pmk_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_pmk_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_pmk_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_pmk_V.Name = "menu_d_pmk_V"
-        Me.menu_d_pmk_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pmk_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_pmk_V.TabIndex = 0
         Me.menu_d_pmk_V.Text = "Venti"
         Me.menu_d_pmk_V.UseVisualStyleBackColor = False
@@ -2001,10 +2067,11 @@ Partial Class frmMain
         'menu_d_ow_G
         '
         Me.menu_d_ow_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ow_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_ow_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_ow_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_ow_G.Name = "menu_d_ow_G"
-        Me.menu_d_ow_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ow_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_ow_G.TabIndex = 0
         Me.menu_d_ow_G.Text = "Grande"
         Me.menu_d_ow_G.UseVisualStyleBackColor = False
@@ -2012,10 +2079,11 @@ Partial Class frmMain
         'menu_d_ow_V
         '
         Me.menu_d_ow_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ow_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_ow_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_ow_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_ow_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_ow_V.Name = "menu_d_ow_V"
-        Me.menu_d_ow_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ow_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_ow_V.TabIndex = 0
         Me.menu_d_ow_V.Text = "Venti"
         Me.menu_d_ow_V.UseVisualStyleBackColor = False
@@ -2045,10 +2113,11 @@ Partial Class frmMain
         'menu_d_wc_G
         '
         Me.menu_d_wc_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_wc_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_wc_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_wc_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_wc_G.Name = "menu_d_wc_G"
-        Me.menu_d_wc_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_wc_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_wc_G.TabIndex = 0
         Me.menu_d_wc_G.Text = "Grande"
         Me.menu_d_wc_G.UseVisualStyleBackColor = False
@@ -2056,10 +2125,11 @@ Partial Class frmMain
         'menu_d_wc_V
         '
         Me.menu_d_wc_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_wc_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_wc_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_wc_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_wc_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_wc_V.Name = "menu_d_wc_V"
-        Me.menu_d_wc_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_wc_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_wc_V.TabIndex = 0
         Me.menu_d_wc_V.Text = "Venti"
         Me.menu_d_wc_V.UseVisualStyleBackColor = False
@@ -2089,10 +2159,11 @@ Partial Class frmMain
         'menu_d_zd_G
         '
         Me.menu_d_zd_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_zd_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_zd_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_zd_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_zd_G.Name = "menu_d_zd_G"
-        Me.menu_d_zd_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_zd_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_zd_G.TabIndex = 0
         Me.menu_d_zd_G.Text = "Grande"
         Me.menu_d_zd_G.UseVisualStyleBackColor = False
@@ -2100,10 +2171,11 @@ Partial Class frmMain
         'menu_d_zd_V
         '
         Me.menu_d_zd_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_zd_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_zd_V.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_zd_V.Location = New System.Drawing.Point(69, 35)
         Me.menu_d_zd_V.Name = "menu_d_zd_V"
-        Me.menu_d_zd_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_zd_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_zd_V.TabIndex = 0
         Me.menu_d_zd_V.Text = "Venti"
         Me.menu_d_zd_V.UseVisualStyleBackColor = False
@@ -2133,10 +2205,11 @@ Partial Class frmMain
         'menu_d_vc_G
         '
         Me.menu_d_vc_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_vc_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_vc_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_vc_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_vc_G.Name = "menu_d_vc_G"
-        Me.menu_d_vc_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_vc_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_vc_G.TabIndex = 0
         Me.menu_d_vc_G.Text = "Grande"
         Me.menu_d_vc_G.UseVisualStyleBackColor = False
@@ -2144,10 +2217,11 @@ Partial Class frmMain
         'menu_d_vc_V
         '
         Me.menu_d_vc_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_vc_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_vc_V.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_vc_V.Location = New System.Drawing.Point(69, 35)
         Me.menu_d_vc_V.Name = "menu_d_vc_V"
-        Me.menu_d_vc_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_vc_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_vc_V.TabIndex = 0
         Me.menu_d_vc_V.Text = "Venti"
         Me.menu_d_vc_V.UseVisualStyleBackColor = False
@@ -2177,10 +2251,11 @@ Partial Class frmMain
         'menu_d_tt_G
         '
         Me.menu_d_tt_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_tt_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_tt_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_tt_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_tt_G.Name = "menu_d_tt_G"
-        Me.menu_d_tt_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_tt_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_tt_G.TabIndex = 0
         Me.menu_d_tt_G.Text = "Grande"
         Me.menu_d_tt_G.UseVisualStyleBackColor = False
@@ -2188,10 +2263,11 @@ Partial Class frmMain
         'menu_d_tt_V
         '
         Me.menu_d_tt_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_tt_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_tt_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_tt_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_tt_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_tt_V.Name = "menu_d_tt_V"
-        Me.menu_d_tt_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_tt_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_tt_V.TabIndex = 0
         Me.menu_d_tt_V.Text = "Venti"
         Me.menu_d_tt_V.UseVisualStyleBackColor = False
@@ -2221,10 +2297,11 @@ Partial Class frmMain
         'menu_d_tm_G
         '
         Me.menu_d_tm_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_tm_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_tm_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_tm_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_tm_G.Name = "menu_d_tm_G"
-        Me.menu_d_tm_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_tm_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_tm_G.TabIndex = 0
         Me.menu_d_tm_G.Text = "Grande"
         Me.menu_d_tm_G.UseVisualStyleBackColor = False
@@ -2232,10 +2309,11 @@ Partial Class frmMain
         'menu_d_tm_V
         '
         Me.menu_d_tm_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_tm_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_tm_V.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menu_d_tm_V.Location = New System.Drawing.Point(69, 35)
+        Me.menu_d_tm_V.Location = New System.Drawing.Point(69, 36)
         Me.menu_d_tm_V.Name = "menu_d_tm_V"
-        Me.menu_d_tm_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_tm_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_tm_V.TabIndex = 0
         Me.menu_d_tm_V.Text = "Venti"
         Me.menu_d_tm_V.UseVisualStyleBackColor = False
@@ -2265,10 +2343,11 @@ Partial Class frmMain
         'menu_d_pk_G
         '
         Me.menu_d_pk_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pk_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_pk_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_pk_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_pk_G.Name = "menu_d_pk_G"
-        Me.menu_d_pk_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pk_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_pk_G.TabIndex = 0
         Me.menu_d_pk_G.Text = "Grande"
         Me.menu_d_pk_G.UseVisualStyleBackColor = False
@@ -2276,10 +2355,11 @@ Partial Class frmMain
         'menu_d_pk_V
         '
         Me.menu_d_pk_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pk_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_pk_V.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_pk_V.Location = New System.Drawing.Point(69, 35)
         Me.menu_d_pk_V.Name = "menu_d_pk_V"
-        Me.menu_d_pk_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pk_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_pk_V.TabIndex = 0
         Me.menu_d_pk_V.Text = "Venti"
         Me.menu_d_pk_V.UseVisualStyleBackColor = False
@@ -2309,10 +2389,11 @@ Partial Class frmMain
         'menu_d_cl_V
         '
         Me.menu_d_cl_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_cl_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_cl_V.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_cl_V.Location = New System.Drawing.Point(69, 35)
         Me.menu_d_cl_V.Name = "menu_d_cl_V"
-        Me.menu_d_cl_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_cl_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_cl_V.TabIndex = 0
         Me.menu_d_cl_V.Text = "Venti"
         Me.menu_d_cl_V.UseVisualStyleBackColor = False
@@ -2320,10 +2401,11 @@ Partial Class frmMain
         'menu_d_cl_G
         '
         Me.menu_d_cl_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_cl_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_cl_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_cl_G.Location = New System.Drawing.Point(3, 35)
         Me.menu_d_cl_G.Name = "menu_d_cl_G"
-        Me.menu_d_cl_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_cl_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_cl_G.TabIndex = 0
         Me.menu_d_cl_G.Text = "Grande"
         Me.menu_d_cl_G.UseVisualStyleBackColor = False
@@ -2353,10 +2435,11 @@ Partial Class frmMain
         'menu_d_sb_V
         '
         Me.menu_d_sb_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_sb_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_sb_V.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_sb_V.Location = New System.Drawing.Point(68, 35)
         Me.menu_d_sb_V.Name = "menu_d_sb_V"
-        Me.menu_d_sb_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_sb_V.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_sb_V.TabIndex = 0
         Me.menu_d_sb_V.Text = "Venti"
         Me.menu_d_sb_V.UseVisualStyleBackColor = False
@@ -2364,10 +2447,11 @@ Partial Class frmMain
         'menu_d_sb_G
         '
         Me.menu_d_sb_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_sb_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_sb_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_sb_G.Location = New System.Drawing.Point(3, 35)
         Me.menu_d_sb_G.Name = "menu_d_sb_G"
-        Me.menu_d_sb_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_sb_G.Size = New System.Drawing.Size(64, 61)
         Me.menu_d_sb_G.TabIndex = 0
         Me.menu_d_sb_G.Text = "Grande"
         Me.menu_d_sb_G.UseVisualStyleBackColor = False
@@ -2397,10 +2481,11 @@ Partial Class frmMain
         'menu_d_pb_G
         '
         Me.menu_d_pb_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pb_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_pb_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_pb_G.Location = New System.Drawing.Point(3, 36)
         Me.menu_d_pb_G.Name = "menu_d_pb_G"
-        Me.menu_d_pb_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pb_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_pb_G.TabIndex = 0
         Me.menu_d_pb_G.Text = "Grande"
         Me.menu_d_pb_G.UseVisualStyleBackColor = False
@@ -2408,10 +2493,11 @@ Partial Class frmMain
         'menu_d_pb_V
         '
         Me.menu_d_pb_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_pb_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_pb_V.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_pb_V.Location = New System.Drawing.Point(69, 35)
         Me.menu_d_pb_V.Name = "menu_d_pb_V"
-        Me.menu_d_pb_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_pb_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_pb_V.TabIndex = 0
         Me.menu_d_pb_V.Text = "Venti"
         Me.menu_d_pb_V.UseVisualStyleBackColor = False
@@ -2441,10 +2527,11 @@ Partial Class frmMain
         'menu_d_ms_V
         '
         Me.menu_d_ms_V.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ms_V.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.menu_d_ms_V.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_ms_V.Location = New System.Drawing.Point(69, 35)
         Me.menu_d_ms_V.Name = "menu_d_ms_V"
-        Me.menu_d_ms_V.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ms_V.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_ms_V.TabIndex = 0
         Me.menu_d_ms_V.Text = "Venti"
         Me.menu_d_ms_V.UseVisualStyleBackColor = False
@@ -2452,10 +2539,11 @@ Partial Class frmMain
         'menu_d_ms_G
         '
         Me.menu_d_ms_G.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_d_ms_G.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_d_ms_G.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_d_ms_G.Location = New System.Drawing.Point(3, 35)
         Me.menu_d_ms_G.Name = "menu_d_ms_G"
-        Me.menu_d_ms_G.Size = New System.Drawing.Size(64, 45)
+        Me.menu_d_ms_G.Size = New System.Drawing.Size(64, 62)
         Me.menu_d_ms_G.TabIndex = 0
         Me.menu_d_ms_G.Text = "Grande"
         Me.menu_d_ms_G.UseVisualStyleBackColor = False
@@ -2501,11 +2589,11 @@ Partial Class frmMain
         '
         'account_delbtn
         '
-        Me.account_delbtn.Location = New System.Drawing.Point(898, 618)
+        Me.account_delbtn.Location = New System.Drawing.Point(900, 618)
         Me.account_delbtn.Name = "account_delbtn"
         Me.account_delbtn.Size = New System.Drawing.Size(134, 75)
         Me.account_delbtn.TabIndex = 3
-        Me.account_delbtn.Text = "delete"
+        Me.account_delbtn.Text = "LOGS"
         Me.account_delbtn.UseVisualStyleBackColor = True
         '
         'account_editbtn
@@ -2529,21 +2617,21 @@ Partial Class frmMain
         'accounts_dgv
         '
         Me.accounts_dgv.AllowUserToAddRows = False
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.accounts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.accounts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column13})
         Me.accounts_dgv.Location = New System.Drawing.Point(2, 2)
         Me.accounts_dgv.Name = "accounts_dgv"
         Me.accounts_dgv.ReadOnly = True
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.accounts_dgv.Size = New System.Drawing.Size(1364, 600)
         Me.accounts_dgv.TabIndex = 0
         '
@@ -2657,14 +2745,14 @@ Partial Class frmMain
         'dgv_members
         '
         Me.dgv_members.AllowUserToAddRows = False
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_members.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_members.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
         Me.dgv_members.Location = New System.Drawing.Point(2, 3)
@@ -2704,7 +2792,7 @@ Partial Class frmMain
         Me.panInventory.Controls.Add(Me.Label3)
         Me.panInventory.Controls.Add(Me.inv_edit)
         Me.panInventory.Controls.Add(Me.inventorydgv)
-        Me.panInventory.Location = New System.Drawing.Point(0, 700)
+        Me.panInventory.Location = New System.Drawing.Point(0, 703)
         Me.panInventory.Name = "panInventory"
         Me.panInventory.Size = New System.Drawing.Size(1366, 700)
         Me.panInventory.TabIndex = 6
@@ -2753,14 +2841,14 @@ Partial Class frmMain
         '
         Me.inventorydgv.AllowUserToAddRows = False
         Me.inventorydgv.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.inventorydgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.inventorydgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.inventorydgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.inventorydgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column1, Me.Column2, Me.Column5})
         Me.inventorydgv.Location = New System.Drawing.Point(0, 72)
@@ -3216,11 +3304,6 @@ Partial Class frmMain
     Friend WithEvents menu_d_pmk_V As Button
     Friend WithEvents btnOrder As Button
     Friend WithEvents txtTotalOrder As TextBox
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents btnDeleteOrders As Button
     Friend WithEvents account_delbtn As Button
     Friend WithEvents account_editbtn As Button
@@ -3246,4 +3329,9 @@ Partial Class frmMain
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class
