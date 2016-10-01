@@ -24,12 +24,12 @@ Partial Class frmtotal
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblchange = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.tbchangee = New System.Windows.Forms.TextBox()
         Me.tbtotal = New System.Windows.Forms.TextBox()
         Me.paymenttendered = New System.Windows.Forms.TextBox()
-        Me.tbchangee = New System.Windows.Forms.TextBox()
-        Me.lblchange = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,6 +57,16 @@ Partial Class frmtotal
         Me.Button1.Text = "PROCEED"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'lblchange
+        '
+        Me.lblchange.AutoSize = True
+        Me.lblchange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblchange.Location = New System.Drawing.Point(113, 129)
+        Me.lblchange.Name = "lblchange"
+        Me.lblchange.Size = New System.Drawing.Size(65, 20)
+        Me.lblchange.TabIndex = 1
+        Me.lblchange.Text = "Change"
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -77,11 +87,21 @@ Partial Class frmtotal
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Payment Tendered"
         '
+        'tbchangee
+        '
+        Me.tbchangee.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbchangee.Location = New System.Drawing.Point(57, 157)
+        Me.tbchangee.Name = "tbchangee"
+        Me.tbchangee.ReadOnly = True
+        Me.tbchangee.Size = New System.Drawing.Size(179, 26)
+        Me.tbchangee.TabIndex = 0
+        '
         'tbtotal
         '
         Me.tbtotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbtotal.Location = New System.Drawing.Point(57, 93)
         Me.tbtotal.Name = "tbtotal"
+        Me.tbtotal.ReadOnly = True
         Me.tbtotal.Size = New System.Drawing.Size(179, 26)
         Me.tbtotal.TabIndex = 0
         '
@@ -90,26 +110,9 @@ Partial Class frmtotal
         Me.paymenttendered.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.paymenttendered.Location = New System.Drawing.Point(57, 32)
         Me.paymenttendered.Name = "paymenttendered"
+        Me.paymenttendered.ReadOnly = True
         Me.paymenttendered.Size = New System.Drawing.Size(179, 26)
         Me.paymenttendered.TabIndex = 0
-        '
-        'tbchangee
-        '
-        Me.tbchangee.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbchangee.Location = New System.Drawing.Point(57, 157)
-        Me.tbchangee.Name = "tbchangee"
-        Me.tbchangee.Size = New System.Drawing.Size(179, 26)
-        Me.tbchangee.TabIndex = 0
-        '
-        'lblchange
-        '
-        Me.lblchange.AutoSize = True
-        Me.lblchange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblchange.Location = New System.Drawing.Point(113, 129)
-        Me.lblchange.Name = "lblchange"
-        Me.lblchange.Size = New System.Drawing.Size(65, 20)
-        Me.lblchange.TabIndex = 1
-        Me.lblchange.Text = "Change"
         '
         'frmtotal
         '
