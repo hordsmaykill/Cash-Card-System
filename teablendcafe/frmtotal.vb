@@ -90,7 +90,7 @@ Public Class frmtotal
             cmd.ExecuteNonQuery()
         Next
         MsgBox("Success!")
-
+        frmMain.dgvorders.Rows.Clear()
         Me.Close()
     End Sub
 
