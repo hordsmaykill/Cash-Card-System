@@ -26,7 +26,7 @@ Partial Class deletemem
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.admispasswordcancel = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPass = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -36,7 +36,7 @@ Partial Class deletemem
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Panel1.Controls.Add(Me.admispasswordcancel)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txtPass)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 21)
         Me.Panel1.Name = "Panel1"
@@ -45,7 +45,6 @@ Partial Class deletemem
         '
         'admispasswordcancel
         '
-        Me.admispasswordcancel.BackColor = System.Drawing.Color.White
         Me.admispasswordcancel.Location = New System.Drawing.Point(173, 36)
         Me.admispasswordcancel.Name = "admispasswordcancel"
         Me.admispasswordcancel.Size = New System.Drawing.Size(112, 23)
@@ -62,13 +61,13 @@ Partial Class deletemem
         Me.Button1.Text = "Verify"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtPass
         '
-        Me.TextBox1.Location = New System.Drawing.Point(145, 13)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.txtPass.Location = New System.Drawing.Point(145, 13)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPass.Size = New System.Drawing.Size(157, 20)
+        Me.txtPass.TabIndex = 4
         '
         'Label1
         '
@@ -99,6 +98,6 @@ Partial Class deletemem
     Friend WithEvents Panel1 As Panel
     Friend WithEvents admispasswordcancel As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPass As TextBox
     Friend WithEvents Label1 As Label
 End Class

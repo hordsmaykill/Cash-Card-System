@@ -190,7 +190,7 @@ Public Class frmMain
 
         With Command
             .Connection = Connect
-            .CommandText = "SELECT * FROM tblcustomers"
+            .CommandText = "SELECT * FROM tblcustomers WHERE status='Active'"
         End With
         Reader = Command.ExecuteReader
 
@@ -1093,16 +1093,10 @@ Public Class frmMain
 
         SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
 
-        Delete = MsgBox("Are you sure you want to delete this Member " + SelectedMember + "?", vbYesNo + vbQuestion, "Message")
+        Delete = MsgBox("Are you sure you want to void this Member " + SelectedMember + "?", vbYesNo + vbQuestion, "Message")
         If Delete = MsgBoxResult.Yes Then
+            deletemem.SelectedMember = SelectedMember
             deletemem.ShowDialog()
-            With Command
-                .Connection = Connect
-                .CommandText = "DELETE FROM tblcustomers WHERE cus_no = '" & SelectedMember & "'"
-                .ExecuteNonQuery()
-            End With
-            membersDGV()
-            MsgBox("Member " + SelectedMember + " successfully deleted!", vbOKOnly + vbInformation, "Message")
         End If
     End Sub
 
