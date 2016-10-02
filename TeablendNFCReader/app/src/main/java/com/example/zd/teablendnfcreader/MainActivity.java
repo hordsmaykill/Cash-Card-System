@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.UnsupportedEncodingException;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences prefs;
     private EditText txtIp;
+    private TextView tvIp;
 
     private String ip;
 
@@ -40,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
         // set ip
         prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         String ipOut = "IP: " + prefs.getString("ip", "10.0.0.2");
+        tvIp = (TextView) findViewById(R.id.tvIp);
         txtIp = (EditText) findViewById(R.id.txtIp);
-        txtIp.setText(ipOut);
+        tvIp.setText(ipOut);
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 

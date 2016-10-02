@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -25,6 +26,8 @@ public class UpdateActivity extends AppCompatActivity {
     private SharedPreferences prefs;
     private String ip;
 
+    private String id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +38,9 @@ public class UpdateActivity extends AppCompatActivity {
         // ip = "192.168.1.13";
 
         Bundle extras = getIntent().getExtras();
-        String result = extras.getString("result");
-        Toast.makeText(this, "result: " + result, Toast.LENGTH_SHORT).show();
-        new BGWorker().execute(result);
+        id = extras.getString("result");
+        Toast.makeText(this, "result: " + id, Toast.LENGTH_SHORT).show();
+        new BGWorker().execute(id);
 
     }
 
@@ -128,6 +131,9 @@ public class UpdateActivity extends AppCompatActivity {
                 Toast.makeText(UpdateActivity.this, "An error has occured", Toast.LENGTH_SHORT).show();
             }
             Log.i("NFO", "Login NFO: " + out);
+
+            TextView txtID = (TextView) findViewById(R.id.txtID);
+            txtID.setText(id);
 
         }
     }
