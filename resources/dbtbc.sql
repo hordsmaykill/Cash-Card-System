@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2016 at 08:16 AM
+-- Generation Time: Oct 02, 2016 at 05:59 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -51,16 +51,17 @@ CREATE TABLE `tblcustomers` (
   `cus_no` varchar(10) NOT NULL,
   `cus_name` varchar(25) NOT NULL,
   `cus_since` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `cus_loadwallet` int(6) NOT NULL
+  `cus_loadwallet` int(6) NOT NULL,
+  `status` varchar(10) NOT NULL DEFAULT 'Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblcustomers`
 --
 
-INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`) VALUES
-('1', 'TEST', '2016-09-30 21:20:50', 100),
-('tbc123', 'BETATESTER', '2016-09-30 21:20:34', 823);
+INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`, `status`) VALUES
+('1', 'TEST', '2016-10-02 15:58:10', 100, 'Active'),
+('tbc123', 'BETATESTER', '2016-09-30 21:20:34', 823, 'Active');
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,7 @@ INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
 ('DSH_CP', 50),
 ('DSH_CS', 50),
 ('DSH_ES', 50),
-('DSH_FB', 44),
+('DSH_FB', 41),
 ('DSH_HS', 50),
 ('DSH_IB', 50),
 ('DSH_LS', 50),
@@ -94,7 +95,7 @@ INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
 ('DSH_PP', 50),
 ('DSH_SB', 50),
 ('DSH_SS', 50),
-('DSH_TD', 48),
+('DSH_TD', 45),
 ('DSH_TE', 49),
 ('DSH_UC', 50),
 ('D_BBT', 50),
@@ -151,7 +152,8 @@ INSERT INTO `tblorders` (`ord_code`, `total`, `ord_change`, `ord_tendered`, `ord
 ('011016013340-31', 695, 5, 700, '2016-10-01'),
 ('011016051639-85', 70, 0, 0, '2016-10-01'),
 ('011016051934-77', 149, 0, 0, '2016-10-01'),
-('011016052034-70', 139, 0, 0, '2016-10-01');
+('011016052034-70', 139, 0, 0, '2016-10-01'),
+('021016122605-31', 924, 76, 1000, '2016-10-02');
 
 -- --------------------------------------------------------
 
@@ -178,6 +180,8 @@ INSERT INTO `tblorder_prod` (`ord_code`, `prod_code`, `prod_name`, `prod_qty`, `
 ('011016051639-85', 'D_TT', 'Taro Treat Venti', 1, 70),
 ('011016051934-77', 'DSH_TE', 'Tofu Express', 1, 149),
 ('011016052034-70', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
+('021016122605-31', 'DSH_FB', 'Flaming Buffalo Wing', 3, 139),
+('021016122605-31', 'DSH_TD', 'TBC Double Decker', 3, 169),
 ('260916022731-42', 'DSH_FB', 'Flaming Buffalo Wing', 5, 139),
 ('260916022731-42', 'DSH_TE', 'Tofu Express', 4, 149),
 ('260916023038-40', 'DSH_TE', 'Tofu Express', 5, 149),
@@ -317,7 +321,21 @@ CREATE TABLE `tbltimeintimeout` (
 
 INSERT INTO `tbltimeintimeout` (`user`, `time`, `description`) VALUES
 ('admin', '2016-09-30 18:42:36', 'in'),
-('admin', '2016-09-30 19:31:09', 'in');
+('admin', '2016-09-30 19:31:09', 'in'),
+('admin', '2016-10-01 14:50:56', 'in'),
+('admin', '2016-10-01 15:09:46', 'in'),
+('admin', '2016-10-01 15:38:40', 'in'),
+('admin', '2016-10-01 15:52:43', 'in'),
+('admin', '2016-10-01 15:53:36', 'in'),
+('admin', '2016-10-01 16:14:39', 'in'),
+('admin', '2016-10-01 16:25:42', 'in'),
+('admin', '2016-10-02 07:42:31', 'in'),
+('admin', '2016-10-02 10:19:29', 'in'),
+('admin', '2016-10-02 10:20:32', 'out'),
+('admin', '2016-10-02 11:07:19', 'in'),
+('admin', '2016-10-02 11:10:10', 'out'),
+('admin', '2016-10-02 11:39:46', 'in'),
+('admin', '2016-10-02 15:18:18', 'in');
 
 -- --------------------------------------------------------
 
