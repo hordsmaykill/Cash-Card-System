@@ -21,16 +21,16 @@ Public Class frmordersadminpassclear
 
 
     Private Sub adminclearorder_Click(sender As Object, e As EventArgs) Handles adminclearorder.Click
+        Dim reader As MySqlDataReader
+
         With Command
             .Connection = Connect
             .CommandText = "SELECT password FROM tbladministrators WHERE username = 'admin'"
-            .ExecuteNonQuery()
         End With
+        reader = Command.ExecuteReader
 
-        Dim reply As MsgBoxResult
-
-        reply = MsgBox("Do you really want to Clear?", MsgBoxStyle.YesNoCancel, "Clear")
-        If reply = MsgBoxResult.Yes Then
+        If reader.HasRows Then
+            reader.Read()
             frmMain.dgvorders.Rows.Clear()
             Me.Close()
         End If
