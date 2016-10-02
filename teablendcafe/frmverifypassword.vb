@@ -27,7 +27,7 @@ Public Class frmverifypassword
 
     Private Sub btnverify_Click(sender As Object, e As EventArgs) Handles btnverify.Click
         ' if tama ung password
-        Dim check As String
+        Dim check As String = ""
 
         With Command
             .Connection = Connect
@@ -47,11 +47,14 @@ Public Class frmverifypassword
                 Case "addmember"
                     addcustomer.ShowDialog()
                 Case "editmember"
-                    frmmemberedit.ShowDialog()
+                    frmmemers_editchoices.ShowDialog()
+
 
             End Select
             ' end if
         End If
+        Reader.Close()
+        tbbadminpassword.Clear()
         Me.Close()
     End Sub
 End Class

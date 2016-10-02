@@ -1102,7 +1102,8 @@ Public Class frmMain
 
     Private Sub btnmembers_add_Click(sender As Object, e As EventArgs) Handles btnmembers_add.Click
         frmverifypassword.state = "addmember"
-        addcustomer.ShowDialog()
+        frmverifypassword.ShowDialog()
+
     End Sub
 
     Private Sub dgvorders_RowStateChanged(sender As Object, e As DataGridViewRowStateChangedEventArgs) Handles dgvorders.RowStateChanged
@@ -1227,9 +1228,8 @@ Public Class frmMain
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         frmverifypassword.state = "editmember"
-        SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
-        userSelected = SelectedMember
-        frmmemers_editchoices.ShowDialog()
+        frmverifypassword.ShowDialog()
+
     End Sub
 
     Private Sub btnclearorder_Click(sender As Object, e As EventArgs) Handles btnclearorder.Click
