@@ -75,6 +75,7 @@ Partial Class frmremainingload
         '
         'tbchange
         '
+        Me.tbchange.Enabled = False
         Me.tbchange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbchange.Location = New System.Drawing.Point(54, 120)
         Me.tbchange.Name = "tbchange"
@@ -83,6 +84,7 @@ Partial Class frmremainingload
         '
         'tbtotal
         '
+        Me.tbtotal.Enabled = False
         Me.tbtotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbtotal.Location = New System.Drawing.Point(54, 56)
         Me.tbtotal.Name = "tbtotal"
