@@ -2,9 +2,10 @@
 Public Class deletemem
 
     Dim Command As New MySqlCommand
-    Dim Reader As MySqlDataReader
     Dim Connect As New MySqlConnection
     Dim str As String
+
+    Public SelectedMember As String
 
     Public Sub ConnectDB()
         If Connect.State = ConnectionState.Closed Then
@@ -18,20 +19,29 @@ Public Class deletemem
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim reader As MySqlDataReader
         With Command
             .Connection = Connect
             .CommandText = "SELECT password FROM tbladministrators WHERE username = 'admin'"
-            .ExecuteNonQuery()
         End With
-        'del'
-        Dim reply As String
+        reader = Command.ExecuteReader
+        If reader.HasRows Then
+            reader.Read()
+            If txtPass.Text = reader.Item(0).ToString Then
+                reader.Close()
 
+                With Command
+                    .Connection = Connect
+                    .CommandText = "UPDATE tblcustomers SET status='Inactive' WHERE cus_no = '" & SelectedMember & "'"
+                    .ExecuteNonQuery()
+                End With
+                frmMain.membersDGV()
+                MsgBox("Member " + SelectedMember + " successfully voided!", vbOKOnly + vbInformation, "Message")
 
-        reply = MsgBox("Do you really want to Delete this current order(s)?", MsgBoxStyle.YesNoCancel, "Clear")
-        If reply = MsgBoxResult.Yes Then
-            frmMain.dgv_members.Rows.RemoveAt(frmMain.dgvorders.CurrentRow.Index)
-            Me.Close()
+            End If
         End If
+        reader.Close()
+        Me.Close()
     End Sub
 
     Private Sub admispasswordcancel_Click(sender As Object, e As EventArgs) Handles admispasswordcancel.Click

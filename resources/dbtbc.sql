@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD:dbtbc (2).sql
--- Generation Time: Oct 01, 2016 at 08:16 AM
-=======
--- Generation Time: Sep 25, 2016 at 05:15 PM
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
+-- Generation Time: Oct 02, 2016 at 05:59 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -41,14 +37,9 @@ CREATE TABLE `tbladministrators` (
 --
 
 INSERT INTO `tbladministrators` (`username`, `password`, `type`) VALUES
-<<<<<<< HEAD:dbtbc (2).sql
 ('admin', 'admin', 'manager'),
 ('test1', 'test1', 'cashier'),
 ('test2', 'test2', 'manager');
-=======
-('admin', 'admin', 'superuser'),
-('z', 'mypass', 'Super User');
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
 
 -- --------------------------------------------------------
 
@@ -60,22 +51,17 @@ CREATE TABLE `tblcustomers` (
   `cus_no` varchar(10) NOT NULL,
   `cus_name` varchar(25) NOT NULL,
   `cus_since` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `cus_loadwallet` int(6) NOT NULL
+  `cus_loadwallet` int(6) NOT NULL,
+  `status` varchar(10) NOT NULL DEFAULT 'Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblcustomers`
 --
 
-INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`) VALUES
-<<<<<<< HEAD:dbtbc (2).sql
-('1', 'TEST', '2016-09-30 21:20:50', 100),
-('tbc123', 'BETATESTER', '2016-09-30 21:20:34', 823);
-=======
-('tbc1', 'testtest', '2016-09-23 23:24:40', 100),
-('tbc123', 'dfg', '2016-09-23 22:00:05', 200),
-('tbc456', 'testing test', '2016-09-21 21:14:58', 300);
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
+INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`, `status`) VALUES
+('1', 'TEST', '2016-10-02 15:58:10', 100, 'Active'),
+('tbc123', 'BETATESTER', '2016-09-30 21:20:34', 823, 'Active');
 
 -- --------------------------------------------------------
 
@@ -93,7 +79,6 @@ CREATE TABLE `tblinventory` (
 --
 
 INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
-<<<<<<< HEAD:dbtbc (2).sql
 ('DSG_SS', 50),
 ('DSH_BB', 50),
 ('DSH_C', 50),
@@ -102,7 +87,7 @@ INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
 ('DSH_CP', 50),
 ('DSH_CS', 50),
 ('DSH_ES', 50),
-('DSH_FB', 44),
+('DSH_FB', 41),
 ('DSH_HS', 50),
 ('DSH_IB', 50),
 ('DSH_LS', 50),
@@ -110,7 +95,7 @@ INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
 ('DSH_PP', 50),
 ('DSH_SB', 50),
 ('DSH_SS', 50),
-('DSH_TD', 48),
+('DSH_TD', 45),
 ('DSH_TE', 49),
 ('DSH_UC', 50),
 ('D_BBT', 50),
@@ -142,56 +127,6 @@ INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
 ('D_WC', 50),
 ('D_WM', 50),
 ('D_ZD', 50);
-=======
-('DSG_SS', 31),
-('DSH_BB', 30),
-('DSH_C', 30),
-('DSH_CB', 30),
-('DSH_CC', 30),
-('DSH_CP', 30),
-('DSH_CS', 30),
-('DSH_ES', 30),
-('DSH_FB', 30),
-('DSH_HS', 30),
-('DSH_IB', 30),
-('DSH_LS', 30),
-('DSH_N', 30),
-('DSH_PP', 30),
-('DSH_SB', 30),
-('DSH_SS', 29),
-('DSH_TD', 30),
-('DSH_TE', 25),
-('DSH_UC', 30),
-('D_BBT', 30),
-('D_CK', 30),
-('D_CL', 30),
-('D_DP', 30),
-('D_GAT', 30),
-('D_HMT', 30),
-('D_KT', 30),
-('D_Lemo', 30),
-('D_LL', 30),
-('D_LT', 30),
-('D_MM', 30),
-('D_MMT', 30),
-('D_MS', 21),
-('D_MT', 30),
-('D_OW', 30),
-('D_PB', 30),
-('D_PK', 30),
-('D_PMK', 30),
-('D_PT', 30),
-('D_SB', 30),
-('D_SMT', 30),
-('D_SS', 30),
-('D_ST', 30),
-('D_TM', 30),
-('D_TT', 28),
-('D_VC', 30),
-('D_WC', 30),
-('D_WM', 30),
-('D_ZD', 30);
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
 
 -- --------------------------------------------------------
 
@@ -202,11 +137,8 @@ INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
 CREATE TABLE `tblorders` (
   `ord_code` varchar(15) NOT NULL,
   `total` double NOT NULL,
-<<<<<<< HEAD:dbtbc (2).sql
   `ord_change` double NOT NULL,
   `ord_tendered` double NOT NULL,
-=======
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
   `ord_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -214,24 +146,14 @@ CREATE TABLE `tblorders` (
 -- Dumping data for table `tblorders`
 --
 
-<<<<<<< HEAD:dbtbc (2).sql
 INSERT INTO `tblorders` (`ord_code`, `total`, `ord_change`, `ord_tendered`, `ord_date`) VALUES
 ('011016011344-48', 70, 2242, 2312, '2016-10-01'),
 ('011016012511-44', 338, 162, 500, '2016-10-01'),
 ('011016013340-31', 695, 5, 700, '2016-10-01'),
 ('011016051639-85', 70, 0, 0, '2016-10-01'),
 ('011016051934-77', 149, 0, 0, '2016-10-01'),
-('011016052034-70', 139, 0, 0, '2016-10-01');
-=======
-INSERT INTO `tblorders` (`ord_code`, `total`, `ord_date`) VALUES
-('250916-12579', 147, '2016-09-25'),
-('250916-19200', 110, '2016-09-25'),
-('250916-25592', 98, '2016-09-25'),
-('250916-32086', 350, '2016-09-25'),
-('250916-70420', 129, '2016-09-25'),
-('250916-80007', 745, '2016-09-25'),
-('250916-89693', 220, '2016-09-25');
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
+('011016052034-70', 139, 0, 0, '2016-10-01'),
+('021016122605-31', 924, 76, 1000, '2016-10-02');
 
 -- --------------------------------------------------------
 
@@ -252,13 +174,14 @@ CREATE TABLE `tblorder_prod` (
 --
 
 INSERT INTO `tblorder_prod` (`ord_code`, `prod_code`, `prod_name`, `prod_qty`, `prod_price`) VALUES
-<<<<<<< HEAD:dbtbc (2).sql
 ('011016011344-48', 'D_TT', 'Taro Treat Venti', 1, 70),
 ('011016012511-44', 'DSH_TD', 'TBC Double Decker', 2, 169),
 ('011016013340-31', 'DSH_FB', 'Flaming Buffalo Wing', 5, 139),
 ('011016051639-85', 'D_TT', 'Taro Treat Venti', 1, 70),
 ('011016051934-77', 'DSH_TE', 'Tofu Express', 1, 149),
 ('011016052034-70', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
+('021016122605-31', 'DSH_FB', 'Flaming Buffalo Wing', 3, 139),
+('021016122605-31', 'DSH_TD', 'TBC Double Decker', 3, 169),
 ('260916022731-42', 'DSH_FB', 'Flaming Buffalo Wing', 5, 139),
 ('260916022731-42', 'DSH_TE', 'Tofu Express', 4, 149),
 ('260916023038-40', 'DSH_TE', 'Tofu Express', 5, 149),
@@ -310,15 +233,6 @@ INSERT INTO `tblorder_prod` (`ord_code`, `prod_code`, `prod_name`, `prod_qty`, `
 ('290916120831-41', 'DSH_C', 'Churros', 4, 49),
 ('290916121207-54', 'DSH_C', 'Churros', 5, 49),
 ('290916122610-75', 'DSH_BB', 'BBQ Burger', 5, 99);
-=======
-('250916-12579', 'DSH_C', 'Churros', 3, 49),
-('250916-19200', 'D_TT', 'Taro Treat Grande', 2, 55),
-('250916-25592', 'DSH_C', 'Churros', 2, 49),
-('250916-32086', 'D_MS', 'Melon Swirl Venti', 5, 70),
-('250916-70420', 'DSH_SS', 'Sizzling Sisig', 1, 129),
-('250916-80007', 'DSH_TE', 'Tofu Express', 5, 149),
-('250916-89693', 'D_MS', 'Melon Swirl Grande', 4, 55);
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
 
 -- --------------------------------------------------------
 
@@ -392,7 +306,6 @@ INSERT INTO `tblproducts` (`prod_code`, `prod_name`, `prod_priceG`, `prod_priceV
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD:dbtbc (2).sql
 -- Table structure for table `tbltimeintimeout`
 --
 
@@ -408,13 +321,25 @@ CREATE TABLE `tbltimeintimeout` (
 
 INSERT INTO `tbltimeintimeout` (`user`, `time`, `description`) VALUES
 ('admin', '2016-09-30 18:42:36', 'in'),
-('admin', '2016-09-30 19:31:09', 'in');
+('admin', '2016-09-30 19:31:09', 'in'),
+('admin', '2016-10-01 14:50:56', 'in'),
+('admin', '2016-10-01 15:09:46', 'in'),
+('admin', '2016-10-01 15:38:40', 'in'),
+('admin', '2016-10-01 15:52:43', 'in'),
+('admin', '2016-10-01 15:53:36', 'in'),
+('admin', '2016-10-01 16:14:39', 'in'),
+('admin', '2016-10-01 16:25:42', 'in'),
+('admin', '2016-10-02 07:42:31', 'in'),
+('admin', '2016-10-02 10:19:29', 'in'),
+('admin', '2016-10-02 10:20:32', 'out'),
+('admin', '2016-10-02 11:07:19', 'in'),
+('admin', '2016-10-02 11:10:10', 'out'),
+('admin', '2016-10-02 11:39:46', 'in'),
+('admin', '2016-10-02 15:18:18', 'in');
 
 -- --------------------------------------------------------
 
 --
-=======
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
 -- Table structure for table `tbltransaction`
 --
 
@@ -428,11 +353,7 @@ CREATE TABLE `tbltransaction` (
 --
 
 INSERT INTO `tbltransaction` (`id`, `cus_no`) VALUES
-<<<<<<< HEAD:dbtbc (2).sql
 (1, 'tbc123');
-=======
-(1, '0');
->>>>>>> refs/remotes/hordsmaykill/master:resources/dbtbc.sql
 
 --
 -- Indexes for dumped tables
