@@ -26,7 +26,7 @@ Partial Class frmremainingload
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblchange = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.tbchangee = New System.Windows.Forms.TextBox()
+        Me.tbchange = New System.Windows.Forms.TextBox()
         Me.tbtotal = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -37,7 +37,7 @@ Partial Class frmremainingload
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.lblchange)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.tbchangee)
+        Me.Panel1.Controls.Add(Me.tbchange)
         Me.Panel1.Controls.Add(Me.tbtotal)
         Me.Panel1.Location = New System.Drawing.Point(12, 20)
         Me.Panel1.Name = "Panel1"
@@ -73,13 +73,13 @@ Partial Class frmremainingload
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Total Bill"
         '
-        'tbchangee
+        'tbchange
         '
-        Me.tbchangee.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbchangee.Location = New System.Drawing.Point(54, 120)
-        Me.tbchangee.Name = "tbchangee"
-        Me.tbchangee.Size = New System.Drawing.Size(179, 26)
-        Me.tbchangee.TabIndex = 0
+        Me.tbchange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbchange.Location = New System.Drawing.Point(54, 120)
+        Me.tbchange.Name = "tbchange"
+        Me.tbchange.Size = New System.Drawing.Size(179, 26)
+        Me.tbchange.TabIndex = 0
         '
         'tbtotal
         '
@@ -110,6 +110,6 @@ Partial Class frmremainingload
     Friend WithEvents Button1 As Button
     Friend WithEvents lblchange As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents tbchangee As TextBox
+    Friend WithEvents tbchange As TextBox
     Friend WithEvents tbtotal As TextBox
 End Class
