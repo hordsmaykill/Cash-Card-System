@@ -36,19 +36,20 @@ Partial Class login
         'tbusername
         '
         Me.tbusername.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbusername.ForeColor = System.Drawing.SystemColors.GrayText
         Me.tbusername.Location = New System.Drawing.Point(198, 269)
         Me.tbusername.Name = "tbusername"
         Me.tbusername.Size = New System.Drawing.Size(252, 29)
-        Me.tbusername.TabIndex = 0
+        Me.tbusername.TabIndex = 1
         '
         'tbpassword
         '
         Me.tbpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbpassword.ForeColor = System.Drawing.SystemColors.GrayText
         Me.tbpassword.Location = New System.Drawing.Point(198, 304)
         Me.tbpassword.Name = "tbpassword"
-        Me.tbpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbpassword.Size = New System.Drawing.Size(252, 29)
-        Me.tbpassword.TabIndex = 1
+        Me.tbpassword.TabIndex = 2
         '
         'lDate
         '
@@ -58,7 +59,7 @@ Partial Class login
         Me.lDate.Location = New System.Drawing.Point(46, 97)
         Me.lDate.Name = "lDate"
         Me.lDate.Size = New System.Drawing.Size(28, 13)
-        Me.lDate.TabIndex = 7
+        Me.lDate.TabIndex = 0
         Me.lDate.Text = "date"
         '
         'lTime
@@ -81,7 +82,7 @@ Partial Class login
         Me.btnlogin.Location = New System.Drawing.Point(198, 355)
         Me.btnlogin.Name = "btnlogin"
         Me.btnlogin.Size = New System.Drawing.Size(114, 39)
-        Me.btnlogin.TabIndex = 9
+        Me.btnlogin.TabIndex = 0
         Me.btnlogin.Text = "LOGIN"
         Me.btnlogin.UseVisualStyleBackColor = True
         '
@@ -90,7 +91,7 @@ Partial Class login
         Me.btnexit.Location = New System.Drawing.Point(336, 355)
         Me.btnexit.Name = "btnexit"
         Me.btnexit.Size = New System.Drawing.Size(114, 39)
-        Me.btnexit.TabIndex = 10
+        Me.btnexit.TabIndex = 3
         Me.btnexit.Text = "EXIT"
         Me.btnexit.UseVisualStyleBackColor = True
         '
