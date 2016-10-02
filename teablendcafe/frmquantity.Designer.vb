@@ -40,12 +40,14 @@ Partial Class frmquantity
         Me.btnOk = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNum = New System.Windows.Forms.TextBox()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.num0)
         Me.Panel1.Controls.Add(Me.num9)
         Me.Panel1.Controls.Add(Me.num6)
@@ -64,21 +66,21 @@ Partial Class frmquantity
         Me.Panel1.Controls.Add(Me.txtNum)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(247, 345)
+        Me.Panel1.Size = New System.Drawing.Size(247, 347)
         Me.Panel1.TabIndex = 0
         '
         'num0
         '
-        Me.num0.Location = New System.Drawing.Point(183, 244)
+        Me.num0.Location = New System.Drawing.Point(185, 177)
         Me.num0.Name = "num0"
-        Me.num0.Size = New System.Drawing.Size(52, 51)
+        Me.num0.Size = New System.Drawing.Size(52, 118)
         Me.num0.TabIndex = 12
         Me.num0.Text = "0"
         Me.num0.UseVisualStyleBackColor = True
         '
         'num9
         '
-        Me.num9.Location = New System.Drawing.Point(126, 244)
+        Me.num9.Location = New System.Drawing.Point(127, 244)
         Me.num9.Name = "num9"
         Me.num9.Size = New System.Drawing.Size(52, 51)
         Me.num9.TabIndex = 12
@@ -87,7 +89,7 @@ Partial Class frmquantity
         '
         'num6
         '
-        Me.num6.Location = New System.Drawing.Point(167, 177)
+        Me.num6.Location = New System.Drawing.Point(129, 177)
         Me.num6.Name = "num6"
         Me.num6.Size = New System.Drawing.Size(52, 51)
         Me.num6.TabIndex = 12
@@ -96,7 +98,7 @@ Partial Class frmquantity
         '
         'num3
         '
-        Me.num3.Location = New System.Drawing.Point(167, 114)
+        Me.num3.Location = New System.Drawing.Point(129, 114)
         Me.num3.Name = "num3"
         Me.num3.Size = New System.Drawing.Size(52, 51)
         Me.num3.TabIndex = 12
@@ -123,7 +125,7 @@ Partial Class frmquantity
         '
         'num5
         '
-        Me.num5.Location = New System.Drawing.Point(99, 177)
+        Me.num5.Location = New System.Drawing.Point(70, 177)
         Me.num5.Name = "num5"
         Me.num5.Size = New System.Drawing.Size(52, 51)
         Me.num5.TabIndex = 12
@@ -132,7 +134,7 @@ Partial Class frmquantity
         '
         'num4
         '
-        Me.num4.Location = New System.Drawing.Point(32, 177)
+        Me.num4.Location = New System.Drawing.Point(12, 177)
         Me.num4.Name = "num4"
         Me.num4.Size = New System.Drawing.Size(52, 51)
         Me.num4.TabIndex = 12
@@ -141,7 +143,7 @@ Partial Class frmquantity
         '
         'num2
         '
-        Me.num2.Location = New System.Drawing.Point(99, 114)
+        Me.num2.Location = New System.Drawing.Point(70, 114)
         Me.num2.Name = "num2"
         Me.num2.Size = New System.Drawing.Size(52, 51)
         Me.num2.TabIndex = 12
@@ -150,7 +152,7 @@ Partial Class frmquantity
         '
         'num1
         '
-        Me.num1.Location = New System.Drawing.Point(32, 114)
+        Me.num1.Location = New System.Drawing.Point(12, 114)
         Me.num1.Name = "num1"
         Me.num1.Size = New System.Drawing.Size(52, 51)
         Me.num1.TabIndex = 12
@@ -211,14 +213,24 @@ Partial Class frmquantity
         Me.txtNum.Name = "txtNum"
         Me.txtNum.Size = New System.Drawing.Size(111, 47)
         Me.txtNum.TabIndex = 6
+        Me.txtNum.Text = "0"
         Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(185, 114)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(52, 51)
+        Me.btnClear.TabIndex = 13
+        Me.btnClear.Text = "C"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
         'frmquantity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(271, 361)
+        Me.ClientSize = New System.Drawing.Size(271, 371)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -248,4 +260,5 @@ Partial Class frmquantity
     Friend WithEvents num7 As Button
     Friend WithEvents num5 As Button
     Friend WithEvents num4 As Button
+    Friend WithEvents btnClear As Button
 End Class

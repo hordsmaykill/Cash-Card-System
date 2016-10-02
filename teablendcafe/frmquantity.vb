@@ -15,11 +15,14 @@ Public Class frmquantity
         End If
 
         txtNum.Text = ""
-        qty = 1
+        qty = 0
 
     End Sub
 
     Private Sub numClicked(n As String)
+        If txtNum.Text = "0" Then
+            txtNum.Text = ""
+        End If
         txtNum.Text &= n
     End Sub
 
@@ -29,6 +32,11 @@ Public Class frmquantity
         Dim reader As MySqlDataReader
 
         Dim qtyFromDB As Integer
+
+        If txtNum.Text = "0" Then
+            MsgBox("Invalid quantity. quantity must be >= 1")
+            Exit Sub
+        End If
 
 
         With cmd
@@ -145,5 +153,10 @@ Public Class frmquantity
 
     Private Sub num9_Click(sender As Object, e As EventArgs) Handles num9.Click
         numClicked("9")
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        txtNum.Text = ""
+        qty = 0
     End Sub
 End Class
