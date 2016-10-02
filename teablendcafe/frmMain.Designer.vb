@@ -233,7 +233,7 @@ Partial Class frmMain
         Me.ltime = New System.Windows.Forms.Label()
         Me.lDate = New System.Windows.Forms.Label()
         Me.panAssessment = New System.Windows.Forms.Panel()
-        Me.Panel34 = New System.Windows.Forms.Panel()
+        Me.panMember = New System.Windows.Forms.Panel()
         Me.btnmembers_del = New System.Windows.Forms.Button()
         Me.btnmembers_add = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -328,7 +328,7 @@ Partial Class frmMain
         Me.panHome.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.panAssessment.SuspendLayout()
-        Me.Panel34.SuspendLayout()
+        Me.panMember.SuspendLayout()
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panInventory.SuspendLayout()
         CType(Me.inventorydgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -637,7 +637,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -2800)
+        Me.panContent.Location = New System.Drawing.Point(230, -2100)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -2701,23 +2701,23 @@ Partial Class frmMain
         '
         Me.panAssessment.BackColor = System.Drawing.Color.Transparent
         Me.panAssessment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.panAssessment.Controls.Add(Me.Panel34)
+        Me.panAssessment.Controls.Add(Me.panMember)
         Me.panAssessment.Location = New System.Drawing.Point(0, 2105)
         Me.panAssessment.Name = "panAssessment"
         Me.panAssessment.Size = New System.Drawing.Size(1366, 695)
         Me.panAssessment.TabIndex = 8
         '
-        'Panel34
+        'panMember
         '
-        Me.Panel34.Controls.Add(Me.btnmembers_del)
-        Me.Panel34.Controls.Add(Me.btnmembers_add)
-        Me.Panel34.Controls.Add(Me.Button6)
-        Me.Panel34.Controls.Add(Me.dgv_members)
-        Me.Panel34.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel34.Location = New System.Drawing.Point(0, 0)
-        Me.Panel34.Name = "Panel34"
-        Me.Panel34.Size = New System.Drawing.Size(1366, 695)
-        Me.Panel34.TabIndex = 0
+        Me.panMember.Controls.Add(Me.btnmembers_del)
+        Me.panMember.Controls.Add(Me.btnmembers_add)
+        Me.panMember.Controls.Add(Me.Button6)
+        Me.panMember.Controls.Add(Me.dgv_members)
+        Me.panMember.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panMember.Location = New System.Drawing.Point(0, 0)
+        Me.panMember.Name = "panMember"
+        Me.panMember.Size = New System.Drawing.Size(1366, 695)
+        Me.panMember.TabIndex = 0
         '
         'btnmembers_del
         '
@@ -3097,7 +3097,7 @@ Partial Class frmMain
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.panAssessment.ResumeLayout(False)
-        Me.Panel34.ResumeLayout(False)
+        Me.panMember.ResumeLayout(False)
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panInventory.ResumeLayout(False)
         Me.panInventory.PerformLayout()
@@ -3318,7 +3318,7 @@ Partial Class frmMain
     Friend WithEvents accounts_dgv As DataGridView
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents Panel34 As Panel
+    Friend WithEvents panMember As Panel
     Friend WithEvents btnmembers_del As Button
     Friend WithEvents btnmembers_add As Button
     Friend WithEvents Button6 As Button

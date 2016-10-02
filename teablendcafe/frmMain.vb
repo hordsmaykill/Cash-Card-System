@@ -152,6 +152,18 @@ Public Class frmMain
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
 
+        For Each ctrl As Control In panMenu.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In panMember.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In panAccounts.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
         For Each ctrl As Control In panmenumenu.Controls
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
@@ -159,6 +171,38 @@ Public Class frmMain
         For Each ctrl As Control In panAssessment.Controls
             AddHandler ctrl.Click, AddressOf ctrl_Click
         Next
+
+        For Each ctrl As Control In GroupBox1.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In drinks_panmenu1.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In sub_panmenu1.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In main_panmenu1.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In Drinks_panmenu.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In Panel3.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        For Each ctrl As Control In main_panmenu.Controls
+            AddHandler ctrl.Click, AddressOf ctrl_Click
+        Next
+
+        AddHandler dgv_members.Click, AddressOf ctrl_Click
+
+        AddHandler accounts_dgv.Click, AddressOf ctrl_Click
 
     End Sub
 
