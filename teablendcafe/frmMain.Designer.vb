@@ -205,7 +205,7 @@ Partial Class frmMain
         Me.drinks_panemenubtn2 = New System.Windows.Forms.Button()
         Me.drinks_panemenubtn1 = New System.Windows.Forms.Button()
         Me.panAccounts = New System.Windows.Forms.Panel()
-        Me.account_delbtn = New System.Windows.Forms.Button()
+        Me.btnAccLogs = New System.Windows.Forms.Button()
         Me.account_editbtn = New System.Windows.Forms.Button()
         Me.account_addbtn = New System.Windows.Forms.Button()
         Me.accounts_dgv = New System.Windows.Forms.DataGridView()
@@ -522,7 +522,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -1400)
+        Me.panContent.Location = New System.Drawing.Point(230, -2800)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -2406,7 +2406,7 @@ Partial Class frmMain
         'panAccounts
         '
         Me.panAccounts.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.panAccounts.Controls.Add(Me.account_delbtn)
+        Me.panAccounts.Controls.Add(Me.btnAccLogs)
         Me.panAccounts.Controls.Add(Me.account_editbtn)
         Me.panAccounts.Controls.Add(Me.account_addbtn)
         Me.panAccounts.Controls.Add(Me.accounts_dgv)
@@ -2415,14 +2415,14 @@ Partial Class frmMain
         Me.panAccounts.Size = New System.Drawing.Size(1366, 703)
         Me.panAccounts.TabIndex = 10
         '
-        'account_delbtn
+        'btnAccLogs
         '
-        Me.account_delbtn.Location = New System.Drawing.Point(898, 618)
-        Me.account_delbtn.Name = "account_delbtn"
-        Me.account_delbtn.Size = New System.Drawing.Size(134, 75)
-        Me.account_delbtn.TabIndex = 3
-        Me.account_delbtn.Text = "delete"
-        Me.account_delbtn.UseVisualStyleBackColor = True
+        Me.btnAccLogs.Location = New System.Drawing.Point(898, 618)
+        Me.btnAccLogs.Name = "btnAccLogs"
+        Me.btnAccLogs.Size = New System.Drawing.Size(134, 75)
+        Me.btnAccLogs.TabIndex = 3
+        Me.btnAccLogs.Text = "Logs"
+        Me.btnAccLogs.UseVisualStyleBackColor = True
         '
         'account_editbtn
         '
@@ -3312,7 +3312,7 @@ Partial Class frmMain
     Friend WithEvents btnOrder As Button
     Friend WithEvents txtTotalOrder As TextBox
     Friend WithEvents btnDeleteOrders As Button
-    Friend WithEvents account_delbtn As Button
+    Friend WithEvents btnAccLogs As Button
     Friend WithEvents account_editbtn As Button
     Friend WithEvents account_addbtn As Button
     Friend WithEvents accounts_dgv As DataGridView
