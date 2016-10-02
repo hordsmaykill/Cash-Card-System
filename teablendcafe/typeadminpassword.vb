@@ -25,14 +25,21 @@ Public Class typeadminpassword
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim reader As MySqlDataReader
         With Command
             .Connection = Connect
             .CommandText = "SELECT password FROM tbladministrators WHERE username = 'admin'"
-            .ExecuteNonQuery()
         End With
-        editaccounts.ShowDialog()
+        reader = Command.ExecuteReader
 
-
+        If reader.HasRows Then
+            reader.Read()
+            If txtPass.Text = reader.Item(0) Then
+                reader.Close()
+                editaccounts.ShowDialog()
+            End If
+        End If
+        reader.Close()
         Me.Close()
     End Sub
 End Class

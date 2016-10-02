@@ -23,8 +23,7 @@ Public Class editaccounts
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim SelectedAccount As String = frmMain.accounts_dgv.Item(0, frmMain.accounts_dgv.CurrentRow.Index).Value
-
+        Dim SelectedAccount As String = frmMain.userSelected
         With Command
             .Connection = Connect
             .CommandText = "UPDATE tbladministrators SET username='" & tbusernameeditac.Text & "',password='" & tbusernameeditpass.Text & "',type='" & cbnewusertype.Text & "' WHERE username= '" & SelectedAccount & "'"

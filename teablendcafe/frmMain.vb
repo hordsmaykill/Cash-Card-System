@@ -1077,7 +1077,6 @@ Public Class frmMain
         typeadminpassword.ShowDialog()
     End Sub
 
-    ''
     Private Sub ChangePass()
         Dim Username As String
         SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
