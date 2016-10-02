@@ -20,6 +20,9 @@ Public Class login
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call ConnectDB()
+
+        tbusername.Text = "username"
+        tbpassword.Text = "password"
         TransparencyKey = BackColor
         Me.AcceptButton = btnlogin
         Me.CancelButton = btnexit
@@ -71,7 +74,7 @@ Public Class login
 
         reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")
         If reply = MsgBoxResult.Yes Then
-            Environment.Exit(0)
+            Me.Close()
         End If
     End Sub
 
@@ -99,5 +102,37 @@ Public Class login
         End If
         Reader.Close()
     End Sub
+
+    Private Sub tbusername_Enter(sender As Object, e As EventArgs) Handles tbusername.Enter
+        If tbusername.Text = "username" Then
+            tbusername.Text = ""
+            tbusername.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub tbusername_Leave(sender As Object, e As EventArgs) Handles tbusername.Leave
+        If tbusername.Text = "" Then
+            tbusername.Text = "username"
+            tbusername.ForeColor = Color.Gray
+        End If
+    End Sub
+
+    Private Sub tbpassword_Enter(sender As Object, e As EventArgs) Handles tbpassword.Enter
+        If tbpassword.Text = "password" Then
+            tbpassword.Text = ""
+            tbpassword.PasswordChar = "*"
+            tbpassword.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub tbpassword_Leave(sender As Object, e As EventArgs) Handles tbpassword.Leave
+        If tbpassword.Text = "" Then
+            tbpassword.Text = "password"
+            tbpassword.PasswordChar = ""
+            tbpassword.ForeColor = Color.Gray
+        End If
+    End Sub
+
+
     ''
 End Class
