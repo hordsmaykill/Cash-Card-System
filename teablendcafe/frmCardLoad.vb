@@ -74,7 +74,7 @@ Public Class frmCardLoad
 
 
         ' insert id and date
-        cmd.CommandText = "INSERT INTO tblorders VALUES('" & ord_code & "', " & total & ", '" & curDate & "')"
+        cmd.CommandText = "INSERT INTO tblorders(ord_code, total, ord_date) VALUES('" & ord_code & "', " & total & ", '" & curDate & "')"
         cmd.ExecuteNonQuery()
 
         For i As Integer = 0 To frmMain.dgvorders.RowCount - 1
@@ -110,7 +110,7 @@ Public Class frmCardLoad
         Next
 
         ' update wallet value
-        cmd.CommandText = "SELECT cus_loadwallet FROM tblcustomers"
+        cmd.CommandText = "SELECT cus_loadwallet FROM tblcustomers WHERE cus_no='" & customerNumber & "'"
         reader = cmd.ExecuteReader()
 
         reader.Read()
