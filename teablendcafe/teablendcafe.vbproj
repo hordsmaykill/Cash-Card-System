@@ -562,6 +562,7 @@
     <None Include="Resources\default.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\arrowleft.png" />
     <Content Include="Resources\tbc.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

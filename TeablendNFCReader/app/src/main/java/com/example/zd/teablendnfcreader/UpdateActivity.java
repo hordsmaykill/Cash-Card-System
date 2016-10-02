@@ -30,8 +30,9 @@ public class UpdateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
 
-        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-        ip = prefs.getString("ip", "10.0.0.2");
+        //prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        //ip = prefs.getString("ip", "10.0.0.2");
+        ip = "192.168.1.13";
 
         Bundle extras = getIntent().getExtras();
         String result = extras.getString("result");
