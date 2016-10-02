@@ -124,6 +124,12 @@
     <Compile Include="frmCardLoad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmetramount.Designer.vb">
+      <DependentUpon>frmetramount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmetramount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frminvedit.Designer.vb">
       <DependentUpon>frminvedit.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,12 @@
       <DependentUpon>frmquantity.vb</DependentUpon>
     </Compile>
     <Compile Include="frmquantity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtotal.Designer.vb">
+      <DependentUpon>frmtotal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmtotal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.vb">
@@ -238,6 +250,9 @@
     <EmbeddedResource Include="frmCardLoad.resx">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmetramount.resx">
+      <DependentUpon>frmetramount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frminvedit.resx">
       <DependentUpon>frminvedit.vb</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmquantity.resx">
       <DependentUpon>frmquantity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtotal.resx">
+      <DependentUpon>frmtotal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
