@@ -43,13 +43,15 @@ Public Class login
 
 
         If Reader.HasRows Then
-            MsgBox("Welcome" & Reader.Item(0).ToString & "", vbInformation + vbOKOnly, "Message")
+            Dim user As String
+            user = Reader.Item(0).ToString
+            MsgBox("Welcome" & user & "", vbInformation + vbOKOnly, "Message")
             user = Reader.Item(0)
 
             Reader.Close()
             Call checkingpriviledges()
             ' set current user
-            frmMain.currentUser = Reader.Item(0).ToString
+            frmMain.currentUser = user
 
             With Command
                 .CommandText = "INSERT INTO tbltimeintimeout (user, description) VALUES('" & user & "','in')"
