@@ -142,6 +142,12 @@
     <Compile Include="frminvedit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLogs.Designer.vb">
+      <DependentUpon>frmLogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frminvedit.resx">
       <DependentUpon>frminvedit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogs.resx">
+      <DependentUpon>frmLogs.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -563,6 +572,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrowleft.png" />
+    <None Include="Resources\drinks.jpg" />
+    <None Include="Resources\drinks1.jpg" />
+    <None Include="Resources\maincourse.jpg" />
+    <None Include="Resources\Forsharing.jpg" />
     <Content Include="Resources\tbc.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -62,6 +62,21 @@ teablendcafe
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:teablendcafe.My.Resources.Resources.drinks">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.drinks1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.Forsharing">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:teablendcafe.My.Resources.Resources.frm">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -158,6 +173,11 @@ teablendcafe
 </summary>
 </member>
 <member name="P:teablendcafe.My.Resources.Resources.logout1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:teablendcafe.My.Resources.Resources.maincourse">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
