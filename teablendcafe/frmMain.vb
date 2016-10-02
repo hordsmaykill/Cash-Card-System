@@ -1244,10 +1244,5 @@ Public Class frmMain
         typeadminpassworddelete.ShowDialog()
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As EventArgs)
-
-    End Sub
-
-
 End Class
 

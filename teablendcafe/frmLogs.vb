@@ -10,6 +10,10 @@ Public Class frmLogs
             Connect.ConnectionString = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
             Connect.Open()
         End If
+
+        lblUser.Text = "Logs for: " & user
+
+        updateDGV()
     End Sub
 
     Private Sub updateDGV()
@@ -18,14 +22,13 @@ Public Class frmLogs
         Dim reader As MySqlDataReader
         With cmd
             .Connection = Connect
-            .CommandText = ""
+            .CommandText = "SELECT time, description FROM tbltimeintimeout WHERE user = '" & user & "'"
         End With
         reader = cmd.ExecuteReader
         If reader.HasRows Then
             dgv.Rows.Clear()
-            While reader.Read
-                dgv.Rows.Add()
-
+            While reader.Read()
+                dgv.Rows.Add(reader.Item(0), reader.Item(1))
             End While
         End If
 

@@ -173,6 +173,12 @@
     <Compile Include="frmquantity.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmremainingload.Designer.vb">
+      <DependentUpon>frmremainingload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmremainingload.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmtotal.Designer.vb">
       <DependentUpon>frmtotal.vb</DependentUpon>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmquantity.resx">
       <DependentUpon>frmquantity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmremainingload.resx">
+      <DependentUpon>frmremainingload.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtotal.resx">
       <DependentUpon>frmtotal.vb</DependentUpon>

@@ -147,3 +147,4 @@ C:\Users\Kizaku\Desktop\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frm
 D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmetramount.resources
 D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmtotal.resources
 D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmLogs.resources
+D:\zD\Documents\GitHub\Cash-Card-System\teablendcafe\obj\Debug\teablendcafe.frmremainingload.resources

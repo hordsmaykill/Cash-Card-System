@@ -44,10 +44,13 @@ Partial Class frmLogs
         '
         Me.dgv.AllowUserToAddRows = False
         Me.dgv.AllowUserToDeleteRows = False
+        Me.dgv.AllowUserToResizeRows = False
         Me.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.coltime, Me.colinout})
         Me.dgv.Location = New System.Drawing.Point(12, 57)
+        Me.dgv.MultiSelect = False
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.Size = New System.Drawing.Size(529, 278)
