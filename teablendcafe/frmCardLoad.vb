@@ -119,7 +119,10 @@ Public Class frmCardLoad
         End If
         reader.Close()
 
-        MsgBox("Remaining account load is: " & wallet)
+        frmremainingload.tbtotal.Text = total
+        frmremainingload.tbchange.Text = wallet
+        frmremainingload.ShowDialog()
+        Me.Close()
     End Sub
 
     Private Sub resetTransaction()

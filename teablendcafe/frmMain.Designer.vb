@@ -637,7 +637,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -2100)
+        Me.panContent.Location = New System.Drawing.Point(230, -1400)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
