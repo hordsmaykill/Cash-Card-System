@@ -1067,7 +1067,8 @@ Public Class frmMain
     End Sub
 
     Private Sub account_addbtn_Click(sender As Object, e As EventArgs) Handles account_addbtn.Click
-        formadmincreatenew.ShowDialog()
+        frmverifypassword.state = "add"
+        frmverifypassword.ShowDialog()
     End Sub
 
     Private Sub account_editbtn_Click(sender As Object, e As EventArgs) Handles account_editbtn.Click
@@ -1087,13 +1088,14 @@ Public Class frmMain
 
 
     Private Sub btnmembers_del_Click(sender As Object, e As EventArgs) Handles btnmembers_del.Click
-        deletemem.ShowDialog()
-        Dim Delete As String
+
+        Dim Delete As MsgBoxResult
 
         SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
 
         Delete = MsgBox("Are you sure you want to delete this Member " + SelectedMember + "?", vbYesNo + vbQuestion, "Message")
-        If Delete = vbYes Then
+        If Delete = MsgBoxResult.Yes Then
+            deletemem.ShowDialog()
             With Command
                 .Connection = Connect
                 .CommandText = "DELETE FROM tblcustomers WHERE cus_no = '" & SelectedMember & "'"
@@ -1105,7 +1107,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnmembers_add_Click(sender As Object, e As EventArgs) Handles btnmembers_add.Click
-
+        frmverifypassword.state = "addmember"
         addcustomer.ShowDialog()
     End Sub
 
@@ -1230,7 +1232,7 @@ Public Class frmMain
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
+        frmverifypassword.state = "editmember"
         SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
         userSelected = SelectedMember
         frmmemers_editchoices.ShowDialog()
