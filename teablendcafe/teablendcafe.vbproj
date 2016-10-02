@@ -45,12 +45,6 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Resources\tbc.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\MySql.Data.dll</HintPath>
@@ -130,16 +124,16 @@
     <Compile Include="frmCardLoad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmetramount.Designer.vb">
-      <DependentUpon>frmetramount.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmetramount.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frminvedit.Designer.vb">
       <DependentUpon>frminvedit.vb</DependentUpon>
     </Compile>
     <Compile Include="frminvedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogs.Designer.vb">
+      <DependentUpon>frmLogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogs.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.vb">
@@ -171,18 +165,6 @@
       <DependentUpon>frmquantity.vb</DependentUpon>
     </Compile>
     <Compile Include="frmquantity.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmremainingload.Designer.vb">
-      <DependentUpon>frmremainingload.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmremainingload.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmtotal.Designer.vb">
-      <DependentUpon>frmtotal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmtotal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.vb">
@@ -256,11 +238,11 @@
     <EmbeddedResource Include="frmCardLoad.resx">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmetramount.resx">
-      <DependentUpon>frmetramount.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frminvedit.resx">
       <DependentUpon>frminvedit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogs.resx">
+      <DependentUpon>frmLogs.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -276,12 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmquantity.resx">
       <DependentUpon>frmquantity.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmremainingload.resx">
-      <DependentUpon>frmremainingload.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmtotal.resx">
-      <DependentUpon>frmtotal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
@@ -306,7 +282,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -560,10 +535,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\default.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\arrowleft.png" />
-    <Content Include="Resources\tbc.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

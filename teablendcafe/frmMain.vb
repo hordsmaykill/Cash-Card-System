@@ -1061,29 +1061,10 @@ Public Class frmMain
         drinksToDGV("DSH_SS", DRINKS_SIZEG)
     End Sub
 
-
-    ''
-
-    Private Sub account_delbtn_Click(sender As Object, e As EventArgs) Handles account_delbtn.Click
-        panconmembersdelete.ShowDialog()
-
-        Dim Delete As String
-
-        SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
-
-        Delete = MsgBox("Are you sure you want to delete Administrator " + SelectedAdmin + "?", vbYesNo + vbQuestion, "Message")
-        If Delete = vbYes Then
-            With Command
-                .Connection = Connect
-                .CommandText = "DELETE FROM tblAdministrators WHERE username = '" & SelectedAdmin & "'"
-                .ExecuteNonQuery()
-            End With
-            AccountsDGV()
-            MsgBox("Administrator " + SelectedAdmin + " successfully deleted!", vbOKOnly + vbInformation, "Message")
-        End If
+    Private Sub account_delbtn_Click(sender As Object, e As EventArgs) Handles btnAccLogs.Click
+        frmLogs.user = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
+        frmLogs.ShowDialog()
     End Sub
-
-
 
     Private Sub account_addbtn_Click(sender As Object, e As EventArgs) Handles account_addbtn.Click
         formadmincreatenew.ShowDialog()
