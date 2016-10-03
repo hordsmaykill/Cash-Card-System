@@ -106,7 +106,7 @@ Partial Class formadmincreatenew
         '
         Me.cbadminpreviledges.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbadminpreviledges.FormattingEnabled = True
-        Me.cbadminpreviledges.Items.AddRange(New Object() {"Super User", "User"})
+        Me.cbadminpreviledges.Items.AddRange(New Object() {"Cashier ", "Manager"})
         Me.cbadminpreviledges.Location = New System.Drawing.Point(141, 59)
         Me.cbadminpreviledges.Name = "cbadminpreviledges"
         Me.cbadminpreviledges.Size = New System.Drawing.Size(94, 21)

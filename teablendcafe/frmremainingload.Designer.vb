@@ -28,12 +28,14 @@ Partial Class frmremainingload
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tbchange = New System.Windows.Forms.TextBox()
         Me.tbtotal = New System.Windows.Forms.TextBox()
+        Me.cancel = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.cancel)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.lblchange)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -46,7 +48,7 @@ Partial Class frmremainingload
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(104, 159)
+        Me.Button1.Location = New System.Drawing.Point(54, 159)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 41)
         Me.Button1.TabIndex = 2
@@ -91,6 +93,15 @@ Partial Class frmremainingload
         Me.tbtotal.Size = New System.Drawing.Size(179, 26)
         Me.tbtotal.TabIndex = 0
         '
+        'cancel
+        '
+        Me.cancel.Location = New System.Drawing.Point(158, 159)
+        Me.cancel.Name = "cancel"
+        Me.cancel.Size = New System.Drawing.Size(75, 41)
+        Me.cancel.TabIndex = 2
+        Me.cancel.Text = "CANCEL"
+        Me.cancel.UseVisualStyleBackColor = True
+        '
         'frmremainingload
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -114,4 +125,5 @@ Partial Class frmremainingload
     Friend WithEvents Label3 As Label
     Friend WithEvents tbchange As TextBox
     Friend WithEvents tbtotal As TextBox
+    Friend WithEvents cancel As Button
 End Class

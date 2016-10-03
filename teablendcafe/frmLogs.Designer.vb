@@ -34,6 +34,7 @@ Partial Class frmLogs
         '
         Me.lblUser.AutoSize = True
         Me.lblUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblUser.Location = New System.Drawing.Point(23, 18)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(49, 24)
@@ -70,7 +71,7 @@ Partial Class frmLogs
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(500, 12)
+        Me.btnClose.Location = New System.Drawing.Point(501, 12)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(40, 23)
         Me.btnClose.TabIndex = 2
@@ -81,6 +82,7 @@ Partial Class frmLogs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(552, 347)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.dgv)

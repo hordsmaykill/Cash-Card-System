@@ -30,12 +30,14 @@ Partial Class frmtotal
         Me.tbchangee = New System.Windows.Forms.TextBox()
         Me.tbtotal = New System.Windows.Forms.TextBox()
         Me.paymenttendered = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.lblchange)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -45,12 +47,12 @@ Partial Class frmtotal
         Me.Panel1.Controls.Add(Me.paymenttendered)
         Me.Panel1.Location = New System.Drawing.Point(12, 33)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(291, 230)
+        Me.Panel1.Size = New System.Drawing.Size(291, 240)
         Me.Panel1.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(110, 186)
+        Me.Button1.Location = New System.Drawing.Point(57, 189)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 41)
         Me.Button1.TabIndex = 2
@@ -114,12 +116,21 @@ Partial Class frmtotal
         Me.paymenttendered.Size = New System.Drawing.Size(179, 26)
         Me.paymenttendered.TabIndex = 0
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(161, 189)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 41)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "CANCEL"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmtotal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(315, 275)
+        Me.ClientSize = New System.Drawing.Size(315, 285)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmtotal"
@@ -139,4 +150,5 @@ Partial Class frmtotal
     Friend WithEvents paymenttendered As TextBox
     Friend WithEvents lblchange As Label
     Friend WithEvents tbchangee As TextBox
+    Friend WithEvents Button2 As Button
 End Class

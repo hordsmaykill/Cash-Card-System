@@ -42,6 +42,7 @@ Partial Class cashcard
         '
         'Button2
         '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(166, 11)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(149, 96)
@@ -51,6 +52,7 @@ Partial Class cashcard
         '
         'btncash
         '
+        Me.btncash.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncash.Location = New System.Drawing.Point(14, 11)
         Me.btncash.Name = "btncash"
         Me.btncash.Size = New System.Drawing.Size(146, 96)
