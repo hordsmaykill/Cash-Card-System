@@ -58,7 +58,7 @@ Partial Class frminvedit
         Me.Button1.Location = New System.Drawing.Point(40, 59)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 36)
-        Me.Button1.TabIndex = 2
+        Me.Button1.TabIndex = 0
         Me.Button1.Text = "Add"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -77,7 +77,7 @@ Partial Class frminvedit
         Me.upnaddquantity.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
         Me.upnaddquantity.Name = "upnaddquantity"
         Me.upnaddquantity.Size = New System.Drawing.Size(120, 20)
-        Me.upnaddquantity.TabIndex = 0
+        Me.upnaddquantity.TabIndex = 1
         '
         'frminvedit
         '

@@ -57,7 +57,7 @@ Partial Class frmmemberedit
         Me.Button1.Location = New System.Drawing.Point(71, 58)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(93, 44)
-        Me.Button1.TabIndex = 2
+        Me.Button1.TabIndex = 0
         Me.Button1.Text = "Submit"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -77,7 +77,7 @@ Partial Class frmmemberedit
         Me.tbcusnewname.Location = New System.Drawing.Point(150, 21)
         Me.tbcusnewname.Name = "tbcusnewname"
         Me.tbcusnewname.Size = New System.Drawing.Size(188, 26)
-        Me.tbcusnewname.TabIndex = 0
+        Me.tbcusnewname.TabIndex = 1
         '
         'frmmemberedit
         '

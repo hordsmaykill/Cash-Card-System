@@ -48,7 +48,7 @@ Partial Class frmetramount
         Me.tbenterpayment.Location = New System.Drawing.Point(47, 40)
         Me.tbenterpayment.Name = "tbenterpayment"
         Me.tbenterpayment.Size = New System.Drawing.Size(173, 29)
-        Me.tbenterpayment.TabIndex = 6
+        Me.tbenterpayment.TabIndex = 1
         '
         'Label1
         '
@@ -65,7 +65,7 @@ Partial Class frmetramount
         Me.btncancel.Location = New System.Drawing.Point(143, 75)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(77, 32)
-        Me.btncancel.TabIndex = 3
+        Me.btncancel.TabIndex = 2
         Me.btncancel.Text = "Cancel"
         Me.btncancel.UseVisualStyleBackColor = True
         '
@@ -74,7 +74,7 @@ Partial Class frmetramount
         Me.btnOK.Location = New System.Drawing.Point(47, 75)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(77, 32)
-        Me.btnOK.TabIndex = 4
+        Me.btnOK.TabIndex = 0
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = True
         '

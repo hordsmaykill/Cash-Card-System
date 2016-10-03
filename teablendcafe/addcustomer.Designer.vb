@@ -52,7 +52,7 @@ Partial Class addcustomer
         Me.btnmembers_addcustomer_submit.Location = New System.Drawing.Point(27, 112)
         Me.btnmembers_addcustomer_submit.Name = "btnmembers_addcustomer_submit"
         Me.btnmembers_addcustomer_submit.Size = New System.Drawing.Size(107, 48)
-        Me.btnmembers_addcustomer_submit.TabIndex = 2
+        Me.btnmembers_addcustomer_submit.TabIndex = 0
         Me.btnmembers_addcustomer_submit.Text = "Submit"
         Me.btnmembers_addcustomer_submit.UseVisualStyleBackColor = True
         '

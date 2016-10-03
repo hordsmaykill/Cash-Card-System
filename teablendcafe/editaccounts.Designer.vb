@@ -96,7 +96,7 @@ Partial Class editaccounts
         Me.tbusernameeditpass.Location = New System.Drawing.Point(146, 52)
         Me.tbusernameeditpass.Name = "tbusernameeditpass"
         Me.tbusernameeditpass.Size = New System.Drawing.Size(133, 26)
-        Me.tbusernameeditpass.TabIndex = 1
+        Me.tbusernameeditpass.TabIndex = 2
         '
         'tbusernameeditac
         '
@@ -111,7 +111,7 @@ Partial Class editaccounts
         Me.Button2.Location = New System.Drawing.Point(173, 120)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(91, 32)
-        Me.Button2.TabIndex = 0
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
         '
