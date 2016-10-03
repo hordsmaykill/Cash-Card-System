@@ -49,7 +49,15 @@ Public Class frmverifypassword
                 Case "editmember"
                     frmmemers_editchoices.ShowDialog()
 
+                Case "delmember"
+                    Dim Delete As MsgBoxResult
+                    Dim SelectedMember As String
+                    SelectedMember = frmMain.dgv_members.Item(0, frmMain.dgv_members.CurrentRow.Index).Value
 
+                    Delete = MsgBox("Are you sure you want to void this Member " + SelectedMember + "?", vbYesNo + vbQuestion, "Message")
+                    If Delete = MsgBoxResult.Yes Then
+                        deletemem.SelectedMember = SelectedMember
+                    End If
             End Select
             ' end if
         End If

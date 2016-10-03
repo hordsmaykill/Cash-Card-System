@@ -48,7 +48,7 @@ Partial Class frmverifypassword
         Me.tbbadminpassword.Name = "tbbadminpassword"
         Me.tbbadminpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbbadminpassword.Size = New System.Drawing.Size(157, 20)
-        Me.tbbadminpassword.TabIndex = 9
+        Me.tbbadminpassword.TabIndex = 1
         '
         'Label1
         '
@@ -65,7 +65,7 @@ Partial Class frmverifypassword
         Me.btnverify.Location = New System.Drawing.Point(28, 40)
         Me.btnverify.Name = "btnverify"
         Me.btnverify.Size = New System.Drawing.Size(112, 23)
-        Me.btnverify.TabIndex = 7
+        Me.btnverify.TabIndex = 0
         Me.btnverify.Text = "Verify"
         Me.btnverify.UseVisualStyleBackColor = True
         '
@@ -74,7 +74,7 @@ Partial Class frmverifypassword
         Me.cancelcc.Location = New System.Drawing.Point(158, 40)
         Me.cancelcc.Name = "cancelcc"
         Me.cancelcc.Size = New System.Drawing.Size(112, 23)
-        Me.cancelcc.TabIndex = 8
+        Me.cancelcc.TabIndex = 2
         Me.cancelcc.Text = "Cancel"
         Me.cancelcc.UseVisualStyleBackColor = True
         '

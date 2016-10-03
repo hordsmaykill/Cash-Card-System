@@ -49,7 +49,7 @@ Partial Class frmordersadminpassclear
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.TextBox1.TabIndex = 1
         '
         'Label1
         '
@@ -66,7 +66,7 @@ Partial Class frmordersadminpassclear
         Me.adminclearorder.Location = New System.Drawing.Point(28, 40)
         Me.adminclearorder.Name = "adminclearorder"
         Me.adminclearorder.Size = New System.Drawing.Size(112, 23)
-        Me.adminclearorder.TabIndex = 7
+        Me.adminclearorder.TabIndex = 0
         Me.adminclearorder.Text = "Verify"
         Me.adminclearorder.UseVisualStyleBackColor = True
         '
@@ -75,7 +75,7 @@ Partial Class frmordersadminpassclear
         Me.cancelcc.Location = New System.Drawing.Point(158, 40)
         Me.cancelcc.Name = "cancelcc"
         Me.cancelcc.Size = New System.Drawing.Size(112, 23)
-        Me.cancelcc.TabIndex = 8
+        Me.cancelcc.TabIndex = 2
         Me.cancelcc.Text = "Cancel"
         Me.cancelcc.UseVisualStyleBackColor = True
         '

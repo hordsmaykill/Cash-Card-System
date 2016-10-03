@@ -48,7 +48,7 @@ Partial Class deletemem
         Me.admispasswordcancel.Location = New System.Drawing.Point(173, 36)
         Me.admispasswordcancel.Name = "admispasswordcancel"
         Me.admispasswordcancel.Size = New System.Drawing.Size(112, 23)
-        Me.admispasswordcancel.TabIndex = 6
+        Me.admispasswordcancel.TabIndex = 2
         Me.admispasswordcancel.Text = "Cancel"
         Me.admispasswordcancel.UseVisualStyleBackColor = False
         '
@@ -57,7 +57,7 @@ Partial Class deletemem
         Me.Button1.Location = New System.Drawing.Point(43, 36)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 23)
-        Me.Button1.TabIndex = 5
+        Me.Button1.TabIndex = 0
         Me.Button1.Text = "Verify"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -67,7 +67,7 @@ Partial Class deletemem
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(157, 20)
-        Me.txtPass.TabIndex = 4
+        Me.txtPass.TabIndex = 1
         '
         'Label1
         '

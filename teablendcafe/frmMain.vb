@@ -1131,16 +1131,8 @@ Public Class frmMain
 
 
     Private Sub btnmembers_del_Click(sender As Object, e As EventArgs) Handles btnmembers_del.Click
-
-        Dim Delete As MsgBoxResult
-
-        SelectedMember = dgv_members.Item(0, dgv_members.CurrentRow.Index).Value
-
-        Delete = MsgBox("Are you sure you want to void this Member " + SelectedMember + "?", vbYesNo + vbQuestion, "Message")
-        If Delete = MsgBoxResult.Yes Then
-            deletemem.SelectedMember = SelectedMember
-            deletemem.ShowDialog()
-        End If
+        frmverifypassword.state = "delmember"
+        frmverifypassword.ShowDialog()
     End Sub
 
     Private Sub btnmembers_add_Click(sender As Object, e As EventArgs) Handles btnmembers_add.Click
