@@ -8,11 +8,7 @@ Public Class frmquantity
     Public qty As Integer
 
     Private Sub frmquantity_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            conn.Open()
-        End If
+        conn = ConnectionModule.getConnection()
 
         txtNum.Text = ""
         qty = 0

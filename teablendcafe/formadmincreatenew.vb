@@ -6,18 +6,10 @@ Public Class formadmincreatenew
     Dim str As String
 
     Private Sub formadmincreatenew_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call ConnectDB()
+        Connect = ConnectionModule.getConnection()
         frmMain.AccountsDGV()
     End Sub
 
-
-    Public Sub ConnectDB()
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
-        End If
-    End Sub
 
     'Private Sub UpdateDGV()
     '    frmMain.accounts_dgv.Rows.Clear()

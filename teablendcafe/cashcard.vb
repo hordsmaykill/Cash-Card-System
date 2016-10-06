@@ -7,16 +7,9 @@ Public Class cashcard
     Dim str As String
 
     Private Sub cashcardLoad(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call ConnectDB()
+        Connect = ConnectionModule.getConnection()
     End Sub
 
-    Public Sub ConnectDB()
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
-        End If
-    End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         frmCardLoad.ShowDialog()
         Me.Close()

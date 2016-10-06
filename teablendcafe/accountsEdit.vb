@@ -5,14 +5,13 @@ Public Class accountsEdit
     Dim Connect As New MySqlConnection
     Dim str As String
 
-    Public Sub ConnectDB()
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
+    Private Sub accountsEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Connect = ConnectionModule.getConnection()
 
-        End If
+        frmMain.AccountsDGV()
+        lUsername.Text = "Enter new password for " & frmMain.userSelected
     End Sub
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
     End Sub
@@ -56,13 +55,7 @@ Public Class accountsEdit
         End If
     End Sub
 
-    Private Sub accountsEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ConnectDB()
-        frmMain.AccountsDGV()
-        lUsername.Text = "Enter new password for " & frmMain.userSelected
 
-
-    End Sub
 
 
 End Class

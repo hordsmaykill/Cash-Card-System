@@ -9,18 +9,6 @@ Public Class frmMain
     Dim SelectedAdmin As String
     Dim SelectedMember As String
 
-
-
-    Public Sub ConnectDB()
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
-
-            qtyRetrieved = 0
-
-        End If
-    End Sub
     ' NAVIGATION VARS
     ' 1 Home
     ' 2 inventory
@@ -86,9 +74,10 @@ Public Class frmMain
     Public userSelected As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Connect = ConnectionModule.getConnection()
+
         ' default states
         menuHideLoad()
-        Call ConnectDB()
         Call AccountsDGV()
         Call ChangePass()
         Call DGVINV()

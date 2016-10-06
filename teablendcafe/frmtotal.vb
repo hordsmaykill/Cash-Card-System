@@ -11,20 +11,8 @@ Public Class frmtotal
     Dim totalamount As Double
     Dim change As Double
 
-    Public Sub ConnectDB()
-
-        Dim str As String
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
-        End If
-
-    End Sub
-
-
     Private Sub frmtotal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call ConnectDB()
+        Connect = ConnectionModule.getConnection()
 
         paymenttendered.Text = frmetramount.tbenterpayment.Text
         tendered = Double.Parse(paymenttendered.Text)

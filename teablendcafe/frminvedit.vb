@@ -10,21 +10,11 @@ Public Class frminvedit
 
 
     Private Sub frminvedit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call ConnectDB()
+        Connect = ConnectionModule.getConnection()
+
         Dim SelecteddQty As Integer = frmMain.inventorydgv.Item(2, frmMain.inventorydgv.CurrentRow.Index).Value
 
         upnaddquantity.Value = SelecteddQty
-
-    End Sub
-
-    Public Sub ConnectDB()
-
-        Dim str As String
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
-        End If
 
     End Sub
 

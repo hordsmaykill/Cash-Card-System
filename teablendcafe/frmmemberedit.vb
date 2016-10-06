@@ -6,20 +6,8 @@ Public Class frmmemberedit
     Dim Connect As New MySqlConnection
     Dim str As String
 
-
-    Public Sub ConnectDB()
-
-        Dim str As String
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
-        End If
-    End Sub
-
     Private Sub frmmemberedit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call ConnectDB()
-
+        Connect = ConnectionModule.getConnection()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

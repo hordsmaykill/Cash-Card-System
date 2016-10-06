@@ -100,6 +100,7 @@
     <Compile Include="cashcard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ConnectionModule.vb" />
     <Compile Include="deletemem.Designer.vb">
       <DependentUpon>deletemem.vb</DependentUpon>
     </Compile>

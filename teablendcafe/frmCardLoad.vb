@@ -10,22 +10,11 @@ Public Class frmCardLoad
     Dim TransactionReader As MySqlDataReader
 
     Private Sub frmCardLoad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ConnectDB()
+        Connect = ConnectionModule.getConnection()
 
         ' reset db
         resetTransaction()
         tmrCheck.Enabled = True
-
-    End Sub
-
-    Public Sub ConnectDB()
-
-        Dim str As String
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
-        End If
 
     End Sub
 
