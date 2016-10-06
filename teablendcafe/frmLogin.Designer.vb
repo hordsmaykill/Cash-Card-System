@@ -95,7 +95,7 @@ Partial Class frmLogin
         Me.btnexit.Text = "EXIT"
         Me.btnexit.UseVisualStyleBackColor = True
         '
-        'login
+        'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -109,12 +109,11 @@ Partial Class frmLogin
         Me.Controls.Add(Me.lDate)
         Me.Controls.Add(Me.tbpassword)
         Me.Controls.Add(Me.tbusername)
-        Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "login"
+        Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "login"
         Me.ResumeLayout(False)

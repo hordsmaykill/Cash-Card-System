@@ -24,6 +24,7 @@ Partial Class frmquantity
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmquantity))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.num0 = New System.Windows.Forms.Button()
         Me.num9 = New System.Windows.Forms.Button()
         Me.num6 = New System.Windows.Forms.Button()
@@ -40,7 +41,6 @@ Partial Class frmquantity
         Me.btnOk = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNum = New System.Windows.Forms.TextBox()
-        Me.btnClear = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,6 +69,15 @@ Partial Class frmquantity
         Me.Panel1.Size = New System.Drawing.Size(247, 347)
         Me.Panel1.TabIndex = 0
         '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(185, 114)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(52, 51)
+        Me.btnClear.TabIndex = 13
+        Me.btnClear.Text = "C"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
         'num0
         '
         Me.num0.Location = New System.Drawing.Point(185, 177)
@@ -80,7 +89,7 @@ Partial Class frmquantity
         '
         'num9
         '
-        Me.num9.Location = New System.Drawing.Point(127, 244)
+        Me.num9.Location = New System.Drawing.Point(127, 238)
         Me.num9.Name = "num9"
         Me.num9.Size = New System.Drawing.Size(52, 51)
         Me.num9.TabIndex = 12
@@ -107,7 +116,7 @@ Partial Class frmquantity
         '
         'num8
         '
-        Me.num8.Location = New System.Drawing.Point(69, 244)
+        Me.num8.Location = New System.Drawing.Point(69, 238)
         Me.num8.Name = "num8"
         Me.num8.Size = New System.Drawing.Size(52, 51)
         Me.num8.TabIndex = 12
@@ -116,7 +125,7 @@ Partial Class frmquantity
         '
         'num7
         '
-        Me.num7.Location = New System.Drawing.Point(12, 244)
+        Me.num7.Location = New System.Drawing.Point(12, 238)
         Me.num7.Name = "num7"
         Me.num7.Size = New System.Drawing.Size(52, 51)
         Me.num7.TabIndex = 12
@@ -215,15 +224,6 @@ Partial Class frmquantity
         Me.txtNum.TabIndex = 6
         Me.txtNum.Text = "0"
         Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'btnClear
-        '
-        Me.btnClear.Location = New System.Drawing.Point(185, 114)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(52, 51)
-        Me.btnClear.TabIndex = 13
-        Me.btnClear.Text = "C"
-        Me.btnClear.UseVisualStyleBackColor = True
         '
         'frmquantity
         '

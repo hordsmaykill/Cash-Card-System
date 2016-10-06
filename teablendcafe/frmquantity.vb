@@ -10,7 +10,7 @@ Public Class frmquantity
     Private Sub frmquantity_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conn = ConnectionModule.getConnection()
 
-        txtNum.Text = ""
+        txtNum.Text = "0"
         qty = 0
 
     End Sub
@@ -152,7 +152,7 @@ Public Class frmquantity
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        txtNum.Text = ""
+        txtNum.Text = "0"
         qty = 0
     End Sub
 End Class
