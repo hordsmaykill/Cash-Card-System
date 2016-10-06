@@ -2,19 +2,20 @@
 
 Public Class frmquantity
 
+    Private Const HOLD_ADD = 0
+    Private Const HOLD_SUB = 1
+
+    Dim holdBtn As Integer
+
     Dim conn As New MySqlConnection
 
     Public prodCode As String
     Public qty As Integer
 
     Private Sub frmquantity_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conn = ConnectionModule.getConnection()
 
-        If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            conn.Open()
-        End If
-
-        txtNum.Text = ""
+        txtNum.Text = "0"
         qty = 0
 
     End Sub
@@ -25,6 +26,32 @@ Public Class frmquantity
         End If
         txtNum.Text &= n
     End Sub
+
+    Private Sub addNum()
+        If txtNum.Text = "" Or txtNum.Text = "0" Then
+            qty = 0
+        Else
+            qty = Integer.Parse(txtNum.Text)
+        End If
+
+        qty += 1
+        txtNum.Text = qty
+    End Sub
+
+    Private Sub subNum()
+        If txtNum.Text = "" Or txtNum.Text = "0" Then
+            qty = 0
+        Else
+            qty = Integer.Parse(txtNum.Text)
+        End If
+
+        If Not (qty <= 1) Then
+            qty -= 1
+        End If
+        txtNum.Text = qty
+    End Sub
+
+
 
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         ' check if the input qty is valid
@@ -78,28 +105,35 @@ Public Class frmquantity
         Me.Close()
     End Sub
 
-    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
-        If txtNum.Text = "" Then
-            qty = 0
-        Else
-            qty = Integer.Parse(txtNum.Text)
-        End If
-
-        If qty <> 1 Then
-            qty -= 1
-        End If
-        txtNum.Text = qty
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnSub.Click
+        subNum()
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If txtNum.Text = "" Then
-            qty = 0
-        Else
-            qty = Integer.Parse(txtNum.Text)
-        End If
+        addNum()
+    End Sub
 
-        qty += 1
-        txtNum.Text = qty
+    Private Sub btnAdd_MouseDown(sender As Object, e As MouseEventArgs) Handles btnAdd.MouseDown
+        holdBtn = HOLD_ADD
+        tmrHold.Enabled = True
+    End Sub
+
+    Private Sub btnSub_MouseDown(sender As Object, e As MouseEventArgs) Handles btnSub.MouseDown
+        holdBtn = HOLD_SUB
+        tmrHold.Enabled = True
+    End Sub
+
+    Private Sub btn_MouseUp(sender As Object, e As MouseEventArgs) Handles btnAdd.MouseUp, btnSub.MouseUp
+        tmrHold.Enabled = False
+    End Sub
+
+    Private Sub tmrHold_Tick(sender As Object, e As EventArgs) Handles tmrHold.Tick
+        Select Case holdBtn
+            Case HOLD_ADD
+                addNum()
+            Case HOLD_SUB
+                subNum()
+        End Select
     End Sub
 
     Private Sub txtNum_KeyDown(sender As Object, e As KeyEventArgs)
@@ -156,7 +190,9 @@ Public Class frmquantity
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        txtNum.Text = ""
+        txtNum.Text = "0"
         qty = 0
     End Sub
+
+
 End Class

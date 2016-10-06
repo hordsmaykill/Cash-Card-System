@@ -82,46 +82,47 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accountsEdit.Designer.vb">
-      <DependentUpon>accountsEdit.vb</DependentUpon>
+    <Compile Include="frmAccountsEdit.Designer.vb">
+      <DependentUpon>frmAccountsEdit.vb</DependentUpon>
     </Compile>
-    <Compile Include="accountsEdit.vb">
+    <Compile Include="frmAccountsEdit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addcustomer.Designer.vb">
-      <DependentUpon>addcustomer.vb</DependentUpon>
+    <Compile Include="frmAddCustomer.Designer.vb">
+      <DependentUpon>frmAddCustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="addcustomer.vb">
+    <Compile Include="frmAddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cashcard.Designer.vb">
-      <DependentUpon>cashcard.vb</DependentUpon>
+    <Compile Include="frmCashCard.Designer.vb">
+      <DependentUpon>frmCashCard.vb</DependentUpon>
     </Compile>
-    <Compile Include="cashcard.vb">
+    <Compile Include="frmCashCard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="deletemem.Designer.vb">
-      <DependentUpon>deletemem.vb</DependentUpon>
+    <Compile Include="ConnectionModule.vb" />
+    <Compile Include="frmDeleteMember.Designer.vb">
+      <DependentUpon>frmDeleteMember.vb</DependentUpon>
     </Compile>
-    <Compile Include="deletemem.vb">
+    <Compile Include="frmDeleteMember.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editaccounts.Designer.vb">
-      <DependentUpon>editaccounts.vb</DependentUpon>
+    <Compile Include="frmEditAccounts.Designer.vb">
+      <DependentUpon>frmEditAccounts.vb</DependentUpon>
     </Compile>
-    <Compile Include="editaccounts.vb">
+    <Compile Include="frmEditAccounts.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formadmincreatenew.Designer.vb">
-      <DependentUpon>formadmincreatenew.vb</DependentUpon>
+    <Compile Include="frmAdminCreateNew.Designer.vb">
+      <DependentUpon>frmAdminCreateNew.vb</DependentUpon>
     </Compile>
-    <Compile Include="formadmincreatenew.vb">
+    <Compile Include="frmAdminCreateNew.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmaddLoad.Designer.vb">
-      <DependentUpon>FrmaddLoad.vb</DependentUpon>
+    <Compile Include="frmaddLoad.Designer.vb">
+      <DependentUpon>frmaddLoad.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmaddLoad.vb">
+    <Compile Include="frmaddLoad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCardLoad.Designer.vb">
@@ -130,16 +131,16 @@
     <Compile Include="frmCardLoad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmetramount.Designer.vb">
-      <DependentUpon>frmetramount.vb</DependentUpon>
+    <Compile Include="frmEnterAmoutn.Designer.vb">
+      <DependentUpon>frmEnterAmoutn.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmetramount.vb">
+    <Compile Include="frmEnterAmoutn.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frminvedit.Designer.vb">
-      <DependentUpon>frminvedit.vb</DependentUpon>
+    <Compile Include="frmInventoryEdit.Designer.vb">
+      <DependentUpon>frmInventoryEdit.vb</DependentUpon>
     </Compile>
-    <Compile Include="frminvedit.vb">
+    <Compile Include="frmInventoryEdit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogs.Designer.vb">
@@ -155,28 +156,28 @@
       <DependentUpon>frmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmmemberedit.Designer.vb">
-      <DependentUpon>frmmemberedit.vb</DependentUpon>
+    <Compile Include="frmMemberEdit.Designer.vb">
+      <DependentUpon>frmMemberEdit.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmmemberedit.vb">
+    <Compile Include="frmMemberEdit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmmemers_editchoices.Designer.vb">
-      <DependentUpon>frmmemers_editchoices.vb</DependentUpon>
+    <Compile Include="frmMembersEditChoices.Designer.vb">
+      <DependentUpon>frmMembersEditChoices.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmmemers_editchoices.vb">
+    <Compile Include="frmMembersEditChoices.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmordersadminpassclear.Designer.vb">
-      <DependentUpon>frmordersadminpassclear.vb</DependentUpon>
+    <Compile Include="frmOrdersAdminPassClear.Designer.vb">
+      <DependentUpon>frmOrdersAdminPassClear.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmordersadminpassclear.vb">
+    <Compile Include="frmOrdersAdminPassClear.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmquantity.Designer.vb">
-      <DependentUpon>frmquantity.vb</DependentUpon>
+    <Compile Include="frmQuantity.Designer.vb">
+      <DependentUpon>frmQuantity.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmquantity.vb">
+    <Compile Include="frmQuantity.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmremainingload.Designer.vb">
@@ -197,10 +198,10 @@
     <Compile Include="frmverifypassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.vb">
-      <DependentUpon>login.vb</DependentUpon>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="login.vb">
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -218,10 +219,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="panconmembersdelete.Designer.vb">
-      <DependentUpon>panconmembersdelete.vb</DependentUpon>
+    <Compile Include="frmPanConMembersDelete.Designer.vb">
+      <DependentUpon>frmPanConMembersDelete.vb</DependentUpon>
     </Compile>
-    <Compile Include="panconmembersdelete.vb">
+    <Compile Include="frmPanConMembersDelete.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="splash.Designer.vb">
@@ -230,49 +231,49 @@
     <Compile Include="splash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="typeadminpassword.Designer.vb">
-      <DependentUpon>typeadminpassword.vb</DependentUpon>
+    <Compile Include="frmTypeAdminPassword.Designer.vb">
+      <DependentUpon>frmTypeAdminPassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="typeadminpassword.vb">
+    <Compile Include="frmTypeAdminPassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="typeadminpassworddelete.Designer.vb">
-      <DependentUpon>typeadminpassworddelete.vb</DependentUpon>
+    <Compile Include="frmTypeAdminPasswordDelete.Designer.vb">
+      <DependentUpon>frmTypeAdminPasswordDelete.vb</DependentUpon>
     </Compile>
-    <Compile Include="typeadminpassworddelete.vb">
+    <Compile Include="frmTypeAdminPasswordDelete.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="accountsEdit.resx">
-      <DependentUpon>accountsEdit.vb</DependentUpon>
+    <EmbeddedResource Include="frmAccountsEdit.resx">
+      <DependentUpon>frmAccountsEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addcustomer.resx">
-      <DependentUpon>addcustomer.vb</DependentUpon>
+    <EmbeddedResource Include="frmAddCustomer.resx">
+      <DependentUpon>frmAddCustomer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cashcard.resx">
-      <DependentUpon>cashcard.vb</DependentUpon>
+    <EmbeddedResource Include="frmCashCard.resx">
+      <DependentUpon>frmCashCard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="deletemem.resx">
-      <DependentUpon>deletemem.vb</DependentUpon>
+    <EmbeddedResource Include="frmDeleteMember.resx">
+      <DependentUpon>frmDeleteMember.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editaccounts.resx">
-      <DependentUpon>editaccounts.vb</DependentUpon>
+    <EmbeddedResource Include="frmEditAccounts.resx">
+      <DependentUpon>frmEditAccounts.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formadmincreatenew.resx">
-      <DependentUpon>formadmincreatenew.vb</DependentUpon>
+    <EmbeddedResource Include="frmAdminCreateNew.resx">
+      <DependentUpon>frmAdminCreateNew.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmaddLoad.resx">
-      <DependentUpon>FrmaddLoad.vb</DependentUpon>
+    <EmbeddedResource Include="frmaddLoad.resx">
+      <DependentUpon>frmaddLoad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCardLoad.resx">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmetramount.resx">
-      <DependentUpon>frmetramount.vb</DependentUpon>
+    <EmbeddedResource Include="frmEnterAmoutn.resx">
+      <DependentUpon>frmEnterAmoutn.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frminvedit.resx">
-      <DependentUpon>frminvedit.vb</DependentUpon>
+    <EmbeddedResource Include="frmInventoryEdit.resx">
+      <DependentUpon>frmInventoryEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogs.resx">
       <DependentUpon>frmLogs.vb</DependentUpon>
@@ -280,17 +281,17 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmmemberedit.resx">
-      <DependentUpon>frmmemberedit.vb</DependentUpon>
+    <EmbeddedResource Include="frmMemberEdit.resx">
+      <DependentUpon>frmMemberEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmmemers_editchoices.resx">
-      <DependentUpon>frmmemers_editchoices.vb</DependentUpon>
+    <EmbeddedResource Include="frmMembersEditChoices.resx">
+      <DependentUpon>frmMembersEditChoices.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmordersadminpassclear.resx">
-      <DependentUpon>frmordersadminpassclear.vb</DependentUpon>
+    <EmbeddedResource Include="frmOrdersAdminPassClear.resx">
+      <DependentUpon>frmOrdersAdminPassClear.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmquantity.resx">
-      <DependentUpon>frmquantity.vb</DependentUpon>
+    <EmbeddedResource Include="frmQuantity.resx">
+      <DependentUpon>frmQuantity.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmremainingload.resx">
       <DependentUpon>frmremainingload.vb</DependentUpon>
@@ -301,8 +302,8 @@
     <EmbeddedResource Include="frmverifypassword.resx">
       <DependentUpon>frmverifypassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.vb</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -310,17 +311,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="panconmembersdelete.resx">
-      <DependentUpon>panconmembersdelete.vb</DependentUpon>
+    <EmbeddedResource Include="frmPanConMembersDelete.resx">
+      <DependentUpon>frmPanConMembersDelete.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="typeadminpassword.resx">
-      <DependentUpon>typeadminpassword.vb</DependentUpon>
+    <EmbeddedResource Include="frmTypeAdminPassword.resx">
+      <DependentUpon>frmTypeAdminPassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="typeadminpassworddelete.resx">
-      <DependentUpon>typeadminpassworddelete.vb</DependentUpon>
+    <EmbeddedResource Include="frmTypeAdminPasswordDelete.resx">
+      <DependentUpon>frmTypeAdminPasswordDelete.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

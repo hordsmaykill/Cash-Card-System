@@ -6,10 +6,7 @@ Public Class frmLogs
     Public user As String
 
     Private Sub frmLogs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Connect.State = ConnectionState.Closed Then
-            Connect.ConnectionString = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.Open()
-        End If
+        Connect = ConnectionModule.getConnection()
 
         lblUser.Text = "Logs for: " & user
 

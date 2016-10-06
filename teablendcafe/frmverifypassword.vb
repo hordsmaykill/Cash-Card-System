@@ -7,17 +7,8 @@ Public Class frmverifypassword
 
     Public state As String
 
-    Public Sub ConnectDB()
-        If Connect.State = ConnectionState.Closed Then
-            str = "server=localhost; userid=root; password=; database=dbtbc; Allow Zero Datetime=True;"
-            Connect.ConnectionString = str
-            Connect.Open()
-        End If
-    End Sub
-
-
     Private Sub frmverifypassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call ConnectDB()
+        Connect = ConnectionModule.getConnection()
     End Sub
 
 
@@ -43,11 +34,11 @@ Public Class frmverifypassword
 
             Select Case state
                 Case "add"
-                    formadmincreatenew.ShowDialog()
+                    frmAdminCreateNew.ShowDialog()
                 Case "addmember"
-                    addcustomer.ShowDialog()
+                    frmAddCustomer.ShowDialog()
                 Case "editmember"
-                    frmmemers_editchoices.ShowDialog()
+                    frmMembersEditChoices.ShowDialog()
 
                 Case "delmember"
                     Dim Delete As MsgBoxResult
@@ -56,7 +47,7 @@ Public Class frmverifypassword
 
                     Delete = MsgBox("Are you sure you want to void this Member " + SelectedMember + "?", vbYesNo + vbQuestion, "Message")
                     If Delete = MsgBoxResult.Yes Then
-                        deletemem.SelectedMember = SelectedMember
+                        frmDeleteMember.SelectedMember = SelectedMember
                     End If
             End Select
             ' end if

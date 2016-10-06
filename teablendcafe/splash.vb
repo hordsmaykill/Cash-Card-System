@@ -14,7 +14,7 @@
         If X = True Then
             Me.Opacity = Me.Opacity - 0.1
             If Me.Opacity <= 0 Then
-                login.Show()
+                frmLogin.Show()
                 Me.Close()
             End If
         End If
