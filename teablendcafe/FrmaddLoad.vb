@@ -23,7 +23,7 @@ Public Class FrmaddLoad
         MsgBox("Load " & SelectedMember & " successfully added!", vbOKOnly + vbInformation, "Message")
         Me.Close()
 
-        frmmemers_editchoices.Hide()
+        frmMembersEditChoices.Hide()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

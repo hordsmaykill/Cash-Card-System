@@ -27,7 +27,7 @@ Public Class frmmemberedit
         MsgBox("Member " & SelectedMember & "has successfully been updated!", vbOKOnly + vbInformation, "Message")
         Me.Close()
 
-        frmmemers_editchoices.Hide()
+        frmMembersEditChoices.Hide()
 
     End Sub
 

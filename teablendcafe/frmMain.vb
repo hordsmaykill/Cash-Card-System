@@ -626,7 +626,7 @@ Public Class frmMain
                 .ExecuteNonQuery()
             End With
             Me.Close()
-            login.Show()
+            frmLogin.Show()
         End If
     End Sub
 
@@ -692,7 +692,7 @@ Public Class frmMain
                         tmrDrinks1.Enabled = False
                     End If
 
-                ElseIf drinksLocationX = -(MAIN_PANMENU_WIDTH * 2)
+                ElseIf drinksLocationX = -(MAIN_PANMENU_WIDTH * 2) Then
                     drinks_panmenu1.Location = New Point(drinks_panmenu1.Location.X + DRINKS_SCROLL_SPEED, drinks_panmenu1.Location.Y)
 
                     If drinks_panmenu1.Location.X = -DRINKS_PANMENU_WIDTH Then
@@ -1107,14 +1107,14 @@ Public Class frmMain
     Private Sub account_editbtn_Click(sender As Object, e As EventArgs) Handles account_editbtn.Click
         SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
         userSelected = SelectedAdmin
-        typeadminpassword.ShowDialog()
+        frmTypeAdminPassword.ShowDialog()
     End Sub
 
     Private Sub ChangePass()
         Dim Username As String
         SelectedAdmin = accounts_dgv.Item(0, accounts_dgv.CurrentRow.Index).Value
         Username = SelectedAdmin
-        accountsEdit.lUsername.Text = Username
+        frmAccountsEdit.lUsername.Text = Username
     End Sub
 
 
@@ -1135,7 +1135,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
-        cashcard.ShowDialog()
+        frmCashCard.ShowDialog()
     End Sub
 
 
@@ -1187,7 +1187,7 @@ Public Class frmMain
 
 
     Private Sub inv_add_Click(sender As Object, e As EventArgs) Handles inv_edit.Click
-        frminvedit.ShowDialog()
+        frmInventoryEdit.ShowDialog()
     End Sub
 
 
@@ -1261,7 +1261,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnDeleteOrders_Click(sender As Object, e As EventArgs) Handles btnDeleteOrders.Click
-        typeadminpassworddelete.ShowDialog()
+        frmTypeAdminPasswordDelete.ShowDialog()
     End Sub
 
 End Class
