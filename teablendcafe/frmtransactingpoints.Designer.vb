@@ -56,11 +56,11 @@ Partial Class frmtransactingpoints
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(113, 15)
+        Me.Label1.Location = New System.Drawing.Point(94, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 13)
+        Me.Label1.Size = New System.Drawing.Size(112, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Transacting"
+        Me.Label1.Text = "Transacting via Points"
         '
         'btnClose
         '

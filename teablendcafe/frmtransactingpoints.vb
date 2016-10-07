@@ -107,9 +107,9 @@ Public Class frmtransactingpoints
         End If
         reader.Close()
 
-        frmremainingload.tbtotal.Text = total
-        frmremainingload.tbchange.Text = pointswallet
-        frmremainingload.ShowDialog()
+        frmremainingpoints.tbtotal.Text = total
+        frmremainingpoints.tbchange.Text = pointswallet
+        frmremainingpoints.ShowDialog()
         Me.Close()
     End Sub
 

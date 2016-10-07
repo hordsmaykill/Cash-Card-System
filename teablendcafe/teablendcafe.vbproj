@@ -192,6 +192,12 @@
     <Compile Include="frmremainingload.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmremainingpoints.Designer.vb">
+      <DependentUpon>frmremainingpoints.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmremainingpoints.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmtotal.Designer.vb">
       <DependentUpon>frmtotal.vb</DependentUpon>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmremainingload.resx">
       <DependentUpon>frmremainingload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmremainingpoints.resx">
+      <DependentUpon>frmremainingpoints.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtotal.resx">
       <DependentUpon>frmtotal.vb</DependentUpon>
