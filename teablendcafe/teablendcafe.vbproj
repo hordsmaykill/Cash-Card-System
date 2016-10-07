@@ -198,6 +198,12 @@
     <Compile Include="frmtotal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmtransactingpoints.Designer.vb">
+      <DependentUpon>frmtransactingpoints.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmtransactingpoints.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmverifypassword.Designer.vb">
       <DependentUpon>frmverifypassword.vb</DependentUpon>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmtotal.resx">
       <DependentUpon>frmtotal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtransactingpoints.resx">
+      <DependentUpon>frmtransactingpoints.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmverifypassword.resx">
       <DependentUpon>frmverifypassword.vb</DependentUpon>

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmCardLoad
+Partial Class frmtransactingpoints
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,25 +22,34 @@ Partial Class frmCardLoad
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCardLoad))
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.tmrCheck = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnClose
+        'Panel1
         '
-        Me.btnClose.Location = New System.Drawing.Point(97, 141)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(97, 40)
-        Me.btnClose.TabIndex = 0
-        Me.btnClose.Text = "Cancel"
-        Me.btnClose.UseVisualStyleBackColor = True
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.btnClose)
+        Me.Panel1.Location = New System.Drawing.Point(13, 28)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(296, 201)
+        Me.Panel1.TabIndex = 4
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.teablendcafe.My.Resources.Resources._default
+        Me.PictureBox1.Location = New System.Drawing.Point(97, 54)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 81)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -51,44 +60,26 @@ Partial Class frmCardLoad
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Transacting"
         '
-        'tmrCheck
+        'btnClose
         '
-        Me.tmrCheck.Enabled = True
-        Me.tmrCheck.Interval = 500
+        Me.btnClose.Location = New System.Drawing.Point(97, 141)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(97, 40)
+        Me.btnClose.TabIndex = 0
+        Me.btnClose.Text = "Cancel"
+        Me.btnClose.UseVisualStyleBackColor = True
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.btnClose)
-        Me.Panel1.Location = New System.Drawing.Point(12, 30)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(296, 201)
-        Me.Panel1.TabIndex = 3
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.teablendcafe.My.Resources.Resources._default
-        Me.PictureBox1.Location = New System.Drawing.Point(97, 49)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(93, 77)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
-        'frmCardLoad
+        'frmtransactingpoints
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(319, 249)
+        Me.ClientSize = New System.Drawing.Size(321, 241)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmCardLoad"
+        Me.Name = "frmtransactingpoints"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmCardLoad"
+        Me.Text = "frmtransactingpoints"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -96,9 +87,8 @@ Partial Class frmCardLoad
 
     End Sub
 
-    Friend WithEvents btnClose As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents tmrCheck As Timer
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnClose As Button
     Friend WithEvents PictureBox1 As PictureBox
 End Class
