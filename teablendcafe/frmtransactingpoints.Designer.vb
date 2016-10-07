@@ -22,10 +22,12 @@ Partial Class frmtransactingpoints
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.tmrcheck = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,6 +71,11 @@ Partial Class frmtransactingpoints
         Me.btnClose.Text = "Cancel"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'tmrcheck
+        '
+        Me.tmrcheck.Enabled = True
+        Me.tmrcheck.Interval = 500
+        '
         'frmtransactingpoints
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -91,4 +98,5 @@ Partial Class frmtransactingpoints
     Friend WithEvents Label1 As Label
     Friend WithEvents btnClose As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents tmrcheck As Timer
 End Class
