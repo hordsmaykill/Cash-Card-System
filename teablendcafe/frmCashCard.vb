@@ -11,7 +11,7 @@ Public Class frmCashCard
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        frmCardLoad.ShowDialog()
+        frmchoicespointsorload.ShowDialog()
         Me.Close()
     End Sub
 

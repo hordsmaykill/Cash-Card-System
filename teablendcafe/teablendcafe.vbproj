@@ -101,6 +101,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConnectionModule.vb" />
+    <Compile Include="frmchoicespointsorload.Designer.vb">
+      <DependentUpon>frmchoicespointsorload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmchoicespointsorload.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmDeleteMember.Designer.vb">
       <DependentUpon>frmDeleteMember.vb</DependentUpon>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCashCard.resx">
       <DependentUpon>frmCashCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmchoicespointsorload.resx">
+      <DependentUpon>frmchoicespointsorload.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeleteMember.resx">
       <DependentUpon>frmDeleteMember.vb</DependentUpon>

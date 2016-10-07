@@ -27,12 +27,14 @@ Partial Class frmCashCard
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btncash = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.btncash)
         Me.Panel1.Location = New System.Drawing.Point(12, 39)
@@ -43,9 +45,9 @@ Partial Class frmCashCard
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(166, 11)
+        Me.Button2.Location = New System.Drawing.Point(166, 29)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(149, 96)
+        Me.Button2.Size = New System.Drawing.Size(149, 78)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "CARD"
         Me.Button2.UseVisualStyleBackColor = True
@@ -53,9 +55,9 @@ Partial Class frmCashCard
         'btncash
         '
         Me.btncash.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncash.Location = New System.Drawing.Point(14, 11)
+        Me.btncash.Location = New System.Drawing.Point(14, 29)
         Me.btncash.Name = "btncash"
-        Me.btncash.Size = New System.Drawing.Size(146, 96)
+        Me.btncash.Size = New System.Drawing.Size(146, 78)
         Me.btncash.TabIndex = 2
         Me.btncash.Text = "CASH"
         Me.btncash.UseVisualStyleBackColor = True
@@ -73,7 +75,17 @@ Partial Class frmCashCard
         Me.Button3.Text = "x"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'cashcard
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(84, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(174, 20)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "MODES OF PAYMENT"
+        '
+        'frmCashCard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -83,10 +95,11 @@ Partial Class frmCashCard
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "cashcard"
+        Me.Name = "frmCashCard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "cash_card"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -95,4 +108,5 @@ Partial Class frmCashCard
     Friend WithEvents Button2 As Button
     Friend WithEvents btncash As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label1 As Label
 End Class
