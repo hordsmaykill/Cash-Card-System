@@ -101,10 +101,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConnectionModule.vb" />
-    <Compile Include="frmchoicespointsorload.Designer.vb">
-      <DependentUpon>frmchoicespointsorload.vb</DependentUpon>
+    <Compile Include="frmChoicesPointsOrLoad.Designer.vb">
+      <DependentUpon>frmChoicesPointsOrLoad.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmchoicespointsorload.vb">
+    <Compile Include="frmChoicesPointsOrLoad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDeleteMember.Designer.vb">
@@ -186,34 +186,34 @@
     <Compile Include="frmQuantity.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmremainingload.Designer.vb">
-      <DependentUpon>frmremainingload.vb</DependentUpon>
+    <Compile Include="frmRemainingLoad.Designer.vb">
+      <DependentUpon>frmRemainingLoad.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmremainingload.vb">
+    <Compile Include="frmRemainingLoad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmremainingpoints.Designer.vb">
-      <DependentUpon>frmremainingpoints.vb</DependentUpon>
+    <Compile Include="frmRemainingPoints.Designer.vb">
+      <DependentUpon>frmRemainingPoints.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmremainingpoints.vb">
+    <Compile Include="frmRemainingPoints.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmtotal.Designer.vb">
-      <DependentUpon>frmtotal.vb</DependentUpon>
+    <Compile Include="frmTotal.Designer.vb">
+      <DependentUpon>frmTotal.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmtotal.vb">
+    <Compile Include="frmTotal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmtransactingpoints.Designer.vb">
-      <DependentUpon>frmtransactingpoints.vb</DependentUpon>
+    <Compile Include="frmTransactingPoints.Designer.vb">
+      <DependentUpon>frmTransactingPoints.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmtransactingpoints.vb">
+    <Compile Include="frmTransactingPoints.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmverifypassword.Designer.vb">
-      <DependentUpon>frmverifypassword.vb</DependentUpon>
+    <Compile Include="frmVerifyPassword.Designer.vb">
+      <DependentUpon>frmVerifyPassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmverifypassword.vb">
+    <Compile Include="frmVerifyPassword.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
@@ -272,8 +272,8 @@
     <EmbeddedResource Include="frmCashCard.resx">
       <DependentUpon>frmCashCard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmchoicespointsorload.resx">
-      <DependentUpon>frmchoicespointsorload.vb</DependentUpon>
+    <EmbeddedResource Include="frmChoicesPointsOrLoad.resx">
+      <DependentUpon>frmChoicesPointsOrLoad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeleteMember.resx">
       <DependentUpon>frmDeleteMember.vb</DependentUpon>
@@ -314,20 +314,20 @@
     <EmbeddedResource Include="frmQuantity.resx">
       <DependentUpon>frmQuantity.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmremainingload.resx">
-      <DependentUpon>frmremainingload.vb</DependentUpon>
+    <EmbeddedResource Include="frmRemainingLoad.resx">
+      <DependentUpon>frmRemainingLoad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmremainingpoints.resx">
-      <DependentUpon>frmremainingpoints.vb</DependentUpon>
+    <EmbeddedResource Include="frmRemainingPoints.resx">
+      <DependentUpon>frmRemainingPoints.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmtotal.resx">
-      <DependentUpon>frmtotal.vb</DependentUpon>
+    <EmbeddedResource Include="frmTotal.resx">
+      <DependentUpon>frmTotal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmtransactingpoints.resx">
-      <DependentUpon>frmtransactingpoints.vb</DependentUpon>
+    <EmbeddedResource Include="frmTransactingPoints.resx">
+      <DependentUpon>frmTransactingPoints.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmverifypassword.resx">
-      <DependentUpon>frmverifypassword.vb</DependentUpon>
+    <EmbeddedResource Include="frmVerifyPassword.resx">
+      <DependentUpon>frmVerifyPassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
