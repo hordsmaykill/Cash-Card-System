@@ -23,7 +23,6 @@ Partial Class frmremainingpoints
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.cancel = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblchange = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -35,7 +34,6 @@ Partial Class frmremainingpoints
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.cancel)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.lblchange)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -46,22 +44,13 @@ Partial Class frmremainingpoints
         Me.Panel1.Size = New System.Drawing.Size(288, 216)
         Me.Panel1.TabIndex = 2
         '
-        'cancel
-        '
-        Me.cancel.Location = New System.Drawing.Point(158, 159)
-        Me.cancel.Name = "cancel"
-        Me.cancel.Size = New System.Drawing.Size(75, 41)
-        Me.cancel.TabIndex = 2
-        Me.cancel.Text = "CANCEL"
-        Me.cancel.UseVisualStyleBackColor = True
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(54, 159)
+        Me.Button1.Location = New System.Drawing.Point(109, 152)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 41)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "PROCEED"
+        Me.Button1.Text = "OK"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'lblchange
@@ -120,7 +109,6 @@ Partial Class frmremainingpoints
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents cancel As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents lblchange As Label
     Friend WithEvents Label3 As Label
