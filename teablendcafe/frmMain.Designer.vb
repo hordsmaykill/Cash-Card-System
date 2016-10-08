@@ -2836,7 +2836,7 @@ Partial Class frmMain
         Me.cboinventory1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboinventory1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboinventory1.FormattingEnabled = True
-        Me.cboinventory1.Items.AddRange(New Object() {"prod_code", "prod_name", "type"})
+        Me.cboinventory1.Items.AddRange(New Object() {"Product Code", "Product Name", "Type"})
         Me.cboinventory1.Location = New System.Drawing.Point(971, 29)
         Me.cboinventory1.Name = "cboinventory1"
         Me.cboinventory1.Size = New System.Drawing.Size(191, 37)
