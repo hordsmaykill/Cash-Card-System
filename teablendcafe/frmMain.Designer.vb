@@ -640,7 +640,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, 0)
+        Me.panContent.Location = New System.Drawing.Point(230, -2800)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -743,6 +743,7 @@ Partial Class frmMain
         Me.dgvorders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvorders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column10, Me.Column7, Me.Column8, Me.Column9})
         Me.dgvorders.Location = New System.Drawing.Point(4, 38)
+        Me.dgvorders.MultiSelect = False
         Me.dgvorders.Name = "dgvorders"
         Me.dgvorders.ReadOnly = True
         Me.dgvorders.Size = New System.Drawing.Size(544, 563)
@@ -2643,6 +2644,7 @@ Partial Class frmMain
         Me.accounts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.accounts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column13})
         Me.accounts_dgv.Location = New System.Drawing.Point(2, 2)
+        Me.accounts_dgv.MultiSelect = False
         Me.accounts_dgv.Name = "accounts_dgv"
         Me.accounts_dgv.ReadOnly = True
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2771,6 +2773,7 @@ Partial Class frmMain
         Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
         Me.dgv_members.Location = New System.Drawing.Point(2, 3)
+        Me.dgv_members.MultiSelect = False
         Me.dgv_members.Name = "dgv_members"
         Me.dgv_members.Size = New System.Drawing.Size(1361, 580)
         Me.dgv_members.TabIndex = 0
@@ -2856,6 +2859,7 @@ Partial Class frmMain
         '
         Me.inventorydgv.AllowUserToAddRows = False
         Me.inventorydgv.AllowUserToDeleteRows = False
+        Me.inventorydgv.AllowUserToResizeRows = False
         Me.inventorydgv.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
@@ -2876,6 +2880,7 @@ Partial Class frmMain
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.inventorydgv.DefaultCellStyle = DataGridViewCellStyle6
         Me.inventorydgv.Location = New System.Drawing.Point(0, 72)
+        Me.inventorydgv.MultiSelect = False
         Me.inventorydgv.Name = "inventorydgv"
         Me.inventorydgv.ReadOnly = True
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
