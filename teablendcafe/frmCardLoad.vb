@@ -9,8 +9,18 @@ Public Class frmCardLoad
     Dim Connect As New MySqlConnection
     Dim TransactionReader As MySqlDataReader
 
+    Public transaction As Integer
+
     Private Sub frmCardLoad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connect = ConnectionModule.getConnection()
+
+        ' update label
+        Select Case transaction
+            Case frmchoicespointsorload.TRANSACT_LOAD
+                lblTransacting.Text = "Transacting: Load in card will be used."
+            Case frmchoicespointsorload.TRANSACT_POINTS
+                lblTransacting.Text = "Transacting: Points in card will be used."
+        End Select
 
         ' reset db
         resetTransaction()
@@ -53,6 +63,8 @@ Public Class frmCardLoad
             Exit Sub
         End If
         reader.Close()
+
+        ' don't update if points is selected
 
         ' update points
         points = points + pointsComputed

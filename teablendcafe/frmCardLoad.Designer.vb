@@ -25,10 +25,10 @@ Partial Class frmCardLoad
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCardLoad))
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.tmrCheck = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblTransacting = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,15 +42,6 @@ Partial Class frmCardLoad
         Me.btnClose.Text = "Cancel"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(90, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Transacting via Load"
-        '
         'tmrCheck
         '
         Me.tmrCheck.Enabled = True
@@ -59,8 +50,8 @@ Partial Class frmCardLoad
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.lblTransacting)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnClose)
         Me.Panel1.Location = New System.Drawing.Point(12, 30)
         Me.Panel1.Name = "Panel1"
@@ -77,6 +68,15 @@ Partial Class frmCardLoad
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
+        'lblTransacting
+        '
+        Me.lblTransacting.Location = New System.Drawing.Point(3, 15)
+        Me.lblTransacting.Name = "lblTransacting"
+        Me.lblTransacting.Size = New System.Drawing.Size(293, 16)
+        Me.lblTransacting.TabIndex = 4
+        Me.lblTransacting.Text = "Transacting"
+        Me.lblTransacting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmCardLoad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -90,15 +90,14 @@ Partial Class frmCardLoad
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmCardLoad"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents btnClose As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents tmrCheck As Timer
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblTransacting As Label
 End Class

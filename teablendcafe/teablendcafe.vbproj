@@ -192,22 +192,16 @@
     <Compile Include="frmRemainingLoad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRemainingPoints.Designer.vb">
-      <DependentUpon>frmRemainingPoints.vb</DependentUpon>
+    <Compile Include="frmremainingpoints.Designer.vb">
+      <DependentUpon>frmremainingpoints.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmRemainingPoints.vb">
+    <Compile Include="frmremainingpoints.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTotal.Designer.vb">
       <DependentUpon>frmTotal.vb</DependentUpon>
     </Compile>
     <Compile Include="frmTotal.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTransactingPoints.Designer.vb">
-      <DependentUpon>frmTransactingPoints.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTransactingPoints.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmVerifyPassword.Designer.vb">
@@ -317,14 +311,11 @@
     <EmbeddedResource Include="frmRemainingLoad.resx">
       <DependentUpon>frmRemainingLoad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRemainingPoints.resx">
-      <DependentUpon>frmRemainingPoints.vb</DependentUpon>
+    <EmbeddedResource Include="frmremainingpoints.resx">
+      <DependentUpon>frmremainingpoints.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTotal.resx">
       <DependentUpon>frmTotal.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTransactingPoints.resx">
-      <DependentUpon>frmTransactingPoints.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVerifyPassword.resx">
       <DependentUpon>frmVerifyPassword.vb</DependentUpon>
