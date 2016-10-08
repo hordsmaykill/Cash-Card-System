@@ -572,6 +572,7 @@ Partial Class frmMain
         Me.panLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.panLogout.Controls.Add(Me.picLogout)
         Me.panLogout.Controls.Add(Me.lbllogout)
+        Me.panLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.panLogout.Location = New System.Drawing.Point(1177, 12)
         Me.panLogout.Name = "panLogout"
         Me.panLogout.Size = New System.Drawing.Size(135, 45)
@@ -580,6 +581,7 @@ Partial Class frmMain
         '
         'picLogout
         '
+        Me.picLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
         Me.picLogout.Location = New System.Drawing.Point(4, 9)
         Me.picLogout.Name = "picLogout"
@@ -591,6 +593,7 @@ Partial Class frmMain
         'lbllogout
         '
         Me.lbllogout.AutoSize = True
+        Me.lbllogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lbllogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lbllogout.Location = New System.Drawing.Point(62, 15)
         Me.lbllogout.Name = "lbllogout"
@@ -640,7 +643,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -2800)
+        Me.panContent.Location = New System.Drawing.Point(230, -700)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -746,6 +749,7 @@ Partial Class frmMain
         Me.dgvorders.MultiSelect = False
         Me.dgvorders.Name = "dgvorders"
         Me.dgvorders.ReadOnly = True
+        Me.dgvorders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvorders.Size = New System.Drawing.Size(544, 563)
         Me.dgvorders.TabIndex = 35
         '
@@ -2649,6 +2653,7 @@ Partial Class frmMain
         Me.accounts_dgv.ReadOnly = True
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.accounts_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.accounts_dgv.Size = New System.Drawing.Size(1364, 600)
         Me.accounts_dgv.TabIndex = 0
         '
@@ -2775,6 +2780,7 @@ Partial Class frmMain
         Me.dgv_members.Location = New System.Drawing.Point(2, 3)
         Me.dgv_members.MultiSelect = False
         Me.dgv_members.Name = "dgv_members"
+        Me.dgv_members.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_members.Size = New System.Drawing.Size(1361, 580)
         Me.dgv_members.TabIndex = 0
         '
@@ -2891,6 +2897,7 @@ Partial Class frmMain
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.inventorydgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.inventorydgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.inventorydgv.Size = New System.Drawing.Size(1366, 628)
         Me.inventorydgv.TabIndex = 0
         '
