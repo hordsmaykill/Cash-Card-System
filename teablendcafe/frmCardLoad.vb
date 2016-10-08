@@ -24,12 +24,14 @@ Public Class frmCardLoad
 
         ' reset db
         resetDB()
-        ' tmp comment
-        ' start waiting for scan
-        'tmrCheck.Enabled = True
 
-        Dim cusNo As String = "tbc123"
-        updateDatabase(cusNo) ' remove if finished debugging
+        ' start waiting for scan
+        tmrCheck.Enabled = True
+
+
+        ' debugging purpose
+        'Dim cusNo As String = "tbc123"
+        'updateDatabase(cusNo) ' remove if finished debugging
     End Sub
 
     Private Sub updateDatabase(customerNumber As String)
