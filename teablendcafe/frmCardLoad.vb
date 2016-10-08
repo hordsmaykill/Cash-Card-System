@@ -14,8 +14,11 @@ Public Class frmCardLoad
 
         ' reset db
         resetTransaction()
-        tmrCheck.Enabled = True
+        ' tmp comment
+        'tmrCheck.Enabled = True
 
+        Dim cusNo As String = "tbc123"
+        updateDatabase(cusNo) ' remove if finished debugging
     End Sub
 
     Private Sub updateDatabase(customerNumber As String)
@@ -24,29 +27,41 @@ Public Class frmCardLoad
         Dim cmd As New MySqlCommand
         cmd.Connection = Connect
 
-        ' get customer wallet
+        ' get total and set a points
         Dim total As Double = frmMain.txtTotalOrder.Text
+        Dim pointsComputed As Integer
+        If total >= 200 Then
+            pointsComputed = total / 200
+        End If
 
+        ' get customer wallet and points
         Dim wallet As Double
-        cmd.CommandText = "SELECT cus_loadwallet FROM tblcustomers WHERE cus_no='" & customerNumber & "'"
+        Dim points As Integer
+        cmd.CommandText = "SELECT cus_loadwallet, cus_points FROM tblcustomers WHERE cus_no='" & customerNumber & "'"
         reader = cmd.ExecuteReader()
 
         reader.Read()
         If reader.HasRows Then
             wallet = reader.Item(0)
+            points = reader.Item(1)
         End If
-        If wallet <= total Then
-            MsgBox("Not enought balance in account" & vbNewLine & "Remaining account load is: " & wallet)
+
+        ' check load
+        If wallet < total Then
+            MsgBox("Not enough balance in account" & vbNewLine & "Remaining account load is: " & wallet)
             reader.Close()
             Exit Sub
         End If
         reader.Close()
 
+        ' update points
+        points = points + pointsComputed
+
         ' update load
         Dim walletTotal As Double = wallet - total
 
         With cmd
-            .CommandText = "UPDATE tblcustomers SET cus_loadwallet = " & walletTotal & " WHERE cus_no='" & customerNumber & "'"
+            .CommandText = "UPDATE tblcustomers SET cus_loadwallet = " & walletTotal & ", cus_points = " & points & " WHERE cus_no='" & customerNumber & "'"
             .ExecuteNonQuery()
         End With
 
@@ -60,7 +75,6 @@ Public Class frmCardLoad
         Dim ord_code As String = dateConcat & "-" & rand
 
         ' get data
-
 
         ' insert id and date
         cmd.CommandText = "INSERT INTO tblorders(ord_code, total, ord_date) VALUES('" & ord_code & "', " & total & ", '" & curDate & "')"

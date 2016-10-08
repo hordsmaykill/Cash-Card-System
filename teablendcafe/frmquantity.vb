@@ -61,7 +61,7 @@ Public Class frmquantity
         Dim qtyFromDB As Integer
 
         If txtNum.Text = "0" Then
-            MsgBox("Invalid quantity. quantity must be >= 1")
+            MsgBox("Invalid quantity. Quantity must be atleast 1.")
             Exit Sub
         End If
 
