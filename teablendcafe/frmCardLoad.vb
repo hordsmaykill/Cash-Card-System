@@ -23,8 +23,9 @@ Public Class frmCardLoad
         End Select
 
         ' reset db
-        resetTransaction()
+        resetDB()
         ' tmp comment
+        ' start waiting for scan
         'tmrCheck.Enabled = True
 
         Dim cusNo As String = "tbc123"
@@ -55,27 +56,38 @@ Public Class frmCardLoad
             wallet = reader.Item(0)
             points = reader.Item(1)
         End If
-
-        ' check load
-        If wallet < total Then
-            MsgBox("Not enough balance in account" & vbNewLine & "Remaining account load is: " & wallet)
-            reader.Close()
-            Exit Sub
-        End If
         reader.Close()
 
-        ' don't update if points is selected
+        ' don't update if points is selected only card
 
-        ' update points
-        points = points + pointsComputed
+        Dim walletTotal As Double
+        Select Case transaction
+            Case frmchoicespointsorload.TRANSACT_LOAD
+                ' check load
+                If wallet < total Then
+                    MsgBox("Not enough balance in account" & vbNewLine & "Remaining account load is: " & wallet)
+                    Exit Sub
+                End If
 
-        ' update load
-        Dim walletTotal As Double = wallet - total
+                ' add points
+                points = points + pointsComputed
 
-        With cmd
-            .CommandText = "UPDATE tblcustomers SET cus_loadwallet = " & walletTotal & ", cus_points = " & points & " WHERE cus_no='" & customerNumber & "'"
-            .ExecuteNonQuery()
-        End With
+                ' update load and points
+                walletTotal = wallet - total
+                cmd.CommandText = "UPDATE tblcustomers SET cus_loadwallet = " & walletTotal & ", cus_points = " & points & " WHERE cus_no='" & customerNumber & "'"
+
+            Case frmchoicespointsorload.TRANSACT_POINTS
+                ' check points
+                If points < total Then
+                    MsgBox("Not enough points in account" & vbNewLine & "Current points: " & points)
+                    Exit Sub
+                End If
+
+                'update points
+                points = points - total
+                cmd.CommandText = "UPDATE tblcustomers SET cus_points = " & points & " WHERE cus_no='" & customerNumber & "'"
+        End Select
+        cmd.ExecuteNonQuery()
 
         ' update products and inventories
         Dim curDate As String = Date.Today.ToString("yyyy-MM-dd")
@@ -134,15 +146,26 @@ Public Class frmCardLoad
         End If
         reader.Close()
 
-        frmremainingload.tbtotal.Text = total
-        frmremainingload.tbchange.Text = wallet
-        frmremainingload.tbpointsadded.Text = pointsComputed
-        frmremainingload.tbpoints.Text = points
-        frmremainingload.ShowDialog()
+        ' display status
+        Select Case transaction
+            Case frmchoicespointsorload.TRANSACT_LOAD
+                frmremainingload.tbtotal.Text = total
+                frmremainingload.tbchange.Text = wallet
+                frmremainingload.tbpoints.Text = points
+                frmremainingload.ShowDialog()
+
+            Case frmchoicespointsorload.TRANSACT_POINTS
+                frmremainingpoints.tbtotal.Text = total
+                frmremainingpoints.tbpoints.Text = points
+                frmremainingpoints.ShowDialog()
+        End Select
+
+
+
         Me.Close()
     End Sub
 
-    Private Sub resetTransaction()
+    Private Sub resetDB()
         tmrCheck.Enabled = False
 
         Dim Command As New MySqlCommand
@@ -167,7 +190,7 @@ Public Class frmCardLoad
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        resetTransaction()
+        resetDB()
         Me.Close()
     End Sub
 
