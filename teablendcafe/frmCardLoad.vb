@@ -124,6 +124,8 @@ Public Class frmCardLoad
 
         frmremainingload.tbtotal.Text = total
         frmremainingload.tbchange.Text = wallet
+        frmremainingload.tbpointsadded.Text = pointsComputed
+        frmremainingload.tbpoints.Text = points
         frmremainingload.ShowDialog()
         Me.Close()
     End Sub
