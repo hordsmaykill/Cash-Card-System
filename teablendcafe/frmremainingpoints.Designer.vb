@@ -23,11 +23,10 @@ Partial Class frmremainingpoints
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.cancel = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblchange = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.tbchange = New System.Windows.Forms.TextBox()
+        Me.tbpoints = New System.Windows.Forms.TextBox()
         Me.tbtotal = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -35,33 +34,23 @@ Partial Class frmremainingpoints
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.cancel)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.lblchange)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.tbchange)
+        Me.Panel1.Controls.Add(Me.tbpoints)
         Me.Panel1.Controls.Add(Me.tbtotal)
         Me.Panel1.Location = New System.Drawing.Point(12, 21)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(288, 216)
         Me.Panel1.TabIndex = 2
         '
-        'cancel
-        '
-        Me.cancel.Location = New System.Drawing.Point(158, 159)
-        Me.cancel.Name = "cancel"
-        Me.cancel.Size = New System.Drawing.Size(75, 41)
-        Me.cancel.TabIndex = 2
-        Me.cancel.Text = "CANCEL"
-        Me.cancel.UseVisualStyleBackColor = True
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(54, 159)
+        Me.Button1.Location = New System.Drawing.Point(109, 152)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 41)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "PROCEED"
+        Me.Button1.Text = "OK"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'lblchange
@@ -84,14 +73,14 @@ Partial Class frmremainingpoints
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Total Bill"
         '
-        'tbchange
+        'tbpoints
         '
-        Me.tbchange.Enabled = False
-        Me.tbchange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbchange.Location = New System.Drawing.Point(54, 120)
-        Me.tbchange.Name = "tbchange"
-        Me.tbchange.Size = New System.Drawing.Size(179, 26)
-        Me.tbchange.TabIndex = 0
+        Me.tbpoints.Enabled = False
+        Me.tbpoints.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbpoints.Location = New System.Drawing.Point(54, 120)
+        Me.tbpoints.Name = "tbpoints"
+        Me.tbpoints.Size = New System.Drawing.Size(179, 26)
+        Me.tbpoints.TabIndex = 0
         '
         'tbtotal
         '
@@ -120,10 +109,9 @@ Partial Class frmremainingpoints
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents cancel As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents lblchange As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents tbchange As TextBox
+    Friend WithEvents tbpoints As TextBox
     Friend WithEvents tbtotal As TextBox
 End Class

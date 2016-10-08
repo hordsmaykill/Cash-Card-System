@@ -5,7 +5,7 @@
         Me.Close()
     End Sub
 
-    Private Sub cancel_Click(sender As Object, e As EventArgs) Handles cancel.Click
+    Private Sub cancel_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 End Class
