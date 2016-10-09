@@ -643,7 +643,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, -1400)
+        Me.panContent.Location = New System.Drawing.Point(230, 0)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -882,6 +882,7 @@ Partial Class frmMain
         'menu_btn_sbs
         '
         Me.menu_btn_sbs.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_sbs.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_sbs.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_sbs.Location = New System.Drawing.Point(928, 7)
         Me.menu_btn_sbs.Name = "menu_btn_sbs"
@@ -893,6 +894,7 @@ Partial Class frmMain
         'menu_btn_n
         '
         Me.menu_btn_n.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_n.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_n.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_n.Location = New System.Drawing.Point(777, 7)
         Me.menu_btn_n.Name = "menu_btn_n"
@@ -904,7 +906,7 @@ Partial Class frmMain
         'menu_btn_fbw
         '
         Me.menu_btn_fbw.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_fbw.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_fbw.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_fbw.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_fbw.Location = New System.Drawing.Point(607, 7)
         Me.menu_btn_fbw.Name = "menu_btn_fbw"
@@ -916,7 +918,7 @@ Partial Class frmMain
         'menu_btn_te
         '
         Me.menu_btn_te.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_te.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_te.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_te.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_te.Location = New System.Drawing.Point(466, 7)
         Me.menu_btn_te.Name = "menu_btn_te"
@@ -928,7 +930,7 @@ Partial Class frmMain
         'menu_btn_ss
         '
         Me.menu_btn_ss.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_ss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_ss.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_ss.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_ss.Location = New System.Drawing.Point(315, 7)
         Me.menu_btn_ss.Name = "menu_btn_ss"
@@ -940,7 +942,7 @@ Partial Class frmMain
         'menu_btn_cbf
         '
         Me.menu_btn_cbf.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_cbf.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_cbf.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_cbf.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_cbf.Location = New System.Drawing.Point(160, 7)
         Me.menu_btn_cbf.Name = "menu_btn_cbf"
@@ -952,7 +954,7 @@ Partial Class frmMain
         'menu_btn_c
         '
         Me.menu_btn_c.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_c.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_c.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_c.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_c.Location = New System.Drawing.Point(14, 7)
         Me.menu_btn_c.Name = "menu_btn_c"
@@ -1020,6 +1022,7 @@ Partial Class frmMain
         'menu_btn_spam
         '
         Me.menu_btn_spam.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_spam.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_spam.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_spam.Location = New System.Drawing.Point(929, 23)
         Me.menu_btn_spam.Name = "menu_btn_spam"
@@ -1031,6 +1034,7 @@ Partial Class frmMain
         'menu_btn_cs
         '
         Me.menu_btn_cs.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.menu_btn_cs.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_cs.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_cs.Location = New System.Drawing.Point(783, 23)
         Me.menu_btn_cs.Name = "menu_btn_cs"
@@ -1042,7 +1046,7 @@ Partial Class frmMain
         'menu_btn_l
         '
         Me.menu_btn_l.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_l.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_l.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_l.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_l.Location = New System.Drawing.Point(613, 108)
         Me.menu_btn_l.Name = "menu_btn_l"
@@ -1054,7 +1058,7 @@ Partial Class frmMain
         'menu_btn_h
         '
         Me.menu_btn_h.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_h.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_h.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_h.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_h.Location = New System.Drawing.Point(472, 108)
         Me.menu_btn_h.Name = "menu_btn_h"
@@ -1066,7 +1070,7 @@ Partial Class frmMain
         'menu_btn_cp
         '
         Me.menu_btn_cp.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_cp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_cp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_cp.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_cp.Location = New System.Drawing.Point(321, 108)
         Me.menu_btn_cp.Name = "menu_btn_cp"
@@ -1078,7 +1082,7 @@ Partial Class frmMain
         'menu_btn_tdd
         '
         Me.menu_btn_tdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_tdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_tdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_tdd.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_tdd.Location = New System.Drawing.Point(613, 2)
         Me.menu_btn_tdd.Name = "menu_btn_tdd"
@@ -1090,7 +1094,7 @@ Partial Class frmMain
         'menu_btn_ucb
         '
         Me.menu_btn_ucb.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_ucb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_ucb.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_ucb.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_ucb.Location = New System.Drawing.Point(472, 2)
         Me.menu_btn_ucb.Name = "menu_btn_ucb"
@@ -1102,7 +1106,7 @@ Partial Class frmMain
         'menu_btn_pp
         '
         Me.menu_btn_pp.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_pp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_pp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_pp.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_pp.Location = New System.Drawing.Point(170, 108)
         Me.menu_btn_pp.Name = "menu_btn_pp"
@@ -1114,7 +1118,7 @@ Partial Class frmMain
         'menu_btn_es
         '
         Me.menu_btn_es.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_es.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_es.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_es.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_es.Location = New System.Drawing.Point(321, 2)
         Me.menu_btn_es.Name = "menu_btn_es"
@@ -1126,7 +1130,7 @@ Partial Class frmMain
         'menu_btn_cc
         '
         Me.menu_btn_cc.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_cc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_cc.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_cc.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_cc.Location = New System.Drawing.Point(21, 108)
         Me.menu_btn_cc.Name = "menu_btn_cc"
@@ -1138,7 +1142,7 @@ Partial Class frmMain
         'menu_btn_ib
         '
         Me.menu_btn_ib.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_ib.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_ib.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_ib.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_ib.Location = New System.Drawing.Point(170, 2)
         Me.menu_btn_ib.Name = "menu_btn_ib"
@@ -1150,7 +1154,7 @@ Partial Class frmMain
         'menu_btn_bbq
         '
         Me.menu_btn_bbq.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.menu_btn_bbq.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menu_btn_bbq.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menu_btn_bbq.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.menu_btn_bbq.Location = New System.Drawing.Point(20, 2)
         Me.menu_btn_bbq.Name = "menu_btn_bbq"
@@ -2306,7 +2310,7 @@ Partial Class frmMain
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label15.Location = New System.Drawing.Point(5, 8)
         Me.Label15.Name = "Label15"
