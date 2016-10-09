@@ -241,10 +241,6 @@ Partial Class frmMain
         Me.btnmembers_add = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.dgv_members = New System.Windows.Forms.DataGridView()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panInventory = New System.Windows.Forms.Panel()
         Me.cboinventory2 = New System.Windows.Forms.ComboBox()
         Me.cboinventory1 = New System.Windows.Forms.ComboBox()
@@ -269,6 +265,11 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
         CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -643,7 +644,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, 0)
+        Me.panContent.Location = New System.Drawing.Point(230, -2100)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -2780,37 +2781,13 @@ Partial Class frmMain
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgv_members.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16})
+        Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16, Me.Column4})
         Me.dgv_members.Location = New System.Drawing.Point(2, 3)
         Me.dgv_members.MultiSelect = False
         Me.dgv_members.Name = "dgv_members"
         Me.dgv_members.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_members.Size = New System.Drawing.Size(1361, 580)
         Me.dgv_members.TabIndex = 0
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "customer number"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 330
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "customer name"
-        Me.Column14.Name = "Column14"
-        Me.Column14.Width = 330
-        '
-        'Column15
-        '
-        Me.Column15.HeaderText = "customer since"
-        Me.Column15.Name = "Column15"
-        Me.Column15.Width = 330
-        '
-        'Column16
-        '
-        Me.Column16.HeaderText = "customer loadwallet"
-        Me.Column16.Name = "Column16"
-        Me.Column16.Width = 330
         '
         'panInventory
         '
@@ -3033,6 +3010,36 @@ Partial Class frmMain
         'tmrSubmenu
         '
         Me.tmrSubmenu.Interval = 10
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "customer number"
+        Me.Column12.Name = "Column12"
+        Me.Column12.Width = 240
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "customer name"
+        Me.Column14.Name = "Column14"
+        Me.Column14.Width = 300
+        '
+        'Column15
+        '
+        Me.Column15.HeaderText = "customer since"
+        Me.Column15.Name = "Column15"
+        Me.Column15.Width = 260
+        '
+        'Column16
+        '
+        Me.Column16.HeaderText = "customer loadwallet"
+        Me.Column16.Name = "Column16"
+        Me.Column16.Width = 260
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "customer points"
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 260
         '
         'frmMain
         '
@@ -3380,10 +3387,6 @@ Partial Class frmMain
     Friend WithEvents cboinventory1 As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnclearorder As Button
-    Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Column14 As DataGridViewTextBoxColumn
-    Friend WithEvents Column15 As DataGridViewTextBoxColumn
-    Friend WithEvents Column16 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
@@ -3393,4 +3396,9 @@ Partial Class frmMain
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents lblAccounts As Label
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
+    Friend WithEvents Column16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class

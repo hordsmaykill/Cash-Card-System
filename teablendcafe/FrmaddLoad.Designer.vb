@@ -74,7 +74,7 @@ Partial Class FrmaddLoad
         'nupdaddload
         '
         Me.nupdaddload.Location = New System.Drawing.Point(93, 27)
-        Me.nupdaddload.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.nupdaddload.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
         Me.nupdaddload.Name = "nupdaddload"
         Me.nupdaddload.Size = New System.Drawing.Size(120, 20)
         Me.nupdaddload.TabIndex = 0

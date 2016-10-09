@@ -229,7 +229,7 @@ Public Class frmMain
 
         If Reader.HasRows Then
             While Reader.Read
-                dgv_members.Rows.Add(Reader.Item(0), Reader.Item(1), Reader.Item(2), Reader.Item(3))
+                dgv_members.Rows.Add(Reader.Item(0), Reader.Item(1), Reader.Item(2), Reader.Item(3), Reader.Item(4))
             End While
         End If
         Reader.Close()
