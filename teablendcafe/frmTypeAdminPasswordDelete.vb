@@ -19,7 +19,7 @@ Public Class frmTypeAdminPasswordDelete
         Dim reply As String
 
 
-        reply = MsgBox("Do you really want to Delete this current order(s)?", MsgBoxStyle.YesNoCancel, "Clear")
+        reply = MsgBox("Do you really want to void this current order(s)?", MsgBoxStyle.YesNoCancel, "Clear")
         If reply = MsgBoxResult.Yes Then
             frmMain.dgvorders.Rows.RemoveAt(frmMain.dgvorders.CurrentRow.Index)
             Me.Close()
