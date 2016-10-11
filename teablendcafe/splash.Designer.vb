@@ -33,7 +33,7 @@ Partial Class splash
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 3000
+        Me.Timer1.Interval = 6000
         '
         'Timer2
         '
@@ -42,10 +42,10 @@ Partial Class splash
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.WindowFrame
-        Me.PictureBox2.Image = Global.teablendcafe.My.Resources.Resources.splash_panwrapper_img
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 2)
+        Me.PictureBox2.Image = Global.teablendcafe.My.Resources.Resources.newlogo
+        Me.PictureBox2.Location = New System.Drawing.Point(-114, -58)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(588, 603)
+        Me.PictureBox2.Size = New System.Drawing.Size(797, 704)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False

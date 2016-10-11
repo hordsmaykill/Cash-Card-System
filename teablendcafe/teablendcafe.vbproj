@@ -604,6 +604,7 @@
     <None Include="Resources\drinks1.jpg" />
     <None Include="Resources\maincourse.jpg" />
     <None Include="Resources\Forsharing.jpg" />
+    <None Include="Resources\newlogo.gif" />
     <Content Include="Resources\tbc.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

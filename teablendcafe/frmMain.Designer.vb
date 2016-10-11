@@ -23,34 +23,25 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panSideMenu = New System.Windows.Forms.Panel()
         Me.panButtons = New System.Windows.Forms.TableLayoutPanel()
-        Me.picAccounts = New System.Windows.Forms.PictureBox()
-        Me.picAssessment = New System.Windows.Forms.PictureBox()
-        Me.picMenu = New System.Windows.Forms.PictureBox()
-        Me.picInventory = New System.Windows.Forms.PictureBox()
         Me.lblAssessment = New System.Windows.Forms.Label()
         Me.lblMenu = New System.Windows.Forms.Label()
         Me.lblInventory = New System.Windows.Forms.Label()
         Me.lblHome = New System.Windows.Forms.Label()
-        Me.picHome = New System.Windows.Forms.PictureBox()
         Me.lblAccounts = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnUsrMgmt = New System.Windows.Forms.Button()
         Me.panHeading = New System.Windows.Forms.Panel()
         Me.panLogout = New System.Windows.Forms.Panel()
-        Me.picLogout = New System.Windows.Forms.PictureBox()
         Me.lbllogout = New System.Windows.Forms.Label()
-        Me.piclogout2 = New System.Windows.Forms.PictureBox()
-        Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.tmrMenu = New System.Windows.Forms.Timer(Me.components)
         Me.panContent = New System.Windows.Forms.Panel()
         Me.panMenu = New System.Windows.Forms.Panel()
@@ -68,9 +59,6 @@ Partial Class frmMain
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panmenumenu = New System.Windows.Forms.GroupBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.submenu_panbtn2 = New System.Windows.Forms.Button()
         Me.submenu_panmenu1 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -231,10 +219,6 @@ Partial Class frmMain
         Me.accounts_dgv = New System.Windows.Forms.DataGridView()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.panHome = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ltime = New System.Windows.Forms.Label()
-        Me.lDate = New System.Windows.Forms.Label()
         Me.panAssessment = New System.Windows.Forms.Panel()
         Me.panMember = New System.Windows.Forms.Panel()
         Me.btnmembers_del = New System.Windows.Forms.Button()
@@ -270,27 +254,31 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.panHome = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ltime = New System.Windows.Forms.Label()
+        Me.lDate = New System.Windows.Forms.Label()
+        Me.picAccounts = New System.Windows.Forms.PictureBox()
+        Me.picAssessment = New System.Windows.Forms.PictureBox()
+        Me.picMenu = New System.Windows.Forms.PictureBox()
+        Me.picInventory = New System.Windows.Forms.PictureBox()
+        Me.picHome = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picLogout = New System.Windows.Forms.PictureBox()
+        Me.piclogout2 = New System.Windows.Forms.PictureBox()
+        Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
-        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picHome, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panHeading.SuspendLayout()
         Me.panLogout.SuspendLayout()
-        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panContent.SuspendLayout()
         Me.panMenu.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvorders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panmenumenu.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.sub_panmenu1.SuspendLayout()
         Me.main_panmenu.SuspendLayout()
@@ -329,14 +317,26 @@ Partial Class frmMain
         Me.Panel4.SuspendLayout()
         Me.panAccounts.SuspendLayout()
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panHome.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.panAssessment.SuspendLayout()
         Me.panMember.SuspendLayout()
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panInventory.SuspendLayout()
         CType(Me.inventorydgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panWrapper.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panHome.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picHome, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panSideMenu
@@ -377,62 +377,6 @@ Partial Class frmMain
         Me.panButtons.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.panButtons.Size = New System.Drawing.Size(232, 245)
         Me.panButtons.TabIndex = 7
-        '
-        'picAccounts
-        '
-        Me.picAccounts.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picAccounts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picAccounts.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picAccounts.Image = Global.teablendcafe.My.Resources.Resources.ic_person_outline_white_48dp_2x
-        Me.picAccounts.Location = New System.Drawing.Point(0, 196)
-        Me.picAccounts.Margin = New System.Windows.Forms.Padding(0)
-        Me.picAccounts.Name = "picAccounts"
-        Me.picAccounts.Size = New System.Drawing.Size(46, 49)
-        Me.picAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picAccounts.TabIndex = 12
-        Me.picAccounts.TabStop = False
-        '
-        'picAssessment
-        '
-        Me.picAssessment.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picAssessment.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picAssessment.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picAssessment.Image = Global.teablendcafe.My.Resources.Resources.assessment_105
-        Me.picAssessment.Location = New System.Drawing.Point(0, 147)
-        Me.picAssessment.Margin = New System.Windows.Forms.Padding(0)
-        Me.picAssessment.Name = "picAssessment"
-        Me.picAssessment.Size = New System.Drawing.Size(46, 49)
-        Me.picAssessment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picAssessment.TabIndex = 11
-        Me.picAssessment.TabStop = False
-        '
-        'picMenu
-        '
-        Me.picMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picMenu.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picMenu.Image = Global.teablendcafe.My.Resources.Resources.menu_1251
-        Me.picMenu.Location = New System.Drawing.Point(0, 98)
-        Me.picMenu.Margin = New System.Windows.Forms.Padding(0)
-        Me.picMenu.Name = "picMenu"
-        Me.picMenu.Size = New System.Drawing.Size(46, 49)
-        Me.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picMenu.TabIndex = 10
-        Me.picMenu.TabStop = False
-        '
-        'picInventory
-        '
-        Me.picInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picInventory.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picInventory.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picInventory.Image = Global.teablendcafe.My.Resources.Resources.assignment_125
-        Me.picInventory.Location = New System.Drawing.Point(0, 49)
-        Me.picInventory.Margin = New System.Windows.Forms.Padding(0)
-        Me.picInventory.Name = "picInventory"
-        Me.picInventory.Size = New System.Drawing.Size(46, 49)
-        Me.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picInventory.TabIndex = 9
-        Me.picInventory.TabStop = False
         '
         'lblAssessment
         '
@@ -502,20 +446,6 @@ Partial Class frmMain
         Me.lblHome.Text = "Dashboard"
         Me.lblHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'picHome
-        '
-        Me.picHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picHome.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picHome.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picHome.Image = Global.teablendcafe.My.Resources.Resources.home_125
-        Me.picHome.Location = New System.Drawing.Point(0, 0)
-        Me.picHome.Margin = New System.Windows.Forms.Padding(0)
-        Me.picHome.Name = "picHome"
-        Me.picHome.Size = New System.Drawing.Size(46, 49)
-        Me.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picHome.TabIndex = 1
-        Me.picHome.TabStop = False
-        '
         'lblAccounts
         '
         Me.lblAccounts.AutoSize = True
@@ -532,17 +462,6 @@ Partial Class frmMain
         Me.lblAccounts.TabIndex = 13
         Me.lblAccounts.Text = "Accounts"
         Me.lblAccounts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(62, 31)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(95, 82)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
         '
         'btnUsrMgmt
         '
@@ -580,17 +499,6 @@ Partial Class frmMain
         Me.panLogout.TabIndex = 13
         Me.panLogout.Visible = False
         '
-        'picLogout
-        '
-        Me.picLogout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
-        Me.picLogout.Location = New System.Drawing.Point(4, 9)
-        Me.picLogout.Name = "picLogout"
-        Me.picLogout.Size = New System.Drawing.Size(40, 27)
-        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogout.TabIndex = 14
-        Me.picLogout.TabStop = False
-        '
         'lbllogout
         '
         Me.lbllogout.AutoSize = True
@@ -602,28 +510,6 @@ Partial Class frmMain
         Me.lbllogout.TabIndex = 0
         Me.lbllogout.Text = "Logout"
         Me.lbllogout.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'piclogout2
-        '
-        Me.piclogout2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.piclogout2.Image = Global.teablendcafe.My.Resources.Resources.arrowdown
-        Me.piclogout2.Location = New System.Drawing.Point(1310, 22)
-        Me.piclogout2.Name = "piclogout2"
-        Me.piclogout2.Size = New System.Drawing.Size(34, 22)
-        Me.piclogout2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.piclogout2.TabIndex = 10
-        Me.piclogout2.TabStop = False
-        '
-        'btnMenu
-        '
-        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMenu.Image = Global.teablendcafe.My.Resources.Resources.menuDefault
-        Me.btnMenu.Location = New System.Drawing.Point(0, -6)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(71, 78)
-        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMenu.TabIndex = 9
-        Me.btnMenu.TabStop = False
         '
         'tmrMenu
         '
@@ -736,14 +622,14 @@ Partial Class frmMain
         Me.dgvorders.AllowUserToAddRows = False
         Me.dgvorders.AllowUserToDeleteRows = False
         Me.dgvorders.AllowUserToResizeRows = False
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvorders.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvorders.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvorders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvorders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column10, Me.Column7, Me.Column8, Me.Column9})
         Me.dgvorders.Location = New System.Drawing.Point(4, 38)
@@ -811,33 +697,6 @@ Partial Class frmMain
         Me.panmenumenu.TabIndex = 25
         Me.panmenumenu.TabStop = False
         Me.panmenumenu.Text = "Menu"
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.teablendcafe.My.Resources.Resources.maincourse
-        Me.PictureBox3.Location = New System.Drawing.Point(3, 509)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(23, 108)
-        Me.PictureBox3.TabIndex = 58
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.teablendcafe.My.Resources.Resources.Forsharing
-        Me.PictureBox4.Location = New System.Drawing.Point(4, 296)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(23, 111)
-        Me.PictureBox4.TabIndex = 58
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.teablendcafe.My.Resources.Resources.drinks1
-        Me.PictureBox2.Location = New System.Drawing.Point(5, 98)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(23, 67)
-        Me.PictureBox2.TabIndex = 58
-        Me.PictureBox2.TabStop = False
         '
         'submenu_panbtn2
         '
@@ -2642,22 +2501,22 @@ Partial Class frmMain
         'accounts_dgv
         '
         Me.accounts_dgv.AllowUserToAddRows = False
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.accounts_dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.accounts_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.accounts_dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column13})
         Me.accounts_dgv.Location = New System.Drawing.Point(2, 2)
         Me.accounts_dgv.MultiSelect = False
         Me.accounts_dgv.Name = "accounts_dgv"
         Me.accounts_dgv.ReadOnly = True
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accounts_dgv.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.accounts_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.accounts_dgv.Size = New System.Drawing.Size(1364, 600)
         Me.accounts_dgv.TabIndex = 0
@@ -2675,50 +2534,6 @@ Partial Class frmMain
         Me.Column13.Name = "Column13"
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 660
-        '
-        'panHome
-        '
-        Me.panHome.BackColor = System.Drawing.Color.Transparent
-        Me.panHome.BackgroundImage = Global.teablendcafe.My.Resources.Resources.logobgcropped
-        Me.panHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.panHome.Controls.Add(Me.Panel1)
-        Me.panHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.panHome.Location = New System.Drawing.Point(0, 3)
-        Me.panHome.Name = "panHome"
-        Me.panHome.Size = New System.Drawing.Size(1366, 700)
-        Me.panHome.TabIndex = 9
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.ltime)
-        Me.Panel1.Controls.Add(Me.lDate)
-        Me.Panel1.Location = New System.Drawing.Point(0, 655)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1366, 48)
-        Me.Panel1.TabIndex = 0
-        '
-        'ltime
-        '
-        Me.ltime.AutoSize = True
-        Me.ltime.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ltime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ltime.Location = New System.Drawing.Point(1282, 17)
-        Me.ltime.Name = "ltime"
-        Me.ltime.Size = New System.Drawing.Size(41, 16)
-        Me.ltime.TabIndex = 1
-        Me.ltime.Text = "DATE"
-        '
-        'lDate
-        '
-        Me.lDate.AutoSize = True
-        Me.lDate.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lDate.Location = New System.Drawing.Point(13, 17)
-        Me.lDate.Name = "lDate"
-        Me.lDate.Size = New System.Drawing.Size(41, 16)
-        Me.lDate.TabIndex = 0
-        Me.lDate.Text = "DATE"
         '
         'panAssessment
         '
@@ -2772,14 +2587,14 @@ Partial Class frmMain
         'dgv_members
         '
         Me.dgv_members.AllowUserToAddRows = False
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_members.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_members.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgv_members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_members.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12, Me.Column14, Me.Column15, Me.Column16, Me.Column4})
         Me.dgv_members.Location = New System.Drawing.Point(2, 3)
@@ -2878,36 +2693,36 @@ Partial Class frmMain
         Me.inventorydgv.AllowUserToDeleteRows = False
         Me.inventorydgv.AllowUserToResizeRows = False
         Me.inventorydgv.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.inventorydgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.inventorydgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.inventorydgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.inventorydgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column1, Me.Column2, Me.Column5})
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.inventorydgv.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.inventorydgv.DefaultCellStyle = DataGridViewCellStyle6
         Me.inventorydgv.Location = New System.Drawing.Point(0, 72)
         Me.inventorydgv.MultiSelect = False
         Me.inventorydgv.Name = "inventorydgv"
         Me.inventorydgv.ReadOnly = True
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.inventorydgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.inventorydgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.inventorydgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.inventorydgv.Size = New System.Drawing.Size(1366, 628)
         Me.inventorydgv.TabIndex = 0
@@ -3041,6 +2856,191 @@ Partial Class frmMain
         '
         Me.tmrSubmenu.Interval = 10
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.teablendcafe.My.Resources.Resources.maincourse
+        Me.PictureBox3.Location = New System.Drawing.Point(3, 509)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(23, 108)
+        Me.PictureBox3.TabIndex = 58
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.teablendcafe.My.Resources.Resources.Forsharing
+        Me.PictureBox4.Location = New System.Drawing.Point(4, 296)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(23, 111)
+        Me.PictureBox4.TabIndex = 58
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.teablendcafe.My.Resources.Resources.drinks1
+        Me.PictureBox2.Location = New System.Drawing.Point(5, 98)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(23, 67)
+        Me.PictureBox2.TabIndex = 58
+        Me.PictureBox2.TabStop = False
+        '
+        'panHome
+        '
+        Me.panHome.BackColor = System.Drawing.Color.Transparent
+        Me.panHome.BackgroundImage = Global.teablendcafe.My.Resources.Resources.logobgcropped
+        Me.panHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.panHome.Controls.Add(Me.Panel1)
+        Me.panHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.panHome.Location = New System.Drawing.Point(0, 3)
+        Me.panHome.Name = "panHome"
+        Me.panHome.Size = New System.Drawing.Size(1366, 700)
+        Me.panHome.TabIndex = 9
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.ltime)
+        Me.Panel1.Controls.Add(Me.lDate)
+        Me.Panel1.Location = New System.Drawing.Point(0, 655)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1366, 48)
+        Me.Panel1.TabIndex = 0
+        '
+        'ltime
+        '
+        Me.ltime.AutoSize = True
+        Me.ltime.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ltime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ltime.Location = New System.Drawing.Point(1282, 17)
+        Me.ltime.Name = "ltime"
+        Me.ltime.Size = New System.Drawing.Size(41, 16)
+        Me.ltime.TabIndex = 1
+        Me.ltime.Text = "DATE"
+        '
+        'lDate
+        '
+        Me.lDate.AutoSize = True
+        Me.lDate.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lDate.Location = New System.Drawing.Point(13, 17)
+        Me.lDate.Name = "lDate"
+        Me.lDate.Size = New System.Drawing.Size(41, 16)
+        Me.lDate.TabIndex = 0
+        Me.lDate.Text = "DATE"
+        '
+        'picAccounts
+        '
+        Me.picAccounts.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picAccounts.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picAccounts.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picAccounts.Image = Global.teablendcafe.My.Resources.Resources.ic_person_outline_white_48dp_2x
+        Me.picAccounts.Location = New System.Drawing.Point(0, 196)
+        Me.picAccounts.Margin = New System.Windows.Forms.Padding(0)
+        Me.picAccounts.Name = "picAccounts"
+        Me.picAccounts.Size = New System.Drawing.Size(46, 49)
+        Me.picAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picAccounts.TabIndex = 12
+        Me.picAccounts.TabStop = False
+        '
+        'picAssessment
+        '
+        Me.picAssessment.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picAssessment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picAssessment.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picAssessment.Image = Global.teablendcafe.My.Resources.Resources.assessment_105
+        Me.picAssessment.Location = New System.Drawing.Point(0, 147)
+        Me.picAssessment.Margin = New System.Windows.Forms.Padding(0)
+        Me.picAssessment.Name = "picAssessment"
+        Me.picAssessment.Size = New System.Drawing.Size(46, 49)
+        Me.picAssessment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picAssessment.TabIndex = 11
+        Me.picAssessment.TabStop = False
+        '
+        'picMenu
+        '
+        Me.picMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picMenu.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picMenu.Image = Global.teablendcafe.My.Resources.Resources.menu_1251
+        Me.picMenu.Location = New System.Drawing.Point(0, 98)
+        Me.picMenu.Margin = New System.Windows.Forms.Padding(0)
+        Me.picMenu.Name = "picMenu"
+        Me.picMenu.Size = New System.Drawing.Size(46, 49)
+        Me.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picMenu.TabIndex = 10
+        Me.picMenu.TabStop = False
+        '
+        'picInventory
+        '
+        Me.picInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picInventory.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picInventory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picInventory.Image = Global.teablendcafe.My.Resources.Resources.assignment_125
+        Me.picInventory.Location = New System.Drawing.Point(0, 49)
+        Me.picInventory.Margin = New System.Windows.Forms.Padding(0)
+        Me.picInventory.Name = "picInventory"
+        Me.picInventory.Size = New System.Drawing.Size(46, 49)
+        Me.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picInventory.TabIndex = 9
+        Me.picInventory.TabStop = False
+        '
+        'picHome
+        '
+        Me.picHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picHome.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picHome.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picHome.Image = Global.teablendcafe.My.Resources.Resources.home_125
+        Me.picHome.Location = New System.Drawing.Point(0, 0)
+        Me.picHome.Margin = New System.Windows.Forms.Padding(0)
+        Me.picHome.Name = "picHome"
+        Me.picHome.Size = New System.Drawing.Size(46, 49)
+        Me.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picHome.TabIndex = 1
+        Me.picHome.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.teablendcafe.My.Resources.Resources.splash_panwrapper_img
+        Me.PictureBox1.Location = New System.Drawing.Point(62, 31)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 82)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
+        'picLogout
+        '
+        Me.picLogout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
+        Me.picLogout.Location = New System.Drawing.Point(4, 9)
+        Me.picLogout.Name = "picLogout"
+        Me.picLogout.Size = New System.Drawing.Size(40, 27)
+        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogout.TabIndex = 14
+        Me.picLogout.TabStop = False
+        '
+        'piclogout2
+        '
+        Me.piclogout2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.piclogout2.Image = Global.teablendcafe.My.Resources.Resources.arrowdown
+        Me.piclogout2.Location = New System.Drawing.Point(1310, 22)
+        Me.piclogout2.Name = "piclogout2"
+        Me.piclogout2.Size = New System.Drawing.Size(34, 22)
+        Me.piclogout2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.piclogout2.TabIndex = 10
+        Me.piclogout2.TabStop = False
+        '
+        'btnMenu
+        '
+        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMenu.Image = Global.teablendcafe.My.Resources.Resources.menuDefault
+        Me.btnMenu.Location = New System.Drawing.Point(0, -6)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(71, 78)
+        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMenu.TabIndex = 9
+        Me.btnMenu.TabStop = False
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3059,27 +3059,15 @@ Partial Class frmMain
         Me.panSideMenu.ResumeLayout(False)
         Me.panButtons.ResumeLayout(False)
         Me.panButtons.PerformLayout()
-        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picHome, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panHeading.ResumeLayout(False)
         Me.panLogout.ResumeLayout(False)
         Me.panLogout.PerformLayout()
-        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panContent.ResumeLayout(False)
         Me.panMenu.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvorders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panmenumenu.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.sub_panmenu1.ResumeLayout(False)
         Me.main_panmenu.ResumeLayout(False)
@@ -3149,9 +3137,6 @@ Partial Class frmMain
         Me.Panel4.PerformLayout()
         Me.panAccounts.ResumeLayout(False)
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panHome.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.panAssessment.ResumeLayout(False)
         Me.panMember.ResumeLayout(False)
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3159,6 +3144,21 @@ Partial Class frmMain
         Me.panInventory.PerformLayout()
         CType(Me.inventorydgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panWrapper.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panHome.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picHome, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
