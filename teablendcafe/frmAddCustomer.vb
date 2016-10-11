@@ -18,10 +18,11 @@ Public Class frmAddCustomer
         If tbnewcusname.Text = "" Then
             MsgBox("Please make sure the box ais filled.", vbOKOnly + vbInformation, "Message")
         Else
-
+            Dim rand As Integer = CInt(Int((99999 * Rnd()))) + 1
+            Dim id As String = "tbc" & rand
             With Command
                 .Connection = Connect
-                .CommandText = "INSERT INTO tblcustomers(cus_no, cus_name, cus_loadwallet) VALUES('tbc1', '" & tbnewcusname.Text & "', 0)"
+                .CommandText = "INSERT INTO tblcustomers(cus_no, cus_name, cus_loadwallet) VALUES('" & id & "','" & tbnewcusname.Text & "', 0)"
                 .ExecuteNonQuery()
             End With
             MsgBox("Administrator " + tbnewcusname.Text + " successfully created!", vbOKOnly + vbInformation, "Message")

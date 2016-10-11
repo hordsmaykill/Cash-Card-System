@@ -38,7 +38,7 @@ Public Class frmLogin
         If Reader.HasRows Then
             Dim user As String
             user = Reader.Item(0).ToString
-            MsgBox("Welcome" & user & "", vbInformation + vbOKOnly, "Message")
+            MsgBox("Welcome " & user & "", vbInformation + vbOKOnly, "Message")
             user = Reader.Item(0)
 
             Reader.Close()
