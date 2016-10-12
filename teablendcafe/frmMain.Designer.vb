@@ -33,15 +33,24 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.panSideMenu = New System.Windows.Forms.Panel()
         Me.panButtons = New System.Windows.Forms.TableLayoutPanel()
+        Me.picAccounts = New System.Windows.Forms.PictureBox()
+        Me.picAssessment = New System.Windows.Forms.PictureBox()
+        Me.picMenu = New System.Windows.Forms.PictureBox()
+        Me.picInventory = New System.Windows.Forms.PictureBox()
         Me.lblAssessment = New System.Windows.Forms.Label()
         Me.lblMenu = New System.Windows.Forms.Label()
         Me.lblInventory = New System.Windows.Forms.Label()
         Me.lblHome = New System.Windows.Forms.Label()
+        Me.picHome = New System.Windows.Forms.PictureBox()
         Me.lblAccounts = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnUsrMgmt = New System.Windows.Forms.Button()
         Me.panHeading = New System.Windows.Forms.Panel()
         Me.panLogout = New System.Windows.Forms.Panel()
+        Me.picLogout = New System.Windows.Forms.PictureBox()
         Me.lbllogout = New System.Windows.Forms.Label()
+        Me.piclogout2 = New System.Windows.Forms.PictureBox()
+        Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.tmrMenu = New System.Windows.Forms.Timer(Me.components)
         Me.panContent = New System.Windows.Forms.Panel()
         Me.panMenu = New System.Windows.Forms.Panel()
@@ -59,6 +68,9 @@ Partial Class frmMain
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panmenumenu = New System.Windows.Forms.GroupBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.submenu_panbtn2 = New System.Windows.Forms.Button()
         Me.submenu_panmenu1 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -219,6 +231,10 @@ Partial Class frmMain
         Me.accounts_dgv = New System.Windows.Forms.DataGridView()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.panHome = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ltime = New System.Windows.Forms.Label()
+        Me.lDate = New System.Windows.Forms.Label()
         Me.panAssessment = New System.Windows.Forms.Panel()
         Me.panMember = New System.Windows.Forms.Panel()
         Me.btnmembers_del = New System.Windows.Forms.Button()
@@ -254,31 +270,27 @@ Partial Class frmMain
         Me.tmrDrinks1 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrMain2 = New System.Windows.Forms.Timer(Me.components)
         Me.tmrSubmenu = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.panHome = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ltime = New System.Windows.Forms.Label()
-        Me.lDate = New System.Windows.Forms.Label()
-        Me.picAccounts = New System.Windows.Forms.PictureBox()
-        Me.picAssessment = New System.Windows.Forms.PictureBox()
-        Me.picMenu = New System.Windows.Forms.PictureBox()
-        Me.picInventory = New System.Windows.Forms.PictureBox()
-        Me.picHome = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.picLogout = New System.Windows.Forms.PictureBox()
-        Me.piclogout2 = New System.Windows.Forms.PictureBox()
-        Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.panSideMenu.SuspendLayout()
         Me.panButtons.SuspendLayout()
+        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picHome, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panHeading.SuspendLayout()
         Me.panLogout.SuspendLayout()
+        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panContent.SuspendLayout()
         Me.panMenu.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvorders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panmenumenu.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.sub_panmenu1.SuspendLayout()
         Me.main_panmenu.SuspendLayout()
@@ -317,26 +329,14 @@ Partial Class frmMain
         Me.Panel4.SuspendLayout()
         Me.panAccounts.SuspendLayout()
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panHome.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.panAssessment.SuspendLayout()
         Me.panMember.SuspendLayout()
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panInventory.SuspendLayout()
         CType(Me.inventorydgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panWrapper.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panHome.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picHome, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panSideMenu
@@ -377,6 +377,62 @@ Partial Class frmMain
         Me.panButtons.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.panButtons.Size = New System.Drawing.Size(232, 245)
         Me.panButtons.TabIndex = 7
+        '
+        'picAccounts
+        '
+        Me.picAccounts.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picAccounts.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picAccounts.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picAccounts.Image = Global.teablendcafe.My.Resources.Resources.ic_person_outline_white_48dp_2x
+        Me.picAccounts.Location = New System.Drawing.Point(0, 196)
+        Me.picAccounts.Margin = New System.Windows.Forms.Padding(0)
+        Me.picAccounts.Name = "picAccounts"
+        Me.picAccounts.Size = New System.Drawing.Size(46, 49)
+        Me.picAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picAccounts.TabIndex = 12
+        Me.picAccounts.TabStop = False
+        '
+        'picAssessment
+        '
+        Me.picAssessment.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picAssessment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picAssessment.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picAssessment.Image = Global.teablendcafe.My.Resources.Resources.assessment_105
+        Me.picAssessment.Location = New System.Drawing.Point(0, 147)
+        Me.picAssessment.Margin = New System.Windows.Forms.Padding(0)
+        Me.picAssessment.Name = "picAssessment"
+        Me.picAssessment.Size = New System.Drawing.Size(46, 49)
+        Me.picAssessment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picAssessment.TabIndex = 11
+        Me.picAssessment.TabStop = False
+        '
+        'picMenu
+        '
+        Me.picMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picMenu.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picMenu.Image = Global.teablendcafe.My.Resources.Resources.menu_1251
+        Me.picMenu.Location = New System.Drawing.Point(0, 98)
+        Me.picMenu.Margin = New System.Windows.Forms.Padding(0)
+        Me.picMenu.Name = "picMenu"
+        Me.picMenu.Size = New System.Drawing.Size(46, 49)
+        Me.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picMenu.TabIndex = 10
+        Me.picMenu.TabStop = False
+        '
+        'picInventory
+        '
+        Me.picInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picInventory.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picInventory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picInventory.Image = Global.teablendcafe.My.Resources.Resources.assignment_125
+        Me.picInventory.Location = New System.Drawing.Point(0, 49)
+        Me.picInventory.Margin = New System.Windows.Forms.Padding(0)
+        Me.picInventory.Name = "picInventory"
+        Me.picInventory.Size = New System.Drawing.Size(46, 49)
+        Me.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picInventory.TabIndex = 9
+        Me.picInventory.TabStop = False
         '
         'lblAssessment
         '
@@ -446,6 +502,20 @@ Partial Class frmMain
         Me.lblHome.Text = "Dashboard"
         Me.lblHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'picHome
+        '
+        Me.picHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.picHome.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picHome.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picHome.Image = Global.teablendcafe.My.Resources.Resources.home_125
+        Me.picHome.Location = New System.Drawing.Point(0, 0)
+        Me.picHome.Margin = New System.Windows.Forms.Padding(0)
+        Me.picHome.Name = "picHome"
+        Me.picHome.Size = New System.Drawing.Size(46, 49)
+        Me.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picHome.TabIndex = 1
+        Me.picHome.TabStop = False
+        '
         'lblAccounts
         '
         Me.lblAccounts.AutoSize = True
@@ -462,6 +532,17 @@ Partial Class frmMain
         Me.lblAccounts.TabIndex = 13
         Me.lblAccounts.Text = "Accounts"
         Me.lblAccounts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.teablendcafe.My.Resources.Resources.splash_panwrapper_img
+        Me.PictureBox1.Location = New System.Drawing.Point(62, 31)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 82)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
         '
         'btnUsrMgmt
         '
@@ -499,6 +580,17 @@ Partial Class frmMain
         Me.panLogout.TabIndex = 13
         Me.panLogout.Visible = False
         '
+        'picLogout
+        '
+        Me.picLogout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
+        Me.picLogout.Location = New System.Drawing.Point(4, 9)
+        Me.picLogout.Name = "picLogout"
+        Me.picLogout.Size = New System.Drawing.Size(40, 27)
+        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogout.TabIndex = 14
+        Me.picLogout.TabStop = False
+        '
         'lbllogout
         '
         Me.lbllogout.AutoSize = True
@@ -510,6 +602,28 @@ Partial Class frmMain
         Me.lbllogout.TabIndex = 0
         Me.lbllogout.Text = "Logout"
         Me.lbllogout.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'piclogout2
+        '
+        Me.piclogout2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.piclogout2.Image = Global.teablendcafe.My.Resources.Resources.arrowdown
+        Me.piclogout2.Location = New System.Drawing.Point(1310, 22)
+        Me.piclogout2.Name = "piclogout2"
+        Me.piclogout2.Size = New System.Drawing.Size(34, 22)
+        Me.piclogout2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.piclogout2.TabIndex = 10
+        Me.piclogout2.TabStop = False
+        '
+        'btnMenu
+        '
+        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMenu.Image = Global.teablendcafe.My.Resources.Resources.menuDefault
+        Me.btnMenu.Location = New System.Drawing.Point(0, -6)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(71, 78)
+        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMenu.TabIndex = 9
+        Me.btnMenu.TabStop = False
         '
         'tmrMenu
         '
@@ -530,7 +644,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, 0)
+        Me.panContent.Location = New System.Drawing.Point(230, -2800)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -697,6 +811,33 @@ Partial Class frmMain
         Me.panmenumenu.TabIndex = 25
         Me.panmenumenu.TabStop = False
         Me.panmenumenu.Text = "Menu"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.teablendcafe.My.Resources.Resources.maincourse
+        Me.PictureBox3.Location = New System.Drawing.Point(3, 509)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(23, 108)
+        Me.PictureBox3.TabIndex = 58
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.teablendcafe.My.Resources.Resources.Forsharing
+        Me.PictureBox4.Location = New System.Drawing.Point(4, 296)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(23, 111)
+        Me.PictureBox4.TabIndex = 58
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.teablendcafe.My.Resources.Resources.drinks1
+        Me.PictureBox2.Location = New System.Drawing.Point(5, 98)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(23, 67)
+        Me.PictureBox2.TabIndex = 58
+        Me.PictureBox2.TabStop = False
         '
         'submenu_panbtn2
         '
@@ -2535,6 +2676,50 @@ Partial Class frmMain
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 660
         '
+        'panHome
+        '
+        Me.panHome.BackColor = System.Drawing.Color.Transparent
+        Me.panHome.BackgroundImage = Global.teablendcafe.My.Resources.Resources.logobgcropped
+        Me.panHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.panHome.Controls.Add(Me.Panel1)
+        Me.panHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.panHome.Location = New System.Drawing.Point(0, 3)
+        Me.panHome.Name = "panHome"
+        Me.panHome.Size = New System.Drawing.Size(1366, 700)
+        Me.panHome.TabIndex = 9
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.ltime)
+        Me.Panel1.Controls.Add(Me.lDate)
+        Me.Panel1.Location = New System.Drawing.Point(0, 655)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1366, 48)
+        Me.Panel1.TabIndex = 0
+        '
+        'ltime
+        '
+        Me.ltime.AutoSize = True
+        Me.ltime.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ltime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ltime.Location = New System.Drawing.Point(1282, 17)
+        Me.ltime.Name = "ltime"
+        Me.ltime.Size = New System.Drawing.Size(41, 16)
+        Me.ltime.TabIndex = 1
+        Me.ltime.Text = "DATE"
+        '
+        'lDate
+        '
+        Me.lDate.AutoSize = True
+        Me.lDate.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lDate.Location = New System.Drawing.Point(13, 17)
+        Me.lDate.Name = "lDate"
+        Me.lDate.Size = New System.Drawing.Size(41, 16)
+        Me.lDate.TabIndex = 0
+        Me.lDate.Text = "DATE"
+        '
         'panAssessment
         '
         Me.panAssessment.BackColor = System.Drawing.Color.Transparent
@@ -2856,191 +3041,6 @@ Partial Class frmMain
         '
         Me.tmrSubmenu.Interval = 10
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.teablendcafe.My.Resources.Resources.maincourse
-        Me.PictureBox3.Location = New System.Drawing.Point(3, 509)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(23, 108)
-        Me.PictureBox3.TabIndex = 58
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.teablendcafe.My.Resources.Resources.Forsharing
-        Me.PictureBox4.Location = New System.Drawing.Point(4, 296)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(23, 111)
-        Me.PictureBox4.TabIndex = 58
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.teablendcafe.My.Resources.Resources.drinks1
-        Me.PictureBox2.Location = New System.Drawing.Point(5, 98)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(23, 67)
-        Me.PictureBox2.TabIndex = 58
-        Me.PictureBox2.TabStop = False
-        '
-        'panHome
-        '
-        Me.panHome.BackColor = System.Drawing.Color.Transparent
-        Me.panHome.BackgroundImage = Global.teablendcafe.My.Resources.Resources.logobgcropped
-        Me.panHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.panHome.Controls.Add(Me.Panel1)
-        Me.panHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.panHome.Location = New System.Drawing.Point(0, 3)
-        Me.panHome.Name = "panHome"
-        Me.panHome.Size = New System.Drawing.Size(1366, 700)
-        Me.panHome.TabIndex = 9
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.ltime)
-        Me.Panel1.Controls.Add(Me.lDate)
-        Me.Panel1.Location = New System.Drawing.Point(0, 655)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1366, 48)
-        Me.Panel1.TabIndex = 0
-        '
-        'ltime
-        '
-        Me.ltime.AutoSize = True
-        Me.ltime.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ltime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ltime.Location = New System.Drawing.Point(1282, 17)
-        Me.ltime.Name = "ltime"
-        Me.ltime.Size = New System.Drawing.Size(41, 16)
-        Me.ltime.TabIndex = 1
-        Me.ltime.Text = "DATE"
-        '
-        'lDate
-        '
-        Me.lDate.AutoSize = True
-        Me.lDate.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lDate.Location = New System.Drawing.Point(13, 17)
-        Me.lDate.Name = "lDate"
-        Me.lDate.Size = New System.Drawing.Size(41, 16)
-        Me.lDate.TabIndex = 0
-        Me.lDate.Text = "DATE"
-        '
-        'picAccounts
-        '
-        Me.picAccounts.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picAccounts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picAccounts.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picAccounts.Image = Global.teablendcafe.My.Resources.Resources.ic_person_outline_white_48dp_2x
-        Me.picAccounts.Location = New System.Drawing.Point(0, 196)
-        Me.picAccounts.Margin = New System.Windows.Forms.Padding(0)
-        Me.picAccounts.Name = "picAccounts"
-        Me.picAccounts.Size = New System.Drawing.Size(46, 49)
-        Me.picAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picAccounts.TabIndex = 12
-        Me.picAccounts.TabStop = False
-        '
-        'picAssessment
-        '
-        Me.picAssessment.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picAssessment.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picAssessment.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picAssessment.Image = Global.teablendcafe.My.Resources.Resources.assessment_105
-        Me.picAssessment.Location = New System.Drawing.Point(0, 147)
-        Me.picAssessment.Margin = New System.Windows.Forms.Padding(0)
-        Me.picAssessment.Name = "picAssessment"
-        Me.picAssessment.Size = New System.Drawing.Size(46, 49)
-        Me.picAssessment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picAssessment.TabIndex = 11
-        Me.picAssessment.TabStop = False
-        '
-        'picMenu
-        '
-        Me.picMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picMenu.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picMenu.Image = Global.teablendcafe.My.Resources.Resources.menu_1251
-        Me.picMenu.Location = New System.Drawing.Point(0, 98)
-        Me.picMenu.Margin = New System.Windows.Forms.Padding(0)
-        Me.picMenu.Name = "picMenu"
-        Me.picMenu.Size = New System.Drawing.Size(46, 49)
-        Me.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picMenu.TabIndex = 10
-        Me.picMenu.TabStop = False
-        '
-        'picInventory
-        '
-        Me.picInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picInventory.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picInventory.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picInventory.Image = Global.teablendcafe.My.Resources.Resources.assignment_125
-        Me.picInventory.Location = New System.Drawing.Point(0, 49)
-        Me.picInventory.Margin = New System.Windows.Forms.Padding(0)
-        Me.picInventory.Name = "picInventory"
-        Me.picInventory.Size = New System.Drawing.Size(46, 49)
-        Me.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picInventory.TabIndex = 9
-        Me.picInventory.TabStop = False
-        '
-        'picHome
-        '
-        Me.picHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.picHome.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picHome.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.picHome.Image = Global.teablendcafe.My.Resources.Resources.home_125
-        Me.picHome.Location = New System.Drawing.Point(0, 0)
-        Me.picHome.Margin = New System.Windows.Forms.Padding(0)
-        Me.picHome.Name = "picHome"
-        Me.picHome.Size = New System.Drawing.Size(46, 49)
-        Me.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picHome.TabIndex = 1
-        Me.picHome.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.teablendcafe.My.Resources.Resources.splash_panwrapper_img
-        Me.PictureBox1.Location = New System.Drawing.Point(62, 31)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(95, 82)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
-        'picLogout
-        '
-        Me.picLogout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.picLogout.Image = Global.teablendcafe.My.Resources.Resources.logout1
-        Me.picLogout.Location = New System.Drawing.Point(4, 9)
-        Me.picLogout.Name = "picLogout"
-        Me.picLogout.Size = New System.Drawing.Size(40, 27)
-        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogout.TabIndex = 14
-        Me.picLogout.TabStop = False
-        '
-        'piclogout2
-        '
-        Me.piclogout2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.piclogout2.Image = Global.teablendcafe.My.Resources.Resources.arrowdown
-        Me.piclogout2.Location = New System.Drawing.Point(1310, 22)
-        Me.piclogout2.Name = "piclogout2"
-        Me.piclogout2.Size = New System.Drawing.Size(34, 22)
-        Me.piclogout2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.piclogout2.TabIndex = 10
-        Me.piclogout2.TabStop = False
-        '
-        'btnMenu
-        '
-        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMenu.Image = Global.teablendcafe.My.Resources.Resources.menuDefault
-        Me.btnMenu.Location = New System.Drawing.Point(0, -6)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(71, 78)
-        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMenu.TabIndex = 9
-        Me.btnMenu.TabStop = False
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3059,15 +3059,27 @@ Partial Class frmMain
         Me.panSideMenu.ResumeLayout(False)
         Me.panButtons.ResumeLayout(False)
         Me.panButtons.PerformLayout()
+        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picHome, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panHeading.ResumeLayout(False)
         Me.panLogout.ResumeLayout(False)
         Me.panLogout.PerformLayout()
+        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panContent.ResumeLayout(False)
         Me.panMenu.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvorders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panmenumenu.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.sub_panmenu1.ResumeLayout(False)
         Me.main_panmenu.ResumeLayout(False)
@@ -3137,6 +3149,9 @@ Partial Class frmMain
         Me.Panel4.PerformLayout()
         Me.panAccounts.ResumeLayout(False)
         CType(Me.accounts_dgv, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panHome.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.panAssessment.ResumeLayout(False)
         Me.panMember.ResumeLayout(False)
         CType(Me.dgv_members, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3144,21 +3159,6 @@ Partial Class frmMain
         Me.panInventory.PerformLayout()
         CType(Me.inventorydgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panWrapper.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panHome.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.picAccounts, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picAssessment, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picInventory, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picHome, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piclogout2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

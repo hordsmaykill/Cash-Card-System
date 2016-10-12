@@ -22,8 +22,8 @@ Public Class frmLogs
             .CommandText = "SELECT time, description FROM tbltimeintimeout WHERE user = '" & user & "'"
         End With
         reader = cmd.ExecuteReader
+        dgv.Rows.Clear()
         If reader.HasRows Then
-            dgv.Rows.Clear()
             While reader.Read()
                 dgv.Rows.Add(reader.Item(0), reader.Item(1))
             End While

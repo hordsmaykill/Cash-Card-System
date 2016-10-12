@@ -625,8 +625,9 @@ Public Class frmMain
                 .CommandText = "INSERT INTO tbltimeintimeout(user, description) VALUES('" & currentUser & "', 'out')"
                 .ExecuteNonQuery()
             End With
-            Me.Close()
+            Me.Dispose()
             frmLogin.Show()
+
         End If
     End Sub
 
