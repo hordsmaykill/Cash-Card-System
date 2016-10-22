@@ -28,6 +28,14 @@ Public Class frmInventoryEdit
             .CommandText = " UPDATE tblinventory SET inv_qty = " & upnaddquantity.Value & " WHERE inv_prod_code = '" & SelectedInventory & "'"
             .ExecuteNonQuery()
         End With
+        ''insert'
+
+        With Command
+            .Connection = Connect
+            .CommandText = "INSERT INTO tblinventory_trans(ord_code_trans) VALUES ('" & SelectedInventory & "')"
+
+            .ExecuteNonQuery()
+        End With
         frmMain.DGVINV()
         MsgBox("Quantity " & SelectedInventory & " successfully added!", vbOKOnly + vbInformation, "Message")
         Me.Close()
