@@ -106,7 +106,7 @@ Partial Class frmAdminCreateNew
         '
         Me.cbadminpreviledges.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbadminpreviledges.FormattingEnabled = True
-        Me.cbadminpreviledges.Items.AddRange(New Object() {"cashier ", "manager"})
+        Me.cbadminpreviledges.Items.AddRange(New Object() {"Cashier ", "Manager"})
         Me.cbadminpreviledges.Location = New System.Drawing.Point(141, 59)
         Me.cbadminpreviledges.Name = "cbadminpreviledges"
         Me.cbadminpreviledges.Size = New System.Drawing.Size(94, 21)
@@ -134,7 +134,6 @@ Partial Class frmAdminCreateNew
         Me.Text = "formadmincreatenew"
         Me.ResumeLayout(False)
         Me.PerformLayout()
-
     End Sub
 
     Friend WithEvents Label1 As Label
