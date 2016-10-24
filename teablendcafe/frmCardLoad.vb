@@ -68,6 +68,8 @@ Public Class frmCardLoad
                 ' check load
                 If wallet < total Then
                     MsgBox("Not enough balance in account" & vbNewLine & "Remaining account load is: " & wallet)
+
+
                     Exit Sub
                 End If
 
