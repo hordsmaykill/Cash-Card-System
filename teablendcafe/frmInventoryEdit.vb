@@ -12,28 +12,49 @@ Public Class frmInventoryEdit
     Private Sub frminvedit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connect = ConnectionModule.getConnection()
 
-        Dim SelecteddQty As Integer = frmMain.inventorydgv.Item(2, frmMain.inventorydgv.CurrentRow.Index).Value
+        'Dim SelecteddQty As Integer = frmMain.inventorydgv.Item(2, frmMain.inventorydgv.CurrentRow.Index).Value
 
-        upnaddquantity.Value = SelecteddQty
+        'upnaddquantity.Value = SelecteddQty
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         SelectedInventory = frmMain.inventorydgv.Item(0, frmMain.inventorydgv.CurrentRow.Index).Value
+        ''
+        Dim beforemodified As Integer
+        Dim addload As Integer
+        Dim total As Integer
 
 
         With Command
             .Connection = Connect
-            .CommandText = " UPDATE tblinventory SET inv_qty = " & upnaddquantity.Value & " WHERE inv_prod_code = '" & SelectedInventory & "'"
+            .CommandText = "SELECT inv_qty FROM tblinventory WHERE inv_prod_code = '" & SelectedInventory & "'"
+        End With
+        Reader = Command.ExecuteReader
+        Reader.Read()
+
+        If Reader.HasRows Then
+            beforemodified = Reader.Item(0)
+        End If
+        Reader.Close()
+        addload = upnaddquantity.Value
+
+        ''
+        With Command
+            .Connection = Connect
+            .CommandText = "INSERT INTO tblinventory_trans( inv_prod_invbefmov,inv_prod_add,ord_code_trans) VALUES('" & beforemodified & "', '" & addload & "','" & SelectedInventory & "')"
             .ExecuteNonQuery()
         End With
+
+        Reader.Close()
+
+        total = beforemodified + addload
         ''insert'
 
         With Command
             .Connection = Connect
-            .CommandText = "INSERT INTO tblinventory_trans(ord_code_trans) VALUES ('" & SelectedInventory & "')"
-
+            .CommandText = " UPDATE tblinventory SET inv_qty = " & total & " WHERE inv_prod_code = '" & SelectedInventory & "'"
             .ExecuteNonQuery()
         End With
         frmMain.DGVINV()

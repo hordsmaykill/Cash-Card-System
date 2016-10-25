@@ -1261,8 +1261,17 @@ Public Class frmMain
         frmTypeAdminPasswordDelete.ShowDialog()
     End Sub
 
-    Private Sub btnviewtransactions_Click(sender As Object, e As EventArgs) Handles btnviewtransactions.Click, Button1.Click
+    Private Sub btnviewtransactions_Click(sender As Object, e As EventArgs) Handles btnviewtransactions.Click
+        frmviewtransactions.ShowDialog()
+    End Sub
+
+    Private Sub vlt_Click(sender As Object, e As EventArgs) Handles vlt.Click
         frmviewloadtransactions.ShowDialog()
+
+    End Sub
+
+    Private Sub hic_Click(sender As Object, e As EventArgs) Handles hic.Click
+        frminventorychanges.ShowDialog()
     End Sub
 End Class
 

@@ -143,6 +143,12 @@
     <Compile Include="frmEnterAmount.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frminventorychanges.Designer.vb">
+      <DependentUpon>frminventorychanges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frminventorychanges.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmInventoryEdit.Designer.vb">
       <DependentUpon>frmInventoryEdit.vb</DependentUpon>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnterAmount.resx">
       <DependentUpon>frmEnterAmount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frminventorychanges.resx">
+      <DependentUpon>frminventorychanges.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventoryEdit.resx">
       <DependentUpon>frmInventoryEdit.vb</DependentUpon>
