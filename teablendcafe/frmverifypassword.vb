@@ -35,10 +35,6 @@ Public Class frmverifypassword
             Select Case state
                 Case "add"
                     frmAdminCreateNew.ShowDialog()
-                Case "addmember"
-                    frmAddCustomer.ShowDialog()
-                Case "editmember"
-                    frmMembersEditChoices.ShowDialog()
 
                 Case "delmember"
                     Dim Delete As MsgBoxResult
