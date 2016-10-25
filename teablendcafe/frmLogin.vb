@@ -89,6 +89,7 @@ Public Class frmLogin
         If priviledges = "cashier" Then
             frmMain.lblAccounts.Hide()
             frmMain.picAccounts.Hide()
+            frmMain.btnviewtransactions.Visible = False
         End If
         Reader.Close()
     End Sub
