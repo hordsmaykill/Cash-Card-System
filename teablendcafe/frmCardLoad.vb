@@ -34,8 +34,8 @@ Public Class frmCardLoad
 
 
         ' debugging purpose
-        Dim cusNo As String = "tbc123"
-        updateDatabase(cusNo) ' remove if finished debugging
+        ' Dim cusNo As String = "tbc123"
+        ' updateDatabase(cusNo) ' remove if finished debugging
     End Sub
 
     Private Sub updateDatabase(customerNumber As String)
@@ -114,7 +114,7 @@ Public Class frmCardLoad
         ' get data
 
         ' insert id and date
-        cmd.CommandText = "INSERT INTO tblorders(ord_code, total, ord_date, ord_rload_change) VALUES('" & ord_code & "', '" & total & "', '" & curDate & "'," & walletTotal & ")"
+        cmd.CommandText = "INSERT INTO tblorders(ord_code, total, ord_date, ord_rload_change, ord_load_tendered) VALUES('" & ord_code & "', '" & total & "', '" & curDate & "'," & walletTotal & ",'" & wallet & "')"
         cmd.ExecuteNonQuery()
 
         For i As Integer = 0 To frmMain.dgvorders.RowCount - 1
