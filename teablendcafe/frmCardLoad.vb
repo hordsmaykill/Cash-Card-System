@@ -11,6 +11,9 @@ Public Class frmCardLoad
 
     Public transaction As Integer
 
+    Public load As Double
+    Public totalPub As Double
+
     Private Sub frmCardLoad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connect = ConnectionModule.getConnection()
 
@@ -30,8 +33,8 @@ Public Class frmCardLoad
 
 
         ' debugging purpose
-        'Dim cusNo As String = "tbc123"
-        'updateDatabase(cusNo) ' remove if finished debugging
+        Dim cusNo As String = "tbc123"
+        updateDatabase(cusNo) ' remove if finished debugging
     End Sub
 
     Private Sub updateDatabase(customerNumber As String)
@@ -67,7 +70,19 @@ Public Class frmCardLoad
             Case frmchoicespointsorload.TRANSACT_LOAD
                 ' check load
                 If wallet < total Then
-                    MsgBox("Not enough balance in account" & vbNewLine & "Remaining account load is: " & wallet)
+                    MsgBox("Not enough balance in account" & vbNewLine & "Remaining account load is: " & wallet & vbNewLine & "Press OK to continue adding cash.")
+
+                    load = wallet
+                    totalPub = total
+                    frmtotal.action = frmtotal.ADD_CASH
+                    frmEnterAmount.ShowDialog()
+                    Me.Close()
+                    ' if not enough load
+                    ' prompt to input amt
+                    ' dec points
+                    ' 
+
+
                     Exit Sub
                 End If
 

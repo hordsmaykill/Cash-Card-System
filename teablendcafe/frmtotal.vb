@@ -2,6 +2,10 @@
 Imports MySql.Data.MySqlClient
 Public Class frmtotal
 
+    Public Const CASH As Integer = 0
+    Public Const ADD_CASH As Integer = 1
+    Public action As Integer
+
     Dim Command As New MySqlCommand
     Dim Reader As MySqlDataReader
     Dim Connect As New MySqlConnection
@@ -11,17 +15,31 @@ Public Class frmtotal
     Dim totalamount As Double
     Dim change As Double
 
+    Public total As Double
+
     Private Sub frmtotal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connect = ConnectionModule.getConnection()
 
-        paymenttendered.Text = frmEnterAmount.tbenterpayment.Text
-        tendered = Double.Parse(paymenttendered.Text)
+        Select Case action
+            Case CASH
+                paymenttendered.Text = frmEnterAmount.tbenterpayment.Text
+                tendered = Double.Parse(paymenttendered.Text)
 
-        tbtotal.Text = frmMain.txtTotalOrder.Text
-        totalamount = Double.Parse(tbtotal.Text)
+                tbtotal.Text = frmMain.txtTotalOrder.Text
+                totalamount = Double.Parse(tbtotal.Text)
 
-        change = tendered - totalamount
-        tbchangee.Text = change
+                change = tendered - totalamount
+                tbchangee.Text = change
+
+            Case ADD_CASH
+                Dim enteredAmt As Double = Double.Parse(frmEnterAmount.tbenterpayment.Text)
+                enteredAmt += frmCardLoad.load
+                paymenttendered.Text = enteredAmt
+                tendered = Double.Parse(paymenttendered.Text)
+
+
+        End Select
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -29,7 +47,8 @@ Public Class frmtotal
         Dim cmd As New MySqlCommand
         cmd.Connection = Connect
 
-        Dim total As Double = frmMain.txtTotalOrder.Text
+        total = frmMain.txtTotalOrder.Text
+
         ' update products and inventories
         Dim curDate As String = Date.Today.ToString("yyyy-MM-dd")
 
