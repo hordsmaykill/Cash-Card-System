@@ -16,7 +16,7 @@ Public Class frmCashCard
     End Sub
 
     Private Sub btncash_Click(sender As Object, e As EventArgs) Handles btncash.Click
-        frmEnterAmoutn.ShowDialog()
+        frmEnterAmount.ShowDialog()
         Me.Close()
     End Sub
 

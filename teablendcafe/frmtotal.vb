@@ -14,7 +14,7 @@ Public Class frmtotal
     Private Sub frmtotal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connect = ConnectionModule.getConnection()
 
-        paymenttendered.Text = frmEnterAmoutn.tbenterpayment.Text
+        paymenttendered.Text = frmEnterAmount.tbenterpayment.Text
         tendered = Double.Parse(paymenttendered.Text)
 
         tbtotal.Text = frmMain.txtTotalOrder.Text
