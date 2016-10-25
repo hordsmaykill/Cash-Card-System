@@ -114,7 +114,7 @@ Public Class frmCardLoad
         ' get data
 
         ' insert id and date
-        cmd.CommandText = "INSERT INTO tblorders(ord_code, total, ord_date) VALUES('" & ord_code & "', " & total & ", '" & curDate & "')"
+        cmd.CommandText = "INSERT INTO tblorders(ord_code, total, ord_date, ord_rload_change) VALUES('" & ord_code & "', '" & total & "', '" & curDate & "'," & walletTotal & ")"
         cmd.ExecuteNonQuery()
 
         For i As Integer = 0 To frmMain.dgvorders.RowCount - 1

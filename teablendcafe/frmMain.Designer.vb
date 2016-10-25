@@ -247,6 +247,7 @@ Partial Class frmMain
         Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panInventory = New System.Windows.Forms.Panel()
+        Me.btnviewtransactions = New System.Windows.Forms.Button()
         Me.cboinventory2 = New System.Windows.Forms.ComboBox()
         Me.cboinventory1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -482,7 +483,7 @@ Partial Class frmMain
         Me.lblInventory.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.lblInventory.Size = New System.Drawing.Size(186, 49)
         Me.lblInventory.TabIndex = 3
-        Me.lblInventory.Text = "Inventory"
+        Me.lblInventory.Text = "Sales and Inventory"
         Me.lblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblHome
@@ -644,7 +645,7 @@ Partial Class frmMain
         Me.panContent.Controls.Add(Me.Button14)
         Me.panContent.Controls.Add(Me.Button13)
         Me.panContent.Controls.Add(Me.Button12)
-        Me.panContent.Location = New System.Drawing.Point(230, 0)
+        Me.panContent.Location = New System.Drawing.Point(230, -700)
         Me.panContent.Name = "panContent"
         Me.panContent.Size = New System.Drawing.Size(1366, 3504)
         Me.panContent.TabIndex = 9
@@ -2822,6 +2823,7 @@ Partial Class frmMain
         'panInventory
         '
         Me.panInventory.BackColor = System.Drawing.Color.Transparent
+        Me.panInventory.Controls.Add(Me.btnviewtransactions)
         Me.panInventory.Controls.Add(Me.cboinventory2)
         Me.panInventory.Controls.Add(Me.cboinventory1)
         Me.panInventory.Controls.Add(Me.Label3)
@@ -2831,6 +2833,15 @@ Partial Class frmMain
         Me.panInventory.Name = "panInventory"
         Me.panInventory.Size = New System.Drawing.Size(1366, 700)
         Me.panInventory.TabIndex = 6
+        '
+        'btnviewtransactions
+        '
+        Me.btnviewtransactions.Location = New System.Drawing.Point(128, 16)
+        Me.btnviewtransactions.Name = "btnviewtransactions"
+        Me.btnviewtransactions.Size = New System.Drawing.Size(115, 45)
+        Me.btnviewtransactions.TabIndex = 4
+        Me.btnviewtransactions.Text = "View transactions"
+        Me.btnviewtransactions.UseVisualStyleBackColor = True
         '
         'cboinventory2
         '
@@ -2867,7 +2878,7 @@ Partial Class frmMain
         '
         Me.inv_edit.Location = New System.Drawing.Point(13, 16)
         Me.inv_edit.Name = "inv_edit"
-        Me.inv_edit.Size = New System.Drawing.Size(94, 46)
+        Me.inv_edit.Size = New System.Drawing.Size(109, 46)
         Me.inv_edit.TabIndex = 1
         Me.inv_edit.Text = "Update quantity"
         Me.inv_edit.UseVisualStyleBackColor = True
@@ -3401,4 +3412,5 @@ Partial Class frmMain
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents btnviewtransactions As Button
 End Class
