@@ -11,8 +11,9 @@ Public Class frmCardLoad
 
     Public transaction As Integer
 
-    Public load As Double
+    Public loadPub As Double
     Public totalPub As Double
+    Public idPub As String
 
     Private Sub frmCardLoad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connect = ConnectionModule.getConnection()
@@ -72,17 +73,12 @@ Public Class frmCardLoad
                 If wallet < total Then
                     MsgBox("Not enough balance in account" & vbNewLine & "Remaining account load is: " & wallet & vbNewLine & "Press OK to continue adding cash.")
 
-                    load = wallet
+                    idPub = customerNumber
+                    loadPub = wallet
                     totalPub = total
                     frmtotal.action = frmtotal.ADD_CASH
                     frmEnterAmount.ShowDialog()
                     Me.Close()
-                    ' if not enough load
-                    ' prompt to input amt
-                    ' dec points
-                    ' 
-
-
                     Exit Sub
                 End If
 
