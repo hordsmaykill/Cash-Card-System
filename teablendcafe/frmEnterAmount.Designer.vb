@@ -78,7 +78,7 @@ Partial Class frmEnterAmount
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = True
         '
-        'frmetramount
+        'frmEnterAmount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -86,7 +86,7 @@ Partial Class frmEnterAmount
         Me.ClientSize = New System.Drawing.Size(289, 159)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmetramount"
+        Me.Name = "frmEnterAmount"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmetramount"
         Me.Panel1.ResumeLayout(False)

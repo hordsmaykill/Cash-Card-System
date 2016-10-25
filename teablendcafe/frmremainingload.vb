@@ -8,4 +8,8 @@
     Private Sub cancel_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
+
+    Private Sub frmremainingload_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

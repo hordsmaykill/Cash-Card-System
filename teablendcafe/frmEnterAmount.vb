@@ -16,4 +16,8 @@
             MsgBox("The amount is less than the total amount: " & vbNewLine & "Php " & totalamount)
         End If
     End Sub
+
+    Private Sub frmEnterAmount_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

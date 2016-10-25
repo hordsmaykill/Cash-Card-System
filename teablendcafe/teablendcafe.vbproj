@@ -216,6 +216,12 @@
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmviewloadtransactions.Designer.vb">
+      <DependentUpon>frmviewloadtransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmviewloadtransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmviewtransactions.Designer.vb">
       <DependentUpon>frmviewtransactions.vb</DependentUpon>
     </Compile>
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmviewloadtransactions.resx">
+      <DependentUpon>frmviewloadtransactions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmviewtransactions.resx">
       <DependentUpon>frmviewtransactions.vb</DependentUpon>
