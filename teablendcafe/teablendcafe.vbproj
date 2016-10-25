@@ -137,10 +137,10 @@
     <Compile Include="frmCardLoad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEnterAmoutn.Designer.vb">
-      <DependentUpon>frmEnterAmoutn.vb</DependentUpon>
+    <Compile Include="frmEnterAmount.Designer.vb">
+      <DependentUpon>frmEnterAmount.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmEnterAmoutn.vb">
+    <Compile Include="frmEnterAmount.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInventoryEdit.Designer.vb">
@@ -284,8 +284,8 @@
     <EmbeddedResource Include="frmCardLoad.resx">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEnterAmoutn.resx">
-      <DependentUpon>frmEnterAmoutn.vb</DependentUpon>
+    <EmbeddedResource Include="frmEnterAmount.resx">
+      <DependentUpon>frmEnterAmount.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventoryEdit.resx">
       <DependentUpon>frmInventoryEdit.vb</DependentUpon>

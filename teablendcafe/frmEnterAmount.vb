@@ -1,4 +1,4 @@
-﻿Public Class frmEnterAmoutn
+﻿Public Class frmEnterAmount
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
         Me.Close()
     End Sub
