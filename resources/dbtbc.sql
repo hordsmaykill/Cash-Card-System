@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2016 at 05:59 PM
+-- Generation Time: Oct 25, 2016 at 05:38 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -38,8 +38,7 @@ CREATE TABLE `tbladministrators` (
 
 INSERT INTO `tbladministrators` (`username`, `password`, `type`) VALUES
 ('admin', 'admin', 'manager'),
-('test1', 'test1', 'cashier'),
-('test2', 'test2', 'manager');
+('cashier', 'cashier', 'cashier');
 
 -- --------------------------------------------------------
 
@@ -52,6 +51,7 @@ CREATE TABLE `tblcustomers` (
   `cus_name` varchar(25) NOT NULL,
   `cus_since` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `cus_loadwallet` int(6) NOT NULL,
+  `cus_points` int(6) NOT NULL,
   `status` varchar(10) NOT NULL DEFAULT 'Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -59,9 +59,10 @@ CREATE TABLE `tblcustomers` (
 -- Dumping data for table `tblcustomers`
 --
 
-INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`, `status`) VALUES
-('1', 'TEST', '2016-10-02 15:58:10', 100, 'Active'),
-('tbc123', 'BETATESTER', '2016-09-30 21:20:34', 823, 'Active');
+INSERT INTO `tblcustomers` (`cus_no`, `cus_name`, `cus_since`, `cus_loadwallet`, `cus_points`, `status`) VALUES
+('tbc1', 'testing', '2016-10-21 20:38:23', 134, 3, 'Active'),
+('tbc123', 'BETATESTER', '2016-10-21 20:45:28', 9007, 20, 'Active'),
+('tbc70555', 'test', '2016-10-13 03:33:04', 0, 0, 'Active');
 
 -- --------------------------------------------------------
 
@@ -79,7 +80,7 @@ CREATE TABLE `tblinventory` (
 --
 
 INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
-('DSG_SS', 50),
+('DSG_SS', 51),
 ('DSH_BB', 50),
 ('DSH_C', 50),
 ('DSH_CB', 50),
@@ -87,16 +88,16 @@ INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
 ('DSH_CP', 50),
 ('DSH_CS', 50),
 ('DSH_ES', 50),
-('DSH_FB', 41),
+('DSH_FB', 49),
 ('DSH_HS', 50),
 ('DSH_IB', 50),
 ('DSH_LS', 50),
 ('DSH_N', 50),
 ('DSH_PP', 50),
 ('DSH_SB', 50),
-('DSH_SS', 50),
-('DSH_TD', 45),
-('DSH_TE', 49),
+('DSH_SS', 46),
+('DSH_TD', 50),
+('DSH_TE', 36),
 ('DSH_UC', 50),
 ('D_BBT', 50),
 ('D_CK', 50),
@@ -131,6 +132,24 @@ INSERT INTO `tblinventory` (`inv_prod_code`, `inv_qty`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tblinventory_trans`
+--
+
+CREATE TABLE `tblinventory_trans` (
+  `ord_code_trans` varchar(15) NOT NULL,
+  `ord_trans_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblinventory_trans`
+--
+
+INSERT INTO `tblinventory_trans` (`ord_code_trans`, `ord_trans_date`) VALUES
+('DSG_SS', '2016-10-21 20:13:12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tblorders`
 --
 
@@ -139,21 +158,22 @@ CREATE TABLE `tblorders` (
   `total` double NOT NULL,
   `ord_change` double NOT NULL,
   `ord_tendered` double NOT NULL,
-  `ord_date` date NOT NULL
+  `ord_date` date NOT NULL,
+  `ord_rload_change` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblorders`
 --
 
-INSERT INTO `tblorders` (`ord_code`, `total`, `ord_change`, `ord_tendered`, `ord_date`) VALUES
-('011016011344-48', 70, 2242, 2312, '2016-10-01'),
-('011016012511-44', 338, 162, 500, '2016-10-01'),
-('011016013340-31', 695, 5, 700, '2016-10-01'),
-('011016051639-85', 70, 0, 0, '2016-10-01'),
-('011016051934-77', 149, 0, 0, '2016-10-01'),
-('011016052034-70', 139, 0, 0, '2016-10-01'),
-('021016122605-31', 924, 76, 1000, '2016-10-02');
+INSERT INTO `tblorders` (`ord_code`, `total`, `ord_change`, `ord_tendered`, `ord_date`, `ord_rload_change`) VALUES
+('131016090325-60', 55, 0, 0, '2016-10-13', 0),
+('131016114411-70', 639, 0, 0, '2016-10-13', 0),
+('131016114901-99', 1490, 0, 1490, '2016-10-13', 0),
+('221016043823-63', 129, 0, 0, '0000-00-00', 3),
+('221016043943-17', 149, 0, 0, '0000-00-00', 18),
+('221016044146-11', 298, 0, 0, '0000-00-00', 9265),
+('221016044528-81', 258, 0, 0, '2016-10-22', 9007);
 
 -- --------------------------------------------------------
 
@@ -174,65 +194,14 @@ CREATE TABLE `tblorder_prod` (
 --
 
 INSERT INTO `tblorder_prod` (`ord_code`, `prod_code`, `prod_name`, `prod_qty`, `prod_price`) VALUES
-('011016011344-48', 'D_TT', 'Taro Treat Venti', 1, 70),
-('011016012511-44', 'DSH_TD', 'TBC Double Decker', 2, 169),
-('011016013340-31', 'DSH_FB', 'Flaming Buffalo Wing', 5, 139),
-('011016051639-85', 'D_TT', 'Taro Treat Venti', 1, 70),
-('011016051934-77', 'DSH_TE', 'Tofu Express', 1, 149),
-('011016052034-70', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
-('021016122605-31', 'DSH_FB', 'Flaming Buffalo Wing', 3, 139),
-('021016122605-31', 'DSH_TD', 'TBC Double Decker', 3, 169),
-('260916022731-42', 'DSH_FB', 'Flaming Buffalo Wing', 5, 139),
-('260916022731-42', 'DSH_TE', 'Tofu Express', 4, 149),
-('260916023038-40', 'DSH_TE', 'Tofu Express', 5, 149),
-('260916025711-75', 'DSH_SS', 'Sizzling Sisig', 5, 129),
-('260916031217-32', 'DSH_SS', 'Sizzling Sisig', 5, 129),
-('260916032015-72', 'DSH_CS', 'Chicksilog', 4, 59),
-('260916032015-72', 'DSH_SS', 'Sizzling Sisig', 5, 129),
-('260916032015-72', 'DSH_TD', 'TBC Double Decker', 4, 169),
-('260916032015-72', 'DSH_TE', 'Tofu Express', 3, 149),
-('260916032015-72', 'D_SB', 'Strawberry Blush Ven', 6, 70),
-('260916032015-72', 'D_TT', 'Taro Treat Venti', 5, 70),
-('260916032313-75', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
-('260916120537-90', 'D_TT', 'Taro Treat Grande', 1, 55),
-('260916121322-72', 'DSH_TE', 'Tofu Express', 1, 149),
-('260916121643-31', 'D_MS', 'Melon Swirl Grande', 1, 55),
-('260916121650-50', 'D_MS', 'Melon Swirl Grande', 1, 55),
-('270916033226-77', 'DSH_TD', 'TBC Double Decker', 1, 169),
-('270916033238-41', 'DSH_TD', 'TBC Double Decker', 1, 169),
-('270916033643-21', 'DSH_C', 'Churros', 5, 49),
-('270916040915-66', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
-('270916052314-13', 'DSH_TE', 'Tofu Express', 1, 149),
-('270916055347-55', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
-('270916055408-27', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
-('270916055453-81', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
-('270916055533-45', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
-('270916060011-87', 'DSH_C', 'Churros', 7, 49),
-('270916060011-87', 'DSH_CC', 'Chessy Carbonara', 8, 139),
-('270916060011-87', 'DSH_ES', 'Emsilog', 6, 59),
-('270916060011-87', 'DSH_HS', 'Hotsilog', 13, 49),
-('270916060011-87', 'DSH_SS', 'Sizzling Sisig', 5, 129),
-('270916060011-87', 'DSH_TE', 'Tofu Express', 8, 149),
-('270916060229-91', 'DSH_C', 'Churros', 7, 49),
-('270916060229-91', 'DSH_CC', 'Chessy Carbonara', 8, 139),
-('270916060229-91', 'DSH_ES', 'Emsilog', 6, 59),
-('270916060229-91', 'DSH_HS', 'Hotsilog', 13, 49),
-('270916060229-91', 'DSH_SS', 'Sizzling Sisig', 5, 129),
-('270916060229-91', 'DSH_TE', 'Tofu Express', 8, 149),
-('270916060412-59', 'DSH_C', 'Churros', 7, 49),
-('270916060412-59', 'DSH_CC', 'Chessy Carbonara', 8, 139),
-('270916060412-59', 'DSH_ES', 'Emsilog', 6, 59),
-('270916060412-59', 'DSH_HS', 'Hotsilog', 3, 49),
-('270916060412-59', 'DSH_SS', 'Sizzling Sisig', 5, 129),
-('270916060412-59', 'DSH_TE', 'Tofu Express', 8, 149),
-('270916121537-58', 'D_MS', 'Melon Swirl Grande', 5, 55),
-('280916102707-59', 'DSH_FB', 'Flaming Buffalo Wing', 5, 139),
-('280916111238-64', 'DSH_FB', 'Flaming Buffalo Wing', 1, 139),
-('280916111238-64', 'DSH_TD', 'TBC Double Decker', 1, 169),
-('290916120805-44', 'DSH_C', 'Churros', 4, 49),
-('290916120831-41', 'DSH_C', 'Churros', 4, 49),
-('290916121207-54', 'DSH_C', 'Churros', 5, 49),
-('290916122610-75', 'DSH_BB', 'BBQ Burger', 5, 99);
+('131016090325-60', 'D_TT', 'Taro Treat Grande', 1, 55),
+('131016114411-70', 'DSH_C', 'Churros', 10, 49),
+('131016114411-70', 'DSH_TE', 'Tofu Express', 1, 149),
+('131016114901-99', 'DSH_TE', 'Tofu Express', 10, 149),
+('221016043823-63', 'DSH_SS', 'Sizzling Sisig', 1, 129),
+('221016043943-17', 'DSH_TE', 'Tofu Express', 1, 149),
+('221016044146-11', 'DSH_TE', 'Tofu Express', 2, 149),
+('221016044528-81', 'DSH_SS', 'Sizzling Sisig', 2, 129);
 
 -- --------------------------------------------------------
 
@@ -320,22 +289,47 @@ CREATE TABLE `tbltimeintimeout` (
 --
 
 INSERT INTO `tbltimeintimeout` (`user`, `time`, `description`) VALUES
-('admin', '2016-09-30 18:42:36', 'in'),
-('admin', '2016-09-30 19:31:09', 'in'),
-('admin', '2016-10-01 14:50:56', 'in'),
-('admin', '2016-10-01 15:09:46', 'in'),
-('admin', '2016-10-01 15:38:40', 'in'),
-('admin', '2016-10-01 15:52:43', 'in'),
-('admin', '2016-10-01 15:53:36', 'in'),
-('admin', '2016-10-01 16:14:39', 'in'),
-('admin', '2016-10-01 16:25:42', 'in'),
-('admin', '2016-10-02 07:42:31', 'in'),
-('admin', '2016-10-02 10:19:29', 'in'),
-('admin', '2016-10-02 10:20:32', 'out'),
-('admin', '2016-10-02 11:07:19', 'in'),
-('admin', '2016-10-02 11:10:10', 'out'),
-('admin', '2016-10-02 11:39:46', 'in'),
-('admin', '2016-10-02 15:18:18', 'in');
+('test', '2016-10-12 08:54:15', 'in'),
+('test', '2016-10-12 08:54:30', 'out'),
+('test', '2016-10-12 08:55:38', 'in'),
+('test', '2016-10-12 08:56:58', 'in'),
+('admin', '2016-10-12 09:04:44', 'in'),
+('admin', '2016-10-12 09:05:54', 'out'),
+('admin', '2016-10-13 00:49:38', 'in'),
+('admin', '2016-10-13 01:02:19', 'in'),
+('admin', '2016-10-13 01:04:16', 'out'),
+('admin', '2016-10-13 02:57:35', 'in'),
+('admin', '2016-10-13 03:30:57', 'in'),
+('admin', '2016-10-13 03:41:15', 'out'),
+('cashier', '2016-10-13 03:41:39', 'in'),
+('cashier', '2016-10-13 03:45:17', 'out'),
+('cashier', '2016-10-13 03:45:43', 'in'),
+('cashier', '2016-10-13 03:53:47', 'in'),
+('admin', '2016-10-18 14:54:44', 'in'),
+('admin', '2016-10-21 18:16:09', 'in'),
+('admin', '2016-10-21 18:16:21', 'out'),
+('admin', '2016-10-21 18:21:06', 'in'),
+('admin', '2016-10-21 18:22:21', 'in'),
+('admin', '2016-10-21 19:01:51', 'in'),
+('admin', '2016-10-21 19:04:45', 'out'),
+('admin', '2016-10-21 19:15:21', 'in'),
+('admin', '2016-10-21 19:18:47', 'in'),
+('admin', '2016-10-21 19:19:22', 'out'),
+('cashier', '2016-10-21 19:25:45', 'in'),
+('cashier', '2016-10-21 19:26:33', 'out'),
+('admin', '2016-10-21 19:52:55', 'in'),
+('admin', '2016-10-21 19:53:16', 'out'),
+('admin', '2016-10-21 19:56:30', 'in'),
+('admin', '2016-10-21 19:56:52', 'out'),
+('admin', '2016-10-21 20:13:04', 'in'),
+('admin', '2016-10-21 20:13:16', 'out'),
+('admin', '2016-10-21 20:30:44', 'in'),
+('admin', '2016-10-21 20:32:59', 'in'),
+('admin', '2016-10-21 20:38:04', 'in'),
+('admin', '2016-10-21 20:39:27', 'in'),
+('admin', '2016-10-21 20:41:23', 'in'),
+('admin', '2016-10-21 20:45:10', 'in'),
+('admin', '2016-10-22 14:44:47', 'in');
 
 -- --------------------------------------------------------
 
