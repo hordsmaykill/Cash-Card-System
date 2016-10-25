@@ -88,12 +88,6 @@
     <Compile Include="frmAccountsEdit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEnterAmoutn.Designer.vb">
-      <DependentUpon>frmAddcash.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmAddcash.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmAddCustomer.Designer.vb">
       <DependentUpon>frmAddCustomer.vb</DependentUpon>
     </Compile>
@@ -271,9 +265,6 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAccountsEdit.resx">
       <DependentUpon>frmAccountsEdit.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddcash.resx">
-      <DependentUpon>frmAddcash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.vb</DependentUpon>
