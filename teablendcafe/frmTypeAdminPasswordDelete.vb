@@ -9,7 +9,7 @@ Public Class frmTypeAdminPasswordDelete
     Private Sub typeadminpassworddelete_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connect = ConnectionModule.getConnection()
     End Sub
-    Private Sub admindeleteorder_Click(sender As Object, e As EventArgs) Handles admindeleteorder.Click
+    Private Sub admindeleteorder_Click(sender As Object, e As EventArgs) Handles btnVerify.Click
         With Command
             .Connection = Connect
             .CommandText = "SELECT password FROM tbladministrators WHERE username = 'admin'"
@@ -28,7 +28,7 @@ Public Class frmTypeAdminPasswordDelete
 
 
 
-    Private Sub cancelc_Click(sender As Object, e As EventArgs) Handles cancelc.Click
+    Private Sub cancelc_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 

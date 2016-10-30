@@ -27,8 +27,8 @@ Partial Class frmAccountsEdit
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tboxPassword = New System.Windows.Forms.TextBox()
         Me.tboxRPassword = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.lUsername = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -64,23 +64,24 @@ Partial Class frmAccountsEdit
         Me.tboxRPassword.Size = New System.Drawing.Size(112, 20)
         Me.tboxRPassword.TabIndex = 1
         '
-        'Button1
+        'btnSubmit
         '
-        Me.Button1.Location = New System.Drawing.Point(32, 122)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(82, 43)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSubmit.Location = New System.Drawing.Point(32, 122)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(82, 43)
+        Me.btnSubmit.TabIndex = 2
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnCancel
         '
-        Me.Button2.Location = New System.Drawing.Point(157, 121)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 43)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(157, 121)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(82, 43)
+        Me.btnCancel.TabIndex = 3
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'lUsername
         '
@@ -91,22 +92,24 @@ Partial Class frmAccountsEdit
         Me.lUsername.TabIndex = 4
         Me.lUsername.Text = "Enter new Password for NAME: "
         '
-        'accountsEdit
+        'frmAccountsEdit
         '
+        Me.AcceptButton = Me.btnSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.teablendcafe.My.Resources.Resources.frm_edit_accounts
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(271, 183)
         Me.Controls.Add(Me.lUsername)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.tboxRPassword)
         Me.Controls.Add(Me.tboxPassword)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "accountsEdit"
+        Me.Name = "frmAccountsEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "accountsEdit"
         Me.ResumeLayout(False)
@@ -118,7 +121,7 @@ Partial Class frmAccountsEdit
     Friend WithEvents Label2 As Label
     Friend WithEvents tboxPassword As TextBox
     Friend WithEvents tboxRPassword As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnSubmit As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents lUsername As Label
 End Class

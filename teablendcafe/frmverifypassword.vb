@@ -12,11 +12,11 @@ Public Class frmverifypassword
     End Sub
 
 
-    Private Sub cancelcc_Click(sender As Object, e As EventArgs) Handles cancelcc.Click
+    Private Sub cancelcc_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub btnverify_Click(sender As Object, e As EventArgs) Handles btnverify.Click
+    Private Sub btnverify_Click(sender As Object, e As EventArgs) Handles btnVerify.Click
         ' if tama ung password
         Dim check As String = ""
 

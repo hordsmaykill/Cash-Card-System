@@ -125,10 +125,10 @@
     <Compile Include="frmAdminCreateNew.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmaddLoad.Designer.vb">
-      <DependentUpon>frmaddLoad.vb</DependentUpon>
+    <Compile Include="frmAddLoad.Designer.vb">
+      <DependentUpon>frmAddLoad.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmaddLoad.vb">
+    <Compile Include="frmAddLoad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCardLoad.Designer.vb">
@@ -230,8 +230,10 @@
     </Compile>
     <Compile Include="frmviewtransactions.Designer.vb">
       <DependentUpon>frmviewtransactions.vb</DependentUpon>
+    <Compile Include="frmViewTransactions.Designer.vb">
+      <DependentUpon>frmViewTransactions.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmviewtransactions.vb">
+    <Compile Include="frmViewTransactions.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -296,8 +298,8 @@
     <EmbeddedResource Include="frmAdminCreateNew.resx">
       <DependentUpon>frmAdminCreateNew.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmaddLoad.resx">
-      <DependentUpon>frmaddLoad.vb</DependentUpon>
+    <EmbeddedResource Include="frmAddLoad.resx">
+      <DependentUpon>frmAddLoad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCardLoad.resx">
       <DependentUpon>frmCardLoad.vb</DependentUpon>
@@ -349,6 +351,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmviewtransactions.resx">
       <DependentUpon>frmviewtransactions.vb</DependentUpon>
+    <EmbeddedResource Include="frmViewTransactions.resx">
+      <DependentUpon>frmViewTransactions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

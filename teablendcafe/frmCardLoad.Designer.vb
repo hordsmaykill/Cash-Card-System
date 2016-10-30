@@ -24,23 +24,24 @@ Partial Class frmCardLoad
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCardLoad))
-        Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.tmrCheck = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblTransacting = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnClose
+        'btnCancel
         '
-        Me.btnClose.Location = New System.Drawing.Point(97, 141)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(97, 40)
-        Me.btnClose.TabIndex = 0
-        Me.btnClose.Text = "Cancel"
-        Me.btnClose.UseVisualStyleBackColor = True
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(97, 141)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(97, 40)
+        Me.btnCancel.TabIndex = 0
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'tmrCheck
         '
@@ -52,11 +53,20 @@ Partial Class frmCardLoad
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.lblTransacting)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.btnClose)
+        Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Location = New System.Drawing.Point(12, 30)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(296, 201)
         Me.Panel1.TabIndex = 3
+        '
+        'lblTransacting
+        '
+        Me.lblTransacting.Location = New System.Drawing.Point(3, 15)
+        Me.lblTransacting.Name = "lblTransacting"
+        Me.lblTransacting.Size = New System.Drawing.Size(293, 16)
+        Me.lblTransacting.TabIndex = 4
+        Me.lblTransacting.Text = "Transacting"
+        Me.lblTransacting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox1
         '
@@ -68,20 +78,12 @@ Partial Class frmCardLoad
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
-        'lblTransacting
-        '
-        Me.lblTransacting.Location = New System.Drawing.Point(3, 15)
-        Me.lblTransacting.Name = "lblTransacting"
-        Me.lblTransacting.Size = New System.Drawing.Size(293, 16)
-        Me.lblTransacting.TabIndex = 4
-        Me.lblTransacting.Text = "Transacting"
-        Me.lblTransacting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'frmCardLoad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(319, 249)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -95,7 +97,7 @@ Partial Class frmCardLoad
 
     End Sub
 
-    Friend WithEvents btnClose As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents tmrCheck As Timer
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox

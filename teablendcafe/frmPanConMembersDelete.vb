@@ -10,7 +10,7 @@ Public Class frmPanConMembersDelete
         Connect = ConnectionModule.getConnection()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnVerify.Click
         With Command
             .Connection = Connect
             .CommandText = "SELECT password FROM tbladministrators WHERE username = 'admin'"
@@ -21,7 +21,7 @@ Public Class frmPanConMembersDelete
 
     End Sub
 
-    Private Sub admispasswordcancel_Click(sender As Object, e As EventArgs) Handles admispasswordcancel.Click
+    Private Sub admispasswordcancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 End Class

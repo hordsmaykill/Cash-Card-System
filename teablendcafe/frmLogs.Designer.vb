@@ -71,6 +71,7 @@ Partial Class frmLogs
         '
         'btnClose
         '
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClose.Location = New System.Drawing.Point(501, 12)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(40, 23)
@@ -83,6 +84,7 @@ Partial Class frmLogs
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(552, 347)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.dgv)

@@ -202,7 +202,7 @@ Public Class frmCardLoad
 
     End Sub
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         resetDB()
         Me.Close()
     End Sub

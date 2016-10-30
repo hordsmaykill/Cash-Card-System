@@ -24,8 +24,8 @@ Partial Class frmInventoryEdit
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventoryEdit))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.upnaddquantity = New System.Windows.Forms.NumericUpDown()
         Me.Panel1.SuspendLayout()
@@ -35,8 +35,8 @@ Partial Class frmInventoryEdit
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnCancel)
+        Me.Panel1.Controls.Add(Me.btnAdd)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.upnaddquantity)
         Me.Panel1.Location = New System.Drawing.Point(12, 23)
@@ -44,23 +44,24 @@ Partial Class frmInventoryEdit
         Me.Panel1.Size = New System.Drawing.Size(255, 107)
         Me.Panel1.TabIndex = 0
         '
-        'Button2
+        'btnCancel
         '
-        Me.Button2.Location = New System.Drawing.Point(137, 59)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 36)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(137, 59)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 36)
+        Me.btnCancel.TabIndex = 2
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAdd
         '
-        Me.Button1.Location = New System.Drawing.Point(40, 59)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 36)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAdd.Location = New System.Drawing.Point(40, 59)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 36)
+        Me.btnAdd.TabIndex = 0
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -79,16 +80,18 @@ Partial Class frmInventoryEdit
         Me.upnaddquantity.Size = New System.Drawing.Size(120, 20)
         Me.upnaddquantity.TabIndex = 1
         '
-        'frminvedit
+        'frmInventoryEdit
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(279, 145)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frminvedit"
+        Me.Name = "frmInventoryEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frminvedit"
         Me.Panel1.ResumeLayout(False)
@@ -99,8 +102,8 @@ Partial Class frmInventoryEdit
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnAdd As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents upnaddquantity As NumericUpDown
 End Class

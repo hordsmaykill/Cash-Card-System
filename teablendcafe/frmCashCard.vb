@@ -10,18 +10,18 @@ Public Class frmCashCard
         Connect = ConnectionModule.getConnection()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCard.Click
         frmchoicespointsorload.ShowDialog()
         Me.Close()
     End Sub
 
-    Private Sub btncash_Click(sender As Object, e As EventArgs) Handles btncash.Click
+    Private Sub btncash_Click(sender As Object, e As EventArgs) Handles btnCash.Click
         frmtotal.action = frmtotal.CASH
         frmEnterAmount.ShowDialog()
         Me.Close()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
 End Class

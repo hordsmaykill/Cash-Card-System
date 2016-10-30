@@ -18,7 +18,7 @@ Partial Class frmviewtransactions
     Private components As System.ComponentModel.IContainer
 
     'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
+    'It can be modified using the Windows Form Designer.
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
@@ -30,7 +30,7 @@ Partial Class frmviewtransactions
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
         CType(Me.dgvordrtransactions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,6 +51,7 @@ Partial Class frmviewtransactions
         Me.dgvordrtransactions.Location = New System.Drawing.Point(12, 45)
         Me.dgvordrtransactions.Name = "dgvordrtransactions"
         Me.dgvordrtransactions.ReadOnly = True
+        Me.dgvordrtransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvordrtransactions.Size = New System.Drawing.Size(775, 467)
         Me.dgvordrtransactions.TabIndex = 0
         '
@@ -99,22 +100,24 @@ Partial Class frmviewtransactions
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ORDER TRANSACTIONS"
         '
-        'Button1
+        'btnClose
         '
-        Me.Button1.Location = New System.Drawing.Point(727, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(60, 27)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnClose.Location = New System.Drawing.Point(746, 11)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(41, 23)
+        Me.btnClose.TabIndex = 2
+        Me.btnClose.Text = "X"
+        Me.btnClose.UseVisualStyleBackColor = True
         '
         'frmviewtransactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(799, 524)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvordrtransactions)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
@@ -135,5 +138,5 @@ Partial Class frmviewtransactions
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnClose As Button
 End Class

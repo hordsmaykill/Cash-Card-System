@@ -1,6 +1,6 @@
 ﻿Public Class frmremainingload
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         frmMain.dgvorders.Rows.Clear()
         Me.Close()
     End Sub
@@ -9,7 +9,4 @@
         Me.Close()
     End Sub
 
-    Private Sub frmremainingload_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

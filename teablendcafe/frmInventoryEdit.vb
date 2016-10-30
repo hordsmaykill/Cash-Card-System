@@ -10,15 +10,12 @@ Public Class frmInventoryEdit
 
 
     Private Sub frminvedit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Connect = ConnectionModule.getConnection()
-
-        'Dim SelecteddQty As Integer = frmMain.inventorydgv.Item(2, frmMain.inventorydgv.CurrentRow.Index).Value
-
-        'upnaddquantity.Value = SelecteddQty
+        Dim SelecteddQty As Integer = frmMain.inventorydgv.Item(2, frmMain.inventorydgv.CurrentRow.Index).Value
+        upnaddquantity.Value = SelecteddQty
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
         SelectedInventory = frmMain.inventorydgv.Item(0, frmMain.inventorydgv.CurrentRow.Index).Value
         ''
@@ -62,7 +59,8 @@ Public Class frmInventoryEdit
         Me.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
+
 End Class

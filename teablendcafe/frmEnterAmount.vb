@@ -1,5 +1,6 @@
 ﻿Public Class frmEnterAmount
-    Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
+
+    Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
@@ -17,7 +18,4 @@
         End If
     End Sub
 
-    Private Sub frmEnterAmount_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

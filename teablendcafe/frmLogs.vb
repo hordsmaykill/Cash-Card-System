@@ -9,7 +9,6 @@ Public Class frmLogs
         Connect = ConnectionModule.getConnection()
 
         lblUser.Text = "Logs for: " & user
-
         updateDGV()
     End Sub
 

@@ -11,17 +11,17 @@ Public Class frmchoicespointsorload
     Private Sub frmchoicespointsorload_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connect = ConnectionModule.getConnection()
     End Sub
-    Private Sub btnmopucl_Click(sender As Object, e As EventArgs) Handles btnmopucl.Click
+    Private Sub btnmopucl_Click(sender As Object, e As EventArgs) Handles btnLoad.Click
         frmCardLoad.transaction = TRANSACT_LOAD
         frmCardLoad.ShowDialog()
         Me.Close()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
 
-    Private Sub btnmopucp_Click(sender As Object, e As EventArgs) Handles btnmopucp.Click
+    Private Sub btnmopucp_Click(sender As Object, e As EventArgs) Handles btnPoints.Click
         frmCardLoad.transaction = TRANSACT_POINTS
         frmCardLoad.ShowDialog()
         Me.Close()

@@ -11,7 +11,7 @@ Public Class frmordersadminpassclear
     End Sub
 
 
-    Private Sub adminclearorder_Click(sender As Object, e As EventArgs) Handles adminclearorder.Click
+    Private Sub adminclearorder_Click(sender As Object, e As EventArgs) Handles btnVerify.Click
         Dim reader As MySqlDataReader
 
         With Command
@@ -28,7 +28,7 @@ Public Class frmordersadminpassclear
 
     End Sub
 
-    Private Sub cancelcc_Click(sender As Object, e As EventArgs) Handles cancelcc.Click
+    Private Sub cancelcc_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 End Class

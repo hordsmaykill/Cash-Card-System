@@ -25,8 +25,8 @@ Partial Class frmAddCustomer
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddCustomer))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbnewcusname = New System.Windows.Forms.TextBox()
-        Me.btnmembers_addcustomer_submit = New System.Windows.Forms.Button()
-        Me.btnmembers_addcustomer_cancel = New System.Windows.Forms.Button()
+        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -47,37 +47,40 @@ Partial Class frmAddCustomer
         Me.tbnewcusname.Size = New System.Drawing.Size(215, 31)
         Me.tbnewcusname.TabIndex = 1
         '
-        'btnmembers_addcustomer_submit
+        'btnSubmit
         '
-        Me.btnmembers_addcustomer_submit.Location = New System.Drawing.Point(27, 112)
-        Me.btnmembers_addcustomer_submit.Name = "btnmembers_addcustomer_submit"
-        Me.btnmembers_addcustomer_submit.Size = New System.Drawing.Size(107, 48)
-        Me.btnmembers_addcustomer_submit.TabIndex = 0
-        Me.btnmembers_addcustomer_submit.Text = "Submit"
-        Me.btnmembers_addcustomer_submit.UseVisualStyleBackColor = True
+        Me.btnSubmit.Location = New System.Drawing.Point(27, 112)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(107, 48)
+        Me.btnSubmit.TabIndex = 0
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = True
         '
-        'btnmembers_addcustomer_cancel
+        'btnCancel
         '
-        Me.btnmembers_addcustomer_cancel.Location = New System.Drawing.Point(135, 112)
-        Me.btnmembers_addcustomer_cancel.Name = "btnmembers_addcustomer_cancel"
-        Me.btnmembers_addcustomer_cancel.Size = New System.Drawing.Size(107, 48)
-        Me.btnmembers_addcustomer_cancel.TabIndex = 2
-        Me.btnmembers_addcustomer_cancel.Text = "Cancel"
-        Me.btnmembers_addcustomer_cancel.UseVisualStyleBackColor = True
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(135, 112)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(107, 48)
+        Me.btnCancel.TabIndex = 2
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'addcustomer
+        'frmAddCustomer
         '
+        Me.AcceptButton = Me.btnSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.teablendcafe.My.Resources.Resources.frm_edit_accounts1
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(269, 183)
-        Me.Controls.Add(Me.btnmembers_addcustomer_cancel)
-        Me.Controls.Add(Me.btnmembers_addcustomer_submit)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.tbnewcusname)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "addcustomer"
+        Me.Name = "frmAddCustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "addcustomer"
         Me.ResumeLayout(False)
@@ -87,6 +90,6 @@ Partial Class frmAddCustomer
 
     Friend WithEvents Label1 As Label
     Friend WithEvents tbnewcusname As TextBox
-    Friend WithEvents btnmembers_addcustomer_submit As Button
-    Friend WithEvents btnmembers_addcustomer_cancel As Button
+    Friend WithEvents btnSubmit As Button
+    Friend WithEvents btnCancel As Button
 End Class
