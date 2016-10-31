@@ -30,11 +30,6 @@ Public Class FrmaddLoad
         End If
         Reader.Close()
         addload = nupdaddload.Value
-        If addload < 149 Then
-            MsgBox("150 load wallet is the maintaining balance")
-        ElseIf addload > 10000
-            MsgBox("10000 load wallet is the max load that you can loadup")
-        End If
 
         Exit Sub
 
