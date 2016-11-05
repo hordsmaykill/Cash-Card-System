@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class frmmemberedit
+Public Class frmMemberEdit
     Dim SelectedMember As String
     Dim Command As New MySqlCommand
     Dim Reader As MySqlDataReader
@@ -10,11 +10,11 @@ Public Class frmmemberedit
         Connect = ConnectionModule.getConnection()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         SelectedMember = frmMain.dgv_members.Item(0, frmMain.dgv_members.CurrentRow.Index).Value
 
 

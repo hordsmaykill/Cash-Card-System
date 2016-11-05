@@ -1,5 +1,6 @@
 ﻿Public Class frmEnterAmount
-    Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
+
+    Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
@@ -16,4 +17,5 @@
             MsgBox("The amount is less than the total amount: " & vbNewLine & "Php " & totalamount)
         End If
     End Sub
+
 End Class

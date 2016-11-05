@@ -22,57 +22,38 @@ Partial Class frmchoicespointsorload
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnmopucp = New System.Windows.Forms.Button()
-        Me.btnmopucl = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnPoints = New System.Windows.Forms.Button()
+        Me.btnLoad = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button3
+        'btnClose
         '
-        Me.Button3.BackColor = System.Drawing.Color.Tan
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button3.ForeColor = System.Drawing.Color.DarkRed
-        Me.Button3.Location = New System.Drawing.Point(267, 12)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(72, 25)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "x"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnClose.BackColor = System.Drawing.Color.Tan
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnClose.FlatAppearance.BorderSize = 0
+        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnClose.ForeColor = System.Drawing.Color.DarkRed
+        Me.btnClose.Location = New System.Drawing.Point(267, 12)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(72, 25)
+        Me.btnClose.TabIndex = 4
+        Me.btnClose.Text = "x"
+        Me.btnClose.UseVisualStyleBackColor = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.btnmopucp)
-        Me.Panel1.Controls.Add(Me.btnmopucl)
+        Me.Panel1.Controls.Add(Me.btnPoints)
+        Me.Panel1.Controls.Add(Me.btnLoad)
         Me.Panel1.Location = New System.Drawing.Point(10, 43)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(329, 117)
         Me.Panel1.TabIndex = 3
-        '
-        'btnmopucp
-        '
-        Me.btnmopucp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnmopucp.Location = New System.Drawing.Point(166, 42)
-        Me.btnmopucp.Name = "btnmopucp"
-        Me.btnmopucp.Size = New System.Drawing.Size(149, 65)
-        Me.btnmopucp.TabIndex = 1
-        Me.btnmopucp.Text = "POINTS"
-        Me.btnmopucp.UseVisualStyleBackColor = True
-        '
-        'btnmopucl
-        '
-        Me.btnmopucl.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnmopucl.Location = New System.Drawing.Point(14, 42)
-        Me.btnmopucl.Name = "btnmopucl"
-        Me.btnmopucl.Size = New System.Drawing.Size(146, 65)
-        Me.btnmopucl.TabIndex = 2
-        Me.btnmopucl.Text = "LOAD"
-        Me.btnmopucl.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -84,13 +65,34 @@ Partial Class frmchoicespointsorload
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "MODES OF PAYMENT USING CARD"
         '
+        'btnPoints
+        '
+        Me.btnPoints.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPoints.Location = New System.Drawing.Point(166, 42)
+        Me.btnPoints.Name = "btnPoints"
+        Me.btnPoints.Size = New System.Drawing.Size(149, 65)
+        Me.btnPoints.TabIndex = 1
+        Me.btnPoints.Text = "POINTS"
+        Me.btnPoints.UseVisualStyleBackColor = True
+        '
+        'btnLoad
+        '
+        Me.btnLoad.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLoad.Location = New System.Drawing.Point(14, 42)
+        Me.btnLoad.Name = "btnLoad"
+        Me.btnLoad.Size = New System.Drawing.Size(146, 65)
+        Me.btnLoad.TabIndex = 2
+        Me.btnLoad.Text = "LOAD"
+        Me.btnLoad.UseVisualStyleBackColor = True
+        '
         'frmchoicespointsorload
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(351, 168)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmchoicespointsorload"
@@ -102,9 +104,9 @@ Partial Class frmchoicespointsorload
 
     End Sub
 
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnClose As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents btnmopucp As Button
-    Friend WithEvents btnmopucl As Button
+    Friend WithEvents btnPoints As Button
+    Friend WithEvents btnLoad As Button
     Friend WithEvents Label1 As Label
 End Class

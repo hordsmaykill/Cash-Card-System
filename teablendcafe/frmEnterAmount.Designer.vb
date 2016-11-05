@@ -25,7 +25,7 @@ Partial Class frmEnterAmount
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.tbenterpayment = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btncancel = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -35,7 +35,7 @@ Partial Class frmEnterAmount
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.tbenterpayment)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.btncancel)
+        Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Controls.Add(Me.btnOK)
         Me.Panel1.Location = New System.Drawing.Point(12, 29)
         Me.Panel1.Name = "Panel1"
@@ -60,14 +60,15 @@ Partial Class frmEnterAmount
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Cash Payment"
         '
-        'btncancel
+        'btnCancel
         '
-        Me.btncancel.Location = New System.Drawing.Point(143, 75)
-        Me.btncancel.Name = "btncancel"
-        Me.btncancel.Size = New System.Drawing.Size(77, 32)
-        Me.btncancel.TabIndex = 2
-        Me.btncancel.Text = "Cancel"
-        Me.btncancel.UseVisualStyleBackColor = True
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(143, 75)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(77, 32)
+        Me.btnCancel.TabIndex = 2
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnOK
         '
@@ -78,15 +79,17 @@ Partial Class frmEnterAmount
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = True
         '
-        'frmetramount
+        'frmEnterAmount
         '
+        Me.AcceptButton = Me.btnOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(289, 159)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmetramount"
+        Me.Name = "frmEnterAmount"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmetramount"
         Me.Panel1.ResumeLayout(False)
@@ -98,6 +101,6 @@ Partial Class frmEnterAmount
     Friend WithEvents Panel1 As Panel
     Friend WithEvents tbenterpayment As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents btncancel As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents btnOK As Button
 End Class

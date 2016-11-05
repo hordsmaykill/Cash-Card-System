@@ -12,11 +12,11 @@ Public Class frmverifypassword
     End Sub
 
 
-    Private Sub cancelcc_Click(sender As Object, e As EventArgs) Handles cancelcc.Click
+    Private Sub cancelcc_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub btnverify_Click(sender As Object, e As EventArgs) Handles btnverify.Click
+    Private Sub btnverify_Click(sender As Object, e As EventArgs) Handles btnVerify.Click
         ' if tama ung password
         Dim check As String = ""
 
@@ -35,10 +35,6 @@ Public Class frmverifypassword
             Select Case state
                 Case "add"
                     frmAdminCreateNew.ShowDialog()
-                Case "addmember"
-                    frmAddCustomer.ShowDialog()
-                Case "editmember"
-                    frmMembersEditChoices.ShowDialog()
 
                 Case "delmember"
                     Dim Delete As MsgBoxResult

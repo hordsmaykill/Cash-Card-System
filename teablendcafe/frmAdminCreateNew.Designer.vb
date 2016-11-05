@@ -26,8 +26,8 @@ Partial Class frmAdminCreateNew
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btncreate_newuser = New System.Windows.Forms.Button()
-        Me.btncancel_newbtn = New System.Windows.Forms.Button()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.tbnewuser = New System.Windows.Forms.TextBox()
         Me.tbnewpassword = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -61,23 +61,24 @@ Partial Class frmAdminCreateNew
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "New User"
         '
-        'btncreate_newuser
+        'btnCreate
         '
-        Me.btncreate_newuser.Location = New System.Drawing.Point(30, 148)
-        Me.btncreate_newuser.Name = "btncreate_newuser"
-        Me.btncreate_newuser.Size = New System.Drawing.Size(90, 23)
-        Me.btncreate_newuser.TabIndex = 3
-        Me.btncreate_newuser.Text = "Create"
-        Me.btncreate_newuser.UseVisualStyleBackColor = True
+        Me.btnCreate.Location = New System.Drawing.Point(30, 148)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(90, 23)
+        Me.btnCreate.TabIndex = 3
+        Me.btnCreate.Text = "Create"
+        Me.btnCreate.UseVisualStyleBackColor = True
         '
-        'btncancel_newbtn
+        'btnCancel
         '
-        Me.btncancel_newbtn.Location = New System.Drawing.Point(145, 148)
-        Me.btncancel_newbtn.Name = "btncancel_newbtn"
-        Me.btncancel_newbtn.Size = New System.Drawing.Size(98, 23)
-        Me.btncancel_newbtn.TabIndex = 4
-        Me.btncancel_newbtn.Text = "Cancel"
-        Me.btncancel_newbtn.UseVisualStyleBackColor = True
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(145, 148)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(98, 23)
+        Me.btnCancel.TabIndex = 4
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'tbnewuser
         '
@@ -114,15 +115,17 @@ Partial Class frmAdminCreateNew
         '
         'frmAdminCreateNew
         '
+        Me.AcceptButton = Me.btnCreate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.teablendcafe.My.Resources.Resources.frm
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(274, 186)
         Me.Controls.Add(Me.cbadminpreviledges)
         Me.Controls.Add(Me.tbnewpassword)
         Me.Controls.Add(Me.tbnewuser)
-        Me.Controls.Add(Me.btncancel_newbtn)
-        Me.Controls.Add(Me.btncreate_newuser)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label4)
@@ -134,13 +137,14 @@ Partial Class frmAdminCreateNew
         Me.Text = "formadmincreatenew"
         Me.ResumeLayout(False)
         Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents btncreate_newuser As Button
-    Friend WithEvents btncancel_newbtn As Button
+    Friend WithEvents btnCreate As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents tbnewuser As TextBox
     Friend WithEvents tbnewpassword As TextBox
     Friend WithEvents Label4 As Label

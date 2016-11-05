@@ -29,8 +29,8 @@ Partial Class frmLogin
         Me.lDate = New System.Windows.Forms.Label()
         Me.lTime = New System.Windows.Forms.Label()
         Me.tDateTime = New System.Windows.Forms.Timer(Me.components)
-        Me.btnlogin = New System.Windows.Forms.Button()
-        Me.btnexit = New System.Windows.Forms.Button()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'tbusername
@@ -77,34 +77,37 @@ Partial Class frmLogin
         '
         Me.tDateTime.Enabled = True
         '
-        'btnlogin
+        'btnLogin
         '
-        Me.btnlogin.Location = New System.Drawing.Point(198, 355)
-        Me.btnlogin.Name = "btnlogin"
-        Me.btnlogin.Size = New System.Drawing.Size(114, 39)
-        Me.btnlogin.TabIndex = 0
-        Me.btnlogin.Text = "LOGIN"
-        Me.btnlogin.UseVisualStyleBackColor = True
+        Me.btnLogin.Location = New System.Drawing.Point(198, 355)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(114, 39)
+        Me.btnLogin.TabIndex = 0
+        Me.btnLogin.Text = "LOGIN"
+        Me.btnLogin.UseVisualStyleBackColor = True
         '
-        'btnexit
+        'btnExit
         '
-        Me.btnexit.Location = New System.Drawing.Point(336, 355)
-        Me.btnexit.Name = "btnexit"
-        Me.btnexit.Size = New System.Drawing.Size(114, 39)
-        Me.btnexit.TabIndex = 3
-        Me.btnexit.Text = "EXIT"
-        Me.btnexit.UseVisualStyleBackColor = True
+        Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnExit.Location = New System.Drawing.Point(336, 355)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(114, 39)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'frmLogin
         '
+        Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.BackgroundImage = Global.teablendcafe.My.Resources.Resources.login2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(656, 523)
-        Me.Controls.Add(Me.btnexit)
-        Me.Controls.Add(Me.btnlogin)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.lTime)
         Me.Controls.Add(Me.lDate)
         Me.Controls.Add(Me.tbpassword)
@@ -126,6 +129,6 @@ Partial Class frmLogin
     Friend WithEvents lDate As Label
     Friend WithEvents lTime As Label
     Friend WithEvents tDateTime As Timer
-    Friend WithEvents btnlogin As Button
-    Friend WithEvents btnexit As Button
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents btnExit As Button
 End Class

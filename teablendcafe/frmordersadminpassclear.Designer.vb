@@ -26,8 +26,8 @@ Partial Class frmordersadminpassclear
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.adminclearorder = New System.Windows.Forms.Button()
-        Me.cancelcc = New System.Windows.Forms.Button()
+        Me.btnVerify = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -36,8 +36,8 @@ Partial Class frmordersadminpassclear
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.adminclearorder)
-        Me.Panel1.Controls.Add(Me.cancelcc)
+        Me.Panel1.Controls.Add(Me.btnVerify)
+        Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(304, 75)
@@ -61,29 +61,32 @@ Partial Class frmordersadminpassclear
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Administrator Password:"
         '
-        'adminclearorder
+        'btnVerify
         '
-        Me.adminclearorder.Location = New System.Drawing.Point(28, 40)
-        Me.adminclearorder.Name = "adminclearorder"
-        Me.adminclearorder.Size = New System.Drawing.Size(112, 23)
-        Me.adminclearorder.TabIndex = 0
-        Me.adminclearorder.Text = "Verify"
-        Me.adminclearorder.UseVisualStyleBackColor = True
+        Me.btnVerify.Location = New System.Drawing.Point(28, 40)
+        Me.btnVerify.Name = "btnVerify"
+        Me.btnVerify.Size = New System.Drawing.Size(112, 23)
+        Me.btnVerify.TabIndex = 0
+        Me.btnVerify.Text = "Verify"
+        Me.btnVerify.UseVisualStyleBackColor = True
         '
-        'cancelcc
+        'btnCancel
         '
-        Me.cancelcc.Location = New System.Drawing.Point(158, 40)
-        Me.cancelcc.Name = "cancelcc"
-        Me.cancelcc.Size = New System.Drawing.Size(112, 23)
-        Me.cancelcc.TabIndex = 2
-        Me.cancelcc.Text = "Cancel"
-        Me.cancelcc.UseVisualStyleBackColor = True
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(158, 40)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(112, 23)
+        Me.btnCancel.TabIndex = 2
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'frmordersadminpassclear
         '
+        Me.AcceptButton = Me.btnVerify
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(327, 94)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -98,8 +101,8 @@ Partial Class frmordersadminpassclear
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents adminclearorder As Button
-    Friend WithEvents cancelcc As Button
+    Friend WithEvents btnVerify As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
 End Class

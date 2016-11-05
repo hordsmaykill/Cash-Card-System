@@ -27,7 +27,7 @@ Public Class frmAdminCreateNew
     '    End If
     '    Reader.Close()
     'End Sub
-    Private Sub btncreate_newuser_Click(sender As Object, e As EventArgs) Handles btncreate_newuser.Click
+    Private Sub btncreate_newuser_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
         If tbnewuser.Text = "" Or tbnewpassword.Text = "" Then
             MsgBox("Please make sure all boxes are filled.", vbOKOnly + vbInformation, "Message")
         Else
@@ -46,7 +46,7 @@ Public Class frmAdminCreateNew
         End If
     End Sub
 
-    Private Sub btncancel_newbtn_Click(sender As Object, e As EventArgs) Handles btncancel_newbtn.Click
+    Private Sub btncancel_newbtn_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 

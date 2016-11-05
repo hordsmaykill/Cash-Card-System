@@ -12,7 +12,7 @@ Public Class frmAccountsEdit
         lUsername.Text = "Enter new password for " & frmMain.userSelected
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
     'Private Sub AccountsDGV()
@@ -34,7 +34,7 @@ Public Class frmAccountsEdit
 
     'End Sub
     'submit'
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         If tboxPassword.Text = "" Or tboxRPassword.Text = "" Then
             MsgBox("Please make sure all password boxes are filled.", vbOKOnly + vbInformation, "Message")
         ElseIf tboxPassword.Text = tboxRPassword.Text Then

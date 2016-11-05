@@ -9,12 +9,12 @@ Public Class frmAddCustomer
         Connect = ConnectionModule.getConnection()
     End Sub
 
-    Private Sub btnmembers_addcustomer_cancel_Click(sender As Object, e As EventArgs) Handles btnmembers_addcustomer_cancel.Click
+    Private Sub btnmembers_addcustomer_cancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
 
     End Sub
 
-    Private Sub btnmembers_addcustomer_submit_Click(sender As Object, e As EventArgs) Handles btnmembers_addcustomer_submit.Click
+    Private Sub btnmembers_addcustomer_submit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         If tbnewcusname.Text = "" Then
             MsgBox("Please make sure the box ais filled.", vbOKOnly + vbInformation, "Message")
         Else

@@ -24,8 +24,8 @@ Partial Class frmTypeAdminPassword
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTypeAdminPassword))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.admispasswordcancel = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnVerify = New System.Windows.Forms.Button()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -34,8 +34,8 @@ Partial Class frmTypeAdminPassword
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.admispasswordcancel)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnCancel)
+        Me.Panel1.Controls.Add(Me.btnVerify)
         Me.Panel1.Controls.Add(Me.txtPass)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
@@ -43,24 +43,24 @@ Partial Class frmTypeAdminPassword
         Me.Panel1.Size = New System.Drawing.Size(302, 65)
         Me.Panel1.TabIndex = 0
         '
-        'admispasswordcancel
+        'btnCancel
         '
-        Me.admispasswordcancel.BackColor = System.Drawing.Color.White
-        Me.admispasswordcancel.Location = New System.Drawing.Point(163, 32)
-        Me.admispasswordcancel.Name = "admispasswordcancel"
-        Me.admispasswordcancel.Size = New System.Drawing.Size(112, 23)
-        Me.admispasswordcancel.TabIndex = 2
-        Me.admispasswordcancel.Text = "Cancel"
-        Me.admispasswordcancel.UseVisualStyleBackColor = False
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(163, 32)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(112, 23)
+        Me.btnCancel.TabIndex = 2
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnVerify
         '
-        Me.Button1.Location = New System.Drawing.Point(33, 32)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Verify"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnVerify.Location = New System.Drawing.Point(33, 32)
+        Me.btnVerify.Name = "btnVerify"
+        Me.btnVerify.Size = New System.Drawing.Size(112, 23)
+        Me.btnVerify.TabIndex = 1
+        Me.btnVerify.Text = "Verify"
+        Me.btnVerify.UseVisualStyleBackColor = True
         '
         'txtPass
         '
@@ -79,16 +79,18 @@ Partial Class frmTypeAdminPassword
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Administrator Password:"
         '
-        'typeadminpassword
+        'frmTypeAdminPassword
         '
+        Me.AcceptButton = Me.btnVerify
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(326, 84)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "typeadminpassword"
+        Me.Name = "frmTypeAdminPassword"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "typeadminpassword"
         Me.Panel1.ResumeLayout(False)
@@ -98,8 +100,8 @@ Partial Class frmTypeAdminPassword
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents admispasswordcancel As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnVerify As Button
     Friend WithEvents txtPass As TextBox
     Friend WithEvents Label1 As Label
 End Class

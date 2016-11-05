@@ -1101,8 +1101,7 @@ Public Class frmMain
     End Sub
 
     Private Sub account_addbtn_Click(sender As Object, e As EventArgs) Handles account_addbtn.Click
-        frmverifypassword.state = "add"
-        frmverifypassword.ShowDialog()
+        frmMembersEditChoices.ShowDialog()
     End Sub
 
     Private Sub account_editbtn_Click(sender As Object, e As EventArgs) Handles account_editbtn.Click
@@ -1126,8 +1125,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnmembers_add_Click(sender As Object, e As EventArgs) Handles btnmembers_add.Click
-        frmverifypassword.state = "addmember"
-        frmverifypassword.ShowDialog()
+        frmAddCustomer.ShowDialog()
 
     End Sub
 
@@ -1252,9 +1250,7 @@ Public Class frmMain
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        frmverifypassword.state = "editmember"
-        frmverifypassword.ShowDialog()
-
+        frmMembersEditChoices.ShowDialog()
     End Sub
 
     Private Sub btnclearorder_Click(sender As Object, e As EventArgs) Handles btnclearorder.Click
@@ -1267,6 +1263,15 @@ Public Class frmMain
 
     Private Sub btnviewtransactions_Click(sender As Object, e As EventArgs) Handles btnviewtransactions.Click
         frmviewtransactions.ShowDialog()
+    End Sub
+
+    Private Sub vlt_Click(sender As Object, e As EventArgs) Handles vlt.Click
+        frmviewloadtransactions.ShowDialog()
+
+    End Sub
+
+    Private Sub hic_Click(sender As Object, e As EventArgs) Handles hic.Click
+        frminventorychanges.ShowDialog()
     End Sub
 End Class
 

@@ -14,8 +14,6 @@ Public Class frmLogin
         tbusername.Text = "username"
         tbpassword.Text = "password"
         TransparencyKey = BackColor
-        Me.AcceptButton = btnlogin
-        Me.CancelButton = btnexit
     End Sub
 
     Private Sub tDateTime_Tick(sender As Object, e As EventArgs) Handles tDateTime.Tick
@@ -23,7 +21,7 @@ Public Class frmLogin
         lDate.Text = DateTime.Today.ToLongDateString
     End Sub
 
-    Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
+    Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         With Command
             .Connection = Connect
             .CommandText = "SELECT Username,Password FROM tblAdministrators WHERE Username = '" &
@@ -59,7 +57,7 @@ Public Class frmLogin
         End If
     End Sub
 
-    Private Sub btnexit_Click(sender As Object, e As EventArgs) Handles btnexit.Click
+    Private Sub btnexit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Dim reply As MsgBoxResult
 
         reply = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo, "Exit")

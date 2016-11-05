@@ -247,6 +247,8 @@ Partial Class frmMain
         Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panInventory = New System.Windows.Forms.Panel()
+        Me.hic = New System.Windows.Forms.Button()
+        Me.vlt = New System.Windows.Forms.Button()
         Me.btnviewtransactions = New System.Windows.Forms.Button()
         Me.cboinventory2 = New System.Windows.Forms.ComboBox()
         Me.cboinventory1 = New System.Windows.Forms.ComboBox()
@@ -2823,6 +2825,8 @@ Partial Class frmMain
         'panInventory
         '
         Me.panInventory.BackColor = System.Drawing.Color.Transparent
+        Me.panInventory.Controls.Add(Me.hic)
+        Me.panInventory.Controls.Add(Me.vlt)
         Me.panInventory.Controls.Add(Me.btnviewtransactions)
         Me.panInventory.Controls.Add(Me.cboinventory2)
         Me.panInventory.Controls.Add(Me.cboinventory1)
@@ -2834,9 +2838,27 @@ Partial Class frmMain
         Me.panInventory.Size = New System.Drawing.Size(1366, 700)
         Me.panInventory.TabIndex = 6
         '
+        'hic
+        '
+        Me.hic.Location = New System.Drawing.Point(404, 17)
+        Me.hic.Name = "hic"
+        Me.hic.Size = New System.Drawing.Size(115, 45)
+        Me.hic.TabIndex = 4
+        Me.hic.Text = "History of inventory changes"
+        Me.hic.UseVisualStyleBackColor = True
+        '
+        'vlt
+        '
+        Me.vlt.Location = New System.Drawing.Point(267, 17)
+        Me.vlt.Name = "vlt"
+        Me.vlt.Size = New System.Drawing.Size(115, 45)
+        Me.vlt.TabIndex = 4
+        Me.vlt.Text = "View load transactions"
+        Me.vlt.UseVisualStyleBackColor = True
+        '
         'btnviewtransactions
         '
-        Me.btnviewtransactions.Location = New System.Drawing.Point(128, 16)
+        Me.btnviewtransactions.Location = New System.Drawing.Point(137, 17)
         Me.btnviewtransactions.Name = "btnviewtransactions"
         Me.btnviewtransactions.Size = New System.Drawing.Size(115, 45)
         Me.btnviewtransactions.TabIndex = 4
@@ -3413,4 +3435,6 @@ Partial Class frmMain
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents btnviewtransactions As Button
+    Friend WithEvents vlt As Button
+    Friend WithEvents hic As Button
 End Class
